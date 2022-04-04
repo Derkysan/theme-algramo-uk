@@ -1,0 +1,21 @@
+.wrapper-footer {
+  background-color: #000000;
+  color: #ffffff;
+  padding-top: 4em;
+  padding-bottom: 2em;
+  ul {
+    list-style: none;
+    padding-left: 0;
+    li {
+      margin-bottom: 1em;
+      a {
+        text-decoration: none;
+        color: #ffffff;
+      }
+    }
+  }
+  a {
+    text-decoration: none;
+    color: #ffffff;
+  }
+}
