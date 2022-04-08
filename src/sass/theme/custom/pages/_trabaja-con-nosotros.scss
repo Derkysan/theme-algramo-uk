@@ -1,0 +1,82 @@
+.txt-img-block {
+  display: flex;
+  gap: 2em;
+  align-items: center;
+  border: 1px solid red;
+  .block-1 {
+    flex-basis: 40%;
+  }
+  .block-2 {
+    flex-basis: 60%;
+  }
+  .txt-wrapper {
+    border: 1px solid red;
+    padding: 0 5em;
+  }
+  .img-wrapper {
+    width: 100%;
+    height: 100%;
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+    }
+  }
+  .img-wrapper {
+    border: 1px solid blue;
+    height: 570px;
+  }
+}
+
+.graph-wrapper {
+  margin: 5em 0;
+  .graph-img {
+    margin: 0 auto;
+    width: 100%;
+    max-width: 480px;
+    height: 520px;
+    border: 1px solid red;
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+    }
+  }
+}
+
+.collapsible-wrapper {
+  border: 1px solid red;
+}
+.culture-item {
+  .thumb {
+    margin-bottom: 1em;
+  }
+  border: 1px solid red;
+  text-align: center;
+}
+
+.vacancy-empty {
+  background-color: #00ABB1;
+  width: 100%;
+  height: 300px;
+  text-align: center;
+  padding: 3em;
+  color: #ffffff;
+  margin-bottom: 1em;
+}
+.vacancy-list {
+  display: flex;
+  flex-wrap: wrap;
+  .item {
+    flex-basis: calc( 50% - .5em );
+    background-color: #ffffff;
+    padding: 2em;
+    margin-right: 1em;
+    margin-bottom: 1em;
+    &:nth-child(2n) {
+      margin-right: 0;
+    }
+  }
+}

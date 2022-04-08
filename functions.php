@@ -158,8 +158,6 @@ function algramo_theme_widgets_init() {
 }
 add_action( 'widgets_init', 'algramo_theme_widgets_init' );
 
-
-
 function load_swiper_scripts() {
   wp_enqueue_style( 'swiper-css', 'https://unpkg.com/swiper@8/swiper-bundle.min.css' );
   wp_enqueue_script( 'swiper-js' , 'https://unpkg.com/swiper@8/swiper-bundle.min.js', array('jquery') );
@@ -170,3 +168,23 @@ function load_animate_css() {
   wp_enqueue_style( 'style', get_stylesheet_uri() );
 }
 add_action( 'wp_enqueue_scripts', 'load_animate_css' );
+
+/**
+ * Font Awesome Kit Setup
+ * 
+ * This will add your Font Awesome Kit to the front-end, the admin back-end,
+ * and the login screen area.
+ */
+if (! function_exists('fa_custom_setup_kit') ) {
+  function fa_custom_setup_kit($kit_url = '') {
+    foreach ( [ 'wp_enqueue_scripts', 'admin_enqueue_scripts', 'login_enqueue_scripts' ] as $action ) {
+      add_action(
+        $action,
+        function () use ( $kit_url ) {
+          wp_enqueue_script( 'font-awesome-kit', $kit_url, [], null );
+        }
+      );
+    }
+  }
+}
+fa_custom_setup_kit('https://kit.fontawesome.com/b66cc28da7.js');
