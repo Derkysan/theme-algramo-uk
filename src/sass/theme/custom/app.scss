@@ -1,11 +1,15 @@
+// @import './fonts';
+
 // components
 @import './components/header';
 @import './components/footer';
 @import './components/carousel';
+@import './components/loader';
 
 // pages
 @import './pages/home';
 @import './pages/trabaja-con-nosotros';
+@import './pages/simular-impacto';
 
-@import './fonts';
 @import './generic';
+

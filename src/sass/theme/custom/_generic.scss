@@ -1,0 +1,57 @@
+body {
+  font-family: 'CircularStd-Book', Helvetica Neue,Helvetica,Arial,sans-serif;;
+}
+
+.circular-book {
+  font-family: 'CircularStd-Book', Helvetica Neue,Helvetica,Arial,sans-serif;;
+}
+
+.rotate {
+  animation: rotation 8s infinite linear;
+}
+@keyframes rotation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(359deg);
+  }
+}
+
+.banner-header {
+  height: 85vh;
+  &.simular-impacto {
+    height: 75vh;
+  }
+}
+
+.graph-wrapper {
+  .graph-img {
+    position: relative;
+    z-index: 1;
+  }
+  .text-graph-2 {
+    position: absolute;
+    left: -75%;
+    top: -70px;
+    width: 350%;
+    max-width: none;
+    z-index: 0;
+  }
+  .text-graph-3 {
+    position: absolute;
+    left: -75%;
+    top: -105px;
+    width: 250%;
+    max-width: none;
+    z-index: 0;
+  }
+  .text-graph-4 {
+    position: absolute;
+    left: -75%;
+    bottom: -105px;
+    width: 200%;
+    max-width: none;
+    z-index: 0;
+  }
+}

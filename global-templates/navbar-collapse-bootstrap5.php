@@ -11,7 +11,7 @@ defined( 'ABSPATH' ) || exit;
 $container = get_theme_mod( 'understrap_container_type' );
 ?>
 
-<nav id="main-nav" class="navbar navbar-expand-md navbar-light bg-transparent main-navbar sticky-top" aria-labelledby="main-nav-label">
+<nav id="main-nav" class="navbar navbar-expand-md bg-transparent main-navbar sticky-top" aria-labelledby="main-nav-label">
 
 	<h2 id="main-nav-label" class="screen-reader-text">
 		<?php esc_html_e( 'Main Navigation', 'understrap' ); ?>
@@ -43,9 +43,9 @@ $container = get_theme_mod( 'understrap_container_type' );
       <!-- end custom logo -->
     </div>
 
-    <div class="d-flex w-100 justify-content-between">
+    <div class="d-flex w-75 justify-content-between align-items-center">
 
-      <nav id="site-navigation" class="main-navigation ms-auto">
+      <nav id="site-navigation" class="main-navigation">
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="<?php esc_attr_e( 'Toggle navigation', 'understrap' ); ?>">
           <span class="navbar-toggler-icon"></span>
         </button>
@@ -68,7 +68,15 @@ $container = get_theme_mod( 'understrap_container_type' );
           ?>
           
       </nav>
+      <!-- <div class="">
+        <button type="button" class="btn btn-link">ES | EN</button>
+      </div> -->
+      <div class="">
+        <?php dynamic_sidebar( 'header-right' ); ?>
+        <!-- <button type="button" class="btn btn-primary text-white btn-cmp">Simula tu impacto</button> -->
+      </div>
     </div>
+
 		
 
 	</div><!-- .container(-fluid) -->

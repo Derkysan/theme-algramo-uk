@@ -25,6 +25,17 @@ $navbar_type       = get_theme_mod( 'understrap_navbar_type', 'collapse' );
 <body <?php body_class(); ?> <?php understrap_body_attributes(); ?>>
 <?php do_action( 'wp_body_open' ); ?>
 <div class="site" id="page">
+  
+  <div id="loadingPage" class="loader animate__animated animate__fadeIn">
+    <div class="sk-chase">
+      <div class="sk-chase-dot"></div>
+      <div class="sk-chase-dot"></div>
+      <div class="sk-chase-dot"></div>
+      <div class="sk-chase-dot"></div>
+      <div class="sk-chase-dot"></div>
+      <div class="sk-chase-dot"></div>
+    </div>
+  </div>
 
 	<!-- ******************* The Navbar Area ******************* -->
 	<header id="wrapper-navbar" class="<?php if ( is_admin_bar_showing() ) { ?> fixed-top fixed-admin <?php } else { ?>fixed-top<?php } ?>">

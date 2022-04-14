@@ -19,7 +19,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 
 	<div class="<?php echo esc_attr( $container ); ?>">
 
-		<div class="row mb-3">
+		<div class="row mb-5">
 
       <div class="col-12 col-md-4">
         <?php dynamic_sidebar( 'footer-1' ); ?>
@@ -37,12 +37,15 @@ $container = get_theme_mod( 'understrap_container_type' );
 
 		</div>
 
-    <div class="row">
+    <div class="row" style="align-items: baseline;">
       <div class="col">
         <?php dynamic_sidebar( 'footer-5' ); ?>
       </div>
       <div class="col">
-      <?php dynamic_sidebar( 'footer-6' ); ?>
+        <div class="footer-copy">
+          <span>Todos lo derechos reservados, 2022</span>
+          <img src="<?php echo get_theme_file_uri(); ?>/images/logo-empresa-certificada.svg" alt="logo empresa certificada">
+        </div>
       </div>
     </div>
 

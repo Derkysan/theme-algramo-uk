@@ -1,0 +1,21 @@
+.form-select {
+  padding-top: .75em;
+  padding-bottom: .75em;
+  background-color: #ffffff;
+}
+
+.wrapper-carousel {
+  &.data-2 {
+    position: relative;
+    img {
+      &.grid-carousel {
+        position: absolute;
+        width: 50%;
+        left: 0;
+        right: 0;
+        bottom: -6em;
+        margin: auto;
+      }
+    }
+  }
+}

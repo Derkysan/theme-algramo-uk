@@ -1,16 +1,48 @@
 #wrapper-navbar {
+  .wp-block-columns {
+    margin: 0;
+  }
   background: linear-gradient(180deg, #FFFFFF 0%, rgba(255, 255, 255, 0) 100%);
   &.fixed-admin {
     margin-top: 32px;
   }
 }
 .main-navbar {
+  align-items: center;
   .site-branding {
     max-width: 120px;
   }
   .navbar-nav {
     .nav-link {
       font-size: 0.9em;
+      color: rgba(0, 0, 0, 1);
+    }
+  }
+  button {
+    &.btn-cmp {
+      font-weight: 450;
+      font-size: 14px;
+      border-radius: 12px;
+      padding-top: .75em;
+      padding-bottom: .75em;
+    }
+  }
+}
+
+#menu-menu-header-right {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  .btn-cmp {
+    a {
+      font-weight: 450;
+      font-size: 14px;
+      border-radius: 12px;
+      padding: 1em;
+      background-color: #00ABB1;
+      color: #ffffff;
+      text-decoration: none;
+      font-size: 14px;
     }
   }
 }

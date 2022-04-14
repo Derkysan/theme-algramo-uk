@@ -89,6 +89,17 @@ function understrap_child_customize_controls_js() {
 add_action( 'customize_controls_enqueue_scripts', 'understrap_child_customize_controls_js' );
 
 function algramo_theme_widgets_init() {
+  register_sidebar(
+    array(
+      'name'          => esc_html__( 'Header right', 'algramo-theme' ),
+      'id'            => 'sidebar-6',
+      'description'   => esc_html__( 'Add widgets here.', 'algramo-theme' ),
+      'before_widget' => '<section id="%1$s" class="widget %2$s">',
+      'after_widget'  => '</section>',
+      'before_title'  => '<h2 class="widget-title">',
+      'after_title'   => '</h2>',
+    )
+  );
 	register_sidebar(
 		array(
 			'name'          => esc_html__( 'Footer 1', 'algramo-theme' ),
@@ -144,17 +155,7 @@ function algramo_theme_widgets_init() {
       'after_title'   => '</h2>',
     )
   );
-  register_sidebar(
-    array(
-      'name'          => esc_html__( 'Footer 6', 'algramo-theme' ),
-      'id'            => 'sidebar-6',
-      'description'   => esc_html__( 'Add widgets here.', 'algramo-theme' ),
-      'before_widget' => '<section id="%1$s" class="widget %2$s">',
-      'after_widget'  => '</section>',
-      'before_title'  => '<h2 class="widget-title">',
-      'after_title'   => '</h2>',
-    )
-  );
+  
 }
 add_action( 'widgets_init', 'algramo_theme_widgets_init' );
 
@@ -164,6 +165,7 @@ function load_swiper_scripts() {
 }
 add_action( 'wp_enqueue_scripts', 'load_swiper_scripts' );
 function load_animate_css() {
+  wp_enqueue_style( 'animate-css', 'https://unpkg.com/aos@next/dist/aos.css' );
   wp_enqueue_style( 'animate-css', 'https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css' );
   wp_enqueue_style( 'style', get_stylesheet_uri() );
 }

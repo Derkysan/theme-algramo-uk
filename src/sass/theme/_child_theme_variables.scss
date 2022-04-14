@@ -9,3 +9,5 @@ $primary: $green-primary;  // Once we've changed the value, we'll also make it t
 $body-bg: #F4F3F6;
 
 $font-family-sans-serif: CircularStd-Book, Helvetica, Arial, sans-serif;
+
+@import './custom/fonts';
