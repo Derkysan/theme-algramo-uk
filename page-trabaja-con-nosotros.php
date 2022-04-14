@@ -22,25 +22,26 @@
 
     <section class="py-5">
 
-      <div class="wrapper-carousel ps-5">
-
-        <div class="swiper swiper-gallery-2">
-          <div class="swiper-wrapper">
-
-            <?php while (have_rows('galeria_de_imagenes')) : the_row(); ?>
-
-              <div class="swiper-slide">
-                <div class="item">
-                  <div class="thumb">
-                    <?php if (get_sub_field('slide')) : ?>
-                      <img src="<?php the_sub_field('slide'); ?>" />
-                    <?php endif ?>
+      <div class="wrapper-carousel">
+        <div class="container-fluid">
+          <div class="swiper swiper-gallery-2">
+            <div class="swiper-wrapper">
+  
+              <?php while (have_rows('galeria_de_imagenes')) : the_row(); ?>
+  
+                <div class="swiper-slide">
+                  <div class="item">
+                    <div class="thumb">
+                      <?php if (get_sub_field('slide')) : ?>
+                        <img src="<?php the_sub_field('slide'); ?>" />
+                      <?php endif ?>
+                    </div>
                   </div>
                 </div>
-              </div>
-
-            <?php endwhile; ?>
-
+  
+              <?php endwhile; ?>
+  
+            </div>
           </div>
         </div>
 
@@ -60,23 +61,13 @@
       <section class="benefits-wrapper bg-white py-5">
         <div class="container text-center">
           <div class="row justify-content-center">
-            <div class="col-12 col-md-8 ">
+            <div class="col-12 col-md-8">
 
               <div class="mb-3">
                 <img src="<?php echo get_theme_file_uri(); ?>/images/vector-solid.svg" alt="vector-solid">
               </div>
-
               <?php the_sub_field('texto'); ?>
-              <!-- <div class="mb-3">
-              <img src="<?php echo get_theme_file_uri(); ?>/images/vector-solid.svg" alt="vector-solid">
-            </div>
-            <h2 class="mb-4">Beneficios</h2>
-            <p class="">
-              Algramo es una startup con sentido, por eso nos preocupamos de que existan buenas condiciones laborales, que permitan encontrar un equilibrio entre la vida privada y el trabajo, así como un ambiente propicio para el desarrollo personal y profesional.
-              <br><br>
-              <span>¡Además tenemos buenos beneficios!</span>
-            </p> -->
-
+              
             </div>
           </div>
 
@@ -86,21 +77,21 @@
                 <div class="col-12 col-md-11">
 
                   <div class="row">
-                    <div class="col-12 col-md-3">
+                    <div class="col-12 col-md-3 mb-5">
                       <?php the_sub_field('beneficio_1'); ?>
                     </div>
-                    <div class="col-12 col-md-3">
+                    <div class="col-12 col-md-3 mb-5">
                       <?php the_sub_field('beneficio_2'); ?>
                     </div>
-                    <div class="col-12 col-md-3">
+                    <div class="col-12 col-md-3 mb-5">
                       <?php the_sub_field('beneficio_3'); ?>
                     </div>
-                    <div class="col-12 col-md-3">
+                    <div class="col-12 col-md-3 mb-5">
                       <?php the_sub_field('beneficio_4'); ?>
                     </div>
                   </div>
 
-                  <p class="text-center text-primary mt-5 mb-0">Y muchooos más</p>
+                  <p class="text-center text-primary mb-0">Y muchooos más</p>
 
                 </div>
               </div>
@@ -149,7 +140,7 @@
 
         <div class="container">
           <div class="row justify-content-center">
-            <div class="col-6">
+            <div class="col-10 col-md-6">
 
               <div class="graph-wrapper text-center">
                 <img src="<?php echo get_theme_file_uri(); ?>/images/nuestra-cultura.svg" class="text-graph-2" alt="Nuestra cultura">
@@ -173,7 +164,7 @@
 
     <?php if (have_rows('galeria_cultura')) : ?>
 
-      <div class="wrapper-carousel ps-5">
+      <div class="wrapper-carousel">
 
 
         <div class="swiper swiper-gallery-2">
@@ -317,7 +308,7 @@
 
         <div class="container">
           <div class="row justify-content-center">
-            <div class="col-6">
+            <div class="col-10 col-md-6">
 
               <div class="graph-wrapper text-center">
                 <img src="<?php echo get_theme_file_uri(); ?>/images/trabaja-con-nosotros.svg" class="text-graph-3" alt="Trabaja con nosotros">

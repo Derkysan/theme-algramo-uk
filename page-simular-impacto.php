@@ -114,7 +114,7 @@
         <?php while ( have_rows( 'texto-imagen' ) ) : the_row(); ?>
 
           <div class="row justify-content-center text-center">
-            <div class="col-12 col-md-8 pt-3">
+            <div class="col-10 col-md-8 pt-3">
 
               <?php the_sub_field( 'texto' ); ?>
 

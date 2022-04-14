@@ -17,12 +17,11 @@ $container = get_theme_mod( 'understrap_container_type' );
 		<?php esc_html_e( 'Main Navigation', 'understrap' ); ?>
 	</h2>
 
-
 	<!-- <div class="<?php echo esc_attr( $container ); ?>"> -->
   <div class="container-fluid">
 
 		<!-- Your site title as branding in the menu -->
-    <div class="site-branding">
+    
       <?php if ( ! has_custom_logo() ) { ?>
   
         <?php if ( is_front_page() && is_home() ) : ?>
@@ -41,21 +40,22 @@ $container = get_theme_mod( 'understrap_container_type' );
       }
       ?>
       <!-- end custom logo -->
-    </div>
+    
 
-    <div class="d-flex w-75 justify-content-between align-items-center">
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="<?php esc_attr_e( 'Toggle navigation', 'understrap' ); ?>">
+      <i class="fa-solid fa-bars"></i>
+    </button>
+    
+    <!-- <div class="d-flex  justify-content-between align-items-center"> -->
 
-      <nav id="site-navigation" class="main-navigation">
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="<?php esc_attr_e( 'Toggle navigation', 'understrap' ); ?>">
-          <span class="navbar-toggler-icon"></span>
-        </button>
+      <!-- <nav id="site-navigation" class="main-navigation"> -->
           
           <?php
           if ( has_nav_menu( 'primary' ) ) {
             wp_nav_menu(
               array(
                 'theme_location' => 'primary',
-                'container_class' => 'collapse navbar-collapse',
+                'container_class' => 'collapse navbar-collapse justify-content-center',
                 'container_id' => 'navbarNavDropdown',
                 'menu_class' => 'navbar-nav ml-auto',
                 'fallback_cb' => '',
@@ -67,15 +67,14 @@ $container = get_theme_mod( 'understrap_container_type' );
           }
           ?>
           
-      </nav>
+      <!-- </nav> -->
       <!-- <div class="">
         <button type="button" class="btn btn-link">ES | EN</button>
       </div> -->
-      <div class="">
+      <div class="d-none d-md-block">
         <?php dynamic_sidebar( 'header-right' ); ?>
-        <!-- <button type="button" class="btn btn-primary text-white btn-cmp">Simula tu impacto</button> -->
       </div>
-    </div>
+    <!-- </div> -->
 
 		
 

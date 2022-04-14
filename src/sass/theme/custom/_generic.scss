@@ -20,6 +20,9 @@ body {
 
 .banner-header {
   height: 85vh;
+  h1 {
+    font-size: 75px;
+  }
   &.simular-impacto {
     height: 75vh;
   }
@@ -54,4 +57,12 @@ body {
     max-width: none;
     z-index: 0;
   }
+}
+
+@media (max-width: 767.98px) {
+
+  .banner-header h1 {
+    font-size: 3em;
+  }
+
 }

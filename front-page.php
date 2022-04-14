@@ -147,11 +147,11 @@ get_header();
         <?php endif ?>
         <div class="container">
           <div class="row">
-            <div class="col-8">
-              <h3 class="mb-5 pe-4">"<?php the_sub_field('cita_texto'); ?>"</h3>
+            <div class="col-6 col-md-8">
+              <h3 class="pe-4">"<?php the_sub_field('cita_texto'); ?>"</h3>
               <p><?php the_sub_field('cita_info'); ?></p>
             </div>
-            <div class="col-4">
+            <div class="col-6 col-md-4">
             </div>
           </div>
         </div>
@@ -175,7 +175,7 @@ get_header();
 
                   <div class="card-items">
                     <div class="row">
-                      <div class="col">
+                      <div class="col-12 col-md-6">
                         <div class="item-card mb-5">
                           <h5 class="fw-bold"><?php the_sub_field('titulo'); ?></h5>
                           <div class="thumb">
@@ -186,7 +186,7 @@ get_header();
                           <div class="info circular-light"><?php the_sub_field('contenido'); ?> </div>
                         </div>
                       </div>
-                      <div class="col">
+                      <div class="col-12 col-md-6">
                         <div class="item-card mb-5">
                           <h5 class="fw-bold">Más sustentable 🌳</h5>
                           <div class="thumb">
@@ -243,8 +243,8 @@ get_header();
               <h3 class="text-center mb-5"><?php the_sub_field('titulo'); ?> </h3>
 
               <div class="row">
-                <div class="col col-md-1"></div>
-                <div class="col col-md-3">
+                <div class="d-none d-md-inline-flex col-md-1"></div>
+                <div class="d-none d-md-inline-flex col-md-3">
                   <div class="recharge-img">
                     <img src="<?php echo get_theme_file_uri(); ?>/images/recharge-img.png" class="recharge-img-1" alt="recharge-img">
                     <img src="<?php echo get_theme_file_uri(); ?>/images/book-bg-2.png" class="recharge-img-2" alt="recharge-bg">
@@ -256,7 +256,7 @@ get_header();
                     <?php while (have_rows('pasos')) : the_row(); ?>
 
                       <div class="row">
-                        <div class="col-3 ps-5">
+                        <div class="col-4 col-md-3 ps-5">
                           <img src="<?php echo get_theme_file_uri(); ?>/images/paso-1.png" class="step-img" alt="step-1">
                         </div>
                         <div class="col">
@@ -265,7 +265,7 @@ get_header();
                       </div>
 
                       <div class="row">
-                        <div class="col-3 pe-5">
+                        <div class="col-4 col-md-3 pe-5">
                           <img src="<?php echo get_theme_file_uri(); ?>/images/paso-2.png" class="step-img" alt="step-2">
                         </div>
                         <div class="col">
@@ -273,8 +273,8 @@ get_header();
                         </div>
                       </div>
 
-                      <div class="row">
-                        <div class="col-3">...</div>
+                      <div class="row mb-5">
+                        <div class="col-4 col-md-3">...</div>
                         <div class="col">
                           <?php the_sub_field('paso_3'); ?>
                         </div>
@@ -301,9 +301,9 @@ get_header();
         <div class="col">
           <h2 class="text-center mb-5">Todo lo que podrás encontrar</h2>
 
-          <div class="wrapper-carousel ps-5">
+          <div class="wrapper-carousel">
 
-            <div class="swiper swiper-gallery ps-4">
+            <div class="swiper swiper-gallery">
               <div class="swiper-wrapper">
 
                 <?php if (have_rows('carousel_de_imagenes')) : ?>
@@ -344,7 +344,7 @@ get_header();
           <h2 class="mb-5 text-center"><?php the_sub_field('titulo_de_seccion'); ?></h2>
 
           <div class="row">
-            <div class="col">
+            <div class="col-12 col-md-6">
 
               <?php if (have_rows('tarjeta_1')) : ?>
                 <?php while (have_rows('tarjeta_1')) : the_row(); ?>
@@ -371,7 +371,7 @@ get_header();
 
             </div>
 
-            <div class="col">
+            <div class="col-12 col-md-6">
 
               <?php if (have_rows('tarjeta_2')) : ?>
                 <?php while (have_rows('tarjeta_2')) : the_row(); ?>

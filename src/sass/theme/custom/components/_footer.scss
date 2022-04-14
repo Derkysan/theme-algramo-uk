@@ -20,8 +20,13 @@
   }
 }
 #menu-redes-sociales {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
   li {
     margin-right: .5em;
+    display: flex;
+    align-items: center;
     &::before {
       background-color: #fff;
       width: 24px;
@@ -44,4 +49,17 @@
   justify-content: flex-end;
   align-items: flex-end;
   gap: 2em;
+}
+
+@media (max-width: 767.98px) {
+
+  #menu-redes-sociales {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .footer-copy {
+    height: auto;
+  }
+
 }

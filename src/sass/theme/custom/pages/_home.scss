@@ -83,10 +83,14 @@
   h3 {
     font-size: 4em;
     line-height: 1.3em;
+    margin-bottom: 1em
   }
   .quote-img {
-    width: 100%;
-    max-width: 750px;
+    // width: 100%;
+    // max-width: 750px;
+    width: auto;
+    max-width: auto;
+    height: 115%;
     position: absolute;
     right: 0;
     bottom: 0;
@@ -213,4 +217,42 @@ img {
     top: -15em;
     right: -10.5em;
   }
+}
+
+
+// `md` applies to small devices (landscape phones, less than 768px)
+@media (max-width: 767.98px) {
+
+  .main-slider {
+    height: 50vh;
+    .swiper-main {
+      .swiper-slide {
+        .slide-wrapper {
+          h1 {
+            font-size: 1.5em;
+          }
+        }
+      }
+    }
+  }
+
+  .wrapper-quote {
+    img {
+      &.asterisk {
+        height: 60%;
+      }
+    }
+    h3 {
+      font-size: 1.5em;
+    }
+    .quote-img {
+      height: 85%;
+      right: -70px;
+    }
+    p {
+      font-size: .85em;
+    }
+    margin-bottom: 1em
+  }
+
 }

@@ -1,5 +1,6 @@
 .txt-img-block {
   display: flex;
+  flex-direction: row;
   gap: 2em;
   align-items: center;
   .block-1 {
@@ -87,6 +88,7 @@
 }
 .vacancy-list {
   display: flex;
+  flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-between;
   .item {
@@ -151,4 +153,16 @@
     max-width: none;
     z-index: 0;
   }
+}
+
+@media (max-width: 767.98px) {
+
+  .txt-img-block {
+    flex-direction: column;
+  }
+
+  .vacancy-list {
+    flex-direction: column;
+  }
+
 }
