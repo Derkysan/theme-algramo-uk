@@ -49,32 +49,37 @@ $container = get_theme_mod( 'understrap_container_type' );
     <!-- <div class="d-flex  justify-content-between align-items-center"> -->
 
       <!-- <nav id="site-navigation" class="main-navigation"> -->
-          
-          <?php
-          if ( has_nav_menu( 'primary' ) ) {
-            wp_nav_menu(
-              array(
-                'theme_location' => 'primary',
-                'container_class' => 'collapse navbar-collapse justify-content-center',
-                'container_id' => 'navbarNavDropdown',
-                'menu_class' => 'navbar-nav ml-auto',
-                'fallback_cb' => '',
-                'menu_id' => 'main-menu',
-                'depth' => 2,
-                'walker' => new Understrap_WP_Bootstrap_Navwalker(),
-              )
-            );
-          }
-          ?>
-          
-      <!-- </nav> -->
-      <!-- <div class="">
-        <button type="button" class="btn btn-link">ES | EN</button>
-      </div> -->
-      <div class="d-none d-md-block">
-        <?php dynamic_sidebar( 'header-right' ); ?>
+
+      <div id="navbarNavDropdown" class="collapse navbar-collapse justify-content-center">
+
+        <?php
+        if ( has_nav_menu( 'primary' ) ) {
+          wp_nav_menu(
+            array(
+              'theme_location' => 'primary',
+              // 'container_class' => 'collapse navbar-collapse justify-content-center',
+              // 'container_id' => 'navbarNavDropdown',
+              'menu_class' => 'navbar-nav ml-auto',
+              'fallback_cb' => '',
+              'menu_id' => 'main-menu',
+              'depth' => 2,
+              'walker' => new Understrap_WP_Bootstrap_Navwalker(),
+            )
+          );
+        }
+        ?>
+        
+    <!-- </nav> -->
+    <!-- <div class="">
+      <button type="button" class="btn btn-link">ES | EN</button>
+    </div> -->
+    <div class="secondary-menu ms-auto">
+      <?php dynamic_sidebar( 'header-right' ); ?>
+    </div>
+  <!-- </div> -->
+
       </div>
-    <!-- </div> -->
+          
 
 		
 

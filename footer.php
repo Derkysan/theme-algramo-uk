@@ -40,10 +40,10 @@ $container = get_theme_mod( 'understrap_container_type' );
     <div class="d-none d-md-block mb-5"></div>
 
     <div class="row" style="align-items: baseline;">
-      <div class="col-12 col-md-6">
+      <div class="col-12 col-md-7">
         <?php dynamic_sidebar( 'footer-5' ); ?>
       </div>
-      <div class="col-12 col-md-6">
+      <div class="col-12 col-md-5">
         <div class="footer-copy">
           <span>Todos lo derechos reservados, 2022</span>
           <img src="<?php echo get_theme_file_uri(); ?>/images/logo-empresa-certificada.svg" alt="logo empresa certificada">

@@ -8,7 +8,7 @@
 
     <div class="container h-100">
       <div class="row align-items-center justify-content-center h-100">
-        <div class="col-12 col-md-8 text-center">
+        <div class="col-12 col-md-7 text-center">
           <?php if (get_field('banner')) : ?>
             <?php the_field('banner'); ?>
           <?php endif; ?>
@@ -22,7 +22,12 @@
 
     <section class="py-5">
 
-      <div class="wrapper-carousel">
+      <div class="wrapper-carousel"
+        data-aos="fade-in" 
+        data-aos-delay="50"
+        data-aos-offset="100" 
+        data-aos-easing="ease-in-out" 
+        data-aos-once="false">
         <div class="container-fluid">
           <div class="swiper swiper-gallery-2">
             <div class="swiper-wrapper">
@@ -64,9 +69,15 @@
             <div class="col-12 col-md-8">
 
               <div class="mb-3">
-                <img src="<?php echo get_theme_file_uri(); ?>/images/vector-solid.svg" alt="vector-solid">
+                <img src="<?php echo get_theme_file_uri(); ?>/images/vector-solid.svg" class="rotate" alt="vector-solid">
               </div>
-              <?php the_sub_field('texto'); ?>
+              <div data-aos="fade-up" 
+                data-aos-delay="50"
+                data-aos-offset="250" 
+                data-aos-easing="ease-in-out" 
+                data-aos-once="false">
+                <?php the_sub_field('texto'); ?>
+              </div>
               
             </div>
           </div>
@@ -77,21 +88,46 @@
                 <div class="col-12 col-md-11">
 
                   <div class="row">
-                    <div class="col-12 col-md-3 mb-5">
+                    <div class="col-12 col-md-3 mb-5" 
+                      data-aos="fade-up" 
+                      data-aos-delay="50"
+                      data-aos-offset="250" 
+                      data-aos-easing="ease-in-out" 
+                      data-aos-once="false">
                       <?php the_sub_field('beneficio_1'); ?>
                     </div>
-                    <div class="col-12 col-md-3 mb-5">
+                    <div class="col-12 col-md-3 mb-5" 
+                      data-aos="fade-up" 
+                      data-aos-delay="150"
+                      data-aos-offset="250" 
+                      data-aos-easing="ease-in-out" 
+                      data-aos-once="false">
                       <?php the_sub_field('beneficio_2'); ?>
                     </div>
-                    <div class="col-12 col-md-3 mb-5">
+                    <div class="col-12 col-md-3 mb-5" 
+                      data-aos="fade-up" 
+                      data-aos-delay="250"
+                      data-aos-offset="250" 
+                      data-aos-easing="ease-in-out" 
+                      data-aos-once="false">
                       <?php the_sub_field('beneficio_3'); ?>
                     </div>
-                    <div class="col-12 col-md-3 mb-5">
+                    <div class="col-12 col-md-3 mb-5" 
+                      data-aos="fade-up" 
+                      data-aos-delay="350"
+                      data-aos-offset="250" 
+                      data-aos-easing="ease-in-out" 
+                      data-aos-once="false">
                       <?php the_sub_field('beneficio_4'); ?>
                     </div>
                   </div>
 
-                  <p class="text-center text-primary mb-0">Y muchooos más</p>
+                  <p class="text-center text-primary mb-0"
+                    data-aos="fade-right" 
+                    data-aos-delay="50"
+                    data-aos-offset="250" 
+                    data-aos-easing="ease-in-out" 
+                    data-aos-once="false">Y muchooos más</p>
 
                 </div>
               </div>
@@ -109,12 +145,22 @@
       <section class="pt-5">
         <div class="txt-img-block">
           <div class="block-1">
-            <div class="txt-wrapper">
+            <div class="txt-wrapper"
+              data-aos="fade-left" 
+              data-aos-delay="50"
+              data-aos-offset="250" 
+              data-aos-easing="ease-in-out" 
+              data-aos-once="false">
               <?php the_sub_field('texto'); ?>
             </div>
           </div>
           <div class="block-2">
-            <div class="img-wrapper">
+            <div class="img-wrapper"
+              data-aos="fade-right" 
+              data-aos-delay="50"
+              data-aos-offset="250" 
+              data-aos-easing="ease-in-out" 
+              data-aos-once="false">
               <?php if (get_sub_field('imagen')) : ?>
                 <img src="<?php the_sub_field('imagen'); ?>" />
               <?php endif ?>
@@ -132,7 +178,7 @@
   <section class="pb-5">
 
     <div class="text-center py-5">
-      <img src="<?php echo get_theme_file_uri(); ?>/images/vector-solid.svg" alt="vector-solid">
+      <img src="<?php echo get_theme_file_uri(); ?>/images/vector-solid.svg" class="rotate" alt="vector-solid">
     </div>
 
     <?php if (have_rows('cultura')) : ?>
@@ -143,15 +189,42 @@
             <div class="col-10 col-md-6">
 
               <div class="graph-wrapper text-center">
-                <img src="<?php echo get_theme_file_uri(); ?>/images/nuestra-cultura.svg" class="text-graph-2" alt="Nuestra cultura">
-                <img src="<?php echo get_theme_file_uri(); ?>/images/book-bg.png" class="grid-img" alt="grid image">
-                <div class="graph-img">
+                <img src="<?php echo get_theme_file_uri(); ?>/images/nuestra-cultura.svg" 
+                  class="text-graph-2"
+                  data-aos="fade-left" 
+                  data-aos-duration="1500" 
+                  data-aos-delay="50" 
+                  data-aos-offset="250" 
+                  data-aos-easing="ease-in-out" 
+                  data-aos-once="false"
+                  alt="Nuestra cultura">
+                <img src="<?php echo get_theme_file_uri(); ?>/images/book-bg.png" 
+                  class="grid-img" 
+                  data-aos="fade-down" 
+                  data-aos-duration="1000" 
+                  data-aos-delay="50" 
+                  data-aos-offset="250"
+                  data-aos-easing="ease-in-out" 
+                  data-aos-once="false"
+                  alt="grid image">
+                <div class="graph-img"
+                  data-aos="fade-up" 
+                  data-aos-duration="1000" 
+                  data-aos-delay="50" 
+                  data-aos-offset="250"
+                  data-aos-easing="ease-in-out" 
+                  data-aos-once="false">
                   <?php if (get_sub_field('imagen')) : ?>
                     <img src="<?php the_sub_field('imagen'); ?>" />
                   <?php endif ?>
                 </div>
               </div>
-              <div class="mb-5">
+              <div class="mb-5"
+                data-aos="fade-up" 
+                data-aos-delay="50" 
+                data-aos-offset="250"
+                data-aos-easing="ease-in-out" 
+                data-aos-once="false">
                 <?php the_sub_field('texto'); ?>
               </div>
 
@@ -164,7 +237,12 @@
 
     <?php if (have_rows('galeria_cultura')) : ?>
 
-      <div class="wrapper-carousel">
+      <div class="wrapper-carousel"
+        data-aos="fade-in" 
+        data-aos-delay="50" 
+        data-aos-offset="250"
+        data-aos-easing="ease-in-out" 
+        data-aos-once="false">
 
 
         <div class="swiper swiper-gallery-2">
@@ -199,14 +277,19 @@
 
 
   <section class="values-wrapper py-5">
-    <img src="<?php echo get_theme_file_uri(); ?>/images/vector-lineal.png" class="cut-asterisk" alt="asterisk img">
+    <img src="<?php echo get_theme_file_uri(); ?>/images/vector-lineal.png" class="cut-asterisk rotate" alt="asterisk img">
 
     <?php if (have_rows('valores')) : ?>
       <?php while (have_rows('valores')) : the_row(); ?>
 
         <div class="container-fluid px-5">
           <div class="row">
-            <div class="col-12 col-md-4">
+            <div class="col-12 col-md-4"
+              data-aos="fade-right" 
+              data-aos-delay="50" 
+              data-aos-offset="250"
+              data-aos-easing="ease-in-out" 
+              data-aos-once="false">
               <h2><?php the_sub_field('titulo_de_seccion'); ?></h2>
             </div>
             <div class="col-12 col-md-5">
@@ -215,8 +298,21 @@
 
                 <?php while (have_rows('desplegable')) : the_row();
                   $i++; ?>
-                  <div class="collapsible-wrapper">
-                    <img src="<?php echo get_theme_file_uri(); ?>/images/book-bg.png" class="grid-img" alt="grid image">
+                  <div class="collapsible-wrapper"
+                    data-aos="fade-in" 
+                    data-aos-delay="50" 
+                    data-aos-offset="250"
+                    data-aos-easing="ease-in-out" 
+                    data-aos-once="false">
+                    <img src="<?php echo get_theme_file_uri(); ?>/images/book-bg.png" 
+                      class="grid-img" 
+                      data-aos="fade-up" 
+                      data-aos-delay="50" 
+                      data-aos-duration="1500"
+                      data-aos-offset="250"
+                      data-aos-easing="ease-in-out" 
+                      data-aos-once="false"
+                      alt="grid image" />
                     <button class="btn" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
                       <div><span class="text-primary">0<?php echo $i; ?>. </span><?php the_sub_field('titulo'); ?></div> <i class="fa-solid fa-plus"></i>
                     </button>
@@ -256,7 +352,13 @@
         <div class="container">
           <div class="row justify-content-center mb-5">
             <div class="col-12 col-md-8 text-center">
-              <?php the_sub_field('texto'); ?>
+              <div data-aos="fade-up" 
+                  data-aos-delay="50" 
+                  data-aos-offset="250"
+                  data-aos-easing="ease-in-out" 
+                  data-aos-once="false">
+                <?php the_sub_field('texto'); ?>
+              </div>
             </div>
           </div>
 
@@ -269,7 +371,12 @@
                   <?php while (have_rows('item')) : the_row(); ?>
 
                     <div class="col-12 col-md-3">
-                      <div class="culture-item">
+                      <div class="culture-item"
+                        data-aos="fade-left" 
+                        data-aos-delay="50" 
+                        data-aos-offset="250"
+                        data-aos-easing="ease-in-out" 
+                        data-aos-once="false">
                         <div class="thumb">
                           <?php if (get_sub_field('imagen')) : ?>
                             <img src="<?php the_sub_field('imagen'); ?>" />
@@ -311,21 +418,53 @@
             <div class="col-10 col-md-6">
 
               <div class="graph-wrapper text-center">
-                <img src="<?php echo get_theme_file_uri(); ?>/images/trabaja-con-nosotros.svg" class="text-graph-3" alt="Trabaja con nosotros">
-                <img src="<?php echo get_theme_file_uri(); ?>/images/book-bg.png" class="grid-img" alt="grid image">
-                <div class="graph-img">
+                <img src="<?php echo get_theme_file_uri(); ?>/images/trabaja-con-nosotros.svg" 
+                  class="text-graph-3"
+                  data-aos="fade-right" 
+                  data-aos-delay="50" 
+                  data-aos-duration="1500"
+                  data-aos-offset="250"
+                  data-aos-easing="ease-in-out" 
+                  data-aos-once="false"
+                  alt="Trabaja con nosotros">
+                <img src="<?php echo get_theme_file_uri(); ?>/images/book-bg.png" 
+                  class="grid-img"
+                  data-aos="fade-up" 
+                  data-aos-delay="50" 
+                  data-aos-duration="1500"
+                  data-aos-offset="250"
+                  data-aos-easing="ease-in-out" 
+                  data-aos-once="false"
+                  alt="grid image">
+                <div class="graph-img"
+                  data-aos="fade-down" 
+                  data-aos-delay="50" 
+                  data-aos-duration="1500"
+                  data-aos-offset="250"
+                  data-aos-easing="ease-in-out" 
+                  data-aos-once="false">
                   <?php if (get_sub_field('imagen')) : ?>
                     <img src="<?php the_sub_field('imagen'); ?>" />
                   <?php endif ?>
                 </div>
               </div>
-              <div class="mb-5"><?php the_sub_field('texto'); ?></div>
+              <div class="mb-5"
+                data-aos="fade-down" 
+                data-aos-delay="50" 
+                data-aos-offset="250"
+                data-aos-easing="ease-in-out" 
+                data-aos-once="false"><?php the_sub_field('texto'); ?></div>
 
             </div>
           </div>
         </div>
 
-        <h4 class="text-primary">¡Construyamos juntos el primer unicornio circular!🦄🌎</h4>
+        <h4 class="text-primary"
+          data-aos="fade-down" 
+          data-aos-delay="50" 
+          data-aos-offset="250"
+          data-aos-easing="ease-in-out" 
+          data-aos-once="false">¡Construyamos juntos el primer unicornio circular!🦄🌎</h4>
 
       </section>
 
@@ -342,22 +481,28 @@
             <div class="vacancy-list">
               <?php while (have_rows('vacantes')) : the_row(); ?>
 
-
-
-                <div class="item">
+                <div class="item"
+                  data-aos="fade-down" 
+                  data-aos-delay="50" 
+                  data-aos-offset="250"
+                  data-aos-easing="ease-in-out" 
+                  data-aos-once="false">
                   <p class="mb-0"><small><?php the_sub_field('pais'); ?></small></p>
                   <h5 class="my-2"><?php the_sub_field('cargo'); ?></h5>
                   <p class="text-primary"><small>Algramo</small></p>
                   <?php the_sub_field('descripcion'); ?>
                 </div>
 
-
-
               <?php endwhile; ?>
             </div>
           <?php else : ?>
 
-            <div class="vacancy-empty">
+            <div class="vacancy-empty"
+              data-aos="fade-up" 
+              data-aos-delay="50" 
+              data-aos-offset="250"
+              data-aos-easing="ease-in-out" 
+              data-aos-once="false">
               <div class="row h-100 justify-content-center align-content-center">
                 <div class="col-12 col-md-6">
                   <p class="mb-0">Ups! No tenemos vacantes por el momento ¿Quieres insistir de cualquier forma? Insistenos a RRHH@algramo.com</p>

@@ -37,6 +37,20 @@
             object-fit: cover;
             object-position: center;
           }
+          video {
+            position: absolute;
+            z-index: 0;
+            object-fit: cover;
+            width:100%;
+            height:100%;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+
+            &::-webkit-media-controls {
+              display:none !important;
+            }
+          }
         }
       }
     }
@@ -86,13 +100,10 @@
     margin-bottom: 1em
   }
   .quote-img {
-    // width: 100%;
-    // max-width: 750px;
-    width: auto;
-    max-width: auto;
-    height: 115%;
+    width: 60%;
+    height: auto;
     position: absolute;
-    right: 0;
+    left: 40%;
     bottom: 0;
     z-index: 1;
   }
@@ -101,37 +112,137 @@
   }
 }
 
-.card-items {
-  .item-card {
-    .thumb {
-      position: relative;
-      margin: 2em 0;
-      height: 410px;
-      .img-spin {
-        width: 150px;
-        height: 150px;
-        position: absolute;
-        top: -75px;
-        right: -75px;
-        z-index: 2;
-      }
-      img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        object-position: center;
+.smart-buy {
+  position: relative;
+  overflow: hidden;
+  img {
+    &.graph {
+      position: absolute;
+      right: 0;
+      bottom: -20%;
+      z-index: 0;
+    }
+  }
+  .card-items {
+    position: relative;
+    .item-card {
+      .thumb {
+        position: relative;
+        margin: 2em 0;
+        height: 410px;
+        .img-spin {
+          width: 150px;
+          height: 150px;
+          position: absolute;
+          top: -75px;
+          right: -75px;
+          z-index: 0;
+        }
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          object-position: center;
+          position: relative;
+          z-index: 1;
+        }
       }
     }
   }
 }
 
+
 .store-btn-wrapper {
   height: 100vh;
+  min-height: 630px;
   position: relative;
   .store-btn-list {
     display: flex;
     gap: 1em;
     justify-content: center;
+  }
+  img {
+    &.cut-asterisk {
+      top: 0;
+      left: 0;
+      position: absolute;
+    }
+  }
+  .phone-1 {
+    position: absolute;
+    width: 400px;
+    margin: 0 auto;
+    left: 4em;
+    bottom: 2em;
+    .text {
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      z-index: 2;
+      width: 120px;
+      font-weight: 700;
+      img {
+        &.arrow {
+          position: absolute;
+          left: 2em;
+          bottom: 110%;
+          z-index: 1;
+        }
+      }
+    }
+  }
+  .phone-2 {
+    position: absolute;
+    width: 250px;
+    margin: 0 auto;
+    left: 0;
+    right: 0;
+    bottom: 2em;
+    .text {
+      position: absolute;
+      left: calc( -140px - 2em );
+      top: 0;
+      z-index: 2;
+      width: 140px;
+      text-align: right;
+      font-weight: 700;
+    }
+    img {
+      &.shine-1 {
+        width: 55px;
+        position: absolute;
+        bottom: 0;
+        right: -2em;
+      }
+      &.shine-2 {
+        width: 50px;
+        position: absolute;
+        top: 0;
+        left: -1em;
+      }
+    }
+  }
+  .phone-3 {
+    position: absolute;
+    width: 300px;
+    margin: 0 auto;
+    right: 6em;
+    bottom: 2em;
+    .text {
+      position: absolute;
+      left: -90px;
+      bottom: 10em;
+      z-index: 2;
+      width: 110px;
+      text-align: right;
+      font-weight: 700;
+      img {
+        &.emoji {
+          width: 2em !important;
+          height: 2em !important;
+        }
+      }
+    }
   }
 }
 
@@ -195,12 +306,14 @@ img {
   .link-item {
     position: relative;
     z-index: 1;
+    margin-bottom: 2em;
   }
 }
 
 .recharge-img-wrapper {
   width: 440px;
   height: 420px;
+  position: relative;
   img {
     width: 100%;
     height: 100%;
@@ -218,6 +331,8 @@ img {
     right: -10.5em;
   }
 }
+
+
 
 
 // `md` applies to small devices (landscape phones, less than 768px)
@@ -253,6 +368,18 @@ img {
       font-size: .85em;
     }
     margin-bottom: 1em
+  }
+
+  .store-btn-wrapper {
+    height: auto;
+  }
+
+  .phone-1,
+  .phone-2,
+  .phone-3 {
+    position: relative !important;
+    top: 0 !important;
+    left: 0 !important;
   }
 
 }

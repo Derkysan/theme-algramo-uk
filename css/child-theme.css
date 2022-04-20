@@ -1,44 +1,4 @@
 @charset "UTF-8";
-@font-face {
-  font-family: "CircularStd-Black";
-  src: url("../../../../fonts/circular/CircularStd-Black.eot");
-  src: url("../../../../fonts/circular/CircularStd-Black.eot?#iefix") format("embedded-opentype"), url("../../../../fonts/circular/CircularStd-Black.woff2") format("woff2"), url("../../../../fonts/circular/CircularStd-Black.woff") format("woff"), url("../../../../fonts/circular/CircularStd-Black.ttf") format("truetype"), url("../../../../fonts/circular/CircularStd-Black.svg#CircularStd-Black") format("svg");
-  font-weight: normal;
-  font-style: normal;
-  font-display: swap;
-}
-@font-face {
-  font-family: "CircularStd-Bold";
-  src: url("../../../../fonts/circular/CircularStd-Bold.eot");
-  src: url("../../../../fonts/circular/CircularStd-Bold.eot?#iefix") format("embedded-opentype"), url("../../../../fonts/circular/CircularStd-Bold.woff2") format("woff2"), url("../../../../fonts/circular/CircularStd-Bold.woff") format("woff"), url("../../../../fonts/circular/CircularStd-Bold.ttf") format("truetype"), url("../../../../fonts/circular/CircularStd-Bold.svg#CircularStd-Bold") format("svg");
-  font-weight: normal;
-  font-style: normal;
-  font-display: swap;
-}
-@font-face {
-  font-family: "CircularStd-Book";
-  src: url("../../../../fonts/circular/CircularStd-Book.eot");
-  src: url("../../../../fonts/circular/CircularStd-Book.eot?#iefix") format("embedded-opentype"), url("../../../../fonts/circular/CircularStd-Book.woff2") format("woff2"), url("../../../../fonts/circular/CircularStd-Book.woff") format("woff"), url("../../../../fonts/circular/CircularStd-Book.ttf") format("truetype"), url("../../../../fonts/circular/CircularStd-Book.svg#CircularStd-Book") format("svg");
-  font-weight: normal;
-  font-style: normal;
-  font-display: swap;
-}
-@font-face {
-  font-family: "CircularStd-Medium";
-  src: url("../../../../fonts/circular/CircularStd-Medium.eot");
-  src: url("../../../../fonts/circular/CircularStd-Medium.eot?#iefix") format("embedded-opentype"), url("../../../../fonts/circular/CircularStd-Medium.woff2") format("woff2"), url("../../../../fonts/circular/CircularStd-Medium.woff") format("woff"), url("../../../../fonts/circular/CircularStd-Medium.ttf") format("truetype"), url("../../../../fonts/circular/CircularStd-Medium.svg#CircularStd-Medium") format("svg");
-  font-weight: normal;
-  font-style: normal;
-  font-display: swap;
-}
-@font-face {
-  font-family: "CircularSpotifyText-Light";
-  src: url("../../../../fonts/circular/CircularSpotifyText-Light.eot");
-  src: url("../../../../fonts/circular/CircularSpotifyText-Light.eot?#iefix") format("embedded-opentype"), url("../../../../fonts/circular/CircularSpotifyText-Light.woff2") format("woff2"), url("../../../../fonts/circular/CircularSpotifyText-Light.woff") format("woff"), url("../../../../fonts/circular/CircularSpotifyText-Light.ttf") format("truetype"), url("../../../../fonts/circular/CircularSpotifyText-Light.svg#CircularSpotifyText-Light") format("svg");
-  font-weight: normal;
-  font-style: normal;
-  font-display: swap;
-}
 /*!
  * Bootstrap v5.1.1 (https://getbootstrap.com/)
  * Copyright 2011-2021 The Bootstrap Authors
@@ -15686,6 +15646,15 @@ figure.woocommerce-product-gallery__wrapper {
   font-size: 14px;
 }
 
+.menu-menu-principal-container {
+  margin-bottom: 0;
+}
+
+@media (max-width: 767.98px) {
+  .menu-menu-principal-container {
+    margin-bottom: 2em;
+  }
+}
 .wrapper-footer {
   background-color: #000000;
   color: #ffffff;
@@ -15714,7 +15683,7 @@ figure.woocommerce-product-gallery__wrapper {
   flex-direction: row;
 }
 #menu-redes-sociales li {
-  margin-right: 0.5em;
+  margin-right: 1em;
   display: flex;
   align-items: center;
 }
@@ -16082,6 +16051,20 @@ figure.woocommerce-product-gallery__wrapper {
   -o-object-position: center;
   object-position: center;
 }
+.main-slider .swiper-main .swiper-slide .slide-wrapper .slider-img video {
+  position: absolute;
+  z-index: 0;
+  -o-object-fit: cover;
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.main-slider .swiper-main .swiper-slide .slide-wrapper .slider-img video::-webkit-media-controls {
+  display: none !important;
+}
 
 .graph-1 {
   width: 100%;
@@ -16125,11 +16108,10 @@ figure.woocommerce-product-gallery__wrapper {
   margin-bottom: 1em;
 }
 .wrapper-quote .quote-img {
-  width: auto;
-  max-width: auto;
-  height: 115%;
+  width: 60%;
+  height: auto;
   position: absolute;
-  right: 0;
+  left: 40%;
   bottom: 0;
   z-index: 1;
 }
@@ -16137,36 +16119,127 @@ figure.woocommerce-product-gallery__wrapper {
   font-size: 1.35em;
 }
 
-.card-items .item-card .thumb {
+.smart-buy {
+  position: relative;
+  overflow: hidden;
+}
+.smart-buy img.graph {
+  position: absolute;
+  right: 0;
+  bottom: -20%;
+  z-index: 0;
+}
+.smart-buy .card-items {
+  position: relative;
+}
+.smart-buy .card-items .item-card .thumb {
   position: relative;
   margin: 2em 0;
   height: 410px;
 }
-.card-items .item-card .thumb .img-spin {
+.smart-buy .card-items .item-card .thumb .img-spin {
   width: 150px;
   height: 150px;
   position: absolute;
   top: -75px;
   right: -75px;
-  z-index: 2;
+  z-index: 0;
 }
-.card-items .item-card .thumb img {
+.smart-buy .card-items .item-card .thumb img {
   width: 100%;
   height: 100%;
   -o-object-fit: cover;
   object-fit: cover;
   -o-object-position: center;
   object-position: center;
+  position: relative;
+  z-index: 1;
 }
 
 .store-btn-wrapper {
   height: 100vh;
+  min-height: 630px;
   position: relative;
 }
 .store-btn-wrapper .store-btn-list {
   display: flex;
   gap: 1em;
   justify-content: center;
+}
+.store-btn-wrapper img.cut-asterisk {
+  top: 0;
+  left: 0;
+  position: absolute;
+}
+.store-btn-wrapper .phone-1 {
+  position: absolute;
+  width: 400px;
+  margin: 0 auto;
+  left: 4em;
+  bottom: 2em;
+}
+.store-btn-wrapper .phone-1 .text {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  z-index: 2;
+  width: 120px;
+  font-weight: 700;
+}
+.store-btn-wrapper .phone-1 .text img.arrow {
+  position: absolute;
+  left: 2em;
+  bottom: 110%;
+  z-index: 1;
+}
+.store-btn-wrapper .phone-2 {
+  position: absolute;
+  width: 250px;
+  margin: 0 auto;
+  left: 0;
+  right: 0;
+  bottom: 2em;
+}
+.store-btn-wrapper .phone-2 .text {
+  position: absolute;
+  left: calc(-140px - 2em);
+  top: 0;
+  z-index: 2;
+  width: 140px;
+  text-align: right;
+  font-weight: 700;
+}
+.store-btn-wrapper .phone-2 img.shine-1 {
+  width: 55px;
+  position: absolute;
+  bottom: 0;
+  right: -2em;
+}
+.store-btn-wrapper .phone-2 img.shine-2 {
+  width: 50px;
+  position: absolute;
+  top: 0;
+  left: -1em;
+}
+.store-btn-wrapper .phone-3 {
+  position: absolute;
+  width: 300px;
+  margin: 0 auto;
+  right: 6em;
+  bottom: 2em;
+}
+.store-btn-wrapper .phone-3 .text {
+  position: absolute;
+  left: -90px;
+  bottom: 10em;
+  z-index: 2;
+  width: 110px;
+  text-align: right;
+  font-weight: 700;
+}
+.store-btn-wrapper .phone-3 .text img.emoji {
+  width: 2em !important;
+  height: 2em !important;
 }
 
 .wrapper-recharge {
@@ -16224,11 +16297,13 @@ img.grid-carousel {
 .how-to-wrapper .link-item {
   position: relative;
   z-index: 1;
+  margin-bottom: 2em;
 }
 
 .recharge-img-wrapper {
   width: 440px;
   height: 420px;
+  position: relative;
 }
 .recharge-img-wrapper img {
   width: 100%;
@@ -16272,6 +16347,18 @@ img.grid-carousel {
   }
   .wrapper-quote p {
     font-size: 0.85em;
+  }
+
+  .store-btn-wrapper {
+    height: auto;
+  }
+
+  .phone-1,
+.phone-2,
+.phone-3 {
+    position: relative !important;
+    top: 0 !important;
+    left: 0 !important;
   }
 }
 .txt-img-block {
@@ -16398,6 +16485,7 @@ img.grid-carousel {
   font-size: 3.5em;
 }
 .culture-wrapper .culture-item {
+  margin-bottom: 2em;
   text-align: center;
 }
 .culture-wrapper .culture-item .thumb {
@@ -16452,8 +16540,13 @@ img.grid-carousel {
   margin: auto;
 }
 
+html {
+  overflow-x: hidden !important;
+}
+
 body {
   font-family: "CircularStd-Book", Helvetica Neue, Helvetica, Arial, sans-serif;
+  min-height: 600px;
 }
 
 .circular-book {
@@ -16517,6 +16610,14 @@ body {
   left: -75%;
   bottom: -105px;
   width: 200%;
+  max-width: none;
+  z-index: 0;
+}
+.graph-wrapper .text-graph-5 {
+  position: absolute;
+  left: -85%;
+  top: -70px;
+  width: 280%;
   max-width: none;
   z-index: 0;
 }

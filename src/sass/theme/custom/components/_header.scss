@@ -46,3 +46,15 @@
     }
   }
 }
+
+.menu-menu-principal-container {
+  margin-bottom: 0;
+}
+
+@media (max-width: 767.98px) {
+
+  .menu-menu-principal-container {
+    margin-bottom: 2em;
+  }
+
+}

@@ -60,8 +60,21 @@
       <div class="row">
         <div class="col">
 
-          <div class="wrapper-carousel data-2">
-            <img src="<?php echo get_theme_file_uri(); ?>/images/book-bg.png" class="grid-carousel" alt="grid image">
+          <div class="wrapper-carousel data-2"
+            data-aos="fade-in" 
+            data-aos-delay="50"
+            data-aos-offset="50" 
+            data-aos-easing="ease-in-out" 
+            data-aos-once="false">
+            <img src="<?php echo get_theme_file_uri(); ?>/images/book-bg.png" 
+              class="grid-carousel"
+              data-aos="fade-up"
+              data-aos-duration="1500" 
+              data-aos-delay="50"
+              data-aos-offset="250" 
+              data-aos-easing="ease-in-out" 
+              data-aos-once="false"
+              alt="grid image">
             <div class="swiper swiper-data">
               <div class="swiper-wrapper">
 
@@ -116,7 +129,13 @@
           <div class="row justify-content-center text-center">
             <div class="col-10 col-md-8 pt-3">
 
+            <div data-aos="fade-down"
+              data-aos-delay="50"
+              data-aos-offset="250" 
+              data-aos-easing="ease-in-out" 
+              data-aos-once="false">
               <?php the_sub_field( 'texto' ); ?>
+            </div>
 
             </div>
           </div>
@@ -124,8 +143,22 @@
           <div class="row mb-5 pb-5">
             <div class="col">
               <div class="graph-wrapper text-center mt-3">
-                <img src="<?php echo get_theme_file_uri(); ?>/images/cada-recarga-cuenta-sumate-a-recargar-el-futuro.svg" class="text-graph-4" alt="cada-recarga-cuenta-sumate-a-recargar-el-futuro">
-                <div class="graph-img">
+                <img src="<?php echo get_theme_file_uri(); ?>/images/cada-recarga-cuenta-sumate-a-recargar-el-futuro.svg" 
+                  class="text-graph-4" 
+                  data-aos="fade-left"
+                  data-aos-duration="2000"
+                  data-aos-delay="50"
+                  data-aos-offset="50" 
+                  data-aos-easing="ease-in-out" 
+                  data-aos-once="false"
+                  ata-aos-anchor-placement="top-bottom"
+                  alt="cada-recarga-cuenta-sumate-a-recargar-el-futuro">
+                <div class="graph-img"
+                  data-aos="fade-up"
+                  data-aos-delay="50"
+                  data-aos-offset="250" 
+                  data-aos-easing="ease-in-out" 
+                  data-aos-once="false">
                   <?php if ( get_sub_field( 'imagen' ) ) : ?>
                     <img src="<?php the_sub_field( 'imagen' ); ?>" />
                   <?php endif ?>
