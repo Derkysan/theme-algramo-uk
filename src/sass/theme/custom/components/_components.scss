@@ -1,0 +1,94 @@
+.marquee-wrapper {
+  position: absolute;
+  .marquee {
+    width: 100vw;
+    left: 0;
+    position: relative;
+    div {
+      display: block;
+      width: 200%;
+      position: absolute;
+      overflow: hidden;
+      animation: marqueeAnimation 10s linear infinite;
+      span {
+        font-weight: 450;
+        float: left;
+        line-height: 1.2em;
+        width: 50%;
+        white-space: nowrap;
+        overflow: hidden;
+        &.lineal {
+          color: rgba($color: #000000, $alpha: 0.75);
+          -webkit-text-fill-color: rgba($color: #ffffff, $alpha: 0); /* Will override color (regardless of order) */
+          -webkit-text-stroke-width: 1px;
+          -webkit-text-stroke-color: rgba($color: #000000, $alpha: 0.75);
+        }
+      }
+    }
+  }
+  &.home-1 {
+    top: 10em;
+    .marquee {
+      height: 6em;
+      div {
+        span {
+          font-size: 4.3em;
+        }
+      }
+    }
+  }
+  &.home-2 {
+    top: 4em;
+    .marquee {
+      height: 5.5em;
+      div {
+        span {
+          font-size: 3.7em;
+        }
+      }
+    }
+  }
+  &.trabaja-con-nosotros {
+    top: 12.6em;
+    .marquee {
+      height: 5.5em;
+      div {
+        span {
+          font-size: 3.6em;
+        }
+      }
+    }
+  }
+  &.trabaja-con-nosotros-2 {
+    top: 9em;
+    .marquee {
+      height: 6em;
+      div {
+        span {
+          font-size: 4.1em;
+        }
+      }
+    }
+  }
+  &.simula {
+    top: auto;
+    bottom: 6em;
+    .marquee {
+      height: 6em;
+      div {
+        span {
+          font-size: 3.5em;
+        }
+      }
+    }
+  }
+
+  @keyframes marqueeAnimation {
+    0% {
+      left: 0;
+    }
+    100% {
+      left: -100%;
+    }
+  }
+}

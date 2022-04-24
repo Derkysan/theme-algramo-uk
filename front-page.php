@@ -37,28 +37,20 @@ get_header();
                 <div class="swiper-slide">
                   <div class="slide-wrapper">
                     <div class="slider-img">
-                      <!-- <?php if (get_sub_field('imagen')) : ?>
-                        <img src="<?php the_sub_field('imagen'); ?>" />
-                      <?php endif ?> -->
-
-                      <!-- <video width="100%" height="100%" controls autoplay muted>
-                        <source src="mov_bbb.mp4" type="video/mp4">
-                        <source src="mov_bbb.ogg" type="video/ogg">
-                        Your browser does not support HTML video.
-                      </video> -->
-
                       <video width="100%" height="100%" autoplay muted loop>
-                        <source src="http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ElephantsDream.mp4" type="video/mp4">
-                        <!-- <source src="mov_bbb.ogg" type="video/ogg"> -->
-                        Your browser does not support HTML video.
+                        <?php if (get_sub_field('video')) : ?>
+                          <source src="<?php the_sub_field('video'); ?>" type="video/mp4">
+                          <source src="<?php the_sub_field('video'); ?>" type="video/ogg">
+                          <?php endif ?>
+                          Your browser does not support HTML video.
                       </video>
                     </div>
-                    <div class="container-fluid h-100 px-5">
+                    <div class="container-fluid h-100 px-4">
                       <div class="row h-100 align-items-center">
                         <div class="col">
 
                           <div class="row justify-content-center">
-                            <div class="col-12 col-md-10">
+                            <div class="col-12 col-md-11">
                               <h1>
                                 <?php the_sub_field('texto'); ?>
                               </h1>
@@ -92,11 +84,31 @@ get_header();
   <?php if (have_rows('bloque_reutilizar')) : ?>
     <?php while (have_rows('bloque_reutilizar')) : the_row(); ?>
 
-      <section class="py-5">
+      <section class="py-5 position-relative">
+        <div class="marquee-wrapper home-1" data-aos="fade-in" data-aos-delay="250" data-aos-offset="200" data-aos-easing="ease-in-out">
+          <div class="marquee">
+            <div>
+              <span>Algramo es la nueva forma de reutilizar.</span>
+              <span>Algramo es la nueva forma de reutilizar.</span>
+            </div>
+          </div>
+          <div class="marquee">
+            <div>
+              <span class="lineal">Algramo es la nueva forma de reutilizar.</span>
+              <span class="lineal">Algramo es la nueva forma de reutilizar.</span>
+            </div>
+          </div>
+          <div class="marquee">
+            <div>
+              <span class="lineal">Algramo es la nueva forma de reutilizar.</span>
+              <span class="lineal">Algramo es la nueva forma de reutilizar.</span>
+            </div>
+          </div>
+        </div>
         <div class="graph-1 text-center">
           <img src="<?php echo get_theme_file_uri(); ?>/images/vector-solid.svg" class="asterisk" data-aos="fade-left" data-aos-offset="200" data-aos-easing="ease-in-out" alt="asterisk img">
           <img src="<?php echo get_theme_file_uri(); ?>/images/book-bg.png" class="grid-img" data-aos="fade-right" data-aos-delay="150" data-aos-offset="200" data-aos-easing="ease-in-out" alt="grid image">
-          <img src="<?php echo get_theme_file_uri(); ?>/images/algramo-es-la-nueva-forma-de-reutilizar.svg" class="text-graph-1" data-aos="fade-left" data-aos-duration="2000" data-aos-delay="50" data-aos-offset="200" data-aos-easing="ease-in-out" alt="Algramo es la nueva forma de reutilizar.">
+          <!-- <img src="<?php echo get_theme_file_uri(); ?>/images/algramo-es-la-nueva-forma-de-reutilizar.svg" class="text-graph-1" data-aos="fade-left" data-aos-delay="50" data-aos-offset="200" data-aos-easing="ease-in-out" alt="Algramo es la nueva forma de reutilizar."> -->
         </div>
         <div class="container">
           <div class="row justify-content-center mt-5 pt-3">
@@ -160,7 +172,7 @@ get_header();
         <div class="container">
           <div class="row">
             <div class="col-6 col-md-8">
-              <h3 class="pe-4" data-aos="fade-right" data-aos-delay="50" data-aos-offset="200" data-aos-easing="ease-in-out">"<?php the_sub_field('cita_texto'); ?>"</h3>
+              <h3 class="pe-4" data-aos="fade-right" data-aos-delay="50" data-aos-offset="200" data-aos-easing="ease-in-out"><?php the_sub_field('cita_texto'); ?></h3>
               <p data-aos="fade-right" data-aos-delay="150" data-aos-offset="0" data-aos-easing="ease-in-out"><?php the_sub_field('cita_info'); ?></p>
             </div>
             <div class="col-6 col-md-4">
@@ -177,7 +189,7 @@ get_header();
     <?php while (have_rows('compra_inteligente')) : the_row(); ?>
 
       <section class="smart-buy py-5">
-        <img src="<?php echo get_theme_file_uri(); ?>/images/text-graph-1.svg" class="graph" alt="text graph">
+        <img src="<?php echo get_theme_file_uri(); ?>/images/text-graph-1.svg" class="graph" alt="text graph" data-aos="fade-right" data-aos-delay="50" data-aos-offset="50" data-aos-easing="ease-in-out">
         <div class="container">
           <div class="row justify-content-center">
             <div class="col-12 col-md-8">
@@ -236,7 +248,7 @@ get_header();
   <section class="py-5 bg-white store-btn-wrapper">
     <img src="<?php echo get_theme_file_uri(); ?>/images/vector-lineal-green-cut-top.png" class="cut-asterisk" data-aos="fade-down-right" data-aos-delay="50" data-aos-offset="250" data-aos-easing="ease-in-out" alt="asterisk img">
 
-    <div class="phone-1 d-none d-md-block">
+    <div class="phone-1 d-none d-md-block" data-aos="fade-left" data-aos-delay="50" data-aos-offset="50" data-aos-easing="ease-in-out">
       <img src="<?php echo get_theme_file_uri(); ?>/images/phone-1.png" alt="phone">
       <div class="text">
         <img src="<?php echo get_theme_file_uri(); ?>/images/arrow.svg" class="arrow" alt="arrow">
@@ -244,18 +256,18 @@ get_header();
       </div>
     </div>
 
-    <div class="phone-2 d-none d-md-block">
+    <div class="phone-2 d-none d-md-block"  data-aos="fade-up" data-aos-delay="50" data-aos-offset="50" data-aos-easing="ease-in-out">
       <img src="<?php echo get_theme_file_uri(); ?>/images/phone-2.png" alt="phone">
       <img src="<?php echo get_theme_file_uri(); ?>/images/shine-1.svg" class="shine-1" alt="shine">
       <img src="<?php echo get_theme_file_uri(); ?>/images/shine-2.svg" class="shine-2" alt="shine">
-      <div class="text">Podrás ver y gestionar tus envases</div>
+      <div class="text">Podrás ver y <span style="color: #f1c756;">gestionar tus envases</span></div>
     </div>
 
-    <div class="phone-3 d-none d-md-block">
+    <div class="phone-3 d-none d-md-block"  data-aos="fade-right" data-aos-delay="50" data-aos-offset="50" data-aos-easing="ease-in-out">
       <img src="<?php echo get_theme_file_uri(); ?>/images/phone-3.png" alt="phone">      
       <div class="text">
         <img src="<?php echo get_theme_file_uri(); ?>/images/happy-face.svg" class="emoji" w alt="happy emoji">
-        Revisa el impacto que has generado
+        Revisa el impacto <span style="color: #f1c756;">que has generado</span>
       </div>
     </div>
 
@@ -309,7 +321,7 @@ get_header();
   <?php if (have_rows('claves_para_mi_primera_recarga')) : ?>
     <?php while (have_rows('claves_para_mi_primera_recarga')) : the_row(); ?>
 
-      <section class="wrapper-recharge">
+      <section class="wrapper-recharge d-none">
         <div class="container">
           <div class="row">
             <div class="col">
@@ -368,7 +380,7 @@ get_header();
     <?php endwhile; ?>
   <?php endif; ?>
 
-  <section class="gallery-carousel-wrapper py-5">
+  <section class="gallery-carousel-wrapper py-5 d-none">
     <img src="<?php echo get_theme_file_uri(); ?>/images/vector-lineal-green.png" class="asterisk rotate" data-aos="flip-left" data-aos-delay="250" data-aos-offset="250" data-aos-easing="ease-in-out" alt="asterisk img">
     <img src="<?php echo get_theme_file_uri(); ?>/images/book-bg.png" class="grid-carousel" data-aos="flip-left" data-aos-delay="50" data-aos-offset="250" data-aos-easing="ease-in-out" alt="grid image">
     <div class="container-fluid">
@@ -577,16 +589,36 @@ get_header();
     </div>
   </section>
 
-  <section class="py-5">
+  <section class="py-5 position-relative">
+    <div class="marquee-wrapper home-2" data-aos="fade-in" data-aos-delay="250" data-aos-offset="200" data-aos-easing="ease-in-out">
+      <div class="marquee">
+        <div>
+          <span class="lineal">Recarguemos el futuro. Recarguemos el futuro.</span>
+          <span class="lineal">Recarguemos el futuro. Recarguemos el futuro.</span>
+        </div>
+      </div>
+      <div class="marquee">
+        <div>
+          <span class="lineal">Recarguemos el futuro. Recarguemos el futuro.</span>
+          <span class="lineal">Recarguemos el futuro. Recarguemos el futuro.</span>
+        </div>
+      </div>
+      <div class="marquee">
+        <div>
+          <span class="lineal">Recarguemos el futuro. Recarguemos el futuro.</span>
+          <span class="lineal">Recarguemos el futuro. Recarguemos el futuro.</span>
+        </div>
+      </div>
+    </div>
     <div class="container">
       <div class="row justify-content-center">
         <div class="col-10 col-md-6">
 
           <div class="graph-wrapper text-center">
-            <img src="<?php echo get_theme_file_uri(); ?>/images/recarguemos-futuro.svg" class="text-graph-5" data-aos="fade-right" data-aos-duration="2000" data-aos-delay="50" data-aos-offset="250" data-aos-easing="ease-in-out" alt="recarguemos-futuro">
+            <!-- <img src="<?php echo get_theme_file_uri(); ?>/images/recarguemos-futuro.svg" class="text-graph-5" data-aos="fade-right" data-aos-delay="50" data-aos-offset="250" data-aos-easing="ease-in-out" alt="recarguemos-futuro"> -->
             <div class="d-flex justify-content-center mb-5">
-              <div class="recharge-img-wrapper" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="50" data-aos-offset="250" data-aos-easing="ease-in-out">
-                <img src="<?php echo get_theme_file_uri(); ?>/images/fff.png" alt="recharge-img">
+              <div class="recharge-img-wrapper" data-aos="fade-up" data-aos-delay="50" data-aos-offset="250" data-aos-easing="ease-in-out">
+                <img src="<?php echo get_theme_file_uri(); ?>/images/gify-home.gif" alt="gif home">
               </div>
             </div>
           </div>

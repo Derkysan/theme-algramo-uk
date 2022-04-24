@@ -50,7 +50,8 @@ $container = get_theme_mod( 'understrap_container_type' );
 
       <!-- <nav id="site-navigation" class="main-navigation"> -->
 
-      <div id="navbarNavDropdown" class="collapse navbar-collapse justify-content-center">
+      <div id="navbarNavDropdown" class="collapse navbar-collapse justify-content-between">
+        <span></span>
 
         <?php
         if ( has_nav_menu( 'primary' ) ) {
@@ -73,7 +74,7 @@ $container = get_theme_mod( 'understrap_container_type' );
     <!-- <div class="">
       <button type="button" class="btn btn-link">ES | EN</button>
     </div> -->
-    <div class="secondary-menu ms-auto">
+    <div class="secondary-menu">
       <?php dynamic_sidebar( 'header-right' ); ?>
     </div>
   <!-- </div> -->

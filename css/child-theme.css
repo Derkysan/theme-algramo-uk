@@ -16008,6 +16008,100 @@ figure.woocommerce-product-gallery__wrapper {
     transform: scale(1);
   }
 }
+.marquee-wrapper {
+  position: absolute;
+}
+.marquee-wrapper .marquee {
+  width: 100vw;
+  left: 0;
+  position: relative;
+}
+.marquee-wrapper .marquee div {
+  display: block;
+  width: 200%;
+  position: absolute;
+  overflow: hidden;
+  -webkit-animation: marqueeAnimation 10s linear infinite;
+  animation: marqueeAnimation 10s linear infinite;
+}
+.marquee-wrapper .marquee div span {
+  font-weight: 450;
+  float: left;
+  line-height: 1.2em;
+  width: 50%;
+  white-space: nowrap;
+  overflow: hidden;
+}
+.marquee-wrapper .marquee div span.lineal {
+  color: rgba(0, 0, 0, 0.75);
+  -webkit-text-fill-color: rgba(255, 255, 255, 0);
+  /* Will override color (regardless of order) */
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: rgba(0, 0, 0, 0.75);
+}
+.marquee-wrapper.home-1 {
+  top: 10em;
+}
+.marquee-wrapper.home-1 .marquee {
+  height: 6em;
+}
+.marquee-wrapper.home-1 .marquee div span {
+  font-size: 4.3em;
+}
+.marquee-wrapper.home-2 {
+  top: 4em;
+}
+.marquee-wrapper.home-2 .marquee {
+  height: 5.5em;
+}
+.marquee-wrapper.home-2 .marquee div span {
+  font-size: 3.7em;
+}
+.marquee-wrapper.trabaja-con-nosotros {
+  top: 12.6em;
+}
+.marquee-wrapper.trabaja-con-nosotros .marquee {
+  height: 5.5em;
+}
+.marquee-wrapper.trabaja-con-nosotros .marquee div span {
+  font-size: 3.6em;
+}
+.marquee-wrapper.trabaja-con-nosotros-2 {
+  top: 9em;
+}
+.marquee-wrapper.trabaja-con-nosotros-2 .marquee {
+  height: 6em;
+}
+.marquee-wrapper.trabaja-con-nosotros-2 .marquee div span {
+  font-size: 4.1em;
+}
+.marquee-wrapper.simula {
+  top: auto;
+  bottom: 6em;
+}
+.marquee-wrapper.simula .marquee {
+  height: 6em;
+}
+.marquee-wrapper.simula .marquee div span {
+  font-size: 3.5em;
+}
+@-webkit-keyframes marqueeAnimation {
+  0% {
+    left: 0;
+  }
+  100% {
+    left: -100%;
+  }
+}
+@keyframes marqueeAnimation {
+  0% {
+    left: 0;
+  }
+  100% {
+    left: -100%;
+  }
+}
+
 .main-slider {
   width: 100%;
   height: 100vh;
@@ -16175,7 +16269,7 @@ figure.woocommerce-product-gallery__wrapper {
   position: absolute;
   width: 400px;
   margin: 0 auto;
-  left: 4em;
+  left: 5em;
   bottom: 2em;
 }
 .store-btn-wrapper .phone-1 .text {
@@ -16625,6 +16719,9 @@ body {
 @media (max-width: 767.98px) {
   .banner-header h1, .banner-header .h1 {
     font-size: 3em;
+  }
+  .banner-header.simular-impacto {
+    height: auto;
   }
 }
 .has-blue-color,

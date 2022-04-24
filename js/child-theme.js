@@ -10727,7 +10727,8 @@
 
 	// Add your custom JS here.
 	aos.init({
-	  once: true
+	  once: true,
+	  duration: 1000
 	});
 
 	(function ($) {

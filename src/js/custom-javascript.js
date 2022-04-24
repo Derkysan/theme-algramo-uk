@@ -3,7 +3,10 @@ import Swiper from 'https://unpkg.com/swiper@8/swiper-bundle.esm.browser.min.js'
 import { CountUp } from '../../node_modules/countup.js/dist/countUp.min.js';
 
 import AOS from 'aos';
-AOS.init({ once: true });
+AOS.init({ 
+  once: true,
+  duration: 1000,
+});
 
 (function ($) {
 
