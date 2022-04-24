@@ -366,7 +366,10 @@
           </div>
         </div>
 
-        <h4 class="text-primary" data-aos="fade-down" data-aos-delay="50" data-aos-offset="250" data-aos-easing="ease-in-out">¡Construyamos juntos el primer unicornio circular!🦄🌎</h4>
+        <h4 class="text-primary" data-aos="fade-down" data-aos-delay="50" data-aos-offset="250" data-aos-easing="ease-in-out">¡Construyamos juntos el primer unicornio circular!
+          <span><img src="<?php echo get_theme_file_uri(); ?>/images/emoji-unicorn.png" style="width: 24px" alt="emoji"></span> 
+          <span><img src="<?php echo get_theme_file_uri(); ?>/images/emoji-world.png" style="width: 24px" alt="emoji"></span> 
+        </h4>
 
       </section>
 

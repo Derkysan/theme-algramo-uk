@@ -361,7 +361,7 @@ img {
       font-size: 1.5em;
     }
     .quote-img {
-      height: 85%;
+      height: auto;
       right: -70px;
     }
     p {
@@ -380,6 +380,23 @@ img {
     position: relative !important;
     top: 0 !important;
     left: 0 !important;
+  }
+
+  .phone-2 {
+    margin: 0 !important;
+    .text {
+      left: auto !important;
+      right: calc(-50px - 2em) !important;
+    }
+  }
+
+  .phone-3 {
+    margin: 0 !important;
+    .text {
+      right: -50px !important;
+      left: auto !important;
+      bottom: 20em !important;
+    }
   }
 
 }

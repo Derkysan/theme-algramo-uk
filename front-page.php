@@ -38,11 +38,16 @@ get_header();
                   <div class="slide-wrapper">
                     <div class="slider-img">
                       <video width="100%" height="100%" autoplay muted loop>
-                        <?php if (get_sub_field('video')) : ?>
-                          <source src="<?php the_sub_field('video'); ?>" type="video/mp4">
-                          <source src="<?php the_sub_field('video'); ?>" type="video/ogg">
-                          <?php endif ?>
-                          Your browser does not support HTML video.
+                        <?php $video = get_sub_field( 'video' ); ?>
+                        <?php if ( $video ) : ?>
+                          <!-- <a href="<?php echo esc_url( $video['url'] ); ?>"><?php echo esc_html( $video['filename'] ); ?></a> -->
+                          <?php if (get_sub_field('video')) : ?>
+                            <source src="<?php echo esc_url( $video['url'] ); ?>" type="video/mp4">
+                            <source src="<?php echo esc_url( $video['url'] ); ?>" type="video/ogg">
+                            <?php endif ?>
+                            Your browser does not support HTML video.
+                        <?php endif; ?>
+                        
                       </video>
                     </div>
                     <div class="container-fluid h-100 px-4">
@@ -116,7 +121,10 @@ get_header();
               <div class="mt-5 mb-5" class="text-graph-1" data-aos="fade-up" data-aos-delay="50" data-aos-offset="200" data-aos-easing="ease-in-out">
                 <?php the_sub_field('bloque_texto'); ?>
               </div>
-              <h3 class="text-primary mb-0 fw-bold" data-aos="fade-up" data-aos-delay="50" data-aos-offset="200" data-aos-easing="ease-in-out"><?php the_sub_field('frase_destacada'); ?> 👋🏻</h3>
+              <h3 class="text-primary mb-0 fw-bold" data-aos="fade-up" data-aos-delay="50" data-aos-offset="200" data-aos-easing="ease-in-out">
+                <?php the_sub_field('frase_destacada'); ?> 
+                <span><img src="<?php echo get_theme_file_uri(); ?>/images/emoji-hand.png" style="width: 24px" alt="emoji"></span>
+              </h3>
             </div>
           </div>
         </div>
@@ -204,7 +212,7 @@ get_header();
                     <?php while (have_rows('item_1')) : the_row(); ?>
                       <div class="col-12 col-md-6">
                         <div class="item-card mb-5" data-aos="fade-right" data-aos-delay="50" data-aos-offset="250" data-aos-easing="ease-in-out">
-                          <h5 class="fw-bold"><?php the_sub_field('titulo'); ?></h5>
+                          <h5 class="fw-bold"><?php the_sub_field('titulo'); ?> <span><img src="<?php echo get_theme_file_uri(); ?>/images/emoji-money.png" style="width: 24px" alt="emoji"></span></h5>
                           <div class="thumb">
                             <?php if (get_sub_field('imagen')) : ?>
                               <img src="<?php the_sub_field('imagen'); ?>" />
@@ -220,7 +228,7 @@ get_header();
                     <?php while (have_rows('item_2')) : the_row(); ?>
                       <div class="col-12 col-md-6">
                         <div class="item-card mb-5" data-aos="fade-left" data-aos-delay="50" data-aos-offset="250" data-aos-easing="ease-in-out">
-                          <h5 class="fw-bold"><?php the_sub_field('titulo'); ?></h5>
+                          <h5 class="fw-bold"><?php the_sub_field('titulo'); ?><span><img src="<?php echo get_theme_file_uri(); ?>/images/emoji-tree.png" style="width: 24px" alt="emoji"></span></h5>
                           <div class="thumb">
                             <?php if (get_sub_field('imagen')) : ?>
                               <img src="<?php the_sub_field('imagen'); ?>" />
@@ -302,7 +310,7 @@ get_header();
             <img src="<?php echo get_theme_file_uri(); ?>/images/phone-2.png" alt="phone">
             <img src="<?php echo get_theme_file_uri(); ?>/images/shine-1.svg" class="shine-1" alt="shine">
             <img src="<?php echo get_theme_file_uri(); ?>/images/shine-2.svg" class="shine-2" alt="shine">
-            <div class="text">Podrás ver y gestionar tus envases</div>
+            <div class="text">Podrás ver y <span style="color: #f1c756;">gestionar tus envases</div>
           </div>
         </div>
         <div class="col-12">
@@ -310,7 +318,7 @@ get_header();
             <img src="<?php echo get_theme_file_uri(); ?>/images/phone-3.png" alt="phone">      
             <div class="text">
               <img src="<?php echo get_theme_file_uri(); ?>/images/happy-face.svg" class="emoji" w alt="happy emoji">
-              Revisa el impacto que has generado
+              Revisa el impacto <span style="color: #f1c756;">que has generado</span>
             </div>
           </div>
         </div>
@@ -442,7 +450,9 @@ get_header();
                         <img src="<?php the_sub_field('imagen'); ?>" />
                       <?php endif ?>
                     </div>
-                    <h5 class="my-4"><?php the_sub_field('titulo'); ?></h5>
+                    <h5 class="my-4"><?php the_sub_field('titulo'); ?>
+                      <!-- <span><img src="<?php echo get_theme_file_uri(); ?>/images/emoji-hand.png" style="width: 24px" alt="emoji"></span>  -->
+                    </h5>
 
                     <?php if (have_rows('enlace')) : ?>
                       <?php while (have_rows('enlace')) : the_row(); ?>
@@ -469,7 +479,9 @@ get_header();
                         <img src="<?php the_sub_field('imagen'); ?>" />
                       <?php endif ?>
                     </div>
-                    <h5 class="my-4"><?php the_sub_field('titulo'); ?></h5>
+                    <h5 class="my-4"><?php the_sub_field('titulo'); ?>
+                      <!-- <span><img src="<?php echo get_theme_file_uri(); ?>/images/emoji-hand.png" style="width: 24px" alt="emoji"></span>  -->
+                    </h5>
 
                     <?php if (have_rows('enlace')) : ?>
                       <?php while (have_rows('enlace')) : the_row(); ?>

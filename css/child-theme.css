@@ -16436,7 +16436,7 @@ img.grid-carousel {
     font-size: 1.5em;
   }
   .wrapper-quote .quote-img {
-    height: 85%;
+    height: auto;
     right: -70px;
   }
   .wrapper-quote p {
@@ -16453,6 +16453,23 @@ img.grid-carousel {
     position: relative !important;
     top: 0 !important;
     left: 0 !important;
+  }
+
+  .phone-2 {
+    margin: 0 !important;
+  }
+  .phone-2 .text {
+    left: auto !important;
+    right: calc(-50px - 2em) !important;
+  }
+
+  .phone-3 {
+    margin: 0 !important;
+  }
+  .phone-3 .text {
+    right: -50px !important;
+    left: auto !important;
+    bottom: 20em !important;
   }
 }
 .txt-img-block {
