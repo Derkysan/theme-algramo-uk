@@ -74,6 +74,11 @@ $container = get_theme_mod( 'understrap_container_type' );
     <!-- <div class="">
       <button type="button" class="btn btn-link">ES | EN</button>
     </div> -->
+    <div class="lang-selector">
+      <?php
+        echo do_shortcode('[wpml_language_selector_widget]');
+      ?>
+    </div>
     <div class="secondary-menu">
       <?php dynamic_sidebar( 'header-right' ); ?>
     </div>

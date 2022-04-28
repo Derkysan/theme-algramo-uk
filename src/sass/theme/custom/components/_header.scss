@@ -47,6 +47,35 @@
   }
 }
 
+.lang-selector {
+  .wpml-ls-legacy-dropdown {
+    max-width: 12em !important;
+    ul {
+      li {
+        a {
+          background-color: rgba($color: #ffffff, $alpha: 0) !important;
+          border: 0 !important;
+          &.wpml-ls-item-toggle {
+            &:after {
+              border: 0 !important;
+              font-family: "Font Awesome 5 Free"; 
+              font-weight: 900; 
+              content: "\f107";
+              top: 0 !important;
+              color: #000000;
+            }
+          }
+        }
+        .wpml-ls-sub-menu {
+          border: 0 !important;
+        }
+      }
+    }
+  }
+}
+
+
+
 .menu-menu-principal-container {
   margin-bottom: 0;
 }
