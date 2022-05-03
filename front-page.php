@@ -21,9 +21,15 @@ get_header();
 <div class="animate__animated animate__fadeIn">
 
   <section class="main-slider">
-    <div class="img-spin rotate">
-      <img src="<?php echo get_theme_file_uri(); ?>/images/recarga-reutiliza-repite.svg" class="" alt="Recarga, reutiliza, repite">
-    </div>
+    <?php if (ICL_LANGUAGE_CODE=='en') { ?>
+      <div class="img-spin rotate">
+        <img src="<?php echo get_theme_file_uri(); ?>/images/refill-reuse-repeat.svg" class="" alt="Refill, reuse, repeat">
+      </div>
+    <?php } else { ?>
+      <div class="img-spin rotate">
+        <img src="<?php echo get_theme_file_uri(); ?>/images/recarga-reutiliza-repite.svg" class="" alt="Recarga, reutiliza, repite">
+      </div>
+    <?php } ?>
     <!-- Slider main container -->
     <div class="swiper-main">
       <!-- Additional required wrapper -->
@@ -36,7 +42,7 @@ get_header();
 
                 <div class="swiper-slide">
                   <div class="slide-wrapper">
-                    <div class="slider-img">
+                    <div class="slider-img d-none d-md-block">
                       <video width="100%" height="100%" autoplay muted loop>
                         <?php $video = get_sub_field( 'video' ); ?>
                         <?php if ( $video ) : ?>
@@ -49,6 +55,9 @@ get_header();
                         <?php endif; ?>
                         
                       </video>
+                    </div>
+                    <div class="slider-img d-block d-md-none">
+                      <img src="<?php echo get_theme_file_uri(); ?>/images/ajuste-video-home.gif" alt="Gif home">
                     </div>
                     <div class="container-fluid h-100 px-4">
                       <div class="row h-100 align-items-center">
@@ -86,30 +95,45 @@ get_header();
     </div>
   </section>
 
+  
+
   <?php if (have_rows('bloque_reutilizar')) : ?>
     <?php while (have_rows('bloque_reutilizar')) : the_row(); ?>
 
       <section class="py-5 position-relative">
-        <div class="marquee-wrapper home-1" data-aos="fade-in" data-aos-delay="250" data-aos-offset="200" data-aos-easing="ease-in-out">
-          <div class="marquee">
-            <div>
-              <span><?php _e('Algramo es la nueva forma de reutilizar.')?></span>
-              <span><?php _e('Algramo es la nueva forma de reutilizar.')?></span>
+        <div class="marquee-wrapper home-1">
+          <div class="hero-marquee">
+            <div class="marquee">
+              <span class="clipped-text">
+                Algramo es la nueva forma de reutilizar.
+              </span>
+              <span class="clipped-text">
+                Algramo es la nueva forma de reutilizar.
+              </span>
             </div>
           </div>
-          <div class="marquee">
-            <div>
-              <span class="lineal"><?php _e('Algramo es la nueva forma de reutilizar.')?></span>
-              <span class="lineal"><?php _e('Algramo es la nueva forma de reutilizar.')?></span>
+          <div class="hero-marquee">
+            <div class="marquee">
+              <span class="clipped-text lineal">
+                Algramo es la nueva forma de reutilizar.
+              </span>
+              <span class="clipped-text lineal">
+                Algramo es la nueva forma de reutilizar.
+              </span>
             </div>
           </div>
-          <div class="marquee">
-            <div>
-              <span class="lineal"><?php _e('Algramo es la nueva forma de reutilizar.')?></span>
-              <span class="lineal"><?php _e('Algramo es la nueva forma de reutilizar.')?></span>
+          <div class="hero-marquee">
+            <div class="marquee">
+              <span class="clipped-text lineal">
+                Algramo es la nueva forma de reutilizar.
+              </span>
+              <span class="clipped-text lineal">
+                Algramo es la nueva forma de reutilizar.
+              </span>
             </div>
           </div>
         </div>
+        
         <div class="graph-1 text-center">
           <img src="<?php echo get_theme_file_uri(); ?>/images/vector-solid.svg" class="asterisk" data-aos="fade-left" data-aos-offset="200" data-aos-easing="ease-in-out" alt="asterisk img">
           <img src="<?php echo get_theme_file_uri(); ?>/images/book-bg.png" class="grid-img" data-aos="fade-right" data-aos-delay="150" data-aos-offset="200" data-aos-easing="ease-in-out" alt="grid image">
@@ -551,7 +575,10 @@ get_header();
       <div class="row">
         <div class="col">
 
-          <h2 class="mb-5 text-center" data-aos="fade-right" data-aos-delay="50" data-aos-offset="250" data-aos-easing="ease-in-out">Impacto que hemos generado juntos</h2>
+        <?php if (ICL_LANGUAGE_CODE=='es') : ?>
+          <!-- 'en'; -->
+          <h2 class="mb-5 text-center" data-aos="fade-right" data-aos-delay="50" data-aos-offset="250" data-aos-easing="ease-in-out"><?php _e('Impacto que hemos generado juntos'); ?></h2>
+        <?php endif; ?>
 
           <div class="wrapper-carousel" data-aos="fade-in" data-aos-delay="50" data-aos-offset="250" data-aos-easing="ease-in-out">
             <div class="swiper swiper-data">
@@ -569,15 +596,15 @@ get_header();
                   <div class="item">
                     <div class="data">
                       <div id="data-2" class="main" data-aos="fade-in" data-aos-id="randomize"></div>
-                      <p><?php _e('Co2 Evitado'); ?></p>
+                      <p><?php _e('gr. de Co2 evitado'); ?></p>
                     </div>
                   </div>
                 </div>
                 <div class="swiper-slide">
                   <div class="item">
                     <div class="data">
-                      <div class="main">Lts</div>
-                      <p><?php _e('Agua Ahorrada'); ?></p>
+                      <div id="data-3" class="main" data-aos="fade-in" data-aos-id="randomize"></div>
+                      <p><?php _e('lt. de Agua Ahorrada '); ?></p>
                     </div>
                   </div>
                 </div>
@@ -585,18 +612,18 @@ get_header();
                   <div class="item">
                     <div class="data">
                       <div id="data-4" class="main" data-aos="fade-in" data-aos-id="randomize"></div>
-                      <p><?php _e('Tones de Plástico'); ?></p>
+                      <p><?php _e('Kg de plástico ahorrados'); ?></p>
                     </div>
                   </div>
                 </div>
-                <div class="swiper-slide">
+                <!-- <div class="swiper-slide">
                   <div class="item">
                     <div class="data">
                       <div id="data-5" class="main"></div>
                       <p><?php _e('Productos'); ?></p>
                     </div>
                   </div>
-                </div>
+                </div> -->
                 <div class="swiper-slide">
                   <div class="item">
                     <div class="data">
@@ -651,23 +678,35 @@ get_header();
   </section>
 
   <section class="py-5 position-relative">
-    <div class="marquee-wrapper home-2" data-aos="fade-in" data-aos-delay="250" data-aos-offset="200" data-aos-easing="ease-in-out">
-      <div class="marquee">
-        <div>
-          <span class="lineal"><?php _e('Recarguemos el futuro. Recarguemos el futuro.')?></span>
-          <span class="lineal"><?php _e('Recarguemos el futuro. Recarguemos el futuro.')?></span>
+    <div class="marquee-wrapper home-2">
+      <div class="hero-marquee">
+        <div class="marquee">
+          <span class="clipped-text lineal">
+            Recarguemos el futuro. Recarguemos el futuro. Recarguemos el futuro. 
+          </span>
+          <span class="clipped-text lineal">
+            Recarguemos el futuro. Recarguemos el futuro. Recarguemos el futuro. 
+          </span>
         </div>
       </div>
-      <div class="marquee">
-        <div>
-          <span class="lineal"><?php _e('Recarguemos el futuro. Recarguemos el futuro.')?></span>
-          <span class="lineal"><?php _e('Recarguemos el futuro. Recarguemos el futuro.')?></span>
+      <div class="hero-marquee">
+        <div class="marquee">
+          <span class="clipped-text lineal">
+            Recarguemos el futuro. Recarguemos el futuro. Recarguemos el futuro. 
+          </span>
+          <span class="clipped-text lineal">
+            Recarguemos el futuro. Recarguemos el futuro. Recarguemos el futuro. 
+          </span>
         </div>
       </div>
-      <div class="marquee">
-        <div>
-          <span class="lineal"><?php _e('Recarguemos el futuro. Recarguemos el futuro.')?></span>
-          <span class="lineal"><?php _e('Recarguemos el futuro. Recarguemos el futuro.')?></span>
+      <div class="hero-marquee">
+        <div class="marquee">
+          <span class="clipped-text lineal">
+            Recarguemos el futuro. Recarguemos el futuro. Recarguemos el futuro. 
+          </span>
+          <span class="clipped-text lineal">
+            Recarguemos el futuro. Recarguemos el futuro. Recarguemos el futuro. 
+          </span>
         </div>
       </div>
     </div>

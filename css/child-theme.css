@@ -15637,6 +15637,7 @@ figure.woocommerce-product-gallery__wrapper {
 }
 #menu-menu-header-right .btn-cmp a {
   font-weight: 450;
+  display: inline-block;
   font-size: 14px;
   border-radius: 12px;
   padding: 1em;
@@ -15660,6 +15661,7 @@ figure.woocommerce-product-gallery__wrapper {
   content: "\f107";
   top: 0 !important;
   color: #000000;
+  line-height: 1.8em;
 }
 .lang-selector .wpml-ls-legacy-dropdown ul li .wpml-ls-sub-menu {
   border: 0 !important;
@@ -15838,7 +15840,7 @@ figure.woocommerce-product-gallery__wrapper {
   text-align: center;
 }
 .swiper.swiper-data .swiper-wrapper .swiper-slide .item .main {
-  font-size: 6em;
+  font-size: 3.5em;
   font-weight: 600;
 }
 .swiper.swiper-data .swiper-wrapper .swiper-slide .item p {
@@ -16059,50 +16061,20 @@ figure.woocommerce-product-gallery__wrapper {
   -webkit-text-stroke-color: rgba(0, 0, 0, 0.75);
 }
 .marquee-wrapper.home-1 {
-  top: 10em;
-}
-.marquee-wrapper.home-1 .marquee {
-  height: 6em;
-}
-.marquee-wrapper.home-1 .marquee div span {
-  font-size: 4.3em;
+  top: 9em;
 }
 .marquee-wrapper.home-2 {
   top: 4em;
 }
-.marquee-wrapper.home-2 .marquee {
-  height: 5.5em;
-}
-.marquee-wrapper.home-2 .marquee div span {
-  font-size: 3.7em;
-}
 .marquee-wrapper.trabaja-con-nosotros {
   top: 12.6em;
-}
-.marquee-wrapper.trabaja-con-nosotros .marquee {
-  height: 5.5em;
-}
-.marquee-wrapper.trabaja-con-nosotros .marquee div span {
-  font-size: 3.6em;
 }
 .marquee-wrapper.trabaja-con-nosotros-2 {
   top: 9em;
 }
-.marquee-wrapper.trabaja-con-nosotros-2 .marquee {
-  height: 6em;
-}
-.marquee-wrapper.trabaja-con-nosotros-2 .marquee div span {
-  font-size: 4.1em;
-}
 .marquee-wrapper.simula {
   top: auto;
   bottom: 6em;
-}
-.marquee-wrapper.simula .marquee {
-  height: 6em;
-}
-.marquee-wrapper.simula .marquee div span {
-  font-size: 3.5em;
 }
 @-webkit-keyframes marqueeAnimation {
   0% {
@@ -16119,6 +16091,29 @@ figure.woocommerce-product-gallery__wrapper {
   100% {
     left: -100%;
   }
+}
+
+.hero-marquee {
+  white-space: nowrap;
+}
+
+.marquee {
+  font-size: 0;
+}
+
+.clipped-text {
+  display: inline-block;
+  font-size: 80px;
+  line-height: 100px;
+  font-weight: 450;
+  margin-right: 0.5em;
+}
+.clipped-text.lineal {
+  color: rgba(0, 0, 0, 0.75);
+  -webkit-text-fill-color: rgba(255, 255, 255, 0);
+  /* Will override color (regardless of order) */
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: rgba(0, 0, 0, 0.75);
 }
 
 .main-slider {
@@ -16700,6 +16695,10 @@ body {
   font-family: "CircularStd-Book", Helvetica Neue, Helvetica, Arial, sans-serif;
 }
 
+header {
+  padding: 11px 26px;
+}
+
 .rotate {
   -webkit-animation: rotation 8s infinite linear;
   animation: rotation 8s infinite linear;
@@ -16775,6 +16774,10 @@ body {
   }
   .banner-header.simular-impacto {
     height: auto;
+  }
+
+  .secondary-menu {
+    margin-top: 2em;
   }
 }
 .has-blue-color,

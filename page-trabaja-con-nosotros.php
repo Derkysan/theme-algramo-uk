@@ -132,23 +132,35 @@
 
 
   <section class="pb-5 position-relative">
-    <div class="marquee-wrapper trabaja-con-nosotros" data-aos="fade-in" data-aos-delay="250" data-aos-offset="200" data-aos-easing="ease-in-out">
-      <div class="marquee">
-        <div>
-          <span>Nuestra cultura Nuestra cultura Nuestra cultura</span>
-          <span>Nuestra cultura Nuestra cultura Nuestra cultura</span>
+    <div class="marquee-wrapper trabaja-con-nosotros">
+      <div class="hero-marquee">
+        <div class="marquee">
+          <span class="clipped-text ">
+              <?php _e('Nuestra cultura Nuestra cultura')?>
+          </span>
+          <span class="clipped-text ">
+              <?php _e('Nuestra cultura Nuestra cultura')?>
+          </span>
         </div>
       </div>
-      <div class="marquee">
-        <div>
-          <span class="lineal">Nuestra cultura Nuestra cultura Nuestra cultura</span>
-          <span class="lineal">Nuestra cultura Nuestra cultura Nuestra cultura</span>
+      <div class="hero-marquee">
+        <div class="marquee">
+          <span class="clipped-text lineal">
+              <?php _e('Nuestra cultura Nuestra cultura')?>
+          </span>
+          <span class="clipped-text lineal">
+              <?php _e('Nuestra cultura Nuestra cultura')?>
+          </span>
         </div>
       </div>
-      <div class="marquee">
-        <div>
-          <span class="lineal">Nuestra cultura Nuestra cultura Nuestra cultura</span>
-          <span class="lineal">Nuestra cultura Nuestra cultura Nuestra cultura</span>
+      <div class="hero-marquee">
+        <div class="marquee">
+          <span class="clipped-text lineal">
+              <?php _e('Nuestra cultura Nuestra cultura')?>
+          </span>
+          <span class="clipped-text lineal">
+              <?php _e('Nuestra cultura Nuestra cultura')?>
+          </span>
         </div>
       </div>
     </div>
@@ -322,23 +334,35 @@
     <?php while (have_rows('trabaja_con_nosotros')) : the_row(); ?>
 
       <section class="py-5 text-center position-relative">
-        <div class="marquee-wrapper trabaja-con-nosotros-2" data-aos="fade-in" data-aos-delay="250" data-aos-offset="200" data-aos-easing="ease-in-out">
-          <div class="marquee">
-            <div>
-              <span>Trabaja con nosotros Trabaja con nosotros</span>
-              <span>Trabaja con nosotros Trabaja con nosotros</span>
+        <div class="marquee-wrapper trabaja-con-nosotros-2">
+          <div class="hero-marquee">
+            <div class="marquee">
+              <span class="clipped-text ">
+                  <?php _e('Trabaja con nosotros Trabaja con nosotros')?>
+              </span>
+              <span class="clipped-text ">
+                  <?php _e('Trabaja con nosotros Trabaja con nosotros')?>
+              </span>
             </div>
           </div>
-          <div class="marquee">
-            <div>
-              <span class="lineal">Trabaja con nosotros Trabaja con nosotros</span>
-              <span class="lineal">Trabaja con nosotros Trabaja con nosotros</span>
+          <div class="hero-marquee">
+            <div class="marquee">
+              <span class="clipped-text lineal">
+                  <?php _e('Trabaja con nosotros Trabaja con nosotros')?>
+              </span>
+              <span class="clipped-text lineal">
+                  <?php _e('Trabaja con nosotros Trabaja con nosotros')?>
+              </span>
             </div>
           </div>
-          <div class="marquee">
-            <div>
-              <span class="lineal">Trabaja con nosotros Trabaja con nosotros</span>
-              <span class="lineal">Trabaja con nosotros Trabaja con nosotros</span>
+          <div class="hero-marquee">
+            <div class="marquee">
+              <span class="clipped-text lineal">
+                  <?php _e('Trabaja con nosotros Trabaja con nosotros')?>
+              </span>
+              <span class="clipped-text lineal">
+                  <?php _e('Trabaja con nosotros Trabaja con nosotros')?>
+              </span>
             </div>
           </div>
         </div>

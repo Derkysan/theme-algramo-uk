@@ -11,6 +11,10 @@ body {
   font-family: 'CircularStd-Book', Helvetica Neue,Helvetica,Arial,sans-serif;;
 }
 
+header {
+  padding: 11px 26px;
+}
+
 .rotate {
   animation: rotation 8s infinite linear;
 }
@@ -81,6 +85,10 @@ body {
     &.simular-impacto {
       height: auto;
     }
+  }
+
+  .secondary-menu {
+    margin-top: 2em;
   }
 
 }

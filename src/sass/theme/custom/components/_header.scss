@@ -36,6 +36,7 @@
   .btn-cmp {
     a {
       font-weight: 450;
+      display: inline-block;
       font-size: 14px;
       border-radius: 12px;
       padding: 1em;
@@ -63,6 +64,7 @@
               content: "\f107";
               top: 0 !important;
               color: #000000;
+              line-height: 1.8em;
             }
           }
         }

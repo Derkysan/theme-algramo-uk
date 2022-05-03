@@ -18,13 +18,13 @@
             </div>
           </div>
 
-          <div class="row justify-content-center mt-5">
+          <div class="row justify-content-center">
             <div class="col-12 col-md-8">
 
               <div class="row">
                 <div class="col-12 col-md-6">
                   <select id="products" class="form-select mb-5" aria-label="Default select example">
-                    <option selected value="0">Producto</option>
+                    <option selected disabled value="0">Producto</option>
                     <option class="circular-book" value="1">Detergente</option>
                     <option value="2">Lavalozas</option>
                     <option value="3">Limpiapisos</option>
@@ -35,7 +35,7 @@
                 </div>
                 <div class="col-12 col-md-6 mb-5">
                   <select id="frequency" class="form-select" aria-label="Default select example">
-                    <option selected value="0">Frecuencia de compra</option>
+                    <option selected disabled value="0">Frecuencia de compra</option>
                     <option class="circular-book" value="1">Una vez cada 15 días</option>
                     <option value="2">Una vez al mes</option>
                     <option value="3">Una vez cada 2 meses</option>
@@ -108,26 +108,39 @@
   </section>
 
   <section class="py-5 position-relative">
-    <div class="marquee-wrapper simula" data-aos="fade-in" data-aos-delay="250" data-aos-offset="200" data-aos-easing="ease-in-out">
-      <div class="marquee">
-        <div>
-          <span>Cada recarga cuenta, súmate a recargar el futuro.</span>
-          <span>Cada recarga cuenta, súmate a recargar el futuro.</span>
+    <div class="marquee-wrapper simula">
+      <div class="hero-marquee">
+        <div class="marquee">
+          <span class="clipped-text ">
+              <?php _e('Cada recarga cuenta, súmate a recargar el futuro. Cada recarga cuenta, súmate a recargar el futuro.')?>
+          </span>
+          <span class="clipped-text ">
+              <?php _e('Cada recarga cuenta, súmate a recargar el futuro. Cada recarga cuenta, súmate a recargar el futuro.')?>
+          </span>
         </div>
       </div>
-      <div class="marquee">
-        <div>
-          <span class="lineal">Cada recarga cuenta, súmate a recargar el futuro.</span>
-          <span class="lineal">Cada recarga cuenta, súmate a recargar el futuro.</span>
+      <div class="hero-marquee">
+        <div class="marquee">
+          <span class="clipped-text lineal">
+              <?php _e('Cada recarga cuenta, súmate a recargar el futuro. Cada recarga cuenta, súmate a recargar el futuro.')?>
+          </span>
+          <span class="clipped-text lineal">
+              <?php _e('Cada recarga cuenta, súmate a recargar el futuro. Cada recarga cuenta, súmate a recargar el futuro.')?>
+          </span>
         </div>
       </div>
-      <div class="marquee">
-        <div>
-          <span class="lineal">Cada recarga cuenta, súmate a recargar el futuro.</span>
-          <span class="lineal">Cada recarga cuenta, súmate a recargar el futuro.</span>
+      <div class="hero-marquee">
+        <div class="marquee">
+          <span class="clipped-text lineal">
+              <?php _e('Cada recarga cuenta, súmate a recargar el futuro. Cada recarga cuenta, súmate a recargar el futuro.')?>
+          </span>
+          <span class="clipped-text lineal">
+              <?php _e('Cada recarga cuenta, súmate a recargar el futuro. Cada recarga cuenta, súmate a recargar el futuro.')?>
+          </span>
         </div>
       </div>
     </div>
+        
     <div class="container">
 
       <?php if (have_rows('texto-imagen')) : ?>
@@ -149,7 +162,7 @@
                 <!-- <img src="<?php echo get_theme_file_uri(); ?>/images/cada-recarga-cuenta-sumate-a-recargar-el-futuro.svg" class="text-graph-4" data-aos="fade-left" data-aos-delay="50" data-aos-offset="50" data-aos-easing="ease-in-out" ata-aos-anchor-placement="top-bottom" alt="cada-recarga-cuenta-sumate-a-recargar-el-futuro"> -->
                 <div class="d-flex justify-content-center mb-5">
                   <div class="recharge-img-wrapper" data-aos="fade-up" data-aos-delay="50" data-aos-offset="250" data-aos-easing="ease-in-out">
-                    <img src="<?php echo get_theme_file_uri(); ?>/images/gif-trabaja-con-nosotros.gif" alt="gif trabaja con nosotros">
+                    <img src="<?php echo get_theme_file_uri(); ?>/images/salem.gif" alt="salem">
                   </div>
                 </div>
               </div>
