@@ -19,30 +19,32 @@
     color: #ffffff;
   }
 }
-#menu-redes-sociales {
-  display: flex;
-  align-items: center;
-  flex-direction: row;
-  li {
-    margin-right: 1em;
+.nav_menu-10 {
+  ul {
     display: flex;
     align-items: center;
-    &::before {
-      background-color: #fff;
-      width: 24px;
-      height: 24px;
-      color: #000000;
-      border-radius: 4px;
-      display: inline-flex;
+    flex-direction: row;
+    li {
+      margin-right: 1em;
+      display: flex;
       align-items: center;
-      justify-content: center;
-      margin-right: .5em;
-    }
-    a {
-      font-family: 'CircularStd-Book';
+      &::before {
+        background-color: #fff;
+        width: 24px;
+        height: 24px;
+        color: #000000;
+        border-radius: 4px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        margin-right: .5em;
+      }
+      a {
+        font-family: 'CircularStd-Book';
+      }
     }
   }
-}
+} 
 .footer-copy {
   height: 1em;
   display: flex;

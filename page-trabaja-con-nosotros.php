@@ -376,7 +376,6 @@
             <div class="col-10 col-md-6">
 
               <div class="graph-wrapper text-center">
-                <!-- <img src="<?php echo get_theme_file_uri(); ?>/images/trabaja-con-nosotros.svg" class="text-graph-3" data-aos="fade-right" data-aos-delay="50" data-aos-offset="250" data-aos-easing="ease-in-out" alt="Trabaja con nosotros"> -->
                 <img src="<?php echo get_theme_file_uri(); ?>/images/book-bg.png" class="grid-img" data-aos="fade-up" data-aos-delay="50" data-aos-offset="250" data-aos-easing="ease-in-out" alt="grid image">
                 <div class="d-flex justify-content-center mb-5">
                   <div class="recharge-img-wrapper" data-aos="fade-up" data-aos-delay="50" data-aos-offset="250" data-aos-easing="ease-in-out">
@@ -390,50 +389,66 @@
           </div>
         </div>
 
-        <h4 class="text-primary" data-aos="fade-down" data-aos-delay="50" data-aos-offset="250" data-aos-easing="ease-in-out">¡Construyamos juntos el primer unicornio circular!
-          <span><img src="<?php echo get_theme_file_uri(); ?>/images/emoji-unicorn.png" style="width: 24px" alt="emoji"></span> 
-          <span><img src="<?php echo get_theme_file_uri(); ?>/images/emoji-world.png" style="width: 24px" alt="emoji"></span> 
-        </h4>
-
       </section>
 
     <?php endwhile; ?>
   <?php endif; ?>
 
+  
   <section class="vacancy-wrapper py-5">
-
+    
     <div class="container">
       <div class="row justify-content-center">
-        <div class="col-10">
 
-          <?php if (have_rows('vacantes')) : ?>
-            <div class="vacancy-list">
-              <?php while (have_rows('vacantes')) : the_row(); ?>
+        <h4 class="text-primary text-center mb-5" data-aos="fade-down" data-aos-delay="50" data-aos-offset="250" data-aos-easing="ease-in-out"><?php _e('¡Construyamos juntos el primer unicornio circular!')?>
+          <span><img src="<?php echo get_theme_file_uri(); ?>/images/emoji-unicorn.png" style="width: 24px" alt="emoji"></span> 
+          <span><img src="<?php echo get_theme_file_uri(); ?>/images/emoji-world.png" style="width: 24px" alt="emoji"></span> 
+        </h4>
 
-                <div class="item" data-aos="fade-down" data-aos-delay="50" data-aos-offset="250" data-aos-easing="ease-in-out">
-                  <p class="mb-0"><small><?php the_sub_field('pais'); ?></small></p>
-                  <h5 class="my-2"><?php the_sub_field('cargo'); ?></h5>
-                  <p class="text-primary"><small>Algramo</small></p>
-                  <?php the_sub_field('descripcion'); ?>
-                </div>
-
-              <?php endwhile; ?>
-            </div>
-          <?php else : ?>
-
-            <div class="vacancy-empty" data-aos="fade-up" data-aos-delay="50" data-aos-offset="250" data-aos-easing="ease-in-out">
-              <div class="row h-100 justify-content-center align-content-center">
-                <div class="col-12 col-md-6">
-                  <p class="mb-0">Ups! No tenemos vacantes por el momento ¿Quieres insistir de cualquier forma? Insistenos a RRHH@algramo.com</p>
+        <div class="col-12 col-md-4">
+        <?php if ( have_rows( 'vacante_provisional' ) ) : ?>
+          <?php while ( have_rows( 'vacante_provisional' ) ) : the_row(); ?>
+            <a href="<?php the_sub_field( 'enlace' ); ?>" target="_blank" rel="noopener noreferrer">
+              <?php if ( get_sub_field( 'imagen' ) ) : ?>
+                <img src="<?php the_sub_field( 'imagen' ); ?>" />
+              <?php endif ?>
+            </a>
+          <?php endwhile; ?>
+        <?php endif; ?>
+        </div>
+        
+        <div class="d-none">
+          <div class="col-10">
+            <?php if (have_rows('vacantes')) : ?>
+              <div class="vacancy-list">
+                <?php while (have_rows('vacantes')) : the_row(); ?>
+  
+                  <div class="item" data-aos="fade-down" data-aos-delay="50" data-aos-offset="250" data-aos-easing="ease-in-out">
+                    <p class="mb-0"><small><?php the_sub_field('pais'); ?></small></p>
+                    <h5 class="my-2"><?php the_sub_field('cargo'); ?></h5>
+                    <p class="text-primary"><small>Algramo</small></p>
+                    <?php the_sub_field('descripcion'); ?>
+                  </div>
+  
+                <?php endwhile; ?>
+              </div>
+            <?php else : ?>
+  
+              <div class="vacancy-empty" data-aos="fade-up" data-aos-delay="50" data-aos-offset="250" data-aos-easing="ease-in-out">
+                <div class="row h-100 justify-content-center align-content-center">
+                  <div class="col-12 col-md-6">
+                    <p class="mb-0">Ups! No tenemos vacantes por el momento ¿Quieres insistir de cualquier forma? Insistenos a RRHH@algramo.com</p>
+                  </div>
                 </div>
               </div>
-            </div>
-
-          <?php endif; ?>
+  
+            <?php endif; ?>
+          </div>
         </div>
-      </div>
 
+      </div>
     </div>
+
 
   </section>
 

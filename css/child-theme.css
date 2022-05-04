@@ -15647,14 +15647,14 @@ figure.woocommerce-product-gallery__wrapper {
   font-size: 14px;
 }
 
-.lang-selector .wpml-ls-legacy-dropdown {
+.lang-selector .wpml-ls-legacy-dropdown-click {
   max-width: 12em !important;
 }
-.lang-selector .wpml-ls-legacy-dropdown ul li a {
+.lang-selector .wpml-ls-legacy-dropdown-click ul li a {
   background-color: rgba(255, 255, 255, 0) !important;
   border: 0 !important;
 }
-.lang-selector .wpml-ls-legacy-dropdown ul li a.wpml-ls-item-toggle:after {
+.lang-selector .wpml-ls-legacy-dropdown-click ul li a.wpml-ls-item-toggle:after {
   border: 0 !important;
   font-family: "Font Awesome 5 Free";
   font-weight: 900;
@@ -15663,7 +15663,7 @@ figure.woocommerce-product-gallery__wrapper {
   color: #000000;
   line-height: 1.8em;
 }
-.lang-selector .wpml-ls-legacy-dropdown ul li .wpml-ls-sub-menu {
+.lang-selector .wpml-ls-legacy-dropdown-click ul li .wpml-ls-sub-menu {
   border: 0 !important;
 }
 
@@ -15698,17 +15698,17 @@ figure.woocommerce-product-gallery__wrapper {
   color: #ffffff;
 }
 
-#menu-redes-sociales {
+.nav_menu-10 ul {
   display: flex;
   align-items: center;
   flex-direction: row;
 }
-#menu-redes-sociales li {
+.nav_menu-10 ul li {
   margin-right: 1em;
   display: flex;
   align-items: center;
 }
-#menu-redes-sociales li::before {
+.nav_menu-10 ul li::before {
   background-color: #fff;
   width: 24px;
   height: 24px;
@@ -15719,7 +15719,7 @@ figure.woocommerce-product-gallery__wrapper {
   justify-content: center;
   margin-right: 0.5em;
 }
-#menu-redes-sociales li a {
+.nav_menu-10 ul li a {
   font-family: "CircularStd-Book";
 }
 
@@ -16412,6 +16412,7 @@ img.grid-carousel {
   width: 440px;
   height: 420px;
   position: relative;
+  z-index: -1;
 }
 .recharge-img-wrapper img {
   width: 100%;

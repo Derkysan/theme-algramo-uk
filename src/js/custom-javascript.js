@@ -18,8 +18,9 @@ AOS.init({
   });
 
   const swiper = new Swiper('.swiper-products', {
-    cssMode: true,
-    mousewheel: true,
+    autoplay: true,
+    grabCursor: true,
+    mousewheel: false,
     slidesPerView: "auto",
     spaceBetween: 15,
     navigation: {
@@ -35,14 +36,16 @@ AOS.init({
     spaceBetween: 15,
   })
   const swiperGallery = new Swiper('.swiper-gallery', {
-    cssMode: true,
-    mousewheel: true,
+    autoplay: true,
+    grabCursor: true,
+    mousewheel: false,
     slidesPerView: "auto",
     spaceBetween: 15,
   })
   const swiperGallery2 = new Swiper('.swiper-gallery-2', {
-    cssMode: true,
-    mousewheel: true,
+    autoplay: true,
+    grabCursor: true,
+    mousewheel: false,
     slidesPerView: "auto",
     spaceBetween: 15,
   })
@@ -77,13 +80,13 @@ AOS.init({
       });
     });
 
-    const data1 = new CountUp('data-1', 275631, { startVal: 100000, duration: 4 });
-    const data2 = new CountUp('data-2', 9022706, { startVal: 100000, duration: 4 });
-    const data3 = new CountUp('data-3', 6597655, { startVal: 100000, duration: 4 });
-    const data4 = new CountUp('data-4', 35663, { startVal: 50000, duration: 4 });
+    const data1 = new CountUp('data-1', 275631, { startVal: 100000, duration: 25 });
+    const data2 = new CountUp('data-2', 9022706, { startVal: 100000, duration: 25 });
+    const data3 = new CountUp('data-3', 6597655, { startVal: 100000, duration: 25 });
+    const data4 = new CountUp('data-4', 35663, { startVal: 50000, duration: 25 });
     // const data5 = new CountUp('data-5', 15, { startVal: 0 });
-    const data6 = new CountUp('data-6', 80, { startVal: 0, duration: 4 });
-    const data7 = new CountUp('data-7', 4, { startVal: 0, duration: 4 });
+    const data6 = new CountUp('data-6', 80, { startVal: 0, duration: 25 });
+    const data7 = new CountUp('data-7', 4, { startVal: 0, duration: 25 });
     document.addEventListener('aos:in:randomize', () => {
       data1.start();
       data2.start();
@@ -98,9 +101,9 @@ AOS.init({
     const productsSelect = $('#products');
     const productsfrequency = $('#frequency');
 
-    const simulaData1 = new CountUp('simulaData1', 7, { startVal: 0 });
-    const simulaData2 = new CountUp('simulaData2', 2, { startVal: 10, suffix: 'gr' });
-    const simulaData3 = new CountUp('simulaData3', 465, { startVal: 56, suffix: 'gr' });
+    const simulaData1 = new CountUp('simulaData1', 0, { startVal: 0 });
+    const simulaData2 = new CountUp('simulaData2', 0, { startVal: 0, suffix: 'gr' });
+    const simulaData3 = new CountUp('simulaData3', 0, { startVal: 0, suffix: 'gr' });
 
     simulaData1.start();
     simulaData2.start();

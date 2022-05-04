@@ -45,8 +45,12 @@ $container = get_theme_mod( 'understrap_container_type' );
       </div>
       <div class="col-12 col-md-5">
         <div class="footer-copy">
-          <span>Todos lo derechos reservados, 2022</span>
-          <img src="<?php echo get_theme_file_uri(); ?>/images/logo-empresa-certificada.svg" alt="logo empresa certificada">
+          <span><?php _e('Todos lo derechos reservados, 2022'); ?></span>
+          <?php if (ICL_LANGUAGE_CODE=='en') { ?>
+            <img src="<?php echo get_theme_file_uri(); ?>/images/logo-empresa-certificada_en.png" width="70" alt="logo empresa certificada">
+          <?php } else { ?>
+            <img src="<?php echo get_theme_file_uri(); ?>/images/logo-empresa-certificada.svg" width="70" alt="logo empresa certificada">
+          <?php } ?>
         </div>
       </div>
     </div>

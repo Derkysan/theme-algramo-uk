@@ -349,11 +349,11 @@ get_header();
   
             <div class="store-btn-list mt-4">
               <a href="http://" class="d-block" data-aos="fade-right" data-aos-delay="50" data-aos-offset="250" data-aos-easing="ease-in-out" target="_blank" rel="noopener noreferrer">
-                <img src="<?php echo get_theme_file_uri(); ?>/images/store-google.svg" style="height: 40px;" alt="">
+                <img src="<?php echo get_theme_file_uri(); ?>/images/store-google.png" style="height: 40px;" alt="">
               </a>
   
               <a href="http://" class="d-block" data-aos="fade-left" data-aos-delay="50" data-aos-offset="250" data-aos-easing="ease-in-out" target="_blank" rel="noopener noreferrer">
-                <img src="<?php echo get_theme_file_uri(); ?>/images/store-apple.svg" style="height: 40px;" alt="">
+                <img src="<?php echo get_theme_file_uri(); ?>/images/store-apple.png" style="height: 40px;" alt="">
               </a>
             </div>
           </div>
@@ -574,11 +574,8 @@ get_header();
     <div class="container-fluid">
       <div class="row">
         <div class="col">
-
-        <?php if (ICL_LANGUAGE_CODE=='es') : ?>
-          <!-- 'en'; -->
+        
           <h2 class="mb-5 text-center" data-aos="fade-right" data-aos-delay="50" data-aos-offset="250" data-aos-easing="ease-in-out"><?php _e('Impacto que hemos generado juntos'); ?></h2>
-        <?php endif; ?>
 
           <div class="wrapper-carousel" data-aos="fade-in" data-aos-delay="50" data-aos-offset="250" data-aos-easing="ease-in-out">
             <div class="swiper swiper-data">

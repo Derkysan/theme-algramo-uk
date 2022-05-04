@@ -29,14 +29,15 @@ $navbar_type       = get_theme_mod( 'understrap_navbar_type', 'collapse' );
 <div class="site" id="page">
   
   <div id="loadingPage" class="loader animate__animated animate__fadeIn">
-    <div class="sk-chase">
+    <!-- <div class="sk-chase">
       <div class="sk-chase-dot"></div>
       <div class="sk-chase-dot"></div>
       <div class="sk-chase-dot"></div>
       <div class="sk-chase-dot"></div>
       <div class="sk-chase-dot"></div>
       <div class="sk-chase-dot"></div>
-    </div>
+    </div> -->
+    <img src="<?php echo get_theme_file_uri(); ?>/images/loader.gif" width="120" alt="loader">
   </div>
 
 	<!-- ******************* The Navbar Area ******************* -->
