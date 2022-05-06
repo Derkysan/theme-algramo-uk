@@ -93,7 +93,7 @@
                     </div>
                   </div>
 
-                  <p class="text-center text-primary mb-0" data-aos="fade-right" data-aos-delay="50" data-aos-offset="250" data-aos-easing="ease-in-out">Y muchooos más</p>
+                  <p class="text-center text-primary mb-0 d-none" data-aos="fade-right" data-aos-delay="50" data-aos-offset="250" data-aos-easing="ease-in-out">Y muchooos más</p>
 
                 </div>
               </div>
@@ -177,7 +177,7 @@
             <div class="col-10 col-md-6">
 
               <div class="graph-wrapper text-center">
-                <img src="<?php echo get_theme_file_uri(); ?>/images/book-bg.png" class="grid-img" data-aos="fade-down" data-aos-delay="50" data-aos-offset="250" data-aos-easing="ease-in-out" alt="grid image">
+                <img src="<?php echo get_theme_file_uri(); ?>/images/book-bg.png" class="grid-img d-none" data-aos="fade-down" data-aos-delay="50" data-aos-offset="250" data-aos-easing="ease-in-out" alt="grid image">
                 <div class="d-flex justify-content-center mb-5">
                   <div class="recharge-img-wrapper" data-aos="fade-up" data-aos-delay="50" data-aos-offset="250" data-aos-easing="ease-in-out">
                     <img src="<?php echo get_theme_file_uri(); ?>/images/gif-trabaja-con-nosotros.gif" alt="gif trabaja con nosotros">
@@ -376,7 +376,7 @@
             <div class="col-10 col-md-6">
 
               <div class="graph-wrapper text-center">
-                <img src="<?php echo get_theme_file_uri(); ?>/images/book-bg.png" class="grid-img" data-aos="fade-up" data-aos-delay="50" data-aos-offset="250" data-aos-easing="ease-in-out" alt="grid image">
+                <img src="<?php echo get_theme_file_uri(); ?>/images/book-bg.png" class="grid-img d-none" data-aos="fade-up" data-aos-delay="50" data-aos-offset="250" data-aos-easing="ease-in-out" alt="grid image">
                 <div class="d-flex justify-content-center mb-5">
                   <div class="recharge-img-wrapper" data-aos="fade-up" data-aos-delay="50" data-aos-offset="250" data-aos-easing="ease-in-out">
                     <img src="<?php echo get_theme_file_uri(); ?>/images/gif-trabaja-con-nosotros-2.gif" alt="gif trabaja con nosotros">

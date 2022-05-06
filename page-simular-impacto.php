@@ -23,7 +23,7 @@
 
               <div class="row">
                 <div class="col-12 col-md-6">
-                  <select id="products" class="form-select mb-5" aria-label="Default select example">
+                  <select id="products" class="form-select mb-5" aria-label="products selector">
                     <option selected disabled value="0">Producto</option>
                     <option class="circular-book" value="1">Detergente</option>
                     <option value="2">Lavalozas</option>
@@ -34,7 +34,7 @@
                   </select>
                 </div>
                 <div class="col-12 col-md-6 mb-5">
-                  <select id="frequency" class="form-select" aria-label="Default select example">
+                  <select id="frequency" class="form-select" aria-label="frequency selector">
                     <option selected disabled value="0">Frecuencia de compra</option>
                     <option class="circular-book" value="1">Una vez cada 15 días</option>
                     <option value="2">Una vez al mes</option>

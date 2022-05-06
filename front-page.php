@@ -22,11 +22,11 @@ get_header();
 
   <section class="main-slider">
     <?php if (ICL_LANGUAGE_CODE=='en') { ?>
-      <div class="img-spin rotate">
+      <div class="img-spin rotate d-none d-md-block">
         <img src="<?php echo get_theme_file_uri(); ?>/images/refill-reuse-repeat.svg" class="" alt="Refill, reuse, repeat">
       </div>
     <?php } else { ?>
-      <div class="img-spin rotate">
+      <div class="img-spin rotate d-none d-md-block">
         <img src="<?php echo get_theme_file_uri(); ?>/images/recarga-reutiliza-repite.svg" class="" alt="Recarga, reutiliza, repite">
       </div>
     <?php } ?>
@@ -60,8 +60,8 @@ get_header();
                       <img src="<?php echo get_theme_file_uri(); ?>/images/ajuste-video-home.gif" alt="Gif home">
                     </div>
                     <div class="container-fluid h-100 px-4">
-                      <div class="row h-100 align-items-center">
-                        <div class="col">
+                      <div class="row h-100 align-items-end align-items-md-center">
+                        <div class="col slide-txt-wrapper">
 
                           <div class="row justify-content-center">
                             <div class="col-12 col-md-11">
@@ -72,7 +72,7 @@ get_header();
                           </div>
 
                         </div>
-                        <div class="col"></div>
+                        <div class="col d-none d-md-block"></div>
                       </div>
                     </div>
                   </div>
@@ -196,22 +196,22 @@ get_header();
   <?php if (have_rows('cita')) : ?>
     <?php while (have_rows('cita')) : the_row(); ?>
 
-    <?php if (get_sub_field('imagen')) : ?>
-      <section class="wrapper-quote bg-primary text-white py-5">
-        <img src="<?php echo get_theme_file_uri(); ?>/images/vector-lineal-white.png" class="asterisk" data-aos="fade-in" data-aos-delay="50" data-aos-offset="200" data-aos-easing="ease-in-out" alt="asterisk img">
+      <?php if (get_sub_field('imagen')) : ?>
+        <section class="wrapper-quote bg-primary text-white py-5">
+          <img src="<?php echo get_theme_file_uri(); ?>/images/vector-lineal-white.png" class="asterisk" data-aos="fade-in" data-aos-delay="50" data-aos-offset="200" data-aos-easing="ease-in-out" alt="asterisk img">
           <img src="<?php the_sub_field('imagen'); ?>" class="quote-img" data-aos="fade-in" data-aos-delay="50" data-aos-offset="250" data-aos-easing="ease-in-out" />
-          <div class="container">
+          <div class="container quote-txt-wrapper">
             <div class="row">
-              <div class="col-6 col-md-8">
+              <div class="col-12 col-md-8">
                 <h3 class="pe-4" data-aos="fade-right" data-aos-delay="50" data-aos-offset="200" data-aos-easing="ease-in-out"><?php the_sub_field('cita_texto'); ?></h3>
                 <p data-aos="fade-right" data-aos-delay="150" data-aos-offset="0" data-aos-easing="ease-in-out"><?php the_sub_field('cita_info'); ?></p>
               </div>
-              <div class="col-6 col-md-4">
+              <div class="d-none d-md-inline-flex col-md-4">
                 </div>
               </div>
             </div>
           </section>
-          <?php endif ?>
+      <?php endif ?>
 
     <?php endwhile; ?>
   <?php endif; ?>
@@ -221,7 +221,7 @@ get_header();
 
       <section class="smart-buy py-5">
         <?php if (ICL_LANGUAGE_CODE=='es') { ?>
-          <img src="<?php echo get_theme_file_uri(); ?>/images/text-graph-1.svg" class="graph" alt="text graph" data-aos="fade-right" data-aos-delay="50" data-aos-offset="50" data-aos-easing="ease-in-out">
+          <img src="<?php echo get_theme_file_uri(); ?>/images/text-graph-1.svg" class="graph d-none d-md-inline-flex" alt="text graph" data-aos="fade-right" data-aos-delay="50" data-aos-offset="50" data-aos-easing="ease-in-out">
         <?php } else { ?>
 
         <?php } ?>
@@ -317,12 +317,12 @@ get_header();
   <?php } else { ?>
     <!-- 'es'; -->
     <section class="py-5 bg-white store-btn-wrapper">
-      <img src="<?php echo get_theme_file_uri(); ?>/images/vector-lineal-green-cut-top.png" class="cut-asterisk" data-aos="fade-down-right" data-aos-delay="50" data-aos-offset="250" data-aos-easing="ease-in-out" alt="asterisk img">
+      <img src="<?php echo get_theme_file_uri(); ?>/images/vector-lineal-green-cut-top.png" class="cut-asterisk d-none d-md-inline-flex" data-aos="fade-down-right" data-aos-delay="50" data-aos-offset="250" data-aos-easing="ease-in-out" alt="asterisk img">
   
       <div class="phone-1 d-none d-md-block" data-aos="fade-left" data-aos-delay="50" data-aos-offset="50" data-aos-easing="ease-in-out">
         <img src="<?php echo get_theme_file_uri(); ?>/images/phone-1.png" alt="phone">
         <div class="text">
-          <img src="<?php echo get_theme_file_uri(); ?>/images/arrow.svg" class="arrow" alt="arrow">
+          <img src="<?php echo get_theme_file_uri(); ?>/images/arrow.svg" class="arrow d-none d-md-inline-flex" alt="arrow">
           Compra el último envase de tu vida y <span style="color: #00ABB1; ">deja de generar desechos</span>
         </div>
       </div>
@@ -337,7 +337,7 @@ get_header();
       <div class="phone-3 d-none d-md-block"  data-aos="fade-right" data-aos-delay="50" data-aos-offset="50" data-aos-easing="ease-in-out">
         <img src="<?php echo get_theme_file_uri(); ?>/images/phone-3.png" alt="phone">      
         <div class="text">
-          <img src="<?php echo get_theme_file_uri(); ?>/images/happy-face.svg" class="emoji" w alt="happy emoji">
+          <img src="<?php echo get_theme_file_uri(); ?>/images/happy-face.svg" class="emoji d-none d-md-inline-flex" w alt="happy emoji">
           <?php _e('Revisa el impacto <span style="color: #f1c756;">que has generado</span>')?>
         </div>
       </div>
@@ -363,7 +363,7 @@ get_header();
             <div class="phone-1 mb-5">
               <img src="<?php echo get_theme_file_uri(); ?>/images/phone-1.png" alt="phone">
               <div class="text">
-                <img src="<?php echo get_theme_file_uri(); ?>/images/arrow.svg" class="arrow" alt="arrow">
+                <img src="<?php echo get_theme_file_uri(); ?>/images/arrow.svg" class="arrow d-none d-md-inline-flex" alt="arrow">
                 Compra el último envase de tu vida y <span style="color: #00ABB1; ">deja de generar desechos</span>
               </div>
             </div>
@@ -380,7 +380,7 @@ get_header();
             <div class="phone-3">
               <img src="<?php echo get_theme_file_uri(); ?>/images/phone-3.png" alt="phone">      
               <div class="text">
-                <img src="<?php echo get_theme_file_uri(); ?>/images/happy-face.svg" class="emoji" w alt="happy emoji">
+                <img src="<?php echo get_theme_file_uri(); ?>/images/happy-face.svg" class="emoji d-none d-md-inline-flex" w alt="happy emoji">
                 Revisa el impacto <span style="color: #f1c756;">que has generado</span>
               </div>
             </div>

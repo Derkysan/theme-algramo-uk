@@ -16233,8 +16233,7 @@
 	  once: true,
 	  duration: 1000
 	});
-
-	(function ($) {
+	jQuery(document).ready(function ($) {
 	  new Swiper__default["default"]('.swiper-main', {
 	    cssMode: true,
 	    mousewheel: true
@@ -16332,8 +16331,8 @@
 	      data7.start();
 	    }); // Simular impacto
 
-	    const productsSelect = $('#products');
-	    const productsfrequency = $('#frequency');
+	    $('#products');
+	    $('#frequency');
 	    const simulaData1 = new CountUp('simulaData1', 0, {
 	      startVal: 0
 	    });
@@ -16348,69 +16347,466 @@
 	    simulaData1.start();
 	    simulaData2.start();
 	    simulaData3.start();
-	    productsSelect.on('change', function () {
-	      // if (productsfrequency.val() === '0' || productsSelect.val() === '0') return;
-	      switch (productsSelect.val()) {
-	        case '0':
-	          break;
+	    let productVal = '0';
+	    let frequencyVal = '0';
+	    $('#products').on('change', function () {
+	      productVal = $('#products option').filter(':selected').val();
+	      if (this.value === '0' && frequencyVal === '0') return;
 
-	        case '1':
-	          simulaData2.update(150);
-	          simulaData3.update(465);
-	          break;
+	      if (frequencyVal === '1') {
+	        switch (this.value) {
+	          case '1':
+	            simulaData1.update(23);
+	            simulaData2.update(23 * 152);
+	            simulaData3.update(23 * 465);
+	            break;
 
-	        case '2':
-	          simulaData2.update(49);
-	          simulaData3.update(143);
-	          break;
+	          case '2':
+	            simulaData1.update(23);
+	            simulaData2.update(23 * 49);
+	            simulaData3.update(23 * 143);
+	            break;
 
-	        case '3':
-	          simulaData2.update(48);
-	          simulaData3.update(231);
-	          break;
+	          case '3':
+	            simulaData1.update(23);
+	            simulaData2.update(23 * 48);
+	            simulaData3.update(23 * 231);
+	            break;
 
-	        case '4':
-	          simulaData2.update(44);
-	          simulaData3.update(151);
-	          break;
+	          case '4':
+	            simulaData1.update(23);
+	            simulaData2.update(23 * 44);
+	            simulaData3.update(23 * 151);
+	            break;
 
-	        case '5':
-	          simulaData2.update(52);
-	          simulaData3.update(151);
-	          break;
+	          case '5':
+	            simulaData1.update(23);
+	            simulaData2.update(23 * 52);
+	            simulaData3.update(23 * 151);
+	            break;
+
+	          case '6':
+	            simulaData1.update(23);
+	            simulaData2.update(23 * 345);
+	            simulaData3.update(23 * 1141);
+	            break;
+
+	          default:
+	            simulaData1.update(0);
+	            break;
+	        }
+	      }
+
+	      if (frequencyVal === '2') {
+	        switch (this.value) {
+	          case '1':
+	            simulaData1.update(11);
+	            simulaData2.update(11 * 152);
+	            simulaData3.update(11 * 465);
+	            break;
+
+	          case '2':
+	            simulaData1.update(11);
+	            simulaData2.update(11 * 49);
+	            simulaData3.update(11 * 143);
+	            break;
+
+	          case '3':
+	            simulaData1.update(11);
+	            simulaData2.update(11 * 48);
+	            simulaData3.update(11 * 231);
+	            break;
+
+	          case '4':
+	            simulaData1.update(11);
+	            simulaData2.update(11 * 44);
+	            simulaData3.update(11 * 151);
+	            break;
+
+	          case '5':
+	            simulaData1.update(11);
+	            simulaData2.update(11 * 52);
+	            simulaData3.update(11 * 151);
+	            break;
+
+	          case '6':
+	            simulaData1.update(11);
+	            simulaData2.update(11 * 345);
+	            simulaData3.update(11 * 1141);
+	            break;
+
+	          default:
+	            simulaData1.update(0);
+	            break;
+	        }
+	      }
+
+	      if (frequencyVal === '3') {
+	        switch (this.value) {
+	          case '1':
+	            simulaData1.update(5);
+	            simulaData2.update(5 * 152);
+	            simulaData3.update(5 * 465);
+	            break;
+
+	          case '2':
+	            simulaData1.update(5);
+	            simulaData2.update(5 * 143);
+	            simulaData3.update(5 * 143);
+	            break;
+
+	          case '3':
+	            simulaData1.update(5);
+	            simulaData2.update(5 * 48);
+	            simulaData3.update(5 * 231);
+	            break;
+
+	          case '4':
+	            simulaData1.update(5);
+	            simulaData2.update(5 * 44);
+	            simulaData3.update(5 * 151);
+	            break;
+
+	          case '5':
+	            simulaData1.update(5);
+	            simulaData2.update(5 * 52);
+	            simulaData3.update(5 * 151);
+	            break;
+
+	          case '6':
+	            simulaData1.update(5);
+	            simulaData2.update(5 * 345);
+	            simulaData3.update(5 * 1141);
+	            break;
+
+	          default:
+	            simulaData1.update(0);
+	            break;
+	        }
+	      }
+
+	      if (frequencyVal === '4') {
+	        switch (this.value) {
+	          case '1':
+	            simulaData1.update(3);
+	            simulaData2.update(3 * 152);
+	            simulaData3.update(3 * 465);
+	            break;
+
+	          case '2':
+	            simulaData1.update(3);
+	            simulaData2.update(3 * 49);
+	            simulaData3.update(3 * 143);
+	            break;
+
+	          case '3':
+	            simulaData1.update(3);
+	            simulaData2.update(3 * 48);
+	            simulaData3.update(3 * 231);
+	            break;
+
+	          case '4':
+	            simulaData1.update(3);
+	            simulaData2.update(3 * 44);
+	            simulaData3.update(3 * 151);
+	            break;
+
+	          case '5':
+	            simulaData1.update(3);
+	            simulaData2.update(3 * 52);
+	            simulaData3.update(3 * 151);
+	            break;
+
+	          case '6':
+	            simulaData1.update(3);
+	            simulaData2.update(3 * 345);
+	            simulaData3.update(3 * 1141);
+	            break;
+
+	          default:
+	            simulaData1.update(0);
+	            break;
+	        }
+	      }
+
+	      if (frequencyVal === '5') {
+	        switch (this.value) {
+	          case '1':
+	            simulaData1.update(1);
+	            simulaData2.update(1 * 152);
+	            simulaData3.update(1 * 465);
+	            break;
+
+	          case '2':
+	            simulaData1.update(1);
+	            simulaData2.update(1 * 49);
+	            simulaData3.update(1 * 143);
+	            break;
+
+	          case '3':
+	            simulaData1.update(1);
+	            simulaData2.update(1 * 48);
+	            simulaData3.update(1 * 231);
+	            break;
+
+	          case '4':
+	            simulaData1.update(1);
+	            simulaData2.update(1 * 44);
+	            simulaData3.update(1 * 151);
+	            break;
+
+	          case '5':
+	            simulaData1.update(1);
+	            simulaData2.update(1 * 52);
+	            simulaData3.update(1 * 151);
+	            break;
+
+	          case '6':
+	            simulaData1.update(1);
+	            simulaData2.update(1 * 345);
+	            simulaData3.update(1 * 1141);
+	            break;
+
+	          default:
+	            simulaData1.update(0);
+	            break;
+	        }
 	      }
 	    });
-	    productsfrequency.on('change', function () {
-	      // if (productsSelect.val() === '0' || productsfrequency.val() === '0') return;
-	      switch (productsfrequency.val()) {
-	        case '0':
-	          break;
+	    $('#frequency').on('change', function () {
+	      frequencyVal = $('#frequency option').filter(':selected').val();
+	      if (this.value === '0' && productVal === '0') return;
 
-	        case '1':
-	          simulaData1.update(17);
-	          break;
+	      if (productVal === '1') {
+	        switch (this.value) {
+	          case '1':
+	            simulaData1.update(23);
+	            simulaData2.update(23 * 152);
+	            simulaData3.update(23 * 465);
+	            break;
 
-	        case '2':
-	          simulaData1.update(11);
-	          break;
+	          case '2':
+	            simulaData1.update(11);
+	            simulaData2.update(11 * 152);
+	            simulaData3.update(11 * 465);
+	            break;
 
-	        case '3':
-	          simulaData1.update(5);
-	          break;
+	          case '3':
+	            simulaData1.update(5);
+	            simulaData2.update(5 * 152);
+	            simulaData3.update(5 * 465);
+	            break;
 
-	        case '4':
-	          simulaData1.update(3);
-	          break;
+	          case '4':
+	            simulaData1.update(3);
+	            simulaData2.update(3 * 152);
+	            simulaData3.update(3 * 465);
+	            break;
 
-	        case '5':
-	          simulaData1.update(1);
-	          break;
+	          case '5':
+	            simulaData1.update(1);
+	            simulaData2.update(1 * 152);
+	            simulaData3.update(1 * 465);
+	            break;
+
+	          default:
+	            simulaData1.update(0);
+	            break;
+	        }
+	      }
+
+	      if (productVal === '2') {
+	        switch (this.value) {
+	          case '1':
+	            simulaData1.update(23);
+	            simulaData2.update(23 * 49);
+	            simulaData3.update(23 * 143);
+	            break;
+
+	          case '2':
+	            simulaData1.update(11);
+	            simulaData2.update(11 * 49);
+	            simulaData3.update(11 * 143);
+	            break;
+
+	          case '3':
+	            simulaData1.update(5);
+	            simulaData2.update(5 * 49);
+	            simulaData3.update(5 * 143);
+	            break;
+
+	          case '4':
+	            simulaData1.update(3);
+	            simulaData2.update(3 * 49);
+	            simulaData3.update(3 * 143);
+	            break;
+
+	          case '5':
+	            simulaData1.update(1);
+	            simulaData2.update(1 * 49);
+	            simulaData3.update(1 * 143);
+	            break;
+
+	          default:
+	            simulaData1.update(0);
+	            break;
+	        }
+	      }
+
+	      if (productVal === '3') {
+	        switch (this.value) {
+	          case '1':
+	            simulaData1.update(23);
+	            simulaData2.update(23 * 48);
+	            simulaData3.update(23 * 231);
+	            break;
+
+	          case '2':
+	            simulaData1.update(11);
+	            simulaData2.update(11 * 48);
+	            simulaData3.update(11 * 231);
+	            break;
+
+	          case '3':
+	            simulaData1.update(5);
+	            simulaData2.update(5 * 48);
+	            simulaData3.update(5 * 231);
+	            break;
+
+	          case '4':
+	            simulaData1.update(3);
+	            simulaData2.update(3 * 48);
+	            simulaData3.update(3 * 231);
+	            break;
+
+	          case '5':
+	            simulaData1.update(1);
+	            simulaData2.update(1 * 48);
+	            simulaData3.update(1 * 231);
+	            break;
+
+	          default:
+	            simulaData1.update(0);
+	            break;
+	        }
+	      }
+
+	      if (productVal === '4') {
+	        switch (this.value) {
+	          case '1':
+	            simulaData1.update(23);
+	            simulaData2.update(23 * 44);
+	            simulaData3.update(23 * 151);
+	            break;
+
+	          case '2':
+	            simulaData1.update(11);
+	            simulaData2.update(11 * 44);
+	            simulaData3.update(11 * 151);
+	            break;
+
+	          case '3':
+	            simulaData1.update(5);
+	            simulaData2.update(5 * 44);
+	            simulaData3.update(5 * 151);
+	            break;
+
+	          case '4':
+	            simulaData1.update(3);
+	            simulaData2.update(3 * 44);
+	            simulaData3.update(3 * 151);
+	            break;
+
+	          case '5':
+	            simulaData1.update(1);
+	            simulaData2.update(1 * 44);
+	            simulaData3.update(1 * 151);
+	            break;
+
+	          default:
+	            simulaData1.update(0);
+	            break;
+	        }
+	      }
+
+	      if (productVal === '5') {
+	        switch (this.value) {
+	          case '1':
+	            simulaData1.update(23);
+	            simulaData2.update(23 * 52);
+	            simulaData3.update(23 * 151);
+	            break;
+
+	          case '2':
+	            simulaData1.update(11);
+	            simulaData2.update(11 * 52);
+	            simulaData3.update(11 * 151);
+	            break;
+
+	          case '3':
+	            simulaData1.update(5);
+	            simulaData2.update(5 * 52);
+	            simulaData3.update(5 * 151);
+	            break;
+
+	          case '4':
+	            simulaData1.update(3);
+	            simulaData2.update(3 * 52);
+	            simulaData3.update(3 * 151);
+	            break;
+
+	          case '5':
+	            simulaData1.update(1);
+	            simulaData2.update(1 * 52);
+	            simulaData3.update(1 * 151);
+	            break;
+
+	          default:
+	            simulaData1.update(0);
+	            break;
+	        }
+	      }
+
+	      if (productVal === '6') {
+	        switch (this.value) {
+	          case '1':
+	            simulaData1.update(23);
+	            simulaData2.update(23 * 345);
+	            simulaData3.update(23 * 1141);
+	            break;
+
+	          case '2':
+	            simulaData1.update(11);
+	            simulaData2.update(11 * 345);
+	            simulaData3.update(11 * 1141);
+	            break;
+
+	          case '3':
+	            simulaData1.update(5);
+	            simulaData2.update(5 * 345);
+	            simulaData3.update(5 * 1141);
+	            break;
+
+	          case '4':
+	            simulaData1.update(3);
+	            simulaData2.update(3 * 345);
+	            simulaData3.update(3 * 1141);
+	            break;
+
+	          case '5':
+	            simulaData1.update(1);
+	            simulaData2.update(1 * 345);
+	            simulaData3.update(1 * 1141);
+	            break;
+
+	          default:
+	            simulaData1.update(0);
+	            break;
+	        }
 	      }
 	    });
-	  }); // added event listener because it doesn't get the right width
-	  // addEventListener("load", function () {
-	  // });
-	})(jQuery);
+	  });
+	});
 
 	exports.Alert = alert;
 	exports.Button = button;
