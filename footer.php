@@ -56,8 +56,20 @@ $container = get_theme_mod( 'understrap_container_type' );
     </div>
 
 	</div><!-- container end -->
-
+  
+  
+  <div class="dev-brand">
+    <div class="container">
+      <div class="row">
+        <div class="col">
+          <span class="me-2">Website por <b>PROSA</b></span> 
+          <!-- <a href="https://www.prosaestudio.com/" target="_blank" rel="noopener noreferrer"><img src="<?php echo get_theme_file_uri(); ?>/images/" class="" alt="PROSA ESTUDIO"></a> -->
+        </div>
+      </div>
+    </div>
+  </div>
 </footer><!-- wrapper end -->
+
 
 </div><!-- #page we need this extra closing tag here -->
 

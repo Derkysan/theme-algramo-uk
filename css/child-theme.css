@@ -15680,7 +15680,7 @@ figure.woocommerce-product-gallery__wrapper {
   background-color: #000000;
   color: #ffffff;
   padding-top: 4em;
-  padding-bottom: 2em;
+  padding-bottom: 0;
 }
 .wrapper-footer ul {
   list-style: none;
@@ -15746,7 +15746,12 @@ ul#menu-redes-sociales li:before {
   color: #000000;
 }
 ul#menu-redes-sociales li a {
-  font-family: "CircularStd-Book";
+  font-family: CircularStd-Book, Helvetica Neue, Helvetica, Arial, sans-serif !important;
+}
+
+.dev-brand {
+  border-top: 1px solid #ffffff;
+  padding: 1em 0;
 }
 
 @media (max-width: 767.98px) {

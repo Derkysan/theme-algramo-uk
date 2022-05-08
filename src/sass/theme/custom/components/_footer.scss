@@ -2,7 +2,7 @@
   background-color: #000000;
   color: #ffffff;
   padding-top: 4em;
-  padding-bottom: 2em;
+  padding-bottom: 0;
   ul {
     list-style: none;
     padding-left: 0;
@@ -69,10 +69,15 @@ ul {
         color: #000000;
       }
       a {
-        font-family: 'CircularStd-Book';
+        font-family: CircularStd-Book,Helvetica Neue,Helvetica,Arial,sans-serif !important;
       }
     }
   }
+}
+
+.dev-brand {
+  border-top: 1px solid #ffffff;
+  padding: 1em 0;
 }
 
 @media (max-width: 767.98px) {
