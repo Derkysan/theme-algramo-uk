@@ -18,7 +18,7 @@ jQuery(document).ready(function ($) {
   });
 
   const swiper = new Swiper('.swiper-products', {
-    autoplay: true,
+    autoplay: false,
     grabCursor: true,
     mousewheel: false,
     slidesPerView: "auto",

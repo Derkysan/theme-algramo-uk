@@ -15731,10 +15731,10 @@ figure.woocommerce-product-gallery__wrapper {
   gap: 2em;
 }
 
-ul#menu-redes-sociales li {
+ul#menu-redes-sociales li, ul#menu-redes-sociales-uk li {
   margin-right: 0.5em !important;
 }
-ul#menu-redes-sociales li:before {
+ul#menu-redes-sociales li:before, ul#menu-redes-sociales-uk li:before {
   width: 24px;
   height: 24px;
   background-color: #ffffff;
@@ -15745,7 +15745,7 @@ ul#menu-redes-sociales li:before {
   margin-right: 0.5em;
   color: #000000;
 }
-ul#menu-redes-sociales li a {
+ul#menu-redes-sociales li a, ul#menu-redes-sociales-uk li a {
   font-family: CircularStd-Book, Helvetica Neue, Helvetica, Arial, sans-serif !important;
 }
 
@@ -16709,7 +16709,8 @@ img.grid-carousel {
   text-align: center;
 }
 .culture-wrapper .culture-item .thumb {
-  margin-bottom: 2em;
+  margin: 0 auto 2em;
+  max-width: 250px;
 }
 
 .graph-wrapper .graph-img {
@@ -16800,13 +16801,10 @@ header {
   }
 }
 .banner-header {
-  height: 85vh;
+  height: 75vh;
 }
 .banner-header h1, .banner-header .h1 {
   font-size: 75px;
-}
-.banner-header.simular-impacto {
-  height: 75vh;
 }
 
 .graph-wrapper .graph-img {

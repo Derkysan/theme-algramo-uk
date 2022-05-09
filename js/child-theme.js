@@ -16239,7 +16239,7 @@
 	    mousewheel: true
 	  });
 	  new Swiper__default["default"]('.swiper-products', {
-	    autoplay: true,
+	    autoplay: false,
 	    grabCursor: true,
 	    mousewheel: false,
 	    slidesPerView: "auto",

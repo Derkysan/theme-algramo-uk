@@ -62,8 +62,8 @@ $container = get_theme_mod( 'understrap_container_type' );
     <div class="container">
       <div class="row">
         <div class="col">
-          <span class="me-2">Website por <b>PROSA</b></span> 
-          <!-- <a href="https://www.prosaestudio.com/" target="_blank" rel="noopener noreferrer"><img src="<?php echo get_theme_file_uri(); ?>/images/" class="" alt="PROSA ESTUDIO"></a> -->
+          <span class="me-1">Website por</span> 
+          <a href="https://www.prosaestudio.com/" target="_blank" rel="noopener noreferrer"><img src="<?php echo get_theme_file_uri(); ?>/images/prosa_logo.png" width="60" alt="PROSA ESTUDIO"></a>
         </div>
       </div>
     </div>
