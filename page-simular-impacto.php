@@ -4,7 +4,7 @@
 
 <div class="animate__animated animate__fadeIn">
 
-  <section class="banner-header simular-impacto py-5">
+  <section class="banner-header simular-impacto">
 
     <div class="container h-100">
       <div class="row h-100 align-items-center justify-content-center mb-5 text-center">

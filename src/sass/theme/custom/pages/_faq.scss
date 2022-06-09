@@ -1,0 +1,38 @@
+.faq-graph {
+  position: absolute;
+  bottom: -80px;
+  right: -80px;
+  width: 350px;
+}
+
+.collapse-list {
+  .item {
+    border-bottom: 1px solid #F3F6FA;
+    &:first-child {
+      border-top: none;
+    }
+    // &:last-child {
+      //   border-bottom: none;
+      // }
+      .btn-collapse {
+      padding: .75em 0;
+      width: 100%;
+      text-align: inherit;
+      padding-right: 3em;
+      position: relative;
+      font-size: 1.25em;
+      border-radius: 0;
+      .collapse-icon {
+        width: 3em;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        margin: auto;
+      }
+    }
+  }
+}

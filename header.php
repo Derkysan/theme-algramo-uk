@@ -19,6 +19,7 @@ $navbar_type       = get_theme_mod( 'understrap_navbar_type', 'collapse' );
 	<meta charset="<?php bloginfo( 'charset' ); ?>">
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 	<link rel="profile" href="http://gmpg.org/xfn/11">
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.9.7/jquery.fullpage.min.css" />
   
   <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 	<?php wp_head(); ?>
@@ -29,27 +30,13 @@ $navbar_type       = get_theme_mod( 'understrap_navbar_type', 'collapse' );
 <div class="site" id="page">
   
   <div id="loadingPage" class="loader animate__animated animate__fadeIn">
-    <!-- <div class="sk-chase">
-      <div class="sk-chase-dot"></div>
-      <div class="sk-chase-dot"></div>
-      <div class="sk-chase-dot"></div>
-      <div class="sk-chase-dot"></div>
-      <div class="sk-chase-dot"></div>
-      <div class="sk-chase-dot"></div>
-    </div> -->
     <img src="<?php echo get_theme_file_uri(); ?>/images/loader.gif" width="120" alt="loader">
   </div>
 
 	<!-- ******************* The Navbar Area ******************* -->
-	<header id="wrapper-navbar" class="<?php if ( is_admin_bar_showing() ) { ?> fixed-top fixed-admin <?php } else { ?>fixed-top<?php } ?>">
-    <!-- <?php
-    if ( is_admin_bar_showing() ) {
-      echo '<div style="min-height: 32px;">ADMIN BAR ACTIVE</div>';
-    }
-    ?> -->
+	<header id="wrapper-navbar" class="<?php if ( is_admin_bar_showing() ) { ?> fixed-admin <?php } else { ?>fixed-top<?php } ?>">
 
-		<a class="skip-link sr-only sr-only-focusable" href="#content"><?php esc_html_e( 'Skip to content', 'understrap' ); ?></a>
-
+    <a class="skip-link sr-only sr-only-focusable" href="#content"><?php esc_html_e( 'Skip to content', 'understrap' ); ?></a>
 		<?php get_template_part( 'global-templates/navbar', $navbar_type . '-' . $bootstrap_version ); ?>
 
 	</header><!-- #wrapper-navbar end -->

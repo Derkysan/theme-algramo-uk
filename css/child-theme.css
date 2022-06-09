@@ -1,4 +1,36 @@
 @charset "UTF-8";
+@font-face {
+  font-family: "Circular Std Book";
+  src: url("../fonts/circular/CircularStd-Book.eot");
+  src: url("../fonts/circular/CircularStd-Book.eot?#iefix") format("embedded-opentype"), url("../fonts/circular/CircularStd-Book.woff2") format("woff2"), url("../fonts/circular/CircularStd-Book.woff") format("woff"), url("../fonts/circular/CircularStd-Book.ttf") format("truetype"), url("../fonts/circular/CircularStd-Book.svg#CircularStd-Book") format("svg");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Circular Std";
+  src: url("../fonts/circular/CircularStd-Black.eot");
+  src: url("../fonts/circular/CircularStd-Black.eot?#iefix") format("embedded-opentype"), url("../fonts/circular/CircularStd-Black.woff2") format("woff2"), url("../fonts/circular/CircularStd-Black.woff") format("woff"), url("../fonts/circular/CircularStd-Black.ttf") format("truetype"), url("../fonts/circular/CircularStd-Black.svg#CircularStd-Black") format("svg");
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Circular Std";
+  src: url("../fonts/circular/CircularStd-Bold.eot");
+  src: url("../fonts/circular/CircularStd-Bold.eot?#iefix") format("embedded-opentype"), url("../fonts/circular/CircularStd-Bold.woff2") format("woff2"), url("../fonts/circular/CircularStd-Bold.woff") format("woff"), url("../fonts/circular/CircularStd-Bold.ttf") format("truetype"), url("../fonts/circular/CircularStd-Bold.svg#CircularStd-Bold") format("svg");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Circular Std";
+  src: url("../fonts/circular/CircularStd-Medium.eot");
+  src: url("../fonts/circular/CircularStd-Medium.eot?#iefix") format("embedded-opentype"), url("../fonts/circular/CircularStd-Medium.woff2") format("woff2"), url("../fonts/circular/CircularStd-Medium.woff") format("woff"), url("../fonts/circular/CircularStd-Medium.ttf") format("truetype"), url("../fonts/circular/CircularStd-Medium.svg#CircularStd-Medium") format("svg");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
 /*!
  * Bootstrap v5.1.1 (https://getbootstrap.com/)
  * Copyright 2011-2021 The Bootstrap Authors
@@ -48,10 +80,10 @@
   --bs-black-rgb: 0, 0, 0;
   --bs-body-color-rgb: 33, 37, 41;
   --bs-body-bg-rgb: 244, 243, 246;
-  --bs-font-sans-serif: CircularStd-Book, Helvetica, Arial, sans-serif;
+  --bs-font-sans-serif: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   --bs-font-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
   --bs-gradient: linear-gradient(180deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0));
-  --bs-body-font-family: var(--bs-font-sans-serif);
+  --bs-body-font-family: CircularStd-Book;
   --bs-body-font-size: 1rem;
   --bs-body-font-weight: 400;
   --bs-body-line-height: 1.5;
@@ -6800,7 +6832,7 @@ textarea.form-control-lg {
   z-index: 1080;
   display: block;
   margin: 0;
-  font-family: var(--bs-font-sans-serif);
+  font-family: "CircularStd-Book";
   font-style: normal;
   font-weight: 400;
   line-height: 1.5;
@@ -6902,7 +6934,7 @@ textarea.form-control-lg {
   z-index: 1070;
   display: block;
   max-width: 276px;
-  font-family: var(--bs-font-sans-serif);
+  font-family: "CircularStd-Book";
   font-style: normal;
   font-weight: 400;
   line-height: 1.5;
@@ -15602,8 +15634,47 @@ figure.woocommerce-product-gallery__wrapper {
   display: block;
 }
 
+@font-face {
+  font-family: "Circular Std Book";
+  src: url("../fonts/circular/CircularStd-Book.eot");
+  src: url("../fonts/circular/CircularStd-Book.eot?#iefix") format("embedded-opentype"), url("../fonts/circular/CircularStd-Book.woff2") format("woff2"), url("../fonts/circular/CircularStd-Book.woff") format("woff"), url("../fonts/circular/CircularStd-Book.ttf") format("truetype"), url("../fonts/circular/CircularStd-Book.svg#CircularStd-Book") format("svg");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Circular Std";
+  src: url("../fonts/circular/CircularStd-Black.eot");
+  src: url("../fonts/circular/CircularStd-Black.eot?#iefix") format("embedded-opentype"), url("../fonts/circular/CircularStd-Black.woff2") format("woff2"), url("../fonts/circular/CircularStd-Black.woff") format("woff"), url("../fonts/circular/CircularStd-Black.ttf") format("truetype"), url("../fonts/circular/CircularStd-Black.svg#CircularStd-Black") format("svg");
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Circular Std";
+  src: url("../fonts/circular/CircularStd-Bold.eot");
+  src: url("../fonts/circular/CircularStd-Bold.eot?#iefix") format("embedded-opentype"), url("../fonts/circular/CircularStd-Bold.woff2") format("woff2"), url("../fonts/circular/CircularStd-Bold.woff") format("woff"), url("../fonts/circular/CircularStd-Bold.ttf") format("truetype"), url("../fonts/circular/CircularStd-Bold.svg#CircularStd-Bold") format("svg");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Circular Std";
+  src: url("../fonts/circular/CircularStd-Medium.eot");
+  src: url("../fonts/circular/CircularStd-Medium.eot?#iefix") format("embedded-opentype"), url("../fonts/circular/CircularStd-Medium.woff2") format("woff2"), url("../fonts/circular/CircularStd-Medium.woff") format("woff"), url("../fonts/circular/CircularStd-Medium.ttf") format("truetype"), url("../fonts/circular/CircularStd-Medium.svg#CircularStd-Medium") format("svg");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
 #wrapper-navbar {
-  background: linear-gradient(180deg, #FFFFFF 0%, rgba(255, 255, 255, 0) 100%);
+  height: 85px;
+  background-color: #ffffff;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 9999;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
 }
 #wrapper-navbar .wp-block-columns {
   margin: 0;
@@ -15641,7 +15712,7 @@ figure.woocommerce-product-gallery__wrapper {
   font-size: 14px;
   border-radius: 12px;
   padding: 1em;
-  background-color: #00ABB1;
+  background-color: #00abb1;
   color: #ffffff;
   text-decoration: none;
   font-size: 14px;
@@ -15667,16 +15738,75 @@ figure.woocommerce-product-gallery__wrapper {
   border: 0 !important;
 }
 
+.logo-animated {
+  position: relative;
+  display: flex;
+  align-items: inherit;
+}
+.logo-animated .logo-wrapper {
+  transition: all 0.1s ease-in-out;
+  top: 0;
+  opacity: 1;
+  width: 125px;
+  display: inline-block;
+}
+.logo-animated img {
+  height: 2.5em;
+  border: 0;
+  margin: 0;
+  padding: 0;
+  position: relative;
+}
+.logo-animated img.logo {
+  max-width: none;
+  opacity: 1;
+  transition: all 0.5s ease-in-out;
+}
+.logo-animated img.isotipo {
+  opacity: 0;
+  max-width: none;
+  top: 1px;
+  transition: all 0.2s linear;
+  transition-delay: 0;
+}
+.logo-animated.scrolled .logo-wrapper {
+  transition: all 0.3s ease-in-out;
+  width: 0;
+  overflow: hidden;
+}
+.logo-animated.scrolled img.logo {
+  opacity: 0;
+  transition: all 0.3s ease-in-out;
+}
+.logo-animated.scrolled img.isotipo {
+  opacity: 1;
+  transition: all 0.3s ease-in-out;
+  transition-delay: 0.1s;
+}
+
 .menu-menu-principal-container {
   margin-bottom: 0;
 }
 
+.wrapper-logo {
+  width: 160px;
+}
+
 @media (max-width: 767.98px) {
+  #wrapper-navbar {
+    height: auto;
+    position: relative;
+  }
+  #wrapper-navbar.fixed-admin {
+    margin-top: 0;
+  }
+
   .menu-menu-principal-container {
     margin-bottom: 2em;
   }
 }
 .wrapper-footer {
+  position: relative;
   background-color: #000000;
   color: #ffffff;
   padding-top: 4em;
@@ -15731,10 +15861,10 @@ figure.woocommerce-product-gallery__wrapper {
   gap: 2em;
 }
 
-ul#menu-redes-sociales li, ul#menu-redes-sociales-uk li {
+ul#menu-redes-sociales li {
   margin-right: 0.5em !important;
 }
-ul#menu-redes-sociales li:before, ul#menu-redes-sociales-uk li:before {
+ul#menu-redes-sociales li:before {
   width: 24px;
   height: 24px;
   background-color: #ffffff;
@@ -15745,13 +15875,15 @@ ul#menu-redes-sociales li:before, ul#menu-redes-sociales-uk li:before {
   margin-right: 0.5em;
   color: #000000;
 }
-ul#menu-redes-sociales li a, ul#menu-redes-sociales-uk li a {
+ul#menu-redes-sociales li a {
   font-family: CircularStd-Book, Helvetica Neue, Helvetica, Arial, sans-serif !important;
+  cursor: pointer;
 }
 
 .dev-brand {
-  border-top: 1px solid #ffffff;
+  border-top: 1px solid #4d4d4d;
   padding: 1em 0;
+  color: #4d4d4d;
 }
 
 @media (max-width: 767.98px) {
@@ -15763,6 +15895,7 @@ ul#menu-redes-sociales li a, ul#menu-redes-sociales-uk li a {
 
   .footer-copy {
     height: auto;
+    margin-bottom: 3em;
   }
 }
 .swiper {
@@ -16143,6 +16276,99 @@ ul#menu-redes-sociales li a, ul#menu-redes-sociales-uk li a {
     font-size: 50px;
   }
 }
+.fullpage {
+  width: 100%;
+  height: auto;
+  position: relative;
+  overflow: hidden;
+}
+.fullpage .section {
+  height: 100vh;
+}
+.fullpage .section p {
+  font-size: 1.5em;
+}
+.fullpage .section h2, .fullpage .section .h2 {
+  font-size: 3em;
+  color: #00ABB1;
+  font-weight: bold;
+  margin-bottom: 0.5em;
+}
+.fullpage .section .v-slider {
+  height: 100%;
+  max-height: 100vh;
+  width: 100%;
+  max-width: 500px;
+  display: flex;
+  align-items: center;
+}
+.fullpage .section .v-slider.active {
+  height: 100vh;
+}
+.fullpage .section .v-slider.top {
+  top: 0;
+  bottom: auto;
+  position: absolute;
+}
+.fullpage .section .v-slider.bottom {
+  position: absolute;
+  top: auto;
+  bottom: 0;
+}
+.fullpage .section .v-slider.fixed {
+  top: 0;
+  position: fixed;
+}
+
+.swiper.swiper-v {
+  height: 100%;
+  position: relative;
+}
+.swiper.swiper-v .swiper-wrapper {
+  height: 100%;
+}
+.swiper.swiper-v .swiper-wrapper .swiper-slide {
+  width: 100% !important;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+.swiper.swiper-v .pager {
+  position: absolute;
+  top: 0;
+  left: 450px;
+  bottom: 0;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 0.25em;
+}
+.swiper.swiper-v .pager .pagerline {
+  width: 2px;
+  height: 150px;
+  display: flex;
+  flex-direction: column;
+  background: rgba(0, 0, 0, 0.2);
+}
+.swiper.swiper-v .pager .pagerline .bullet {
+  width: 2px;
+  height: 50px;
+  background: rgba(0, 171, 177, 0);
+  transition: all 0.25s ease-in-out;
+}
+.swiper.swiper-v .pager .pagerline .bullet.active {
+  background: #00abb1;
+  transition: all 0.25s ease-in-out;
+}
+
+@media (max-width: 767.98px) {
+  .fullpage .section {
+    height: auto;
+    padding: 5em 0;
+  }
+}
 .main-slider {
   width: 100%;
   height: 100vh;
@@ -16477,6 +16703,58 @@ img.grid-carousel {
   z-index: 1;
 }
 
+.rechargeable-products {
+  display: flex;
+  flex-wrap: wrap;
+}
+.rechargeable-products .item {
+  width: 20%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0 1em 2em;
+  position: relative;
+  cursor: pointer;
+}
+.rechargeable-products .item .item-hover {
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease-in-out;
+  color: #ffffff;
+}
+.rechargeable-products .item .item-hover ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.rechargeable-products .item .item-hover ul li {
+  font-size: 1.15em;
+  margin-bottom: 0.5em;
+}
+.rechargeable-products .item .item-hover:hover {
+  opacity: 1;
+  transition: all 0.3s ease-in-out;
+}
+.rechargeable-products .item img {
+  height: 260px;
+  margin-bottom: 1em;
+}
+.rechargeable-products .item p {
+  font-size: 1.15em;
+  margin-bottom: 0.5em;
+}
+
 @media (max-width: 767.98px) {
   .main-slider {
     height: 100vh;
@@ -16761,21 +17039,172 @@ img.grid-carousel {
   margin: auto;
 }
 
+.faq-graph {
+  position: absolute;
+  bottom: -80px;
+  right: -80px;
+  width: 350px;
+}
+
+.collapse-list .item {
+  border-bottom: 1px solid #F3F6FA;
+}
+.collapse-list .item:first-child {
+  border-top: none;
+}
+.collapse-list .item .btn-collapse {
+  padding: 0.75em 0;
+  width: 100%;
+  text-align: inherit;
+  padding-right: 3em;
+  position: relative;
+  font-size: 1.25em;
+  border-radius: 0;
+}
+.collapse-list .item .btn-collapse .collapse-icon {
+  width: 3em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+}
+
+.contact-form label {
+  color: #00ABB1;
+}
+.contact-form .wpcf7 {
+  padding: 0;
+}
+.contact-form .wpcf7 textarea.wpcf7-form-control,
+.contact-form .wpcf7 select.wpcf7-form-control,
+.contact-form .wpcf7 input:not([type=submit]).wpcf7-form-control {
+  border-radius: 0;
+  border: 1px solid rgba(255, 255, 255, 0);
+  border-bottom: 1px solid #f4f3f6;
+  background-color: rgba(255, 255, 255, 0);
+}
+.contact-form .wpcf7 input[type=submit] {
+  background-color: rgba(255, 255, 255, 0);
+  color: #000000;
+  border: none;
+  border-radius: 0;
+  padding: 10px 20px;
+  font-size: 1.2em;
+  font-weight: bold;
+  cursor: pointer;
+  text-align: right;
+  position: relative;
+}
+.contact-form .btn-send {
+  position: relative;
+  display: flex;
+  justify-content: end;
+}
+.contact-form .btn-send input {
+  padding-right: 60px !important;
+  width: auto;
+  display: inline-flex;
+}
+.contact-form .btn-send .wpcf7-spinner {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.contact-form .btn-send::after {
+  content: "";
+  background-image: url("../images/icon-send.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 50px;
+  height: 50px;
+  display: inline-flex;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+.subject-selector {
+  position: relative;
+}
+.subject-selector .selector {
+  position: relative;
+  z-index: 1;
+}
+.subject-selector .selector .text-selector {
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+  font-size: 3em;
+  color: rgba(200, 200, 200, 0.75);
+  -webkit-text-fill-color: rgba(255, 255, 255, 0);
+  /* Will override color (regardless of order) */
+  -webkit-text-stroke-width: 2.5px;
+  -webkit-text-stroke-color: rgba(200, 200, 200, 0.75);
+  transition: all 0.25s ease;
+  cursor: pointer;
+}
+.subject-selector .selector .text-selector span {
+  color: rgba(200, 200, 200, 0.75);
+  -webkit-text-fill-color: rgba(255, 255, 255, 0);
+  /* Will override color (regardless of order) */
+  -webkit-text-stroke-width: 2.5px;
+  -webkit-text-stroke-color: rgba(200, 200, 200, 0.75);
+  transition: all 0.25s ease;
+}
+.subject-selector .selector .text-selector span {
+  font-size: 1.2em;
+  font-weight: 900;
+  color: rgba(200, 200, 200, 0.75);
+  -webkit-text-fill-color: rgba(255, 255, 255, 0);
+  /* Will override color (regardless of order) */
+  -webkit-text-stroke-width: 0.05px !important;
+  -webkit-text-stroke-color: rgba(200, 200, 200, 0.75);
+}
+.subject-selector .selector .text-selector.active {
+  color: rgba(0, 171, 177, 0.75);
+  -webkit-text-fill-color: #00abb1;
+  /* Will override color (regardless of order) */
+  -webkit-text-stroke-width: 0.05px !important;
+  -webkit-text-stroke-color: rgba(0, 171, 177, 0.75);
+  transition: all 0.25s ease;
+}
+.subject-selector .selector .text-selector.active span {
+  color: rgba(0, 171, 177, 0.75);
+  -webkit-text-fill-color: #00abb1;
+  /* Will override color (regardless of order) */
+  -webkit-text-stroke-width: 0.05px !important;
+  -webkit-text-stroke-color: rgba(0, 171, 177, 0.75);
+  transition: all 0.25s ease;
+}
+.subject-selector .graph {
+  position: absolute;
+  width: 60%;
+  height: 380px;
+  top: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.05);
+}
+
+.hidden-field {
+  position: relative;
+}
+.hidden-field span {
+  position: absolute;
+  visibility: hidden;
+}
+
 html {
   overflow-x: hidden !important;
 }
 
 body {
-  font-family: "CircularStd-Book", Helvetica Neue, Helvetica, Arial, sans-serif;
-  min-height: 600px;
-}
-
-.circular-book {
-  font-family: "CircularStd-Book", Helvetica Neue, Helvetica, Arial, sans-serif;
-}
-
-header {
-  padding: 11px 26px;
+  font-family: "Circular Std Book";
+  font-weight: normal;
 }
 
 .rotate {
@@ -16801,6 +17230,7 @@ header {
   }
 }
 .banner-header {
+  padding-top: 85px;
   height: 75vh;
 }
 .banner-header h1, .banner-header .h1 {
@@ -16844,6 +17274,23 @@ header {
   z-index: 0;
 }
 
+.header-page {
+  width: 100%;
+  height: 300px;
+  margin-top: 85px;
+  position: relative;
+  overflow: hidden;
+}
+.header-page img {
+  position: absolute;
+}
+.header-page h1, .header-page .h1 {
+  font-size: 3.5em;
+}
+.header-page.contact {
+  height: 350px;
+}
+
 @media (max-width: 767.98px) {
   .banner-header h1, .banner-header .h1 {
     font-size: 3em;
@@ -16854,6 +17301,10 @@ header {
 
   .secondary-menu {
     margin-top: 2em;
+  }
+
+  .header-page {
+    margin-top: 0;
   }
 }
 .has-blue-color,

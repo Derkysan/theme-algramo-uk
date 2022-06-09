@@ -2,12 +2,10 @@
 // To overwrite a Bootstrap variable you don´t have to touch the Bootstrap folder.
 // Just copy a variable from src/sass/assets/bootstrap5/_variables.scss, paste it here and edit the value.
 
+@import './custom/fonts';
 
 $green-primary: #00ABB1; // Thats a sample how you could change a BootStrap variable.
 $primary: $green-primary;  // Once we've changed the value, we'll also make it the primary brand color.
 
 $body-bg: #F4F3F6;
-
-$font-family-sans-serif: CircularStd-Book, Helvetica, Arial, sans-serif;
-
-@import './custom/fonts';
+$font-family-base: 'CircularStd-Book';

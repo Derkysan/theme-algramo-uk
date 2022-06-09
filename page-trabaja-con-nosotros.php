@@ -4,7 +4,7 @@
 
 <div class="animate__animated animate__fadeIn">
 
-  <section class="banner-header pt-5">
+  <section class="banner-header">
 
     <div class="container h-100">
       <div class="row align-items-center justify-content-center h-100">
@@ -333,7 +333,7 @@
   <?php if (have_rows('trabaja_con_nosotros')) : ?>
     <?php while (have_rows('trabaja_con_nosotros')) : the_row(); ?>
 
-      <section class="py-5 text-center position-relative">
+      <section class="pt-5 text-center position-relative">
         <div class="marquee-wrapper trabaja-con-nosotros-2">
           <div class="hero-marquee">
             <div class="marquee">
@@ -395,15 +395,10 @@
   <?php endif; ?>
 
   
-  <section class="vacancy-wrapper py-5">
+  <section class="vacancy-wrapper pb-5">
     
     <div class="container">
       <div class="row justify-content-center">
-
-        <h4 class="text-primary text-center mb-5" data-aos="fade-down" data-aos-delay="50" data-aos-offset="250" data-aos-easing="ease-in-out"><?php _e('¡Construyamos juntos el primer unicornio circular!')?>
-          <span><img src="<?php echo get_theme_file_uri(); ?>/images/emoji-unicorn.png" style="width: 24px" alt="emoji"></span> 
-          <span><img src="<?php echo get_theme_file_uri(); ?>/images/emoji-world.png" style="width: 24px" alt="emoji"></span> 
-        </h4>
 
         <div class="col-12 col-md-4">
         <?php if ( have_rows( 'vacante_provisional' ) ) : ?>
@@ -416,6 +411,11 @@
           <?php endwhile; ?>
         <?php endif; ?>
         </div>
+
+        <h4 class="text-primary text-center mt-5" data-aos="fade-down" data-aos-delay="50" data-aos-offset="50" data-aos-easing="ease-in-out"><?php _e('¡Construyamos juntos el primer unicornio circular!')?>
+          <span><img src="<?php echo get_theme_file_uri(); ?>/images/emoji-unicorn.png" style="width: 24px" alt="emoji"></span> 
+          <span><img src="<?php echo get_theme_file_uri(); ?>/images/emoji-world.png" style="width: 24px" alt="emoji"></span> 
+        </h4>
         
         <div class="d-none">
           <div class="col-10">

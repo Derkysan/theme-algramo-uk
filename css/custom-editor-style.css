@@ -1,4 +1,36 @@
 @charset "UTF-8";
+@font-face {
+  font-family: "Circular Std Book";
+  src: url("../fonts/circular/CircularStd-Book.eot");
+  src: url("../fonts/circular/CircularStd-Book.eot?#iefix") format("embedded-opentype"), url("../fonts/circular/CircularStd-Book.woff2") format("woff2"), url("../fonts/circular/CircularStd-Book.woff") format("woff"), url("../fonts/circular/CircularStd-Book.ttf") format("truetype"), url("../fonts/circular/CircularStd-Book.svg#CircularStd-Book") format("svg");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Circular Std";
+  src: url("../fonts/circular/CircularStd-Black.eot");
+  src: url("../fonts/circular/CircularStd-Black.eot?#iefix") format("embedded-opentype"), url("../fonts/circular/CircularStd-Black.woff2") format("woff2"), url("../fonts/circular/CircularStd-Black.woff") format("woff"), url("../fonts/circular/CircularStd-Black.ttf") format("truetype"), url("../fonts/circular/CircularStd-Black.svg#CircularStd-Black") format("svg");
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Circular Std";
+  src: url("../fonts/circular/CircularStd-Bold.eot");
+  src: url("../fonts/circular/CircularStd-Bold.eot?#iefix") format("embedded-opentype"), url("../fonts/circular/CircularStd-Bold.woff2") format("woff2"), url("../fonts/circular/CircularStd-Bold.woff") format("woff"), url("../fonts/circular/CircularStd-Bold.ttf") format("truetype"), url("../fonts/circular/CircularStd-Bold.svg#CircularStd-Bold") format("svg");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Circular Std";
+  src: url("../fonts/circular/CircularStd-Medium.eot");
+  src: url("../fonts/circular/CircularStd-Medium.eot?#iefix") format("embedded-opentype"), url("../fonts/circular/CircularStd-Medium.woff2") format("woff2"), url("../fonts/circular/CircularStd-Medium.woff") format("woff"), url("../fonts/circular/CircularStd-Medium.ttf") format("truetype"), url("../fonts/circular/CircularStd-Medium.svg#CircularStd-Medium") format("svg");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
 *,
 *::before,
 *::after {
@@ -465,10 +497,10 @@ progress {
   --bs-black-rgb: 0, 0, 0;
   --bs-body-color-rgb: 33, 37, 41;
   --bs-body-bg-rgb: 244, 243, 246;
-  --bs-font-sans-serif: CircularStd-Book, Helvetica, Arial, sans-serif;
+  --bs-font-sans-serif: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   --bs-font-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
   --bs-gradient: linear-gradient(180deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0));
-  --bs-body-font-family: var(--bs-font-sans-serif);
+  --bs-body-font-family: CircularStd-Book;
   --bs-body-font-size: 1rem;
   --bs-body-font-weight: 400;
   --bs-body-line-height: 1.5;
