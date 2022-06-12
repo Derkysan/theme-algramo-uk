@@ -88,14 +88,22 @@ $container = get_theme_mod('understrap_container_type');
       <!-- <div class="">
     </div> -->
       <div class="lang-selector">
-        <select id="langSelector" class="form-select border-0" aria-label="Default select example">
+        <!-- <select id="langSelector" class="form-select border-0" aria-label="Default select example">
           <option value="http://www.google.com" selected>
             <img src="<?php echo get_theme_file_uri(); ?>/images/flag-chile.svg" alt="Chile Flag"> Chile
           </option>
           <option value="http://www.youtube.com">
             <img src="<?php echo get_theme_file_uri(); ?>/images/flag-uk.svg" alt="UK Flag"> UK
           </option>
-        </select>
+        </select> -->
+
+        <div class="custom-select" style="width:200px;">
+          <select>
+            <option value="0">Select car:</option>
+            <option selected value="http://www.google.com">Chile</option>
+            <option value="http://www.youtube.com">UK</option>
+          </select>
+        </div>
       </div>
       <div class="secondary-menu">
         <?php dynamic_sidebar('header-right'); ?>

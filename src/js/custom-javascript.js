@@ -1,6 +1,7 @@
 // Add your custom JS here.
 import "./custom/swiper";
 import "./custom/contact";
+import "./custom/dropdown";
 
 import gsap from "gsap";
 

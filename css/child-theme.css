@@ -16369,6 +16369,84 @@ ul#menu-redes-sociales li a {
     padding: 5em 0;
   }
 }
+.custom-select {
+  position: relative;
+}
+.custom-select select {
+  display: none;
+  /*hide original SELECT element:*/
+}
+
+.select-selected:before {
+  width: 1em;
+  position: absolute;
+  content: url("../images/svg/cl.svg");
+  top: 7px;
+  left: 1em;
+}
+.select-selected:after {
+  position: absolute;
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  content: "\f107";
+  top: 7px;
+  right: 10px;
+  width: 0;
+  height: 0;
+}
+
+.select-items div,
+.select-selected {
+  color: #000000;
+  padding: 8px 16px;
+  padding-left: 3em;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.select-items div {
+  position: relative;
+  padding-left: 2.5em;
+}
+.select-items div:nth-child(1):before {
+  width: 1em;
+  position: absolute;
+  content: url("../images/svg/cl.svg");
+  top: 7px;
+  left: 1em;
+}
+.select-items div:nth-child(2):before {
+  width: 1em;
+  position: absolute;
+  content: url("../images/svg/gb.svg");
+  top: 7px;
+  left: 1em;
+}
+
+.select-items {
+  position: absolute;
+  background-color: #f0f0f0;
+  top: 100%;
+  left: 0;
+  right: 0;
+  z-index: 99;
+}
+
+.select-hide {
+  display: none;
+}
+
+.select-items div:hover, .same-as-selected {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+.cl {
+  border: 1px solid red;
+}
+
 .main-slider {
   width: 100%;
   height: 100vh;
@@ -17139,6 +17217,7 @@ img.grid-carousel {
   display: flex;
   align-items: center;
   gap: 0.5em;
+  margin-bottom: 0.5em;
   font-size: 3em;
   color: rgba(200, 200, 200, 0.75);
   -webkit-text-fill-color: rgba(255, 255, 255, 0);
@@ -17184,10 +17263,18 @@ img.grid-carousel {
 .subject-selector .graph {
   position: absolute;
   width: 60%;
-  height: 380px;
+  height: 420px;
   top: 0;
   right: 0;
   background-color: rgba(0, 0, 0, 0.05);
+}
+.subject-selector .graph img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+  object-fit: cover;
+  -o-object-position: center;
+  object-position: center;
 }
 
 .hidden-field {
@@ -17428,6 +17515,7 @@ body {
 .header-page {
   width: 100%;
   height: 450px;
+  padding-top: 85px;
   position: relative;
   overflow: hidden;
 }
@@ -17436,9 +17524,6 @@ body {
 }
 .header-page h1, .header-page .h1 {
   font-size: 3.5em;
-}
-.header-page.contact {
-  height: 350px;
 }
 
 @media (max-width: 767.98px) {
