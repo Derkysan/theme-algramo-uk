@@ -190,3 +190,12 @@ if (! function_exists('fa_custom_setup_kit') ) {
   }
 }
 fa_custom_setup_kit('https://kit.fontawesome.com/b66cc28da7.js');
+
+
+add_filter( 'wpcf7_form_elements', 'mycustom_wpcf7_form_elements' );
+
+function mycustom_wpcf7_form_elements( $form ) {
+$form = do_shortcode( $form );
+
+return $form;
+}
