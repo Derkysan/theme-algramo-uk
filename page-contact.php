@@ -38,7 +38,7 @@
               </div>
             </div>
             <div class="graph">
-              <img id="change-image" src="" alt="">
+              <img id="change-image" src="http://localhost:8888/prosa.cl.algramo/wp-content/themes/understrap-child/images/gif/postular.gif" alt="">
             </div>
           </div>
         </div>
