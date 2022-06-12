@@ -39,7 +39,7 @@ for (i = 0; i < l; i++) {
           if (s.options[i].innerHTML == this.innerHTML) {
             s.selectedIndex = i;
             // console.log(s.options[i].value);
-            changeLanguage(s.options[i].value); // change language
+            changeLanguage(s.options[i].value); // *** change language
             h.innerHTML = this.innerHTML;
             y = this.parentNode.getElementsByClassName("same-as-selected");
             yl = y.length;
