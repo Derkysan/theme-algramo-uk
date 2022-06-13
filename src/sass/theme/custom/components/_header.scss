@@ -145,6 +145,23 @@
   width: 160px;
 }
 
+.secondary-menu {
+  min-width: 160px;
+  display: flex;
+  justify-content: end;
+}
+
+.secondary-menu {
+  width: 100%;
+  ul {
+    li {
+      a {
+        display: block;
+        text-align: center;
+      }
+    }
+  }
+}
 
 @media (max-width: 767.98px) {
   #wrapper-navbar {

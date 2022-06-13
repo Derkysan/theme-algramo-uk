@@ -15792,6 +15792,20 @@ figure.woocommerce-product-gallery__wrapper {
   width: 160px;
 }
 
+.secondary-menu {
+  min-width: 160px;
+  display: flex;
+  justify-content: end;
+}
+
+.secondary-menu {
+  width: 100%;
+}
+.secondary-menu ul li a {
+  display: block;
+  text-align: center;
+}
+
 @media (max-width: 767.98px) {
   #wrapper-navbar {
     height: auto;
@@ -16531,6 +16545,7 @@ ul#menu-redes-sociales li a {
 }
 
 .wrapper-quote {
+  height: 550px;
   position: relative;
 }
 .wrapper-quote img.asterisk {
