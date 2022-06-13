@@ -10,7 +10,7 @@
       <div class="row h-100 align-items-center justify-content-center">
         <div class="col-12 col-md-7">
 
-          <h1 class="text-center fw-bold"><span class="text-primary">Preguntas</span> Frecuentes</h1>
+          <h1 class="text-center fw-bold">FAQ´S </h1>
 
         </div>
       </div>

@@ -145,6 +145,12 @@
   width: 160px;
 }
 
+.secondary-menu {
+  min-width: 160px;
+  display: flex;
+  justify-content: end;
+}
+
 
 @media (max-width: 767.98px) {
   #wrapper-navbar {

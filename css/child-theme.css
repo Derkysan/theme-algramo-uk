@@ -15792,6 +15792,12 @@ figure.woocommerce-product-gallery__wrapper {
   width: 160px;
 }
 
+.secondary-menu {
+  min-width: 160px;
+  display: flex;
+  justify-content: end;
+}
+
 @media (max-width: 767.98px) {
   #wrapper-navbar {
     height: auto;
@@ -16380,7 +16386,7 @@ ul#menu-redes-sociales li a {
 .select-selected:before {
   width: 1em;
   position: absolute;
-  content: url("../images/svg/cl.svg");
+  content: url("../images/svg/gb.svg");
   top: 7px;
   left: 1em;
 }
@@ -16414,14 +16420,14 @@ ul#menu-redes-sociales li a {
 .select-items div:nth-child(1):before {
   width: 1em;
   position: absolute;
-  content: url("../images/svg/cl.svg");
+  content: url("../images/svg/gb.svg");
   top: 7px;
   left: 1em;
 }
 .select-items div:nth-child(2):before {
   width: 1em;
   position: absolute;
-  content: url("../images/svg/gb.svg");
+  content: url("../images/svg/cl.svg");
   top: 7px;
   left: 1em;
 }
@@ -16531,6 +16537,7 @@ ul#menu-redes-sociales li a {
 }
 
 .wrapper-quote {
+  height: 550px;
   position: relative;
 }
 .wrapper-quote img.asterisk {
