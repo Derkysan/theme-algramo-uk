@@ -17,7 +17,7 @@ var console = window.console;
   const logoAnimated = $('.logo-animated');
   $(window).scroll(function () {
 
-    console.log($(window).scrollTop());
+    // console.log($(window).scrollTop());
     if ($(window).scrollTop() >= 100) {
       // alert('scrolltop')
       logoAnimated.addClass('scrolled');

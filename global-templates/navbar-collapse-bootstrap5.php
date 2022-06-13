@@ -100,8 +100,8 @@ $container = get_theme_mod('understrap_container_type');
         <div class="custom-select" style="width:200px;">
           <select>
             <option value="0">Select car:</option>
-            <option selected value="http://www.google.com">Chile</option>
-            <option value="http://www.youtube.com">UK</option>
+            <option selected value="http://cl.algramo.cl/">Chile</option>
+            <option value="https://uk.algramo.cl/">UK</option>
           </select>
         </div>
       </div>

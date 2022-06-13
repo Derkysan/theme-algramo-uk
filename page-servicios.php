@@ -197,19 +197,19 @@
   <section class="locations-wrapper bg-white">
     <div class="container">
       <div class="row">
-        <div class="col">
+        <div class="col-12 col-md-4 mb-5 mb-md-0">
           <div class="location-img">
             <img src="<?php echo get_theme_file_uri(); ?>/images/categoria-1.png" alt="">
           </div>
           <p>Colegios y universidades 🎓</p>
         </div>
-        <div class="col">
+        <div class="col-12 col-md-4 mb-5 mb-md-0">
           <div class="location-img">
             <img src="<?php echo get_theme_file_uri(); ?>/images/categoria-1.png" alt="">
           </div>
           <p>Minimarkets 🥑</p>
         </div>
-        <div class="col">
+        <div class="col-12 col-md-4 mb-5 mb-md-0">
           <div class="location-img">
             <img src="<?php echo get_theme_file_uri(); ?>/images/categoria-1.png" alt="">
           </div>

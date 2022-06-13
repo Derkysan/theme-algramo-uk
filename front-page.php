@@ -201,7 +201,7 @@ get_header();
           <img src="<?php echo get_theme_file_uri(); ?>/images/vector-lineal-white.png" class="asterisk" data-aos="fade-in" data-aos-delay="50" data-aos-offset="200" data-aos-easing="ease-in-out" alt="asterisk img">
           <img src="<?php the_sub_field('imagen'); ?>" class="quote-img" data-aos="fade-in" data-aos-delay="50" data-aos-offset="250" data-aos-easing="ease-in-out" />
           <div class="container quote-txt-wrapper h-100">
-            <div class="row h-100 align-items-center">
+            <div class="row h-100 align-items-start align-items-md-center">
               <div class="col-12 col-md-8">
                 <h3 class="pe-4" data-aos="fade-right" data-aos-delay="50" data-aos-offset="200" data-aos-easing="ease-in-out"><?php the_sub_field('cita_texto'); ?></h3>
                 <p data-aos="fade-right" data-aos-delay="150" data-aos-offset="0" data-aos-easing="ease-in-out"><?php the_sub_field('cita_info'); ?></p>

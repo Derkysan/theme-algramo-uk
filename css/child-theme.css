@@ -15793,13 +15793,10 @@ figure.woocommerce-product-gallery__wrapper {
 }
 
 .secondary-menu {
-  min-width: 160px;
+  width: 100%;
+  max-width: 160px;
   display: flex;
   justify-content: end;
-}
-
-.secondary-menu {
-  width: 100%;
 }
 .secondary-menu ul li a {
   display: block;
@@ -15813,6 +15810,12 @@ figure.woocommerce-product-gallery__wrapper {
   }
   #wrapper-navbar.fixed-admin {
     margin-top: 0;
+  }
+
+  .secondary-menu {
+    width: 100%;
+    max-width: none;
+    justify-content: start;
   }
 
   .menu-menu-principal-container {
@@ -16951,6 +16954,10 @@ img.grid-carousel {
   .phone-3 .text img.emoji {
     display: none !important;
   }
+
+  .rechargeable-products .item {
+    width: 100%;
+  }
 }
 .txt-img-block {
   display: flex;
@@ -17317,11 +17324,13 @@ img.grid-carousel {
   gap: 1em;
 }
 .services-thumb-list li {
+  width: calc(33% - 1em);
   margin: 0 0 20px 0;
   height: 150px;
   overflow: hidden;
   border-radius: 12px;
   flex-grow: 1;
+  flex-shrink: 0;
 }
 .services-thumb-list li a {
   display: flex;
@@ -17367,6 +17376,7 @@ img.grid-carousel {
   width: 100%;
   height: 390px;
   position: relative;
+  margin-bottom: 3em;
 }
 .image-collapse-wrapper .service-image {
   width: 100%;
@@ -17422,6 +17432,7 @@ img.grid-carousel {
   position: absolute;
   right: -80px;
   bottom: -80px;
+  z-index: -1;
 }
 
 .grid-delivery {
@@ -17451,6 +17462,11 @@ img.grid-carousel {
   object-position: center;
 }
 
+@media (max-width: 767.98px) {
+  .services-thumb-list li {
+    width: 100%;
+  }
+}
 html {
   overflow-x: hidden !important;
 }
@@ -17538,6 +17554,8 @@ body {
   position: absolute;
 }
 .header-page h1, .header-page .h1 {
+  position: relative;
+  z-index: 2;
   font-size: 3.5em;
 }
 
@@ -17554,7 +17572,10 @@ body {
   }
 
   .header-page {
-    margin-top: 0;
+    padding-top: 0;
+  }
+  .header-page h1, .header-page .h1 {
+    font-size: 2.5em;
   }
 }
 .has-blue-color,

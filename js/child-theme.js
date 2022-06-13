@@ -11337,16 +11337,16 @@
 	  const subject3 = $('#subject-3');
 	  const subject4 = $('#subject-4');
 	  subject1.click(function () {
-	    $('#change-image').attr('src', 'http://localhost:8888/prosa.cl.algramo/wp-content/themes/understrap-child/images/gif/postular.gif');
+	    $('#change-image').attr('src', 'http://cl.algramo.cl/wp-content/themes/understrap-child/images/gif/postular.gif');
 	  });
 	  subject2.click(function () {
-	    $('#change-image').attr('src', 'http://localhost:8888/prosa.cl.algramo/wp-content/themes/understrap-child/images/gif/colaborar.gif');
+	    $('#change-image').attr('src', 'http://cl.algramo.cl/wp-content/themes/understrap-child/images/gif/colaborar.gif');
 	  });
 	  subject3.click(function () {
-	    $('#change-image').attr('src', 'http://localhost:8888/prosa.cl.algramo/wp-content/themes/understrap-child/images/gif/comprar.gif');
+	    $('#change-image').attr('src', 'http://cl.algramo.cl/wp-content/themes/understrap-child/images/gif/comprar.gif');
 	  });
 	  subject4.click(function () {
-	    $('#change-image').attr('src', 'http://localhost:8888/prosa.cl.algramo/wp-content/themes/understrap-child/images/gif/molestar.gif');
+	    $('#change-image').attr('src', 'http://cl.algramo.cl/wp-content/themes/understrap-child/images/gif/molestar.gif');
 	  });
 	  subject4.attr('tabindex', -1);
 	  $(".text-selector").click(function () {
@@ -16973,7 +16973,6 @@
 	gsapWithCSS.core.Tween;
 
 	// Add your custom JS here.
-	var console$1 = window.console;
 
 	(function ($) {
 	  $('#loadingPage').addClass('animate__animated animate__fadeOut');
@@ -16982,8 +16981,7 @@
 	  }, 2000);
 	  const logoAnimated = $('.logo-animated');
 	  $(window).scroll(function () {
-	    console$1.log($(window).scrollTop());
-
+	    // console.log($(window).scrollTop());
 	    if ($(window).scrollTop() >= 100) {
 	      // alert('scrolltop')
 	      logoAnimated.addClass('scrolled');
