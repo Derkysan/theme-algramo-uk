@@ -3,6 +3,7 @@ var console = window.console;
 const changeLanguage = (lang) => {
   let url = lang;
   if (url) { // require a URL
+    $('#loadingPage').addClass('animate__animated animate__fadeIn');
       window.location = url; // redirect
   }
   return false;

@@ -47,6 +47,7 @@
     "countup.js": "^2.1.0",
     "gsap": "^3.10.4",
     "jquery-flagstrap": "^1.0.3",
+    "mapbox-gl": "^2.9.1",
     "swiper": "^8.0.7"
   },
   "devDependencies": {

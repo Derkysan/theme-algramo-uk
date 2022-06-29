@@ -1,25 +1,30 @@
+var console = window.console;
+
 // Add your custom JS here.
 import "./custom/swiper";
 import "./custom/contact";
 import "./custom/dropdown";
+import "./custom/map";
+import "./custom/dropdow-checkbox-multiselect";
 
 import gsap from "gsap";
 
-var console = window.console;
+(function ($) {
 
-( function( $ ){
-  
-  $('#loadingPage').addClass('animate__animated animate__fadeOut');
-  setTimeout(function () {
-    $('#loadingPage').fadeOut();
-  }, 2000);
+  // alert('testing custom.js');
+  // console.log('testing custom.js');
+
+  $(document).ready(function () {
+    $('#loadingPage').addClass('animate__animated animate__fadeOut');
+    setTimeout(function () {
+      $('#loadingPage').fadeOut();
+    }, 2000);
+  });
 
   const logoAnimated = $('.logo-animated');
   $(window).scroll(function () {
 
-    // console.log($(window).scrollTop());
     if ($(window).scrollTop() >= 100) {
-      // alert('scrolltop')
       logoAnimated.addClass('scrolled');
     } else {
       logoAnimated.removeClass('scrolled');
@@ -57,10 +62,10 @@ var console = window.console;
     let url = $(this).val(); // get selected value
     if (url) { // require a URL
       alert(url); // log it
-        window.location = url; // redirect
+      window.location = url; // redirect
     }
     return false;
   });
 
-  
-})( jQuery );
+
+})(jQuery);

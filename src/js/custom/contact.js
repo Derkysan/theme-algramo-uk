@@ -1,31 +1,46 @@
 (function ($) {
 
-  const templateUrl = '<?php echo get_theme_file_uri(); ?>';
+  if ($(".text-selector")) {
 
-  const subject1 = $('#subject-1');
-  const subject2 = $('#subject-2');
-  const subject3 = $('#subject-3');
-  const subject4 = $('#subject-4');
+    // subject4.attr('tabindex', -1);
 
-  subject1.click(function () {
-    $('#change-image').attr('src', 'http://cl.algramo.cl/wp-content/themes/understrap-child/images/gif/postular.gif');
-  });
-  subject2.click(function () {
-    $('#change-image').attr('src', 'http://cl.algramo.cl/wp-content/themes/understrap-child/images/gif/colaborar.gif');
-  });
-  subject3.click(function () {
-    $('#change-image').attr('src', 'http://cl.algramo.cl/wp-content/themes/understrap-child/images/gif/comprar.gif');
-  });
-  subject4.click(function () {
-    $('#change-image').attr('src', 'http://cl.algramo.cl/wp-content/themes/understrap-child/images/gif/molestar.gif');
-  });
+    let console = window.console;
+    let subjectActive = 0;
 
-  subject4.attr('tabindex', -1);
+    $(".text-selector").click(function () {
+      $(".text-selector").removeClass("active");
+      $(this).addClass("active");
+      subjectActive = $(this).attr("data-val");
 
-  $(".text-selector").click(function () {
-    $(".text-selector").removeClass("active");
-    $(this).addClass("active");
-    $("#subject").val($(this).data('val')).trigger('change');
-  });
+      switch (subjectActive) {
+        case "Postular":
+          $(".subject-img").removeClass("active");
+          $(".subject-1").addClass("active");
+          $("#subject").val("Postular").trigger('change');
+          break;
+        case "Colaborar":
+          $(".subject-img").removeClass("active");
+          $(".subject-2").addClass("active");
+          $("#subject").val("Colaborar").trigger('change');
+          break;
+        case "Comprar":
+          $(".subject-img").removeClass("active");
+          $(".subject-3").addClass("active");
+          $("#subject").val("Comprar").trigger('change');
+          break;
+        case "Molestar":
+          $(".subject-img").removeClass("active");
+          $(".subject-4").addClass("active");
+          $("#subject").val("Molestar").trigger('change');
+          break;
+
+        default:
+          $(".subject-img").removeClass("active");
+          $(".subject-1").addClass("active");
+          break;
+      }
+    });
+
+  } else return
 
 })(jQuery);

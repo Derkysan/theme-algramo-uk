@@ -20,6 +20,8 @@ $navbar_type       = get_theme_mod( 'understrap_navbar_type', 'collapse' );
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 	<link rel="profile" href="http://gmpg.org/xfn/11">
   <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.9.7/jquery.fullpage.min.css" />
+
+  <link href='https://api.mapbox.com/mapbox-gl-js/v2.9.1/mapbox-gl.css' rel='stylesheet' />
   
   <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 	<?php wp_head(); ?>
@@ -34,7 +36,9 @@ $navbar_type       = get_theme_mod( 'understrap_navbar_type', 'collapse' );
   </div>
 
 	<!-- ******************* The Navbar Area ******************* -->
-	<header id="wrapper-navbar" class="<?php if ( is_admin_bar_showing() ) { ?> fixed-admin <?php } else { ?>fixed-top<?php } ?>">
+  <?php $header_admin = is_admin_bar_showing() ? 'fixed-admin' : 'fixed-top'; ?>
+  <?php $header_shadow = is_page_template( 'page-map.php' ) ? 'no-shadow' : ''; ?>
+	<header id="wrapper-navbar" class="<?php echo $header_admin ?> <?php echo $header_shadow ?>">
 
     <a class="skip-link sr-only sr-only-focusable" href="#content"><?php esc_html_e( 'Skip to content', 'understrap' ); ?></a>
 		<?php get_template_part( 'global-templates/navbar', $navbar_type . '-' . $bootstrap_version ); ?>

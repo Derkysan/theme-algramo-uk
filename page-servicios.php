@@ -63,7 +63,7 @@
 
           <div id="lider" class="service-wrapper">
             <div class="d-flex justify-content-center mb-5">
-              <img src="<?php echo get_theme_file_uri(); ?>/images/vector-solid.svg" class="asterisk" data-aos="fade-left" data-aos-offset="200" data-aos-easing="ease-in-out" alt="asterisk img">
+              <img src="<?php echo get_theme_file_uri(); ?>/images/vector-solid.svg" class="asterisk" data-aos="fade-up" data-aos-offset="200" data-aos-easing="ease-in-out" alt="asterisk img">
             </div>
             <h2 class="text-center">Supermercados Lider</h2>
             <p class="text-center">Encuentra nuestras estaciones de recarga mientras</br> haces tus compras de supermercado.</p>
@@ -94,7 +94,7 @@
 
           <div id="acuenta" class="service-wrapper">
             <div class="d-flex justify-content-center mb-5">
-              <img src="<?php echo get_theme_file_uri(); ?>/images/vector-solid.svg" class="asterisk" data-aos="fade-left" data-aos-offset="200" data-aos-easing="ease-in-out" alt="asterisk img">
+              <img src="<?php echo get_theme_file_uri(); ?>/images/vector-solid.svg" class="asterisk" data-aos="fade-up" data-aos-offset="200" data-aos-easing="ease-in-out" alt="asterisk img">
             </div>
             <h2 class="text-center">SuperBodega Acuenta</h2>
             <p class="text-center">Encuentra nuestras estaciones de recarga mientras</br> haces tus compras de supermercado.</p>
@@ -125,7 +125,7 @@
 
           <div id="sodimac" class="service-wrapper">
             <div class="d-flex justify-content-center mb-5">
-              <img src="<?php echo get_theme_file_uri(); ?>/images/vector-solid.svg" class="asterisk" data-aos="fade-left" data-aos-offset="200" data-aos-easing="ease-in-out" alt="asterisk img">
+              <img src="<?php echo get_theme_file_uri(); ?>/images/vector-solid.svg" class="asterisk" data-aos="fade-up" data-aos-offset="200" data-aos-easing="ease-in-out" alt="asterisk img">
             </div>
             <h2 class="text-center">Sodimac</h2>
             <p class="text-center">Encuentra nuestras estaciones de recarga mientras</br> haces tus compras de supermercado.</p>

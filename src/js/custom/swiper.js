@@ -9,6 +9,10 @@ AOS.init({
 
 (function ($) {
 
+  // var console = window.console;
+  // alert('testing swiper.js');
+  // console.log('testing swiper.js');
+
   $(document).ready(function () {
 
     const swiperMain = new Swiper('.swiper-main', {
@@ -16,17 +20,19 @@ AOS.init({
       mousewheel: true,
     });
 
-    const swiper = new Swiper('.swiper-products', {
-      autoplay: false,
-      grabCursor: true,
-      mousewheel: false,
-      slidesPerView: "auto",
-      spaceBetween: 15,
-      navigation: {
-        nextEl: '.swiper-button-next',
-        prevEl: '.swiper-button-prev',
-      },
-    });
+    // if ( $('.swiper-products') ) {
+      const swiper = new Swiper('.swiper-products', {
+        autoplay: false,
+        grabCursor: true,
+        mousewheel: false,
+        slidesPerView: "auto",
+        spaceBetween: 15,
+        navigation: {
+          nextEl: '.swiper-button-next',
+          prevEl: '.swiper-button-prev',
+        },
+      });
+    // }
 
     const swiperData = new Swiper('.swiper-data', {
       cssMode: true,
@@ -49,10 +55,10 @@ AOS.init({
       spaceBetween: 15,
     })
 
-    const data1 = new CountUp('data-1', 275631, { startVal: 100000, duration: 25 });
-    const data2 = new CountUp('data-2', 9022706, { startVal: 100000, duration: 25 });
-    const data3 = new CountUp('data-3', 6597655, { startVal: 100000, duration: 25 });
-    const data4 = new CountUp('data-4', 35663, { startVal: 50000, duration: 25 });
+    const data1 = new CountUp('data-1', 691284, { startVal: 100000, duration: 25 });
+    const data2 = new CountUp('data-2', 255453, { startVal: 100000, duration: 25 });
+    const data3 = new CountUp('data-3', 2541038, { startVal: 100000, duration: 25 });
+    const data4 = new CountUp('data-4', 87622, { startVal: 50000, duration: 25 });
     // const data5 = new CountUp('data-5', 15, { startVal: 0 });
     const data6 = new CountUp('data-6', 80, { startVal: 0, duration: 25 });
     const data7 = new CountUp('data-7', 4, { startVal: 0, duration: 25 });
@@ -117,8 +123,10 @@ AOS.init({
             break;
           case '6':
             simulaData1.update(23);
-            simulaData2.update(23 * 345);
-            simulaData3.update(23 * 1141);
+            // simulaData2.update(23 * 345);
+            simulaData2.update(5 * 345);
+            // simulaData3.update(23 * 1141);
+            simulaData3.update(5 * 1141);
             break;
 
           default:
@@ -157,8 +165,8 @@ AOS.init({
             break;
           case '6':
             simulaData1.update(11);
-            simulaData2.update(11 * 345);
-            simulaData3.update(11 * 1141);
+            simulaData2.update(5 * 345);
+            simulaData3.update(5 * 1141);
             break;
 
           default:
@@ -237,8 +245,8 @@ AOS.init({
             break;
           case '6':
             simulaData1.update(3);
-            simulaData2.update(3 * 345);
-            simulaData3.update(3 * 1141);
+            simulaData2.update(5 * 345);
+            simulaData3.update(5 * 1141);
             break;
 
           default:
@@ -277,8 +285,8 @@ AOS.init({
             break;
           case '6':
             simulaData1.update(1);
-            simulaData2.update(1 * 345);
-            simulaData3.update(1 * 1141);
+            simulaData2.update(5 * 345);
+            simulaData3.update(5 * 1141);
             break;
 
           default:
@@ -476,13 +484,13 @@ AOS.init({
         switch (this.value) {
           case '1':
             simulaData1.update(23);
-            simulaData2.update(23 * 345);
-            simulaData3.update(23 * 1141);
+            simulaData2.update(5 * 345);
+            simulaData3.update(5 * 1141);
             break;
           case '2':
             simulaData1.update(11);
-            simulaData2.update(11 * 345);
-            simulaData3.update(11 * 1141);
+            simulaData2.update(5 * 345);
+            simulaData3.update(5 * 1141);
             break;
           case '3':
             simulaData1.update(5);
@@ -491,13 +499,13 @@ AOS.init({
             break;
           case '4':
             simulaData1.update(3);
-            simulaData2.update(3 * 345);
-            simulaData3.update(3 * 1141);
+            simulaData2.update(5 * 345);
+            simulaData3.update(5 * 1141);
             break;
           case '5':
             simulaData1.update(1);
-            simulaData2.update(1 * 345);
-            simulaData3.update(1 * 1141);
+            simulaData2.update(5 * 345);
+            simulaData3.update(5 * 1141);
             break;
 
           default:
@@ -572,6 +580,23 @@ AOS.init({
         allBullets[2].classList.add('active');
       };
 
+    });
+
+    const swiperGreen = new Swiper('.swiper-delivery', {
+      slidesPerView: "auto",
+      // loop: true,
+      navigation: {
+        nextEl: '.next-green',
+        prevEl: '.prev-green',
+      },
+    });
+    const swiperPurple = new Swiper('.swiper-delivery-purple', {
+      slidesPerView: "auto",
+      // loop: true,
+      navigation: {
+        nextEl: '.next-purple',
+        prevEl: '.prev-purple',
+      },
     });
 
   });

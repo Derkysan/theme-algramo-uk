@@ -37,8 +37,12 @@
                 <i class="fa-solid fa-arrow-right"></i> <span>Molestar</span>
               </div>
             </div>
-            <div class="graph">
-              <img id="change-image" src="http://localhost:8888/prosa.cl.algramo/wp-content/themes/understrap-child/images/gif/postular.gif" alt="">
+            <div class="graph"> 
+              <!-- <img id="change-image" src="http://localhost:8888/prosa.cl.algramo/wp-content/themes/understrap-child/images/gif/postular.gif" alt=""> -->
+              <img class="subject-img subject-1 active" src="http://cl.algramo.cl/wp-content/themes/understrap-child/images/gif/postular.gif" alt="postular">
+              <img class="subject-img subject-2" src="http://cl.algramo.cl/wp-content/themes/understrap-child/images/gif/colaborar.gif" alt="colaborar">
+              <img class="subject-img subject-3" src="http://cl.algramo.cl/wp-content/themes/understrap-child/images/gif/comprar.gif" alt=comprar">
+              <img class="subject-img subject-4" src="http://cl.algramo.cl/wp-content/themes/understrap-child/images/gif/molestar.gif" alt="molestar">
             </div>
           </div>
         </div>

@@ -20,11 +20,23 @@ body {
   }
 }
 
+.btn {
+  .fa-solid {
+    pointer-events:none;
+  }
+}
+
 .banner-header {
   padding-top: 85px;
   height: 75vh;
-  h1 {
-    font-size: 75px;
+  h1, h2 {
+    font-size: 3.5em;
+  }
+  &.simular-impacto {
+    height: 60vh;
+  }
+  &.trabaja-con-nosotros {
+    height: 60vh;
   }
 }
 
@@ -83,10 +95,15 @@ body {
   }
 }
 
+.no-header-page {
+  padding-top: 85px;
+}
+
 @media (max-width: 767.98px) {
 
   .banner-header {
-    h1 {
+    padding-top: 0; 
+    h1, h2 {
       font-size: 3em;
     }
     &.simular-impacto {

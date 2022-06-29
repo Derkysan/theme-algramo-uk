@@ -83,7 +83,7 @@
 }
 
 .wrapper-quote {
-  height: 550px;
+  height: 420px;
   position: relative;
   img {
     &.asterisk {
@@ -101,10 +101,9 @@
     margin-bottom: 1em
   }
   .quote-img {
-    width: 60%;
-    height: auto;
+    height: 120%; 
     position: absolute;
-    left: 40%;
+    right: 0;
     bottom: 0;
     z-index: 1;
   }
@@ -308,6 +307,19 @@ img {
     position: relative;
     z-index: 1;
     margin-bottom: 2em;
+    .thumb {
+      width: 100%;
+      height: 340px;
+      position: relative;
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+        position: relative;
+        z-index: 1;
+      }
+    }
   }
 }
 
@@ -406,14 +418,8 @@ img {
   }
 }
 
-
-
-
 // `md` applies to small devices (landscape phones, less than 768px)
 @media (max-width: 767.98px) {
-
-  
-    
 
   .main-slider {
     height: 100vh;
@@ -464,11 +470,12 @@ img {
       padding-top: 2em;
     }
     .quote-img {
-      right: -20%;
+      height: 60%;
+      right: 0;
+      left: -30%;
+      margin: 0 auto;
       width: auto;
       max-width: none;
-      height: 60vh;
-      left: auto;
     }
     p {
       font-size: .85em;

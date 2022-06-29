@@ -4,7 +4,7 @@
 
 <div class="animate__animated animate__fadeIn">
 
-  <section class="banner-header">
+  <section class="banner-header trabaja-con-nosotros">
 
     <div class="container h-100">
       <div class="row align-items-center justify-content-center h-100">
@@ -20,7 +20,7 @@
 
   <?php if (have_rows('galeria_de_imagenes')) : ?>
 
-    <section class="py-5">
+    <section class="pb-5">
 
       <div class="wrapper-carousel" data-aos="fade-in" data-aos-delay="50" data-aos-offset="100" data-aos-easing="ease-in-out">
         <div class="container-fluid">
@@ -92,8 +92,6 @@
                       <?php the_sub_field('beneficio_4'); ?>
                     </div>
                   </div>
-
-                  <p class="text-center text-primary mb-0 d-none" data-aos="fade-right" data-aos-delay="50" data-aos-offset="250" data-aos-easing="ease-in-out">Y muchooos más</p>
 
                 </div>
               </div>
@@ -249,7 +247,7 @@
                 <?php while (have_rows('desplegable')) : the_row();
                   $i++; ?>
                     <button class="btn" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample-<?php echo $i; ?>" aria-expanded="false" aria-controls="collapseExample">
-                      <div><span class="text-primary">0<?php echo $i; ?>. </span><?php the_sub_field('titulo'); ?></div> <i class="fa-solid fa-plus"></i>
+                      <div class="d-flex"><span class="text-primary me-2">0<?php echo $i; ?>. </span><?php the_sub_field('titulo'); ?></div> <i class="fa-solid fa-plus"></i>
                     </button>
 
                     <div class="collapse" id="collapseExample-<?php echo $i; ?>">

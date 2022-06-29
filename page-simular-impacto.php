@@ -7,7 +7,7 @@
   <section class="banner-header simular-impacto">
 
     <div class="container h-100">
-      <div class="row h-100 align-items-center justify-content-center mb-5 text-center">
+      <div class="row h-100 align-items-center justify-content-center text-center">
         <div class="col">
 
           <div class="row align-items-center justify-content-center h-100">
@@ -23,7 +23,7 @@
 
               <div class="row">
                 <div class="col-12 col-md-6">
-                  <select id="products" class="form-select mb-5" aria-label="products selector">
+                  <select id="products" class="form-select mb-3 mb-md-0" aria-label="products selector">
                     <option selected disabled value="0">Producto</option>
                     <option class="circular-book" value="1">Detergente</option>
                     <option value="2">Lavalozas</option>
@@ -33,7 +33,7 @@
                     <option value="6">Todos los productos de limpieza</option>
                   </select>
                 </div>
-                <div class="col-12 col-md-6 mb-5">
+                <div class="col-12 col-md-6 mb-5 mb-md-0">
                   <select id="frequency" class="form-select" aria-label="frequency selector">
                     <option selected disabled value="0">Frecuencia de compra</option>
                     <option class="circular-book" value="1">Una vez cada 15 días</option>
@@ -55,7 +55,7 @@
 
   </section>
 
-  <section class="py-5">
+  <section class="pb-5">
     <div class="container-fluid">
       <div class="row">
         <div class="col">
@@ -107,7 +107,7 @@
     </div>
   </section>
 
-  <section class="py-5 position-relative">
+  <section class="py-5 position-relative simular-impacto-gif">
     <div class="marquee-wrapper simula">
       <div class="hero-marquee">
         <div class="marquee">
@@ -159,7 +159,6 @@
           <div class="row mb-5 pb-5">
             <div class="col">
               <div class="graph-wrapper text-center mt-3">
-                <!-- <img src="<?php echo get_theme_file_uri(); ?>/images/cada-recarga-cuenta-sumate-a-recargar-el-futuro.svg" class="text-graph-4" data-aos="fade-left" data-aos-delay="50" data-aos-offset="50" data-aos-easing="ease-in-out" ata-aos-anchor-placement="top-bottom" alt="cada-recarga-cuenta-sumate-a-recargar-el-futuro"> -->
                 <div class="d-flex justify-content-center mb-5">
                   <div class="recharge-img-wrapper" data-aos="fade-up" data-aos-delay="50" data-aos-offset="250" data-aos-easing="ease-in-out">
                     <img src="<?php echo get_theme_file_uri(); ?>/images/salem.gif" alt="salem">

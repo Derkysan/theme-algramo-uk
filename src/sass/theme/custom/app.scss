@@ -8,6 +8,9 @@
 @import './components/components';
 @import './components/fullpage';
 @import './components/dropdown';
+@import './components/checkbox';
+@import './components/switch';
+@import './components/dropdow-checkbox-multiselect';
 
 // pages
 @import './pages/home';
@@ -16,6 +19,7 @@
 @import './pages/faq';
 @import './pages/contacto';
 @import './pages/servicios';
+@import './pages/map';
 
 @import './generic';
 
