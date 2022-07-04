@@ -53,59 +53,19 @@
   }
   &.home-1 {
     top: 9em;
-    // .marquee {
-    //   height: 6em;
-    //   div {
-    //     span {
-    //       font-size: 4.3em;
-    //     }
-    //   }
-    // }
   }
   &.home-2 {
     top: 4em;
-    // .marquee {
-    //   height: 5.5em;
-    //   div {
-    //     span {
-    //       font-size: 3.7em;
-    //     }
-    //   }
-    // }
   }
   &.trabaja-con-nosotros {
     top: 12.6em;
-    // .marquee {
-    //   height: 5.5em;
-    //   div {
-    //     span {
-    //       font-size: 3.6em;
-    //     }
-    //   }
-    // }
   }
   &.trabaja-con-nosotros-2 {
     top: 9em;
-    // .marquee {
-    //   height: 6em;
-    //   div {
-    //     span {
-    //       font-size: 4.1em;
-    //     }
-    //   }
-    // }
   }
   &.simula {
     top: auto;
     bottom: 6em;
-    // .marquee {
-    //   height: 6em;
-    //   div {
-    //     span {
-    //       font-size: 3.5em;
-    //     }
-    //   }
-    // }
   }
 
   @keyframes marqueeAnimation {
@@ -114,6 +74,14 @@
     }
     100% {
       left: -100%;
+    }
+  }
+}
+
+.marquee-gif-wrapper {
+  &.quienes-somos {
+    .graph-wrapper {
+      margin-top: 10em;
     }
   }
 }

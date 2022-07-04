@@ -346,7 +346,7 @@ get_header();
     </div>
   </section>
 
-  <section class="fullpage">
+  <section class="fullpage ">
     <div id="block-1" class="section">
       <div class="container h-100">
         <div class="row h-100 align-items-center">
@@ -365,15 +365,12 @@ get_header();
                   <!-- Slides -->
                   <div class="swiper-slide">
                     <img src="<?php echo get_theme_file_uri(); ?>/images/v-slide-1.png" width="300px" alt="slide 1">
-                    <!-- Lorem, ipsum dolor sit amet consectetur adipisicing elit. Earum, eos quam. Facere voluptatem deserunt omnis reiciendis debitis asperiores alias reprehenderit. -->
                   </div>
                   <div class="swiper-slide">
                     <img src="<?php echo get_theme_file_uri(); ?>/images/v-slide-2.png" width="300px" alt=" slide 2">
-                    <!-- ipsum dolor sit amet consectetur adipisicing elit. Earum, eos quam. Facere voluptatem deserunt omnis reiciendis debitis asperiores alias reprehenderit. -->
                   </div>
                   <div class="swiper-slide">
                     <img src="<?php echo get_theme_file_uri(); ?>/images/v-slide-3.png" width="300px" alt=" slide 3">
-                    <!-- dolor sit amet consectetur adipisicing elit. Earum, eos quam. Facere voluptatem deserunt omnis reiciendis debitis asperiores alias reprehenderit. -->
                   </div>
                 </div>
                 <!-- If we need pagination -->
@@ -392,7 +389,6 @@ get_header();
             </div>
 
             <img class="d-block d-md-none" src="<?php echo get_theme_file_uri(); ?>/images/v-slide-1.png" alt="slide 1">
-
 
           </div>
         </div>
@@ -447,7 +443,8 @@ get_header();
           </ul>
         </div>
         <div class="graph">
-          <img src="<?php echo get_theme_file_uri(); ?>/images/svg/rechargeable-1.svg" alt="rechargeable-1">
+          <img src="<?php echo get_theme_file_uri(); ?>/images/svg/rechargeable-1.svg" class="static" alt="rechargeable-1">
+          <img src="<?php echo get_theme_file_uri(); ?>/images/gif/limpieza.gif" class="gif" alt="rechargeable-1">
         </div>
         <p style="color: rgba(0, 143, 255, 1);">Limpieza</p>
       </div>
@@ -460,7 +457,8 @@ get_header();
           </ul>
         </div>
         <div class="graph">
-          <img src="<?php echo get_theme_file_uri(); ?>/images/svg/rechargeable-2.svg" alt="rechargeable-2">
+          <img src="<?php echo get_theme_file_uri(); ?>/images/svg/rechargeable-2.svg" class="static" alt="rechargeable-1">
+          <img src="<?php echo get_theme_file_uri(); ?>/images/gif/mascotas.gif" class="gif" alt="rechargeable-1">
         </div>
         <p style="color: rgba(29, 185, 84, 1);">Mascotas</p>
       </div>
@@ -612,7 +610,7 @@ get_header();
 
           <h2 class="mb-5 text-center" data-aos="fade-left" data-aos-delay="50" data-aos-offset="250" data-aos-easing="ease-in-out"><?php the_sub_field('titulo_de_seccion'); ?></h2>
 
-          <div class="row">
+          <div class="row g-5">
             <div class="col-12 col-md-6" data-aos="fade-right" data-aos-delay="50" data-aos-offset="250" data-aos-easing="ease-in-out">
 
               <?php if (have_rows('tarjeta_1')) : ?>
@@ -775,40 +773,41 @@ get_header();
     </div>
   </section>
 
-  <section class="py-5 position-relative">
+  <section class="py-5 position-relative bg-water">
+    <img src="<?php echo get_theme_file_uri(); ?>/images/bg-water.png" data-aos="fade-in" data-aos-delay="50" data-aos-offset="250" data-aos-easing="ease-in-out" alt="bg water">
     <div class="marquee-wrapper home-2">
       <div class="hero-marquee">
         <div class="marquee">
-          <span class="clipped-text lineal">
+          <span class="clipped-text text-white">
             Recarguemos el futuro. Recarguemos el futuro. Recarguemos el futuro.
           </span>
-          <span class="clipped-text lineal">
-            Recarguemos el futuro. Recarguemos el futuro. Recarguemos el futuro.
-          </span>
-        </div>
-      </div>
-      <div class="hero-marquee">
-        <div class="marquee">
-          <span class="clipped-text lineal">
-            Recarguemos el futuro. Recarguemos el futuro. Recarguemos el futuro.
-          </span>
-          <span class="clipped-text lineal">
+          <span class="clipped-text text-white">
             Recarguemos el futuro. Recarguemos el futuro. Recarguemos el futuro.
           </span>
         </div>
       </div>
       <div class="hero-marquee">
         <div class="marquee">
-          <span class="clipped-text lineal">
+          <span class="clipped-text text-white">
             Recarguemos el futuro. Recarguemos el futuro. Recarguemos el futuro.
           </span>
-          <span class="clipped-text lineal">
+          <span class="clipped-text text-white">
+            Recarguemos el futuro. Recarguemos el futuro. Recarguemos el futuro.
+          </span>
+        </div>
+      </div>
+      <div class="hero-marquee">
+        <div class="marquee">
+          <span class="clipped-text text-white">
+            Recarguemos el futuro. Recarguemos el futuro. Recarguemos el futuro.
+          </span>
+          <span class="clipped-text text-white">
             Recarguemos el futuro. Recarguemos el futuro. Recarguemos el futuro.
           </span>
         </div>
       </div>
     </div>
-    <div class="container">
+    <div class="container d-none">
       <div class="row justify-content-center">
         <div class="col-10 col-md-6">
 

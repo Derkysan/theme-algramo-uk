@@ -54,6 +54,7 @@ AOS.init({
       slidesPerView: "auto",
       spaceBetween: 15,
     })
+    
 
     const data1 = new CountUp('data-1', 691284, { startVal: 100000, duration: 25 });
     const data2 = new CountUp('data-2', 255453, { startVal: 100000, duration: 25 });
@@ -598,7 +599,18 @@ AOS.init({
         prevEl: '.prev-purple',
       },
     });
+    const swiperParallax = new Swiper('.swiper-parallax', {
+      direction: 'vertical',
+      parallax: true,
+      cssMode: true,
+      mousewheel: true,
+      navigation: {
+        nextEl: '.swiper-button-prev',
+        prevEl: '.swiper-button-next',
+      },
+    });
 
   });
+
 
 })(jQuery);

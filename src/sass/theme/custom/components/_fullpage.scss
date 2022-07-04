@@ -17,7 +17,7 @@
     .v-slider {
       height: 100%;
       max-height: 100vh;
-      width: 100%;
+      width: 120%;
       max-width: 500px;
       display: flex;
       align-items: center;
@@ -37,6 +37,32 @@
       &.fixed {
         top: 0;
         position: fixed;
+      }
+    }
+  }
+
+  &.parallax {
+    background-color: #000000;
+    .section {
+      width: 100%;
+      height: calc( 100vh - 85px );
+      background-attachment: fixed;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      .v-slider {
+        .swiper-wrapper {
+          .swiper-slide {
+            padding-right: 5em;
+            h3 {
+              font-size: 2.2em;
+              color: #ffffff;
+            }
+          }
+        }
+        .pager {
+          color: #ffffff;
+        }
       }
     }
   }

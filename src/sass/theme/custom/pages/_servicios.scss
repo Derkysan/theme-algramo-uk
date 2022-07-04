@@ -152,6 +152,121 @@
   }
 }
 
+.tooltips-wrapper {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  .tooltip-item {
+    width: 24px;
+    height: 24px;
+    border-radius: 12px;
+    position: absolute;
+    z-index: 1;
+    background-color: #FFFFFF;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #00ABB1;
+    cursor: pointer;
+    .tooltip-content {
+      position: absolute;
+      width: 380px;
+      height: auto;
+      background-color: #FFFFFF;
+      padding: 1.5em;
+      border-radius: 25px;
+      // top: -55px;
+      left: 40px;
+      color: #2D2D2D;
+      display: none;
+      box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.12);
+      p {
+        text-align: center;
+        margin: 0;
+        font-weight: 300;
+      }  
+      .triangle-left {
+        width: 0;
+        height: 0;
+        border-top: 10px solid transparent;
+        border-right: 10px solid #ffffff;
+        border-bottom: 10px solid transparent;
+        position: absolute;
+        top: calc(50% - 16px);
+        left: -10px;
+      }  
+    }
+    &.active {
+      z-index: 2;
+      .tooltip-content {
+        display: block;
+      }
+    }
+  }
+  &.lider {
+    .tooltip-item {
+      &.dot-1 {
+        top: 42%;
+        left: 18%;
+      }
+      &.dot-2 {
+        top: 50%;
+        left: 38%;
+      }
+      &.dot-3 {
+        top: 50%;
+        left: 59%;
+      }
+      &.dot-4 {
+        top: 60%;
+        left: 38%;
+      }
+    }
+  }
+  &.acuenta {
+    .tooltip-item {
+      &.dot-1 {
+        top: 44%;
+        left: 21%;
+      }
+      &.dot-2 {
+        top: 35%;
+        left: 35%;
+      }
+      &.dot-3 {
+        top: 50%;
+        left: 35%;
+      }
+      &.dot-4 {
+        top: 40%;
+        left: 59%;
+      }
+    }
+  }
+  &.sodimac {
+    .tooltip-item {
+      &.dot-1 {
+        top: 44%;
+        left: 34%;
+      }
+      &.dot-2 {
+        top: 42%;
+        left: 50%;
+      }
+      &.dot-3 {
+        top: 65%;
+        left: 35%;
+      }
+      &.dot-4 {
+        top: 65%;
+        left: 75%;
+      }
+    }
+  }
+}
+
 @media (max-width: 767.98px) {
   .services-thumb-list {
     li {

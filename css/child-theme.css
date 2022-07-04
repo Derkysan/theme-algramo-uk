@@ -16303,6 +16303,10 @@ ul#menu-redes-sociales li a {
   }
 }
 
+.marquee-gif-wrapper.quienes-somos .graph-wrapper {
+  margin-top: 10em;
+}
+
 @media (max-width: 767.98px) {
   .hero-marquee .marquee .clipped-text {
     font-size: 50px;
@@ -16329,7 +16333,7 @@ ul#menu-redes-sociales li a {
 .fullpage .section .v-slider {
   height: 100%;
   max-height: 100vh;
-  width: 100%;
+  width: 120%;
   max-width: 500px;
   display: flex;
   align-items: center;
@@ -16350,6 +16354,27 @@ ul#menu-redes-sociales li a {
 .fullpage .section .v-slider.fixed {
   top: 0;
   position: fixed;
+}
+.fullpage.parallax {
+  background-color: #000000;
+}
+.fullpage.parallax .section {
+  width: 100%;
+  height: calc(100vh - 85px);
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.fullpage.parallax .section .v-slider .swiper-wrapper .swiper-slide {
+  padding-right: 5em;
+}
+.fullpage.parallax .section .v-slider .swiper-wrapper .swiper-slide h3, .fullpage.parallax .section .v-slider .swiper-wrapper .swiper-slide .h3 {
+  font-size: 2.2em;
+  color: #ffffff;
+}
+.fullpage.parallax .section .v-slider .pager {
+  color: #ffffff;
 }
 
 .swiper.swiper-v {
@@ -17089,13 +17114,64 @@ img.grid-carousel {
   opacity: 1;
   transition: all 0.3s ease-in-out;
 }
-.rechargeable-products .item img {
-  height: 260px;
-  margin-bottom: 1em;
-}
 .rechargeable-products .item p {
   font-size: 1.15em;
   margin-bottom: 0.5em;
+}
+.rechargeable-products .item .graph {
+  width: 100%;
+  height: 260px;
+  position: relative;
+  margin-bottom: 1em;
+}
+.rechargeable-products .item .graph img {
+  width: 100%;
+  height: 100%;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  position: absolute;
+}
+.rechargeable-products .item .graph img.static {
+  z-index: 1;
+  opacity: 1;
+  transition: all 0.25s linear;
+}
+.rechargeable-products .item .graph img.gif {
+  z-index: 0;
+  opacity: 0;
+  transition: all 0.25s linear;
+}
+.rechargeable-products .item:hover {
+  opacity: 1;
+  transition: all 0.3s ease-in-out;
+}
+.rechargeable-products .item:hover .graph img.static {
+  opacity: 0;
+  transition: all 0.25s linear;
+}
+.rechargeable-products .item:hover .graph img.gif {
+  opacity: 1;
+  transition: all 0.25s linear;
+}
+
+.bg-water {
+  height: 80vh;
+  max-height: 650px;
+  position: relative;
+}
+.bg-water img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+  object-fit: cover;
+  -o-object-position: center;
+  object-position: center;
+  top: 0;
+  left: 0;
 }
 
 @media (max-width: 767.98px) {
@@ -17738,6 +17814,108 @@ img.grid-carousel {
   object-position: center;
 }
 
+.tooltips-wrapper {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.tooltips-wrapper .tooltip-item {
+  width: 24px;
+  height: 24px;
+  border-radius: 12px;
+  position: absolute;
+  z-index: 1;
+  background-color: #FFFFFF;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #00ABB1;
+  cursor: pointer;
+}
+.tooltips-wrapper .tooltip-item .tooltip-content {
+  position: absolute;
+  width: 380px;
+  height: auto;
+  background-color: #FFFFFF;
+  padding: 1.5em;
+  border-radius: 25px;
+  left: 40px;
+  color: #2D2D2D;
+  display: none;
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.12);
+}
+.tooltips-wrapper .tooltip-item .tooltip-content p {
+  text-align: center;
+  margin: 0;
+  font-weight: 300;
+}
+.tooltips-wrapper .tooltip-item .tooltip-content .triangle-left {
+  width: 0;
+  height: 0;
+  border-top: 10px solid transparent;
+  border-right: 10px solid #ffffff;
+  border-bottom: 10px solid transparent;
+  position: absolute;
+  top: calc(50% - 16px);
+  left: -10px;
+}
+.tooltips-wrapper .tooltip-item.active {
+  z-index: 2;
+}
+.tooltips-wrapper .tooltip-item.active .tooltip-content {
+  display: block;
+}
+.tooltips-wrapper.lider .tooltip-item.dot-1 {
+  top: 42%;
+  left: 18%;
+}
+.tooltips-wrapper.lider .tooltip-item.dot-2 {
+  top: 50%;
+  left: 38%;
+}
+.tooltips-wrapper.lider .tooltip-item.dot-3 {
+  top: 50%;
+  left: 59%;
+}
+.tooltips-wrapper.lider .tooltip-item.dot-4 {
+  top: 60%;
+  left: 38%;
+}
+.tooltips-wrapper.acuenta .tooltip-item.dot-1 {
+  top: 44%;
+  left: 21%;
+}
+.tooltips-wrapper.acuenta .tooltip-item.dot-2 {
+  top: 35%;
+  left: 35%;
+}
+.tooltips-wrapper.acuenta .tooltip-item.dot-3 {
+  top: 50%;
+  left: 35%;
+}
+.tooltips-wrapper.acuenta .tooltip-item.dot-4 {
+  top: 40%;
+  left: 59%;
+}
+.tooltips-wrapper.sodimac .tooltip-item.dot-1 {
+  top: 44%;
+  left: 34%;
+}
+.tooltips-wrapper.sodimac .tooltip-item.dot-2 {
+  top: 42%;
+  left: 50%;
+}
+.tooltips-wrapper.sodimac .tooltip-item.dot-3 {
+  top: 65%;
+  left: 35%;
+}
+.tooltips-wrapper.sodimac .tooltip-item.dot-4 {
+  top: 65%;
+  left: 75%;
+}
+
 @media (max-width: 767.98px) {
   .services-thumb-list li {
     width: 100%;
@@ -17927,6 +18105,39 @@ img.grid-carousel {
   transition: all 0.25s linear;
 }
 
+.banner-wrapper .banner {
+  width: 100%;
+  height: calc(100vh - 85px);
+  position: relative;
+}
+.banner-wrapper .banner img {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  -o-object-fit: cover;
+  object-fit: cover;
+  -o-object-position: center;
+  object-position: center;
+  z-index: 0;
+}
+.banner-wrapper .banner .content-banner {
+  position: relative;
+  z-index: 1;
+  color: #ffffff;
+}
+.banner-wrapper .banner .content-banner h2, .banner-wrapper .banner .content-banner .h2 {
+  font-size: 3.8em;
+  font-weight: 900;
+}
+.banner-wrapper .banner .content-banner p {
+  font-size: 1.3em;
+  font-weight: 300;
+}
+
+.bottom-graph-wrapper {
+  padding: 6em 0 4em;
+}
+
 html {
   overflow-x: hidden !important;
 }
@@ -18030,6 +18241,10 @@ body {
 }
 
 .no-header-page {
+  padding-top: 85px;
+}
+
+.content-page.header-fixed {
   padding-top: 85px;
 }
 

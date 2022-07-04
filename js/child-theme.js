@@ -11351,6 +11351,16 @@
 	        prevEl: '.prev-purple'
 	      }
 	    });
+	    new Swiper__default["default"]('.swiper-parallax', {
+	      direction: 'vertical',
+	      parallax: true,
+	      cssMode: true,
+	      mousewheel: true,
+	      navigation: {
+	        nextEl: '.swiper-button-prev',
+	        prevEl: '.swiper-button-next'
+	      }
+	    });
 	  });
 	})(jQuery);
 
@@ -11706,6 +11716,24 @@
 	  //     }
 	  //   }
 	  // } else return
+	})(jQuery);
+
+	(function ($) {
+	  $(document).ready(function () {
+	    $('.tooltip-item').click(function (e) {
+	      if ($(this).hasClass('active')) {
+	        $('.tooltip-item.active').removeClass("active");
+	      } else {
+	        $('.tooltip-item.active').removeClass("active");
+	        $(this).addClass("active");
+	      }
+	    });
+	    $(document).on('keyup', function (e) {
+	      if (e.key == "Escape") {
+	        $('.tooltip-item.active').removeClass("active");
+	      }
+	    });
+	  });
 	})(jQuery);
 
 	function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }

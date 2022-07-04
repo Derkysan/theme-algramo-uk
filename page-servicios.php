@@ -71,20 +71,39 @@
               <img src="<?php echo get_theme_file_uri(); ?>/images/book-bg.png" class="grid-service-1" data-aos="fade-right" data-aos-delay="150" data-aos-offset="200" data-aos-easing="ease-in-out" alt="grid image">
               <img src="<?php echo get_theme_file_uri(); ?>/images/book-bg.png" class="grid-service-2" data-aos="fade-left" data-aos-delay="150" data-aos-offset="200" data-aos-easing="ease-in-out" alt="grid image">
               <div class="service-image">
-                <img src="<?php echo get_theme_file_uri(); ?>/images/service-1.png" alt="service img">
-              </div>
-              <div class="service-image-collapse">
-                <p class="mb-0">
-                  <button class="btn btn-circle" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+                <img src="<?php echo get_theme_file_uri(); ?>/images/supermercados_lider_fondo_gris.png" alt="service img">
+                <div class="tooltips-wrapper lider ">
+                  <div class="tooltip-item dot-1">
                     <i class="fa-solid fa-plus"></i>
-                  </button>
-                </p>
-                <div class="collapse" id="collapseExample">
-                  <div class="card card-body">
-                    Some placeholder content for the collapse component. This panel is hidden by default but revealed when the user activates the relevant trigger.
+                    <div class="tooltip-content">
+                      <p>Necesitarás usar uno de nuestros envases inteligentes para tu primera recarga. Los encontrarás junto al dispensador y se pagan solo la primera vez.</p>
+                      <div class="triangle-left"></div>
+                    </div>
+                  </div>
+                  <div class="tooltip-item dot-2">
+                    <i class="fa-solid fa-plus"></i>
+                    <div class="tooltip-content">
+                      <p>El proceso de recarga lo controlas tú mismo desde la pantalla. Es muy fácil y cómodo.</p>
+                      <div class="triangle-left"></div>
+                    </div>
+                  </div>
+                  <div class="tooltip-item dot-3">
+                    <i class="fa-solid fa-plus"></i>
+                    <div class="tooltip-content">
+                      <p>Antes de retirar tu envase, recuerda retirar tu ticket, con él debes pagar en caja.</p>
+                      <div class="triangle-left"></div>
+                    </div>
+                  </div>
+                  <div class="tooltip-item dot-4">
+                    <i class="fa-solid fa-plus"></i>
+                    <div class="tooltip-content">
+                      <p>Aquí insertas el envase para iniciar tu recarga. Es importante que tu envase se encuentre limpio y vacío.</p>
+                      <div class="triangle-left"></div>
+                    </div>
                   </div>
                 </div>
               </div>
+              
             </div>
 
             <div class="cta-btn my-5">
@@ -102,20 +121,39 @@
               <img src="<?php echo get_theme_file_uri(); ?>/images/book-bg.png" class="grid-service-1" data-aos="fade-right" data-aos-delay="150" data-aos-offset="200" data-aos-easing="ease-in-out" alt="grid image">
               <img src="<?php echo get_theme_file_uri(); ?>/images/book-bg.png" class="grid-service-2" data-aos="fade-left" data-aos-delay="150" data-aos-offset="200" data-aos-easing="ease-in-out" alt="grid image">
               <div class="service-image">
-                <img src="<?php echo get_theme_file_uri(); ?>/images/service-2.png" alt="service img">
-              </div>
-              <div class="service-image-collapse">
-                <p class="mb-0">
-                  <button class="btn btn-circle" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+                <img src="<?php echo get_theme_file_uri(); ?>/images/superbodega_cuenta_fondo_gris.png" alt="service img">
+                <div class="tooltips-wrapper acuenta">
+                  <div class="tooltip-item dot-1">
                     <i class="fa-solid fa-plus"></i>
-                  </button>
-                </p>
-                <div class="collapse" id="collapseExample">
-                  <div class="card card-body">
-                    Some placeholder content for the collapse component. This panel is hidden by default but revealed when the user activates the relevant trigger.
+                    <div class="tooltip-content">
+                      <p>Necesitarás usar uno de nuestros envases inteligentes para tu primera recarga. Los encontrarás junto al dispensador y se pagan solo la primera vez.</p>
+                      <div class="triangle-left"></div>
+                    </div>
+                  </div>
+                  <div class="tooltip-item dot-2">
+                    <i class="fa-solid fa-plus"></i>
+                    <div class="tooltip-content">
+                      <p>El proceso de recarga lo controlas tú mismo desde la pantalla. Es muy fácil y cómodo.</p>
+                      <div class="triangle-left"></div>
+                    </div>
+                  </div>
+                  <div class="tooltip-item dot-3">
+                    <i class="fa-solid fa-plus"></i>
+                    <div class="tooltip-content">
+                      <p>Aquí insertas el envase para iniciar tu recarga. Es importante que tu envase se encuentre limpio y vacío.</p>
+                      <div class="triangle-left"></div>
+                    </div>
+                  </div>
+                  <div class="tooltip-item dot-4">
+                    <i class="fa-solid fa-plus"></i>
+                    <div class="tooltip-content">
+                      <p>Antes de retirar tu envase, recuerda retirar tu ticket, con él debes pagar en caja.</p>
+                      <div class="triangle-left"></div>
+                    </div>
                   </div>
                 </div>
               </div>
+              
             </div>
 
             <div class="cta-btn my-5">
@@ -133,20 +171,39 @@
               <img src="<?php echo get_theme_file_uri(); ?>/images/book-bg.png" class="grid-service-1" data-aos="fade-right" data-aos-delay="150" data-aos-offset="200" data-aos-easing="ease-in-out" alt="grid image">
               <img src="<?php echo get_theme_file_uri(); ?>/images/book-bg.png" class="grid-service-2" data-aos="fade-left" data-aos-delay="150" data-aos-offset="200" data-aos-easing="ease-in-out" alt="grid image">
               <div class="service-image">
-                <img src="<?php echo get_theme_file_uri(); ?>/images/service-3.png" alt="service img">
-              </div>
-              <div class="service-image-collapse">
-                <p class="mb-0">
-                  <button class="btn btn-circle" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+                <img src="<?php echo get_theme_file_uri(); ?>/images/sodimac_fondo_gris.png" alt="service img">
+                <div class="tooltips-wrapper sodimac">
+                  <div class="tooltip-item dot-1">
                     <i class="fa-solid fa-plus"></i>
-                  </button>
-                </p>
-                <div class="collapse" id="collapseExample">
-                  <div class="card card-body">
-                    Some placeholder content for the collapse component. This panel is hidden by default but revealed when the user activates the relevant trigger.
+                    <div class="tooltip-content">
+                      <p>Aquí insertas el envase para iniciar tu recarga. Es importante que tu envase se encuentre limpio y vacío.</p>
+                      <div class="triangle-left"></div>
+                    </div>
+                  </div>
+                  <div class="tooltip-item dot-2">
+                    <i class="fa-solid fa-plus"></i>
+                    <div class="tooltip-content">
+                      <p>El proceso de recarga lo controlas tú mismo desde la pantalla. Es muy fácil y cómodo.</p>
+                      <div class="triangle-left"></div>
+                    </div>
+                  </div>
+                  <div class="tooltip-item dot-3">
+                    <i class="fa-solid fa-plus"></i>
+                    <div class="tooltip-content">
+                      <p>Necesitarás usar uno de nuestros envases inteligentes para tu primera recarga. Los encontrarás junto al dispensador y se pagan solo la primera vez.</p>
+                      <div class="triangle-left"></div>
+                    </div>
+                  </div>
+                  <div class="tooltip-item dot-4">
+                    <i class="fa-solid fa-plus"></i>
+                    <div class="tooltip-content">
+                      <p>Antes de retirar tu envase, recuerda retirar tu ticket, con él debes pagar en caja.</p>
+                      <div class="triangle-left"></div>
+                    </div>
                   </div>
                 </div>
               </div>
+              
             </div>
 
             <div class="cta-btn my-5">
@@ -205,13 +262,13 @@
         </div>
         <div class="col-12 col-md-4 mb-5 mb-md-0">
           <div class="location-img">
-            <img src="<?php echo get_theme_file_uri(); ?>/images/categoria-1.png" alt="">
+            <img src="<?php echo get_theme_file_uri(); ?>/images/categoria-2.png" alt="">
           </div>
           <p>Minimarkets 🥑</p>
         </div>
         <div class="col-12 col-md-4 mb-5 mb-md-0">
           <div class="location-img">
-            <img src="<?php echo get_theme_file_uri(); ?>/images/categoria-1.png" alt="">
+            <img src="<?php echo get_theme_file_uri(); ?>/images/categoria-3.png" alt="">
           </div>
           <p>Estaciones de servicio 🚘</p>
         </div>

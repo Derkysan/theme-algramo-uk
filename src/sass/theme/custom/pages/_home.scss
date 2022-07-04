@@ -404,17 +404,70 @@ img {
       }
       &:hover {
         opacity: 1;
-        transition: all 0.3s ease-in-out;
+        transition: all 0.3s ease-in-out;        
       }
-    }
-    img {
-      height: 260px;
-      margin-bottom: 1em;
     }
     p {
       font-size: 1.15em;
       margin-bottom: 0.5em;
     }
+    .graph {
+      width: 100%;
+      height: 260px;
+      position: relative;
+      margin-bottom: 1em;
+      img {
+        width: 100%;
+        height: 100%;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        margin: auto;
+        position: absolute;
+        &.static {
+          z-index: 1;
+          opacity: 1;
+          transition: all .25s linear;
+        }
+        &.gif {
+          z-index: 0;
+          opacity: 0;
+          transition: all .25s linear;
+        }
+      }
+    }
+    &:hover {
+      opacity: 1;
+      transition: all 0.3s ease-in-out;
+      .graph {
+        img {
+          &.static {
+            opacity: 0;
+            transition: all .25s linear;
+          }
+          &.gif {
+            opacity: 1;
+            transition: all .25s linear;
+          }
+        }
+      }
+    }
+  }
+}
+
+.bg-water {
+  height: 80vh;
+  max-height: 650px;
+  position: relative;
+  img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    top: 0;
+    left: 0;
   }
 }
 

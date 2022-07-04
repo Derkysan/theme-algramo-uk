@@ -6,6 +6,7 @@ import "./custom/contact";
 import "./custom/dropdown";
 import "./custom/map";
 import "./custom/dropdow-checkbox-multiselect";
+import "./custom/components";
 
 import gsap from "gsap";
 
