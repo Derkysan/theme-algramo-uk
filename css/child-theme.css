@@ -18134,6 +18134,66 @@ img.grid-carousel {
   font-weight: 300;
 }
 
+.timeline-carousel-wrapper h4, .timeline-carousel-wrapper .h4 {
+  line-height: 1.2em;
+}
+
+.carousel-wrapper {
+  width: 100%;
+  border: 1px solid red;
+  position: relative;
+}
+.carousel-wrapper .timeline-swiper {
+  height: 220px;
+}
+.carousel-wrapper .timeline-swiper .swiper-wrapper .swiper-slide {
+  border: 1px solid blue;
+  width: 23%;
+}
+.carousel-wrapper .timeline-swiper.date .swiper-wrapper {
+  height: 160px;
+}
+.carousel-wrapper .timeline-swiper.date .swiper-wrapper .swiper-slide {
+  border: 1px solid orange;
+  width: 23%;
+}
+
+.team-list {
+  display: flex;
+  flex-wrap: wrap;
+}
+.team-list .member {
+  width: calc(20% - 1em);
+  margin-right: 1em;
+  margin-bottom: 1em;
+}
+.team-list .member .thumb {
+  width: 100%;
+  height: 290px;
+  margin-bottom: 0.75em;
+}
+.team-list .member .thumb img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+  object-fit: cover;
+  -o-object-position: center;
+  object-position: center;
+}
+.team-list .member .info {
+  text-align: center;
+}
+.team-list .member .info .name {
+  font-size: 1.2em;
+  font-weight: bold;
+}
+.team-list .member .info p {
+  color: #00ABB1;
+}
+.team-list .member .info:nth-child(5n) {
+  margin-right: 0;
+}
+
 .bottom-graph-wrapper {
   padding: 6em 0 4em;
 }

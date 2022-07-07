@@ -11360,6 +11360,16 @@
 	        nextEl: '.swiper-button-prev',
 	        prevEl: '.swiper-button-next'
 	      }
+	    }); // timeline carousel
+
+	    new Swiper__default["default"]('.timeline-swiper', {
+	      cssMode: false,
+	      mousewheel: false,
+	      slidesPerView: "auto",
+	      navigation: {
+	        nextEl: '.swiper-button-next',
+	        prevEl: '.swiper-button-prev'
+	      }
 	    });
 	  });
 	})(jQuery);

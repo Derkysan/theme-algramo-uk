@@ -610,6 +610,21 @@ AOS.init({
       },
     });
 
+
+    
+    
+
+    // timeline carousel
+    var swiperTimeline = new Swiper('.timeline-swiper', {
+      cssMode: false,
+      mousewheel: false,
+      slidesPerView: "auto",
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      }
+    });
+    
   });
 
 

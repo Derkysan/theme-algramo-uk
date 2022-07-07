@@ -4,30 +4,17 @@
 
 <div class="animate__animated animate__fadeIn">
 
-  <!-- <section class="header-page">
-    <img src="<?php echo get_theme_file_uri(); ?>/images/vector-lineal.png" class="cut-asterisk" data-aos="zoom-out-left" data-aos-delay="50" data-aos-offset="250" data-aos-easing="ease-in-out" alt="asterisk img" style="width: 400px; right: -5em; bottom: -8em;">
-    <div class="container h-100">
-      <div class="row h-100 align-items-center justify-content-center">
-        <div class="col-12 col-md-7">
-
-          <h1 class="text-center fw-bold">Quienes somos</h1>
-
-        </div>
-      </div>
-    </div>
-  </section> -->
-
   <section class="content-page header-fixed">
-    
+
     <div class="banner-wrapper">
       <div class="banner">
         <img src="<?php echo get_theme_file_uri(); ?>/images/banner-quienes-somos.png" alt="banner image">
         <div class="container h-100 content-banner">
           <div class="row h-100 align-items-center">
             <div class="col-6 offset-5">
-              
+
               <h2>Economía circular para Todos y Todas</h2>
-              <p>Empoderar a las personas a  cambiar radicalmente nuestros hábitos de consumo, construyendo un futuro sustentable para esta y las próximas generaciones. </p>
+              <p>Empoderar a las personas a cambiar radicalmente nuestros hábitos de consumo, construyendo un futuro sustentable para esta y las próximas generaciones. </p>
 
             </div>
           </div>
@@ -36,21 +23,45 @@
     </div>
 
     <div class="timeline-carousel-wrapper py-5">
-      <div class="container">
+      <div class="container mb-3">
         <div class="row justify-content-center">
           <div class="col-8">
-            
+
             <div class="d-flex justify-content-center mb-5">
               <img src="<?php echo get_theme_file_uri(); ?>/images/vector-solid.svg" class="asterisk" data-aos="fade-up" data-aos-offset="200" data-aos-easing="ease-in-out" alt="asterisk img">
             </div>
-            <p>De un almacén en la comuna de La Granja a trabajar con las marcas más grandes del mundo ✊🏻</p>
+            <h4 class="text-center fw-bold">De un almacén en la comuna de La Granja a trabajar con las marcas más grandes del mundo ✊🏻</h4 class="text-center fw-bold">
 
           </div>
         </div>
       </div>
 
-      <div class="slider-images">slider-images</div>
-      <div class="slider-dates">slider-dates</div>
+    <div class="carousel-wrapper">
+      <div class="timeline-swiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">Slide 1</div>
+          <div class="swiper-slide">Slide 2</div>
+          <div class="swiper-slide">Slide 3</div>
+          <div class="swiper-slide">Slide 4</div>
+          <div class="swiper-slide">Slide 5</div>
+          <div class="swiper-slide">Slide 6</div>
+          <div class="swiper-slide">Slide 7</div>
+        </div>
+      </div>
+      <hr>
+      <div class="timeline-swiper date">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">Slide 1</div>
+          <div class="swiper-slide">Slide 2</div>
+          <div class="swiper-slide">Slide 3</div>
+          <div class="swiper-slide">Slide 4</div>
+          <div class="swiper-slide">Slide 5</div>
+          <div class="swiper-slide">Slide 6</div>
+          <div class="swiper-slide">Slide 7</div>
+        </div>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+      </div>
     </div>
 
     <div class="team-interactive-wrapper py-5 bg-white">
@@ -59,9 +70,19 @@
           <div class="col">
 
             <h4 class="text-center mb-4">Tenemos la experiencia y el talento para liderar la Refill Revolution.</h4>
-            <h5 class="text-center text-primary mb-5">Equipo de líderes</h5>
+            <h5 class="text-center text-primary mb-5 fw-bold">Equipo de líderes</h5>
 
-            <p>StandBy</p>
+            <div class="team-list">
+              <div class="member">
+                <div class="thumb">
+                  <img src="<?php echo get_theme_file_uri(); ?>/images/member.png" alt="mamber">
+                </div>
+                <div class="info">
+                  <div class="name">Jose Manuel</div>
+                  <p>CEO</p>
+                </div>
+              </div>
+            </div>
 
             <div class="cta-btn my-5">
               <a href="#">¡Conoce al resto de nuestro equipo! <span><i class="fa-solid fa-angle-right"></i></span></a>
@@ -84,7 +105,7 @@
     </div>
 
     <div class="fullpage parallax">
-      <div id="block-1" class="section" style="background-image: url('https://source.unsplash.com/Dz5j0QKVUGY/1280x960');">
+      <div id="block-1" class="section" style="background-image: url('<?php echo get_theme_file_uri(); ?>/images/bg-fast-company.png');">
         <div class="container h-100">
           <div class="row h-100 align-items-center">
             <div class="col-12 col-md-6">
@@ -123,7 +144,7 @@
           </div>
         </div>
       </div>
-      <div id="block-2" class="section" style="background-image: url('https://source.unsplash.com/HGa7kULkQWY/1280x960');">
+      <div id="block-2" class="section" style="background-image: url('<?php echo get_theme_file_uri(); ?>/images/bg-natgeo.png');">
         <div class="container h-100">
           <div class="row h-100 align-items-center">
             <div class="col-12 col-md-6">
@@ -133,7 +154,7 @@
           </div>
         </div>
       </div>
-      <div id="block-3" class="section" style="background-image: url('https://source.unsplash.com/RRSXLJPbqEQ/1280x960');">
+      <div id="block-3" class="section" style="background-image: url('<?php echo get_theme_file_uri(); ?>/images/bg-impacto.png');">
         <div class="container h-100">
           <div class="row h-100 align-items-center">
             <div class="col-12 col-md-6">
@@ -145,7 +166,7 @@
       </div>
     </div>
 
-    
+
     <div class="slider-vertical-parallax-wrapper bg-black text-white">
 
       <!-- <div id="v-slider" class="v-slider d-none d-md-block">
@@ -235,30 +256,30 @@
           <div class="hero-marquee">
             <div class="marquee">
               <span class="clipped-text ">
-                  <?php _e('Tenemos la experiencia y el talento para liderar la Refill Revolution.')?>
+                <?php _e('Tenemos la experiencia y el talento para liderar la Refill Revolution.') ?>
               </span>
               <span class="clipped-text ">
-                  <?php _e('Tenemos la experiencia y el talento para liderar la Refill Revolution.')?>
+                <?php _e('Tenemos la experiencia y el talento para liderar la Refill Revolution.') ?>
               </span>
             </div>
           </div>
           <div class="hero-marquee">
             <div class="marquee">
               <span class="clipped-text lineal">
-                  <?php _e('Tenemos la experiencia y el talento para liderar la Refill Revolution.')?>
+                <?php _e('Tenemos la experiencia y el talento para liderar la Refill Revolution.') ?>
               </span>
               <span class="clipped-text lineal">
-                  <?php _e('Tenemos la experiencia y el talento para liderar la Refill Revolution.')?>
+                <?php _e('Tenemos la experiencia y el talento para liderar la Refill Revolution.') ?>
               </span>
             </div>
           </div>
           <div class="hero-marquee">
             <div class="marquee">
               <span class="clipped-text lineal">
-                  <?php _e('Tenemos la experiencia y el talento para liderar la Refill Revolution.')?>
+                <?php _e('Tenemos la experiencia y el talento para liderar la Refill Revolution.') ?>
               </span>
               <span class="clipped-text lineal">
-                  <?php _e('Tenemos la experiencia y el talento para liderar la Refill Revolution.')?>
+                <?php _e('Tenemos la experiencia y el talento para liderar la Refill Revolution.') ?>
               </span>
             </div>
           </div>
@@ -266,20 +287,20 @@
         <div class="container">
           <div class="row justify-content-center">
             <div class="col-10 col-md-6">
-  
+
               <div class="graph-wrapper text-center">
                 <img src="<?php echo get_theme_file_uri(); ?>/images/book-bg.png" class="grid-img d-none" data-aos="fade-up" data-aos-delay="50" data-aos-offset="250" data-aos-easing="ease-in-out" alt="grid image">
                 <div class="d-flex justify-content-center mb-5">
                   <div class="recharge-img-wrapper" data-aos="fade-up" data-aos-delay="50" data-aos-offset="250" data-aos-easing="ease-in-out">
-                    <img src="<?php echo get_theme_file_uri(); ?>/images/gif-trabaja-con-nosotros-2.gif" alt="gif trabaja con nosotros">
+                    <img src="<?php echo get_theme_file_uri(); ?>/images/gif/rihanna.gif" alt="gif">
                   </div>
                 </div>
               </div>
               <div class="mb-5" data-aos="fade-down" data-aos-delay="50" data-aos-offset="250" data-aos-easing="ease-in-out"><?php the_sub_field('texto'); ?></div>
-  
+
             </div>
           </div>
-  
+
         </div>
       </div>
 
