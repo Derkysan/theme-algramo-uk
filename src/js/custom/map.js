@@ -100,7 +100,7 @@
         
       }
     }
-  
+    /*
     const mapboxgl = require('mapbox-gl/dist/mapbox-gl.js');
   
     mapboxgl.accessToken = 'pk.eyJ1IjoiYWxncmFtbyIsImEiOiJjbDNrN3dnMHUwN3lrM2NxYXd1N3BzcnRzIn0.mDAq3_Hkv0OuUo6S6edoNA';
@@ -110,6 +110,7 @@
       center: [-70.604,-33.417],
       zoom: 12
     });
+    */
 
   } else return
   
