@@ -19,6 +19,14 @@
       }
     });
 
+    // $('.close-modal').click(function (e) { 
+    //   $('#memberModal').hide();
+    // });
+    // $('.member').click( ()=>{
+    //   $('#memberModal').show();
+    // });
+
+
   });
 
 })(jQuery);
