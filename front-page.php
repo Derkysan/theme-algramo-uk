@@ -84,10 +84,6 @@ get_header();
           ?>
         <?php endif; ?>
       </div>
-
-      <!-- If we need navigation buttons -->
-      <!-- <div class="swiper-button-prev"></div>
-<div class="swiper-button-next"></div> -->
     </div>
   </section>
 
@@ -346,7 +342,7 @@ get_header();
     </div>
   </section>
 
-  <section class="fullpage ">
+  <section class="fullpage d-none">
     <div id="block-1" class="section">
       <div class="container h-100">
         <div class="row h-100 align-items-center">

@@ -611,18 +611,24 @@ AOS.init({
     });
 
 
-    
-    
-
     // timeline carousel
     var swiperTimeline = new Swiper('.timeline-swiper', {
-      cssMode: false,
+      // cssMode: true,
+      grabCursor: true,
       mousewheel: false,
       slidesPerView: "auto",
       navigation: {
-        nextEl: '.swiper-button-next',
-        prevEl: '.swiper-button-prev',
+        nextEl: '.swiper-tl-button-next',
+        prevEl: '.swiper-tl-button-prev',
       }
+    });
+
+    let swiperTeam = new Swiper('.swiper-team', {
+      autoplay: false,
+      grabCursor: true,
+      mousewheel: false,
+      slidesPerView: "auto",
+      spaceBetween: 25,
     });
     
   });

@@ -11,7 +11,7 @@
         <img src="<?php echo get_theme_file_uri(); ?>/images/banner-quienes-somos.png" alt="banner image">
         <div class="container h-100 content-banner">
           <div class="row h-100 align-items-center">
-            <div class="col-6 offset-5">
+            <div class="col-12 col-md-6 offset-md-5">
 
               <h2>Economía circular para Todos y Todas</h2>
               <p>Empoderar a las personas a cambiar radicalmente nuestros hábitos de consumo, construyendo un futuro sustentable para esta y las próximas generaciones. </p>
@@ -23,7 +23,7 @@
     </div>
 
     <div class="timeline-carousel-wrapper py-5">
-      <div class="container mb-3">
+      <div class="container mb-5">
         <div class="row justify-content-center">
           <div class="col-8">
 
@@ -35,36 +35,54 @@
           </div>
         </div>
       </div>
+    </div>
 
-    <div class="carousel-wrapper">
+    <div class="carousel-wrapper mb-5">
       <div class="timeline-swiper">
         <div class="swiper-wrapper">
-          <div class="swiper-slide">Slide 1</div>
-          <div class="swiper-slide">Slide 2</div>
-          <div class="swiper-slide">Slide 3</div>
-          <div class="swiper-slide">Slide 4</div>
-          <div class="swiper-slide">Slide 5</div>
-          <div class="swiper-slide">Slide 6</div>
-          <div class="swiper-slide">Slide 7</div>
+          <div class="swiper-slide">
+            <img src="<?php echo get_theme_file_uri(); ?>/images/timeline/1.png" alt="slide timeline">
+          </div>
+          <div class="swiper-slide">
+            <img src="<?php echo get_theme_file_uri(); ?>/images/timeline/2.png" alt="slide timeline">
+          </div>
+          <div class="swiper-slide">
+              <img src="<?php echo get_theme_file_uri(); ?>/images/timeline/3.png" alt="slide timeline">
+          </div>
+          <div class="swiper-slide">
+            <img src="<?php echo get_theme_file_uri(); ?>/images/timeline/4.png" alt="slide timeline">
+          </div>
+          <div class="swiper-slide">
+            <img src="<?php echo get_theme_file_uri(); ?>/images/timeline/5.png" alt="slide timeline">
+          </div>
+          <div class="swiper-slide">
+            <img src="<?php echo get_theme_file_uri(); ?>/images/timeline/6.png" alt="slide timeline">
+          </div>
+          <div class="swiper-slide">
+            <img src="<?php echo get_theme_file_uri(); ?>/images/timeline/7.png" alt="slide timeline">
+          </div>
+          <div class="swiper-slide">
+            <img src="<?php echo get_theme_file_uri(); ?>/images/timeline/8.png" alt="slide timeline">
+          </div>
+          <div class="swiper-slide">
+            <img src="<?php echo get_theme_file_uri(); ?>/images/timeline/9.png" alt="slide timeline">
+          </div>
+          <div class="swiper-slide">
+            <img src="<?php echo get_theme_file_uri(); ?>/images/timeline/10.png" alt="slide timeline">
+          </div>
+          <div class="swiper-slide">
+            <img src="<?php echo get_theme_file_uri(); ?>/images/timeline/11.png" alt="slide timeline">
+          </div>
+          <div class="swiper-slide">
+            <img src="<?php echo get_theme_file_uri(); ?>/images/timeline/12.png" alt="slide timeline">
+          </div>
         </div>
-      </div>
-      <hr>
-      <div class="timeline-swiper date">
-        <div class="swiper-wrapper">
-          <div class="swiper-slide">Slide 1</div>
-          <div class="swiper-slide">Slide 2</div>
-          <div class="swiper-slide">Slide 3</div>
-          <div class="swiper-slide">Slide 4</div>
-          <div class="swiper-slide">Slide 5</div>
-          <div class="swiper-slide">Slide 6</div>
-          <div class="swiper-slide">Slide 7</div>
-        </div>
-        <div class="swiper-button-prev"></div>
-        <div class="swiper-button-next"></div>
+        <div class="btn-swiper swiper-tl-button-next"><i class="fa-solid fa-angle-right"></i></div>
+        <div class="btn-swiper swiper-tl-button-prev"><i class="fa-solid fa-angle-left"></i></div>
       </div>
     </div>
 
-    <div class="team-interactive-wrapper py-5 bg-white">
+    <div class="team-wrapper interactive py-5 bg-white">
       <div class="container">
         <div class="row">
           <div class="col">
@@ -72,21 +90,119 @@
             <h4 class="text-center mb-4">Tenemos la experiencia y el talento para liderar la Refill Revolution.</h4>
             <h5 class="text-center text-primary mb-5 fw-bold">Equipo de líderes</h5>
 
-            <div class="team-list">
-              <div class="member">
-                <div class="thumb">
-                  <img src="<?php echo get_theme_file_uri(); ?>/images/member.png" alt="mamber">
-                </div>
-                <div class="info">
-                  <div class="name">Jose Manuel</div>
-                  <p>CEO</p>
-                </div>
-              </div>
+            <div class="team-list d-none d-md-flex">
+
+              <?php if ( have_rows( 'equipo' ) ) : $i = 0; ?>
+                <?php while ( have_rows( 'equipo' ) ) : the_row(); $i++; ?>
+                  <?php if ( have_rows( 'miembro' ) ) : ?>
+                    <?php while ( have_rows( 'miembro' ) ) : the_row(); ?>
+
+
+                      <div class="member" data-bs-toggle="modal" data-bs-target="#memberModal_<?php echo $i; ?>">
+                        <div class="thumb">
+                          <?php if ( get_sub_field( 'imagen' ) ) : ?>
+                            <img src="<?php the_sub_field( 'imagen' ); ?>" />
+                          <?php endif ?>
+                        </div>
+                        <div class="info">
+                          <div class="name"><?php the_sub_field( 'nombre' ); ?></div>
+                          <p><?php the_sub_field( 'cargo' ); ?></p>
+                        </div>
+                      </div>
+                      
+                      <div class="modal fade" id="memberModal_<?php echo $i; ?>" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="memberModalLabel" aria-hidden="true">
+                        <div class="modal-dialog modal-lg modal-dialog-centered">
+                          <div class="modal-content">
+                            
+                            <div class="modal-body modal-member">
+                              <button type="button" class="btn btn-link close-modal" data-bs-dismiss="modal"><i class="fa-solid fa-xmark"></i></button>
+                              <div class="card-member">
+                                <div class="thumb">
+                                  <?php if ( get_sub_field( 'imagen' ) ) : ?>
+                                    <img src="<?php the_sub_field( 'imagen' ); ?>" />
+                                  <?php endif ?>
+                                </div>
+                              
+                                <div class="info">
+                                  <p><?php the_sub_field( 'nombre' ); ?> <span><?php the_sub_field( 'cargo' ); ?></span></p>
+                                  <h3><?php the_sub_field( 'descripcion' ); ?></h3>
+                                  
+                                  <ul>
+                                    <?php if ( have_rows( 'redes_sociales' ) ) : ?>
+                                      <?php while ( have_rows( 'redes_sociales' ) ) : the_row(); ?>
+
+                                        <?php if ( get_sub_field('instagram') ) { ?>
+                                          <li>
+                                            <a class="text-decoration-none" href="<?php the_sub_field( 'instagram' ); ?>" target="_blank"><span><i class="fa-brands fa-instagram"></i></span> Instagram</a>
+                                          </li>
+                                        <?php } ?>
+                                        <?php if ( get_sub_field('linkedin') ) { ?>
+                                          <li>
+                                            <a class="text-decoration-none" href="<?php the_sub_field( 'linkedin' ); ?>" target="_blank"><span><i class="fa-brands fa-linkedin-in"></i></span> Linkedin</a>
+                                          </li>
+                                        <?php } ?>
+
+                                        
+                                      <?php endwhile; ?>
+                                    <?php endif; ?>
+                                  </ul>
+                                </div>
+                              </div>
+                                
+                            </div>
+                            
+                          </div>
+                        </div>
+                      </div>
+                      
+                    <?php endwhile; ?>
+                  <?php endif; ?>
+                <?php endwhile; ?>
+              <?php else : ?>
+                <?php // No rows found ?>
+              <?php endif; ?>
             </div>
 
-            <div class="cta-btn my-5">
-              <a href="#">¡Conoce al resto de nuestro equipo! <span><i class="fa-solid fa-angle-right"></i></span></a>
+            <!-- Slider main container -->
+            <div class="swiper swiper-team position-relative d-block d-md-none">
+              <div class="swiper-wrapper">
+                <?php if ( have_rows( 'equipo' ) ) : $i = 0; ?>
+                  <?php while ( have_rows( 'equipo' ) ) : the_row(); $i++; ?>
+                    <?php if ( have_rows( 'miembro' ) ) : ?>
+                      <?php while ( have_rows( 'miembro' ) ) : the_row(); ?>
+
+                        <div class="swiper-slide">
+                          <div class="member" data-bs-toggle="modal" data-bs-target="#swiperMemberModal_<?php echo $i; ?>">
+                            <div class="thumb">
+                              <?php if ( get_sub_field( 'imagen' ) ) : ?>
+                                <img src="<?php the_sub_field( 'imagen' ); ?>" />
+                              <?php endif ?>
+                            </div>
+                            <div class="info">
+                              <div class="name"><?php the_sub_field( 'nombre' ); ?></div>
+                              <p><?php the_sub_field( 'cargo' ); ?></p>
+                            </div>
+                          </div>  
+                        </div>   
+                        
+                      <?php endwhile; ?>
+                    <?php endif; ?>
+                  <?php endwhile; ?>
+                <?php else : ?>
+                  <?php // No rows found ?>
+                <?php endif; ?>
+                
+              </div>
+
             </div>
+
+            <?php $cta_equipo = get_field( 'cta_equipo' ); ?>
+            <?php if ( $cta_equipo ) : ?>
+              <div class="cta-btn my-5">
+                <a href="<?php echo esc_url( $cta_equipo); ?>">¡Conoce al resto de nuestro equipo! <span><i class="fa-solid fa-angle-right"></i></span></a>
+              </div>
+            <?php endif; ?>
+
 
           </div>
         </div>
@@ -108,7 +224,7 @@
       <div id="block-1" class="section" style="background-image: url('<?php echo get_theme_file_uri(); ?>/images/bg-fast-company.png');">
         <div class="container h-100">
           <div class="row h-100 align-items-center">
-            <div class="col-12 col-md-6">
+            <div class="col-12 col-md-6 text-center">
               <img src="<?php echo get_theme_file_uri(); ?>/images/svg/logo-fast-company.svg" alt="slide">
             </div>
             <div class="col-12 col-md-6 h-100">
@@ -140,6 +256,8 @@
                 </div>
               </div>
 
+              <h3 class="text-white text-center mt-5 d-block d-md-none">Empresa más innovadora de latinoamérica en 2015 y 2020</h3>
+
             </div>
           </div>
         </div>
@@ -147,106 +265,27 @@
       <div id="block-2" class="section" style="background-image: url('<?php echo get_theme_file_uri(); ?>/images/bg-natgeo.png');">
         <div class="container h-100">
           <div class="row h-100 align-items-center">
-            <div class="col-12 col-md-6">
+            <div class="col-12 col-md-6 text-center">
               <img src="<?php echo get_theme_file_uri(); ?>/images/svg/logo-national-geographic.svg" alt="slide">
             </div>
-            <div class="col-12 col-md-6"></div>
+            <div class="col-12 col-md-6">
+                <h3 class="text-white text-center mt-5 d-block d-md-none">Primer lugar en el Ocean Plastic Innovation Challenge de 2019</h3>
+            </div>
           </div>
         </div>
       </div>
       <div id="block-3" class="section" style="background-image: url('<?php echo get_theme_file_uri(); ?>/images/bg-impacto.png');">
         <div class="container h-100">
           <div class="row h-100 align-items-center">
-            <div class="col-12 col-md-6">
+            <div class="col-12 col-md-6 text-center">
               <img src="<?php echo get_theme_file_uri(); ?>/images/svg/logo-impacto.svg" alt="slide">
             </div>
-            <div class="col-12 col-md-6"></div>
+            <div class="col-12 col-md-6">
+              <h3 class="text-white text-center mt-5 d-block d-md-none">Una de las 20 startups con mayor impacto social y medioambiental del 2021</h3>
+            </div>
           </div>
         </div>
       </div>
-    </div>
-
-
-    <div class="slider-vertical-parallax-wrapper bg-black text-white">
-
-      <!-- <div id="v-slider" class="v-slider d-none d-md-block">
-        <div class="swiper swiper-v">
-          <div class="swiper-wrapper">
-            <div class="swiper-slide">
-              <img src="<?php echo get_theme_file_uri(); ?>/images/v-slide-1.png" width="300px" alt="slide 1">
-            </div>
-            <div class="swiper-slide">
-              <img src="<?php echo get_theme_file_uri(); ?>/images/v-slide-2.png" width="300px" alt=" slide 2">
-            </div>
-            <div class="swiper-slide">
-              <img src="<?php echo get_theme_file_uri(); ?>/images/v-slide-3.png" width="300px" alt=" slide 3">
-            </div>
-          </div>
-          <div class="pager">
-            <span id="slide-idx"></span>
-            <span class="pagerline">
-              <span class="bullet"></span>
-              <span class="bullet"></span>
-              <span class="bullet"></span>
-            </span>
-            <span>03</span>
-          </div>
-
-        </div>
-      </div> -->
-
-      <!-- <div class="swiper swiper-parallax">
-        <div class="swiper-wrapper">
-          <div class="swiper-slide">
-            <img src="https://source.unsplash.com/Dz5j0QKVUGY/1280x960" alt="" data-swiper-parallax-y="450"/>
-            <div class="slide-content">
-              <div class="container h-100">
-                <div class="row h-100 align-items-center">
-                  <div class="col">
-
-                  </div>
-                  <div class="col">
-                    <h3>Empresa más innovadora de latinoamérica en 2015 y 2020</h3>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div> 
-          <div class="swiper-slide">
-            <img src="https://source.unsplash.com/HGa7kULkQWY/1280x960" alt="" data-swiper-parallax-y="450"/>
-            <div class="slide-content">
-              <div class="container h-100">
-                <div class="row h-100 align-items-center">
-                  <div class="col">
-
-                  </div>
-                  <div class="col">
-                    <h3>Primer lugar en el Ocean Plastic Innovation Challenge de 2019</h3>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="swiper-slide">
-            <img src="https://source.unsplash.com/RRSXLJPbqEQ/1280x960" alt="" data-swiper-parallax-y="450"/>
-            <div class="slide-content">
-              <div class="container h-100">
-                <div class="row h-100 align-items-center">
-                  <div class="col">
-
-                  </div>
-                  <div class="col">
-                    <h3>Una de las 20 startups con mayor impacto social y medioambiental del 2021</h3>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          
-        </div>
-        <div class="swiper-pagination"></div>
-      </div> -->
-
     </div>
 
     <div class="bottom-graph-wrapper">
