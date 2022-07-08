@@ -410,6 +410,7 @@ var gapp = {
 			jQuery(".change-places").find("input").prop("checked", true);
 			jQuery(".change-places").show();
 		}
+		this.renderPlaces();
 	},
 	makeSwiper: function(color) {
 		var html = "";
