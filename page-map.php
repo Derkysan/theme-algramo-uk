@@ -293,9 +293,7 @@ var gapp = {
 					}
 				}
 			}
-		}); 
-
-		console.log('okPlaces',okPlaces.length);
+		});  
 
 		for (var i = 0; i < this.places.length; i++) {
 			if (okPlaces.indexOf(this.places[i].id)>-1) {
@@ -318,9 +316,7 @@ var gapp = {
 						)
 					);
 
-					oneMarker.addTo(map);
-
-					console.log('add: ' + this.places[i].id);
+					oneMarker.addTo(map); 
 
 					markers.push({
 						id: this.places[i].id,
@@ -342,7 +338,7 @@ var gapp = {
 	renderStoresListing: function() {
 		var html = "";
 		for (var i = 0; i < this.stores.length; i++) {
-      html += '<li>'+
+      		html += '<li>'+
               '<label class="item-checkbox" for="shop-'+this.stores[i].id+'">' + this.stores[i].name + '' + 
               '<input id="shop-'+this.stores[i].id+'" class="filter-store-class" name="shopFilter" type="checkbox" value="shop'+this.stores[i].id+'">'+
               '<span class="checkmark"></span>'+
@@ -588,6 +584,11 @@ jQuery(document).ready(function() {
         prevEl: '.prev-azul',
       },
     });
+
+
+    <?php 
+    if ($_GET["places"]) { echo "map.on('load', () => jQuery(\"#labelDLVR\").click() );"; }
+    ?>
 
     
 
