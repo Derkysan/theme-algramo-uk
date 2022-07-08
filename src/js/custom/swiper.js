@@ -583,22 +583,6 @@ AOS.init({
 
     });
 
-    const swiperGreen = new Swiper('.swiper-delivery', {
-      slidesPerView: "auto",
-      // loop: true,
-      navigation: {
-        nextEl: '.next-green',
-        prevEl: '.prev-green',
-      },
-    });
-    const swiperPurple = new Swiper('.swiper-delivery-purple', {
-      slidesPerView: "auto",
-      // loop: true,
-      navigation: {
-        nextEl: '.next-purple',
-        prevEl: '.prev-purple',
-      },
-    });
     const swiperParallax = new Swiper('.swiper-parallax', {
       direction: 'vertical',
       parallax: true,
