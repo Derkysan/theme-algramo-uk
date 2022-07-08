@@ -59,8 +59,9 @@ var gapp = {
 			"image": "<?php echo get_theme_file_uri(); ?>/images/products/omo.png",
 			"qty": "3 Lt",
 			"zones": ["azul","morado"],
-			"places": ["lider-santa-amalia","lider-el-rodeo","walmart-departamental","sodimac-la-florida","sodimac-limpio-la-reina"],
-			"brand":true
+			"places": ["lider-santa-amalia","lider-el-rodeo","lider-departamental","sodimac-la-florida","sodimac-limpio-la-reina"],
+			"brand":true,
+			"pos": true
 		},
 		{
 			"id": "quix",
@@ -69,8 +70,9 @@ var gapp = {
 			"image": "<?php echo get_theme_file_uri(); ?>/images/products/quix.png",
 			"qty": "1.5 Lt",
 			"zones": ["azul","morado"],
-			"places": ["lider-santa-amalia","lider-el-rodeo","walmart-departamental","sodimac-la-florida","sodimac-limpio-la-reina"],
-			"brand":true
+			"places": ["lider-santa-amalia","lider-el-rodeo","lider-departamental","sodimac-la-florida","sodimac-limpio-la-reina"],
+			"brand":true,
+			"pos": true
 		},
 		{
 			"id": "soft",
@@ -79,8 +81,9 @@ var gapp = {
 			"image": "<?php echo get_theme_file_uri(); ?>/images/products/soft.png",
 			"qty": "1.5 Lt",
 			"zones": ["azul","morado"],
-			"places": ["lider-santa-amalia","walmart-departamental","sodimac-la-florida"],
-			"brand":true
+			"places": ["lider-santa-amalia","lider-departamental","sodimac-la-florida"],
+			"brand":true,
+			"pos": true
 		},
 		{
 			"id": "cif",
@@ -89,8 +92,9 @@ var gapp = {
 			"image": "<?php echo get_theme_file_uri(); ?>/images/products/cif.png",
 			"qty": "1.5 Lt",
 			"zones": ["azul","morado"],
-			"places": ["lider-santa-amalia","walmart-departamental","sodimac-la-florida"],
-			"brand":true
+			"places": ["lider-santa-amalia","lider-departamental","sodimac-la-florida"],
+			"brand":true,
+			"pos": true
 		},
 		{
 			"id": "detergente-lider",
@@ -100,7 +104,8 @@ var gapp = {
 			"qty": "3 Lt",
 			"zones": [],
 			"places": ["lider-santa-amalia","lider-el-rodeo","lider-pie-andino","acuenta-maipu"],
-			"brand":false
+			"brand":true,
+			"pos": true
 		},
 		{
 			"id": "lavaloza-lider",
@@ -110,7 +115,8 @@ var gapp = {
 			"qty": "1.5 Lt",
 			"zones": [],
 			"places": ["lider-santa-amalia","lider-el-rodeo","lider-pie-andino","acuenta-maipu"],
-			"brand":false
+			"brand":true,
+			"pos": true
 		},
 		{
 			"id": "suavizante-lider",
@@ -120,7 +126,8 @@ var gapp = {
 			"qty": "1.5 Lt",
 			"zones": [],
 			"places": ["lider-santa-amalia","lider-el-rodeo","lider-pie-andino","acuenta-maipu"],
-			"brand":false
+			"brand":true,
+			"pos": true
 		},
 		{
 			"id": "limpiapisos-lider",
@@ -130,7 +137,8 @@ var gapp = {
 			"qty": "1.5 Lt",
 			"zones": [],
 			"places": ["lider-santa-amalia","lider-el-rodeo","lider-pie-andino","acuenta-maipu"],
-			"brand":false
+			"brand":true,
+			"pos": true
 		},
 		{
 			"id": "purina-raza-grande",
@@ -140,7 +148,8 @@ var gapp = {
 			"qty": "3 a 15 kilos",
 			"zones": ["azul"],
 			"places": [],
-			"brand":false
+			"brand":false,
+			"pos": false
 		},
 		{
 			"id": "purina-raza-chica",
@@ -150,7 +159,8 @@ var gapp = {
 			"qty": "3 a 15 kilos",
 			"zones": ["azul"],
 			"places": [],
-			"brand":false
+			"brand":false,
+			"pos": false
 		}
 	],
 	places: [
@@ -179,8 +189,8 @@ var gapp = {
 			"latlng": [-33.3241795,-70.5422958]
 		},
 		{
-			"id": "walmart-departamental",
-			"name": "Walmart Departamental",
+			"id": "lider-departamental",
+			"name": "Lider Departamental",
 			"address": "Av. Américo Vespucio 6325, La Florida, Región Metropolitana",
 			"time": "09:00 a 19:00 hrs",
 			"color": "#007DC3",
@@ -199,7 +209,7 @@ var gapp = {
 			"name": "Sodimac La Florida",
 			"address": "Av. Macul 6402, La Florida, Región Metropolitana",
 			"time": "AM 10:00 a 14:00 hrs y PM 16:00 a 20:00",
-			"color": "#0072CE",
+			"color": "#8fc6fb",
 			"latlng": [-33.5129174,-70.5313586]
 		},
 		{
@@ -207,7 +217,7 @@ var gapp = {
 			"name": "Punto Limpio Sodimac La Reina",
 			"address": "Jorge Alessandri 1347, Santiago, La Reina",
 			"time": "AM 10:00 a 14:00 hrs y PM 16:00 a 20:00",
-			"color": "#0072CE",
+			"color": "#8fc6fb",
 			"latlng": [-33.4626199,-70.5493846]
 		},
 	],
@@ -257,7 +267,7 @@ var gapp = {
 	renderProducts: function(zone) {
 		var html = "";
 		for (var i = 0; i < this.products.length; i++) {
-			if (!zone || this.products[i].zones.indexOf(zone)) {
+			if ((!zone || this.products[i].zones.indexOf(zone)) && this.products[i].pos) {
 				html += '<div class="item change-places">'+
 	              '      <label class="wrapper-checkbox">'+
 	              '        <input id="product-'+this.products[i].id+'" name="products" checked type="checkbox" value="'+this.products[i].id+'">'+
@@ -415,7 +425,7 @@ var gapp = {
 			    '    <div class="swiper-wrapper" id="swiper-slide-'+color+'"> ';
 
 			    for (var i = 0; i < this.products.length; i++) {
-			    	if (this.products[i].zones.indexOf(color)) {
+			    	if (this.products[i].zones.indexOf(color) > -1) {
 							html += '<div class="swiper-slide"><img src="'+this.products[i].image+'" class="" alt="product"></div>';
 			    	}
 			    }
