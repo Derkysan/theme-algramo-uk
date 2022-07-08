@@ -306,7 +306,8 @@ var gapp = {
 				}
 				if (f==0) {
 					var el = document.createElement('div');
-					el.className = 'marker';
+					el.className = 'marker marker-clicks';
+					el.setAttribute('data-id', this.places[i].id);
 					el.style = 'background-color:'+this.places[i].color;
 					
 					var latlng = this.places[i].latlng.slice().reverse();
@@ -315,9 +316,7 @@ var gapp = {
 							`<h3>${this.places[i].name}</h3><p>${this.places[i].address}</p>`
 						)
 					);
-
-					oneMarker.addTo(map); 
-
+					oneMarker.addTo(map);  
 					markers.push({
 						id: this.places[i].id,
 						marker: oneMarker
@@ -500,6 +499,19 @@ jQuery(document).ready(function() {
 	jQuery("#results-stores").html(gapp.renderStoresListing());
 	jQuery("#results-products").html(gapp.renderProductsListing());
 
+	jQuery(document).on("click",".marker-clicks",function() {
+		var d = jQuery(this).attr('data-id');
+		jQuery("#clearFilters").click();
+		for (var i = 0; i < gapp.products.length; i++) {
+			if (gapp.products[i].places.indexOf(d) > -1) {
+				jQuery("#product-" + gapp.products[i].id).prop("checked",true);
+			}
+			else {
+				jQuery("#product-" + gapp.products[i].id).prop("checked",false);
+			}
+		}
+
+	});
 	jQuery("#switchView").change(function() {
 		if (jQuery(this).is(":checked")) {
 	    	gapp.renderPolygons();
