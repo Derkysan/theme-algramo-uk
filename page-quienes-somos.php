@@ -5,45 +5,45 @@
 <div class="animate__animated animate__fadeIn">
 
   <section class="content-page header-fixed">
-    
-    <?php if ( have_rows( 'banner' ) ) : ?>
-      <?php while ( have_rows( 'banner' ) ) : the_row(); ?>
+
+    <?php if (have_rows('banner')) : ?>
+      <?php while (have_rows('banner')) : the_row(); ?>
         <div class="banner-wrapper">
           <div class="banner">
-            <?php if ( get_sub_field( 'imagen_banner' ) ) : ?>
-              <img src="<?php the_sub_field( 'imagen_banner' ); ?>" alt="banner image" />
+            <?php if (get_sub_field('imagen_banner')) : ?>
+              <img src="<?php the_sub_field('imagen_banner'); ?>" alt="banner image" />
             <?php endif ?>
-            
+
             <div class="container h-100 content-banner">
               <div class="row h-100 align-items-center">
                 <div class="col-12 col-md-6 offset-md-5">
 
-                  <?php the_sub_field( 'texto_banner' ); ?>
+                  <?php the_sub_field('texto_banner'); ?>
 
                 </div>
               </div>
             </div>
           </div>
         </div>
-        
-        
+
+
       <?php endwhile; ?>
     <?php endif; ?>
 
-    
 
-    
+
+
     <div class="timeline-carousel-wrapper py-5">
       <div class="container mb-5">
         <div class="row justify-content-center">
           <div class="col-8">
-            
+
             <div class="d-flex justify-content-center mb-5">
               <img src="<?php echo get_theme_file_uri(); ?>/images/vector-solid.svg" class="asterisk" data-aos="fade-up" data-aos-offset="200" data-aos-easing="ease-in-out" alt="asterisk img">
             </div>
-            <?php if ( have_rows( 'linea_de_tiempo' ) ) : ?>
-              <?php while ( have_rows( 'linea_de_tiempo' ) ) : the_row(); ?>
-                <h4 class="text-center fw-bold"><?php the_sub_field( 'texto_cabecera' ); ?></h4>
+            <?php if (have_rows('linea_de_tiempo')) : ?>
+              <?php while (have_rows('linea_de_tiempo')) : the_row(); ?>
+                <h4 class="text-center fw-bold"><?php the_sub_field('texto_cabecera'); ?></h4>
               <?php endwhile; ?>
             <?php endif; ?>
 
@@ -62,7 +62,7 @@
             <img src="<?php echo get_theme_file_uri(); ?>/images/timeline/2.png" alt="slide timeline">
           </div>
           <div class="swiper-slide">
-              <img src="<?php echo get_theme_file_uri(); ?>/images/timeline/3.png" alt="slide timeline">
+            <img src="<?php echo get_theme_file_uri(); ?>/images/timeline/3.png" alt="slide timeline">
           </div>
           <div class="swiper-slide">
             <img src="<?php echo get_theme_file_uri(); ?>/images/timeline/4.png" alt="slide timeline">
@@ -97,7 +97,7 @@
       </div>
     </div>
 
-    
+
     <div class="team-wrapper interactive py-5 bg-white">
       <div class="container">
         <div class="row">
@@ -110,114 +110,177 @@
               <?php _e('Equipo de líderes'); ?>
             </h5>
 
-            <?php if ( have_rows( 'equipo' ) ) : ?>
-	            <?php while ( have_rows( 'equipo' ) ) : the_row(); ?>
+            <?php if (have_rows('equipo')) : ?>
+              <?php while (have_rows('equipo')) : the_row(); ?>
 
-            <div class="team-list d-none d-md-flex">
+                <div class="team-list d-none d-md-flex">
 
-              <?php if ( have_rows( 'listado' ) ) : $i = 0; ?>
-                <?php while ( have_rows( 'listado' ) ) : the_row(); $i++; ?>
-                  <?php if ( have_rows( 'miembro' ) ) : ?>
-                    <?php while ( have_rows( 'miembro' ) ) : the_row(); ?>
+                  <?php if (have_rows('listado')) : $i = 0; ?>
+                    <?php while (have_rows('listado')) : the_row();
+                      $i++; ?>
+                      <?php if (have_rows('miembro')) : ?>
+                        <?php while (have_rows('miembro')) : the_row(); ?>
 
 
-                      <div class="member" data-bs-toggle="modal" data-bs-target="#memberModal_<?php echo $i; ?>">
-                        <div class="thumb">
-                          <?php if ( get_sub_field( 'imagen' ) ) : ?>
-                            <img src="<?php the_sub_field( 'imagen' ); ?>" />
-                          <?php endif ?>
-                        </div>
-                        <div class="info">
-                          <div class="name"><?php the_sub_field( 'nombre' ); ?></div>
-                          <p><?php the_sub_field( 'cargo' ); ?></p>
-                        </div>
-                      </div>
-                      
-                      <div class="modal fade" id="memberModal_<?php echo $i; ?>" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="memberModalLabel" aria-hidden="true">
+                          <div class="member" data-bs-toggle="modal" data-bs-target="#memberModal_<?php echo $i; ?>">
+                            <div class="thumb">
+                              <?php if (get_sub_field('imagen')) : ?>
+                                <img src="<?php the_sub_field('imagen'); ?>" />
+                              <?php endif ?>
+                            </div>
+                            <div class="info">
+                              <div class="name"><?php the_sub_field('nombre'); ?></div>
+                              <p><?php the_sub_field('cargo'); ?></p>
+                            </div>
+                          </div>
+
+                          <div class="modal fade" id="memberModal_<?php echo $i; ?>" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="memberModalLabel" aria-hidden="true">
+                            <div class="modal-dialog modal-lg modal-dialog-centered">
+                              <div class="modal-content">
+
+                                <div class="modal-body modal-member">
+                                  <button type="button" class="btn btn-link close-modal" data-bs-dismiss="modal"><i class="fa-solid fa-xmark"></i></button>
+                                  <div class="card-member">
+                                    <div class="thumb">
+                                      <?php if (get_sub_field('imagen')) : ?>
+                                        <img src="<?php the_sub_field('imagen'); ?>" />
+                                      <?php endif ?>
+                                    </div>
+
+                                    <div class="info">
+                                      <p><?php the_sub_field('nombre'); ?> <span><?php the_sub_field('cargo'); ?></span></p>
+                                      <h3><?php the_sub_field('descripcion'); ?></h3>
+
+                                      <ul>
+                                        <?php if (get_sub_field('instagram')) { ?>
+                                          <li>
+                                            <a class="text-decoration-none" href="<?php the_sub_field('instagram'); ?>" target="_blank"><span><i class="fa-brands fa-instagram"></i></span> Instagram</a>
+                                          </li>
+                                        <?php } ?>
+                                        <?php if (get_sub_field('linkedin')) { ?>
+                                          <li>
+                                            <a class="text-decoration-none" href="<?php the_sub_field('linkedin'); ?>" target="_blank"><span><i class="fa-brands fa-linkedin-in"></i></span> Linkedin</a>
+                                          </li>
+                                        <?php } ?>
+                                      </ul>
+                                    </div>
+                                  </div>
+
+                                </div>
+
+                              </div>
+                            </div>
+                          </div>
+
+                        <?php endwhile; ?>
+                      <?php endif; ?>
+                    <?php endwhile; ?>
+                  <?php else : ?>
+                    <?php // No rows found 
+                    ?>
+                  <?php endif; ?>
+                </div>
+
+                <!-- Team mobile -->
+                <div class="swiper swiper-team position-relative d-block d-md-none">
+                  <div class="swiper-wrapper">
+                    <?php if (have_rows('listado')) : $i = 0; ?>
+                      <?php while (have_rows('listado')) : the_row();
+                        $i++; ?>
+                        <?php if (have_rows('miembro')) : ?>
+                          <?php while (have_rows('miembro')) : the_row(); ?>
+
+                            <div class="swiper-slide">
+                              <div class="member" data-bs-toggle="modal" data-bs-target="#swiperMemberModal_<?php echo $i; ?>">
+                                <div class="thumb">
+                                  <?php if (get_sub_field('imagen')) : ?>
+                                    <img src="<?php the_sub_field('imagen'); ?>" />
+                                  <?php endif ?>
+                                </div>
+                                <div class="info">
+                                  <div class="name"><?php the_sub_field('nombre'); ?></div>
+                                  <p><?php the_sub_field('cargo'); ?></p>
+                                </div>
+                              </div>
+                            </div>
+
+                          <?php endwhile; ?>
+                        <?php endif; ?>
+                      <?php endwhile; ?>
+                    <?php else : ?>
+                      <?php // No rows found 
+                      ?>
+                    <?php endif; ?>
+
+                  </div>
+
+                </div>
+
+                <?php if (have_rows('listado')) : $i = 0; ?>
+                  <?php while (have_rows('listado')) : the_row();
+                    $i++; ?>
+                    <?php if (have_rows('miembro')) : ?>
+                      <?php while (have_rows('miembro')) : the_row(); ?>
+
+                      <div class="modal fade" id="swiperMemberModal_<?php echo $i; ?>" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="memberModalLabel" aria-hidden="true">
                         <div class="modal-dialog modal-lg modal-dialog-centered">
                           <div class="modal-content">
-                            
+
                             <div class="modal-body modal-member">
                               <button type="button" class="btn btn-link close-modal" data-bs-dismiss="modal"><i class="fa-solid fa-xmark"></i></button>
                               <div class="card-member">
                                 <div class="thumb">
-                                  <?php if ( get_sub_field( 'imagen' ) ) : ?>
-                                    <img src="<?php the_sub_field( 'imagen' ); ?>" />
+                                  <?php if (get_sub_field('imagen')) : ?>
+                                    <img src="<?php the_sub_field('imagen'); ?>" />
                                   <?php endif ?>
                                 </div>
-                              
+
                                 <div class="info">
-                                  <p><?php the_sub_field( 'nombre' ); ?> <span><?php the_sub_field( 'cargo' ); ?></span></p>
-                                  <h3><?php the_sub_field( 'descripcion' ); ?></h3>
-                                  
+                                  <p><?php the_sub_field('nombre'); ?> <span><?php the_sub_field('cargo'); ?></span></p>
+                                  <h3><?php the_sub_field('descripcion'); ?></h3>
+
                                   <ul>
-                                    <?php if ( get_sub_field('instagram') ) { ?>
+                                    <?php if (get_sub_field('instagram')) { ?>
                                       <li>
-                                        <a class="text-decoration-none" href="<?php the_sub_field( 'instagram' ); ?>" target="_blank"><span><i class="fa-brands fa-instagram"></i></span> Instagram</a>
+                                        <a class="text-decoration-none" href="<?php the_sub_field('instagram'); ?>" target="_blank"><span><i class="fa-brands fa-instagram"></i></span> Instagram</a>
                                       </li>
                                     <?php } ?>
-                                    <?php if ( get_sub_field('linkedin') ) { ?>
+                                    <?php if (get_sub_field('linkedin')) { ?>
                                       <li>
-                                        <a class="text-decoration-none" href="<?php the_sub_field( 'linkedin' ); ?>" target="_blank"><span><i class="fa-brands fa-linkedin-in"></i></span> Linkedin</a>
+                                        <a class="text-decoration-none" href="<?php the_sub_field('linkedin'); ?>" target="_blank"><span><i class="fa-brands fa-linkedin-in"></i></span> Linkedin</a>
                                       </li>
                                     <?php } ?>
                                   </ul>
                                 </div>
                               </div>
-                                
+
                             </div>
-                            
+
                           </div>
                         </div>
                       </div>
-                      
-                    <?php endwhile; ?>
-                  <?php endif; ?>
-                <?php endwhile; ?>
-              <?php else : ?>
-                <?php // No rows found ?>
-              <?php endif; ?>
-            </div>
-            <?php endwhile; ?>
-  <?php endif; ?>
 
-            <!-- Slider main container -->
-            <div class="swiper swiper-team position-relative d-block d-md-none">
-              <div class="swiper-wrapper">
-                <?php if ( have_rows( 'equipo' ) ) : $i = 0; ?>
-                  <?php while ( have_rows( 'equipo' ) ) : the_row(); $i++; ?>
-                    <?php if ( have_rows( 'miembro' ) ) : ?>
-                      <?php while ( have_rows( 'miembro' ) ) : the_row(); ?>
-
-                        <div class="swiper-slide">
-                          <div class="member" data-bs-toggle="modal" data-bs-target="#swiperMemberModal_<?php echo $i; ?>">
-                            <div class="thumb">
-                              <?php if ( get_sub_field( 'imagen' ) ) : ?>
-                                <img src="<?php the_sub_field( 'imagen' ); ?>" />
-                              <?php endif ?>
-                            </div>
-                            <div class="info">
-                              <div class="name"><?php the_sub_field( 'nombre' ); ?></div>
-                              <p><?php the_sub_field( 'cargo' ); ?></p>
-                            </div>
-                          </div>  
-                        </div>   
-                        
                       <?php endwhile; ?>
                     <?php endif; ?>
                   <?php endwhile; ?>
                 <?php else : ?>
-                  <?php // No rows found ?>
+                  <?php // No rows found 
+                  ?>
                 <?php endif; ?>
+
                 
-              </div>
 
-            </div>
+              <?php endwhile; ?>
+            <?php endif; ?>
 
-            <?php $cta_equipo = get_field( 'cta_equipo' ); ?>
-            <?php if ( $cta_equipo ) : ?>
+
+
+
+
+            <?php $cta_equipo = get_field('cta_equipo'); ?>
+            <?php if ($cta_equipo) : ?>
               <div class="cta-btn my-5">
-                <a href="<?php echo esc_url( $cta_equipo); ?>">
+                <a href="<?php echo esc_url($cta_equipo); ?>">
                   <?php _e('¡Conoce al resto de nuestro equipo! '); ?>
                   <span><i class="fa-solid fa-angle-right"></i></span>
                 </a>
@@ -229,7 +292,7 @@
         </div>
       </div>
     </div>
-      
+
 
     <div class="py-5 bg-black text-white text-center">
       <div class="container">
@@ -293,9 +356,9 @@
               <img src="<?php echo get_theme_file_uri(); ?>/images/svg/logo-national-geographic.svg" alt="slide">
             </div>
             <div class="col-12 col-md-6">
-                <h3 class="text-white text-center mt-5 d-block d-md-none">
-                  <?php _e('Primer lugar en el Ocean Plastic Innovation Challenge de 2019'); ?>
-                </h3>
+              <h3 class="text-white text-center mt-5 d-block d-md-none">
+                <?php _e('Primer lugar en el Ocean Plastic Innovation Challenge de 2019'); ?>
+              </h3>
             </div>
           </div>
         </div>

@@ -56,7 +56,7 @@ $container = get_theme_mod('understrap_container_type');
       <div class="col">
         <div class="d-flex align-items-center justify-content-end">
 
-          <div class="lang-selector me-3">
+          <!-- <div class="lang-selector me-3">
             <div class="custom-select">
               <select>
                 <option value="0">Select car:</option>
@@ -64,7 +64,7 @@ $container = get_theme_mod('understrap_container_type');
                 <option value="https://uk.algramo.cl/">UK</option>
               </select>
             </div>
-          </div>
+          </div> -->
 
           <?php dynamic_sidebar('header-right'); ?>
         </div>
@@ -135,7 +135,7 @@ $container = get_theme_mod('understrap_container_type');
       }
       ?>
 
-      <div class="lang-selector">
+      <!-- <div class="lang-selector">
         <div class="custom-select" style="width:200px;">
           <select>
             <option value="0">Select car:</option>
@@ -143,7 +143,7 @@ $container = get_theme_mod('understrap_container_type');
             <option value="https://uk.algramo.cl/">UK</option>
           </select>
         </div>
-      </div>
+      </div> -->
 
       <div class="secondary-menu">
         <?php dynamic_sidebar('header-right'); ?>

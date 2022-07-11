@@ -16411,6 +16411,10 @@ ul#menu-redes-sociales li a {
   .hero-marquee .marquee .clipped-text {
     font-size: 50px;
   }
+
+  .card-member .thumb {
+    width: 150px;
+  }
 }
 .fullpage {
   width: 100%;
