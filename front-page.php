@@ -87,8 +87,6 @@ get_header();
     </div>
   </section>
 
-
-
   <?php if (have_rows('bloque_reutilizar')) : ?>
     <?php while (have_rows('bloque_reutilizar')) : the_row(); ?>
 
@@ -97,30 +95,30 @@ get_header();
           <div class="hero-marquee">
             <div class="marquee">
               <span class="clipped-text">
-                Algramo es la nueva forma de reutilizar.
+                <?php _e('Algramo es la nueva forma de reutilizar.'); ?>
               </span>
               <span class="clipped-text">
-                Algramo es la nueva forma de reutilizar.
+                <?php _e('Algramo es la nueva forma de reutilizar.'); ?>  
               </span>
             </div>
           </div>
           <div class="hero-marquee">
             <div class="marquee">
               <span class="clipped-text lineal">
-                Algramo es la nueva forma de reutilizar.
+                <?php _e('Algramo es la nueva forma de reutilizar.'); ?>
               </span>
               <span class="clipped-text lineal">
-                Algramo es la nueva forma de reutilizar.
+                <?php _e('Algramo es la nueva forma de reutilizar.'); ?>
               </span>
             </div>
           </div>
           <div class="hero-marquee">
             <div class="marquee">
               <span class="clipped-text lineal">
-                Algramo es la nueva forma de reutilizar.
+                <?php _e('Algramo es la nueva forma de reutilizar.'); ?>
               </span>
               <span class="clipped-text lineal">
-                Algramo es la nueva forma de reutilizar.
+                <?php _e('Algramo es la nueva forma de reutilizar.'); ?>
               </span>
             </div>
           </div>
@@ -129,7 +127,6 @@ get_header();
         <div class="graph-1 text-center">
           <img src="<?php echo get_theme_file_uri(); ?>/images/vector-solid.svg" class="asterisk" data-aos="fade-left" data-aos-offset="200" data-aos-easing="ease-in-out" alt="asterisk img">
           <img src="<?php echo get_theme_file_uri(); ?>/images/book-bg.png" class="grid-img" data-aos="fade-right" data-aos-delay="150" data-aos-offset="200" data-aos-easing="ease-in-out" alt="grid image">
-          <!-- <img src="<?php echo get_theme_file_uri(); ?>/images/algramo-es-la-nueva-forma-de-reutilizar.svg" class="text-graph-1" data-aos="fade-left" data-aos-delay="50" data-aos-offset="200" data-aos-easing="ease-in-out" alt="Algramo es la nueva forma de reutilizar."> -->
         </div>
         <div class="container">
           <div class="row justify-content-center mt-5 pt-3">
@@ -151,7 +148,7 @@ get_header();
 
   <section class="pt-2 pb-5">
     <div class="wrapper-carousel pb-5" data-aos="fade-in" data-aos-delay="250" data-aos-offset="200" data-aos-easing="ease-in-out">
-      <div class="swiper swiper-products">
+      <div class="swiper-products position-relative">
         <div class="swiper-wrapper">
           <?php if (have_rows('carousel_grid')) : ?>
             <?php while (have_rows('carousel_grid')) : the_row(); ?>
@@ -181,6 +178,9 @@ get_header();
             ?>
           <?php endif; ?>
         </div>
+
+        <div class="btn-swiper button-next"><i class="fa-solid fa-angle-right"></i></div>
+        <div class="btn-swiper button-prev"><i class="fa-solid fa-angle-left"></i></div>
       </div>
     </div>
   </section>
@@ -194,7 +194,7 @@ get_header();
           <img src="<?php the_sub_field('imagen'); ?>" class="quote-img" data-aos="fade-in" data-aos-delay="50" data-aos-offset="250" data-aos-easing="ease-in-out" />
           <div class="container quote-txt-wrapper h-100">
             <div class="row h-100 align-items-start align-items-md-center">
-              <div class="col-12 col-md-8">
+              <div class="col-12 col-md-7">
                 <h3 class="pe-4" data-aos="fade-right" data-aos-delay="50" data-aos-offset="200" data-aos-easing="ease-in-out"><?php the_sub_field('cita_texto'); ?></h3>
                 <p data-aos="fade-right" data-aos-delay="150" data-aos-offset="0" data-aos-easing="ease-in-out"><?php the_sub_field('cita_info'); ?></p>
               </div>
@@ -276,7 +276,7 @@ get_header();
       <img src="<?php echo get_theme_file_uri(); ?>/images/phone-1.png" alt="phone">
       <div class="text">
         <img src="<?php echo get_theme_file_uri(); ?>/images/arrow.svg" class="arrow d-none d-md-inline-flex" alt="arrow">
-        Compra el último envase de tu vida y <span style="color: #00ABB1; ">deja de generar desechos</span>
+        <?php _e('Compra el último envase de tu vida y '); ?><span style="color: #00ABB1; "><?php _e('deja de generar desechos')?></span>
       </div>
     </div>
 
@@ -284,14 +284,14 @@ get_header();
       <img src="<?php echo get_theme_file_uri(); ?>/images/phone-2.png" alt="phone">
       <img src="<?php echo get_theme_file_uri(); ?>/images/shine-1.svg" class="shine-1" alt="shine">
       <img src="<?php echo get_theme_file_uri(); ?>/images/shine-2.svg" class="shine-2" alt="shine">
-      <div class="text">Examina y <span style="color: #f1c756;">gestiona tus envases</span></div>
+      <div class="text"><?php _e('Examina y '); ?><span style="color: #f1c756;"></span><?php _e('gestiona tus envases') ?></div>
     </div>
 
     <div class="phone-3 d-none d-md-block" data-aos="fade-right" data-aos-delay="50" data-aos-offset="50" data-aos-easing="ease-in-out">
       <img src="<?php echo get_theme_file_uri(); ?>/images/phone-3.png" alt="phone">
       <div class="text">
         <img src="<?php echo get_theme_file_uri(); ?>/images/happy-face.svg" class="emoji d-none d-md-inline-flex" w alt="happy emoji">
-        <?php _e('Revisa el impacto <span style="color: #f1c756;">que has generado</span>') ?>
+        <?php _e('Revisa el impacto ') ?><span style="color: #f1c756;"><?php _e('que has generado'); ?></span>
       </div>
     </div>
 
@@ -301,23 +301,24 @@ get_header();
           <?php the_field('store'); ?>
 
           <div class="store-btn-list mt-4">
-            <a href="http://" class="d-block" data-aos="fade-right" data-aos-delay="50" data-aos-offset="250" data-aos-easing="ease-in-out" target="_blank" rel="noopener noreferrer">
+            <a href="https://play.google.com/store/apps/details?id=com.algramoapp&gl=US" target="_blank" class="d-block" data-aos="fade-right" data-aos-delay="50" data-aos-offset="250" data-aos-easing="ease-in-out" target="_blank" rel="noopener noreferrer">
               <img src="<?php echo get_theme_file_uri(); ?>/images/store-google.png" style="height: 40px;" alt="google store">
             </a>
 
-            <a href="http://" class="d-block" data-aos="fade-left" data-aos-delay="50" data-aos-offset="250" data-aos-easing="ease-in-out" target="_blank" rel="noopener noreferrer">
+            <a href="https://apps.apple.com/cl/app/algramo/id1499212206" target="_blank" class="d-block" data-aos="fade-left" data-aos-delay="50" data-aos-offset="250" data-aos-easing="ease-in-out" target="_blank" rel="noopener noreferrer">
               <img src="<?php echo get_theme_file_uri(); ?>/images/store-apple.png" style="height: 40px;" alt="apple store">
             </a>
           </div>
         </div>
       </div>
+
       <div class="row d-inline-flex d-md-none mt-5">
         <div class="col-12">
           <div class="phone-1 mb-5">
             <img src="<?php echo get_theme_file_uri(); ?>/images/phone-1.png" alt="phone">
             <div class="text">
               <img src="<?php echo get_theme_file_uri(); ?>/images/arrow.svg" class="arrow d-none d-md-inline-flex" alt="arrow">
-              Compra el último envase de tu vida y <span style="color: #00ABB1; ">deja de generar desechos</span>
+              <?php _e('Compra el último envase de tu vida y '); ?><span style="color: #00ABB1; "><?php _e('deja de generar desechos'); ?></span>
             </div>
           </div>
         </div>
@@ -326,7 +327,7 @@ get_header();
             <img src="<?php echo get_theme_file_uri(); ?>/images/phone-2.png" alt="phone">
             <img src="<?php echo get_theme_file_uri(); ?>/images/shine-1.svg" class="shine-1" alt="shine">
             <img src="<?php echo get_theme_file_uri(); ?>/images/shine-2.svg" class="shine-2" alt="shine">
-            <div class="text">Examina y <span style="color: #f1c756;">gestiona tus envases</span></div>
+            <div class="text"><?php _e('Examina y '); ?><span style="color: #f1c756;"></span><?php _e('gestiona tus envases') ?></div>
           </div>
         </div>
         <div class="col-12">
@@ -334,7 +335,7 @@ get_header();
             <img src="<?php echo get_theme_file_uri(); ?>/images/phone-3.png" alt="phone">
             <div class="text">
               <img src="<?php echo get_theme_file_uri(); ?>/images/happy-face.svg" class="emoji d-none d-md-inline-flex" w alt="happy emoji">
-              Revisa el impacto <span style="color: #f1c756;">que has generado</span>
+              <?php _e('Revisa el impacto ') ?><span style="color: #f1c756;"><?php _e('que has generado'); ?></span>
             </div>
           </div>
         </div>
@@ -347,9 +348,11 @@ get_header();
       <div class="container h-100">
         <div class="row h-100 align-items-center">
           <div class="col-12 col-md-6">
-            <p class="fw-bold">Claves para tu primera recarga 👀 </p>
+            <p class="fw-bold"><?php _e('Claves para tu primera recarga') ?> 👀 </p>
             <h2>Antes de empezar</h2>
-            <p style="font-weight: 100;">Descarga la app y recuerda que no tienes que traer tus envases, nosotros te entregamos uno inteligente en tu primera compra.</p>
+            <p style="font-weight: 100;">
+              <?php _e('Descarga la app y recuerda que no tienes que traer tus envases, nosotros te entregamos uno inteligente en tu primera compra.') ?>
+            </p>
           </div>
           <div class="col-12 col-md-6 h-100">
 
@@ -394,9 +397,11 @@ get_header();
       <div class="container h-100">
         <div class="row h-100 align-items-center">
           <div class="col-12 col-md-6">
-            <p class="fw-bold">Claves para tu primera recarga 😎 </p>
-            <h2>Listo para empezar</h2>
-            <p style="font-weight: 100;">Pon tu envase inteligente en el dispensador y comienza a recargar el futuro.</p>
+            <p class="fw-bold"><?php _e('Claves para tu primera recarga'); ?> 😎 </p>
+            <h2><?php _e('Listo para empezar'); ?></h2>
+            <p style="font-weight: 100;">
+              <?php _e('Pon tu envase inteligente en el dispensador y comienza a recargar el futuro.'); ?>
+            </p>
           </div>
           <div class="col-12 col-md-6">
             <img class="d-block d-md-none" src="<?php echo get_theme_file_uri(); ?>/images/v-slide-2.png" alt="slide 2">
@@ -408,9 +413,14 @@ get_header();
       <div class="container h-100">
         <div class="row h-100 align-items-center">
           <div class="col-12 col-md-6">
-            <p class="fw-bold">Claves para tu primera recarga 🔄 </p>
-            <h2>¡Repite!</h2>
-            <p style="font-weight: 100;">Recuerda siempre volver con tu envase inteligente. ¡El planeta te lo agradecerá!</p>
+            <p class="fw-bold">
+              <?php _e('Claves para tu primera recarga'); ?> 🔄 
+            </p>
+            <h2>
+              🔄 <?php _e('¡Repite!'); ?></h2>
+            <p style="font-weight: 100;">
+              <?php _e('Recuerda siempre volver con tu envase inteligente. ¡El planeta te lo agradecerá!'); ?>
+            </p>
           </div>
           <div class="col-12 col-md-6">
             <img class="d-block d-md-none" src="<?php echo get_theme_file_uri(); ?>/images/v-slide-3.png" alt="slide 3">
@@ -420,11 +430,14 @@ get_header();
     </div>
   </section>
 
-  <section class="bg-white py-5">
+  <!-- section hover gif - hidden -->
+  <section class="bg-white py-5 d-none">
     <div class="container">
       <div class="row">
         <div class="col">
-          <h2 class="mb-5 text-center aos-init aos-animate">Todo lo que podrás recargar</h2>
+          <h2 class="mb-5 text-center aos-init aos-animate">
+            <?php _e('Todo lo que podrás recargar'); ?>
+          </h2>
         </div>
       </div>
     </div>
@@ -556,47 +569,6 @@ get_header();
     <?php endwhile; ?>
   <?php endif; ?>
 
-  <section class="gallery-carousel-wrapper py-5 d-none">
-    <img src="<?php echo get_theme_file_uri(); ?>/images/vector-lineal-green.png" class="asterisk rotate" data-aos="flip-left" data-aos-delay="250" data-aos-offset="250" data-aos-easing="ease-in-out" alt="asterisk img">
-    <img src="<?php echo get_theme_file_uri(); ?>/images/book-bg.png" class="grid-carousel" data-aos="flip-left" data-aos-delay="50" data-aos-offset="250" data-aos-easing="ease-in-out" alt="grid image">
-    <div class="container-fluid">
-      <div class="row mb-5">
-        <div class="col">
-          <h2 class="text-center mb-5" data-aos="fade-right" data-aos-delay="50" data-aos-offset="250" data-aos-easing="ease-in-out">Todo lo que podrás encontrar</h2>
-
-          <div class="wrapper-carousel" data-aos="fade-in" data-aos-delay="50" data-aos-offset="250" data-aos-easing="ease-in-out">
-
-            <div class="swiper swiper-gallery">
-              <div class="swiper-wrapper">
-
-                <?php if (have_rows('carousel_de_imagenes')) : ?>
-                  <?php while (have_rows('carousel_de_imagenes')) : the_row(); ?>
-
-                    <div class="swiper-slide">
-                      <div class="item">
-                        <div class="thumb">
-                          <?php if (get_sub_field('item')) : ?>
-                            <img src="<?php the_sub_field('item'); ?>" />
-                          <?php endif ?>
-                        </div>
-                      </div>
-                    </div>
-
-                  <?php endwhile; ?>
-                <?php else : ?>
-                  <?php // No rows found 
-                  ?>
-                <?php endif; ?>
-
-              </div>
-            </div>
-
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
   <?php if (have_rows('recargar')) : ?>
     <?php while (have_rows('recargar')) : the_row(); ?>
 
@@ -680,14 +652,14 @@ get_header();
           <h2 class="mb-5 text-center" data-aos="fade-right" data-aos-delay="50" data-aos-offset="250" data-aos-easing="ease-in-out"><?php _e('Impacto que hemos generado juntos'); ?></h2>
 
           <div class="wrapper-carousel" data-aos="fade-in" data-aos-delay="50" data-aos-offset="250" data-aos-easing="ease-in-out">
-            <div class="swiper swiper-data">
+            <div class="swiper-data position-relative">
               <div class="swiper-wrapper">
 
                 <div class="swiper-slide">
                   <div class="item">
                     <div class="data">
                       <div id="data-1" class="main" data-aos="fade-in" data-aos-id="randomize"></div>
-                      <p><?php _e('Envases Reutilizados'); ?></p>
+                      <p><?php _e('Envases reutilizados'); ?></p>
                     </div>
                   </div>
                 </div>
@@ -695,7 +667,7 @@ get_header();
                   <div class="item">
                     <div class="data">
                       <div id="data-2" class="main" data-aos="fade-in" data-aos-id="randomize"></div>
-                      <p><?php _e('kg de Co2 evitado'); ?></p>
+                      <p><?php _e('Kg Co2 evitado'); ?></p>
                     </div>
                   </div>
                 </div>
@@ -703,7 +675,7 @@ get_header();
                   <div class="item">
                     <div class="data">
                       <div id="data-3" class="main" data-aos="fade-in" data-aos-id="randomize"></div>
-                      <p><?php _e('lt. de Agua Ahorrada '); ?></p>
+                      <p><?php _e('Lt. Agua Ahorrada '); ?></p>
                     </div>
                   </div>
                 </div>
@@ -711,7 +683,7 @@ get_header();
                   <div class="item">
                     <div class="data">
                       <div id="data-4" class="main" data-aos="fade-in" data-aos-id="randomize"></div>
-                      <p><?php _e('Kg de plástico ahorrados'); ?></p>
+                      <p><?php _e('Kg plástico ahorrados'); ?></p>
                     </div>
                   </div>
                 </div>
@@ -743,12 +715,15 @@ get_header();
                 <div class="swiper-slide">
                   <div class="item">
                     <div class="thumb">
-                      <img src="<?php echo get_theme_file_uri(); ?>/images/giph-impacto.gif" style="object-position: left;" alt="gif impacto">
+                      <img src="<?php echo get_theme_file_uri(); ?>/images/gif/giph-impacto.gif" style="object-position: left;" alt="gif impacto">
                     </div>
                   </div>
                 </div>
 
               </div>
+
+              <div class="btn-swiper button-next"><i class="fa-solid fa-angle-right"></i></div>
+              <div class="btn-swiper button-prev"><i class="fa-solid fa-angle-left"></i></div>
             </div>
           </div>
 
@@ -775,30 +750,30 @@ get_header();
       <div class="hero-marquee">
         <div class="marquee">
           <span class="clipped-text text-white">
-            Recarguemos el futuro. Recarguemos el futuro. Recarguemos el futuro.
+            <?php _e('Recarguemos el futuro. Recarguemos el futuro. Recarguemos el futuro.'); ?>
           </span>
           <span class="clipped-text text-white">
-            Recarguemos el futuro. Recarguemos el futuro. Recarguemos el futuro.
-          </span>
-        </div>
-      </div>
-      <div class="hero-marquee">
-        <div class="marquee">
-          <span class="clipped-text text-white">
-            Recarguemos el futuro. Recarguemos el futuro. Recarguemos el futuro.
-          </span>
-          <span class="clipped-text text-white">
-            Recarguemos el futuro. Recarguemos el futuro. Recarguemos el futuro.
+            <?php _e('Recarguemos el futuro. Recarguemos el futuro. Recarguemos el futuro.'); ?>
           </span>
         </div>
       </div>
       <div class="hero-marquee">
         <div class="marquee">
           <span class="clipped-text text-white">
-            Recarguemos el futuro. Recarguemos el futuro. Recarguemos el futuro.
+            <?php _e('Recarguemos el futuro. Recarguemos el futuro. Recarguemos el futuro.'); ?>
           </span>
           <span class="clipped-text text-white">
-            Recarguemos el futuro. Recarguemos el futuro. Recarguemos el futuro.
+            <?php _e('Recarguemos el futuro. Recarguemos el futuro. Recarguemos el futuro.'); ?>
+          </span>
+        </div>
+      </div>
+      <div class="hero-marquee">
+        <div class="marquee">
+          <span class="clipped-text text-white">
+            <?php _e('Recarguemos el futuro. Recarguemos el futuro. Recarguemos el futuro.'); ?>
+          </span>
+          <span class="clipped-text text-white">
+            <?php _e('Recarguemos el futuro. Recarguemos el futuro. Recarguemos el futuro.'); ?>
           </span>
         </div>
       </div>
@@ -808,10 +783,9 @@ get_header();
         <div class="col-10 col-md-6">
 
           <div class="graph-wrapper text-center">
-            <!-- <img src="<?php echo get_theme_file_uri(); ?>/images/recarguemos-futuro.svg" class="text-graph-5" data-aos="fade-right" data-aos-delay="50" data-aos-offset="250" data-aos-easing="ease-in-out" alt="recarguemos-futuro"> -->
             <div class="d-flex justify-content-center mb-5">
               <div class="recharge-img-wrapper" data-aos="fade-up" data-aos-delay="50" data-aos-offset="250" data-aos-easing="ease-in-out">
-                <img src="<?php echo get_theme_file_uri(); ?>/images/gify-home.gif" alt="gif home">
+                <img src="<?php echo get_theme_file_uri(); ?>/images/gif/gify-home.gif" alt="gif home">
               </div>
             </div>
           </div>

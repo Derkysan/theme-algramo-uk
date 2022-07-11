@@ -22,6 +22,13 @@ import gsap from "gsap";
     }, 2000);
   });
 
+  $(".mobile-menu-toggler").click(function () { 
+    $(".mobile-menu-wrapper").toggleClass('opened');
+  });
+  $(".close-menu").click(function () { 
+    $(".mobile-menu-wrapper").removeClass('opened');
+  });
+
   const logoAnimated = $('.logo-animated');
   $(window).scroll(function () {
 

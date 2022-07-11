@@ -10,7 +10,7 @@
       <div class="row h-100 align-items-center justify-content-center">
         <div class="col-12 col-md-7">
 
-          <h1 class="text-center fw-bold">Hablemos sobre cómo podemos <span class="text-primary">crear, construir y crecer juntos</span></h1>
+          <h1 class="text-center fw-bold"><?php _e('Hablemos sobre cómo podemos'); ?> <span class="text-primary"><?php _e('crear, construir y crecer juntos'); ?></span></h1>
 
         </div>
       </div>
@@ -23,22 +23,21 @@
         <div class="col-12 col-md-6">
           <div class="subject-selector">
             <div class="selector">
-              <p>¿Para que nos escribes?</p>
+              <p><?php _e('¿Para qué nos escribes?'); ?></p>
               <div id="subject-1" class="text-selector active" data-val="Postular">
-                <i class="fa-solid fa-arrow-right"></i> <span>Postular</span>
+                <i class="fa-solid fa-arrow-right"></i> <span><?php _e('Postular'); ?></span>
               </div>
               <div id="subject-2" class="text-selector" data-val="Colaborar">
-                <i class="fa-solid fa-arrow-right"></i> <span>Colaborar</span>
+                <i class="fa-solid fa-arrow-right"></i> <span><?php _e('Colaborar'); ?></span>
               </div>
               <div id="subject-3" class="text-selector" data-val="Comprar">
-                <i class="fa-solid fa-arrow-right"></i> <span>Comprar</span>
+                <i class="fa-solid fa-arrow-right"></i> <span><?php _e('Comprar'); ?></span>
               </div>
               <div id="subject-4" class="text-selector" data-val="Molestar">
-                <i class="fa-solid fa-arrow-right"></i> <span>Molestar</span>
+                <i class="fa-solid fa-arrow-right"></i> <span><?php _e('Molestar'); ?></span>
               </div>
             </div>
             <div class="graph"> 
-              <!-- <img id="change-image" src="http://localhost:8888/prosa.cl.algramo/wp-content/themes/understrap-child/images/gif/postular.gif" alt=""> -->
               <img class="subject-img subject-1 active" src="http://cl.algramo.cl/wp-content/themes/understrap-child/images/gif/postular.gif" alt="postular">
               <img class="subject-img subject-2" src="http://cl.algramo.cl/wp-content/themes/understrap-child/images/gif/colaborar.gif" alt="colaborar">
               <img class="subject-img subject-3" src="http://cl.algramo.cl/wp-content/themes/understrap-child/images/gif/comprar.gif" alt=comprar">

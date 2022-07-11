@@ -23,12 +23,11 @@
     <section class="pb-5">
 
       <div class="wrapper-carousel" data-aos="fade-in" data-aos-delay="50" data-aos-offset="100" data-aos-easing="ease-in-out">
-        <div class="container-fluid">
-          <div class="swiper swiper-gallery-2">
+          <div class="swiper-gallery position-relative">
             <div class="swiper-wrapper">
 
+              
               <?php while (have_rows('galeria_de_imagenes')) : the_row(); ?>
-
                 <div class="swiper-slide">
                   <div class="item">
                     <div class="thumb">
@@ -38,12 +37,13 @@
                     </div>
                   </div>
                 </div>
-
               <?php endwhile; ?>
 
             </div>
+            
+            <div class="btn-swiper button-next"><i class="fa-solid fa-angle-right"></i></div>
+            <div class="btn-swiper button-prev"><i class="fa-solid fa-angle-left"></i></div>
           </div>
-        </div>
 
       </div>
 
@@ -178,7 +178,7 @@
                 <img src="<?php echo get_theme_file_uri(); ?>/images/book-bg.png" class="grid-img d-none" data-aos="fade-down" data-aos-delay="50" data-aos-offset="250" data-aos-easing="ease-in-out" alt="grid image">
                 <div class="d-flex justify-content-center mb-5">
                   <div class="recharge-img-wrapper" data-aos="fade-up" data-aos-delay="50" data-aos-offset="250" data-aos-easing="ease-in-out">
-                    <img src="<?php echo get_theme_file_uri(); ?>/images/gif-trabaja-con-nosotros.gif" alt="gif trabaja con nosotros">
+                    <img src="<?php echo get_theme_file_uri(); ?>/images/git/gif-trabaja-con-nosotros.gif" alt="gif trabaja con nosotros">
                   </div>
                 </div>
               </div>
@@ -198,7 +198,7 @@
       <div class="wrapper-carousel" data-aos="fade-in" data-aos-delay="50" data-aos-offset="250" data-aos-easing="ease-in-out">
 
 
-        <div class="swiper swiper-gallery-2">
+        <div class="swiper-gallery">
           <div class="swiper-wrapper">
 
             <?php while (have_rows('galeria_cultura')) : the_row(); ?>
@@ -242,10 +242,9 @@
 
               <div class="collapsible-wrapper" data-aos="fade-in" data-aos-delay="50" data-aos-offset="250" data-aos-easing="ease-in-out">
                 <img src="<?php echo get_theme_file_uri(); ?>/images/book-bg.png" class="grid-img" data-aos="fade-up" data-aos-delay="50" data-aos-offset="250" data-aos-easing="ease-in-out" alt="grid image" />
-              <?php if (have_rows('desplegable')) : $i = 0; ?>
+                <?php if (have_rows('desplegable')) : $i = 0; ?>
 
-                <?php while (have_rows('desplegable')) : the_row();
-                  $i++; ?>
+                  <?php while (have_rows('desplegable')) : the_row(); $i++; ?>
                     <button class="btn" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample-<?php echo $i; ?>" aria-expanded="false" aria-controls="collapseExample">
                       <div class="d-flex"><span class="text-primary me-2">0<?php echo $i; ?>. </span><?php the_sub_field('titulo'); ?></div> <i class="fa-solid fa-plus"></i>
                     </button>
@@ -255,12 +254,10 @@
                         <?php the_sub_field('contenido'); ?>
                       </div>
                     </div>
-                    
-                    <?php endwhile; ?>
+                  <?php endwhile; ?>
                     
                     <?php else : ?>
-                      <?php // No rows found 
-                ?>
+                    <?php // No rows found ?>
                 </div>
               <?php endif; ?>
 
@@ -285,7 +282,7 @@
         <div class="container">
           <div class="row justify-content-center mb-5">
             <div class="col-12 col-md-8 text-center">
-              <div data-aos="fade-up" data-aos-delay="50" data-aos-offset="250" data-aos-easing="ease-in-out">
+              <div data-aos="fade-up" data-aos-delay="50" data-aos-offset="50" data-aos-easing="ease-in-out">
                 <?php the_sub_field('texto'); ?>
               </div>
             </div>
@@ -300,7 +297,7 @@
                   <?php while (have_rows('item')) : the_row(); ?>
 
                     <div class="col-12 col-md-4 px-5">
-                      <div class="culture-item" data-aos="fade-left" data-aos-delay="50" data-aos-offset="250" data-aos-easing="ease-in-out">
+                      <div class="culture-item" data-aos="fade-left" data-aos-delay="0" data-aos-offset="0" data-aos-easing="ease-in-out">
                         <div class="thumb">
                           <?php if (get_sub_field('imagen')) : ?>
                             <img src="<?php the_sub_field('imagen'); ?>" />
@@ -377,7 +374,7 @@
                 <img src="<?php echo get_theme_file_uri(); ?>/images/book-bg.png" class="grid-img d-none" data-aos="fade-up" data-aos-delay="50" data-aos-offset="250" data-aos-easing="ease-in-out" alt="grid image">
                 <div class="d-flex justify-content-center mb-5">
                   <div class="recharge-img-wrapper" data-aos="fade-up" data-aos-delay="50" data-aos-offset="250" data-aos-easing="ease-in-out">
-                    <img src="<?php echo get_theme_file_uri(); ?>/images/gif-trabaja-con-nosotros-2.gif" alt="gif trabaja con nosotros">
+                    <img src="<?php echo get_theme_file_uri(); ?>/images/gif/gif-trabaja-con-nosotros-2.gif" alt="gif trabaja con nosotros">
                   </div>
                 </div>
               </div>
@@ -399,18 +396,21 @@
       <div class="row justify-content-center">
 
         <div class="col-12 col-md-4">
-        <?php if ( have_rows( 'vacante_provisional' ) ) : ?>
-          <?php while ( have_rows( 'vacante_provisional' ) ) : the_row(); ?>
-            <a href="<?php the_sub_field( 'enlace' ); ?>" target="_blank" rel="noopener noreferrer">
-              <?php if ( get_sub_field( 'imagen' ) ) : ?>
-                <img src="<?php the_sub_field( 'imagen' ); ?>" />
-              <?php endif ?>
-            </a>
-          <?php endwhile; ?>
-        <?php endif; ?>
+          <div data-aos="fade-down" data-aos-delay="50" data-aos-offset="250" data-aos-easing="ease-in-out">
+            <?php if ( have_rows( 'vacante_provisional' ) ) : ?>
+              <?php while ( have_rows( 'vacante_provisional' ) ) : the_row(); ?>
+                <a href="<?php the_sub_field( 'enlace' ); ?>" target="_blank" rel="noopener noreferrer">
+                  <?php if ( get_sub_field( 'imagen' ) ) : ?>
+                    <img src="<?php the_sub_field( 'imagen' ); ?>" />
+                  <?php endif ?>
+                </a>
+              <?php endwhile; ?>
+            <?php endif; ?>
+          </div>
         </div>
 
-        <h4 class="text-primary text-center mt-5" data-aos="fade-down" data-aos-delay="50" data-aos-offset="50" data-aos-easing="ease-in-out"><?php _e('¡Construyamos juntos el primer unicornio circular!')?>
+        <h4 class="text-primary text-center mt-5" data-aos="fade-down" data-aos-delay="50" data-aos-offset="50" data-aos-easing="ease-in-out">
+          <?php _e('¡Construyamos juntos el primer unicornio circular!')?>
           <span><img src="<?php echo get_theme_file_uri(); ?>/images/emoji-unicorn.png" style="width: 24px" alt="emoji"></span> 
           <span><img src="<?php echo get_theme_file_uri(); ?>/images/emoji-world.png" style="width: 24px" alt="emoji"></span> 
         </h4>

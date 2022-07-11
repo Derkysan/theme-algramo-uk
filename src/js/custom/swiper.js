@@ -16,44 +16,96 @@ AOS.init({
   $(document).ready(function () {
 
     const swiperMain = new Swiper('.swiper-main', {
-      cssMode: true,
-      mousewheel: true,
+      mousewheel: false,
     });
 
     // if ( $('.swiper-products') ) {
       const swiper = new Swiper('.swiper-products', {
-        autoplay: false,
+        spaceBetween: 15,
         grabCursor: true,
         mousewheel: false,
         slidesPerView: "auto",
-        spaceBetween: 15,
         navigation: {
-          nextEl: '.swiper-button-next',
-          prevEl: '.swiper-button-prev',
-        },
+          nextEl: '.button-next',
+          prevEl: '.button-prev',
+        }
       });
     // }
+    
+    
 
     const swiperData = new Swiper('.swiper-data', {
-      cssMode: true,
-      mousewheel: true,
-      slidesPerView: "auto",
       spaceBetween: 15,
-    })
+      grabCursor: true,
+      mousewheel: false,
+      slidesPerView: "auto",
+      navigation: {
+        nextEl: '.button-next',
+        prevEl: '.button-prev',
+      }
+    });
+
     const swiperGallery = new Swiper('.swiper-gallery', {
-      autoplay: true,
+      spaceBetween: 15,
       grabCursor: true,
       mousewheel: false,
       slidesPerView: "auto",
-      spaceBetween: 15,
-    })
-    const swiperGallery2 = new Swiper('.swiper-gallery-2', {
-      autoplay: true,
+      navigation: {
+        nextEl: '.button-next',
+        prevEl: '.button-prev',
+      }
+    });
+
+    const swiperParallax = new Swiper('.swiper-parallax', {
+      direction: 'vertical',
+      parallax: true,
+      mousewheel: true,
+      navigation: {
+        nextEl: '.swiper-button-prev',
+        prevEl: '.swiper-button-next',
+      },
+    });
+
+    const swiperTimeline = new Swiper('.timeline-swiper', {
       grabCursor: true,
       mousewheel: false,
       slidesPerView: "auto",
+      navigation: {
+        nextEl: '.button-next',
+        prevEl: '.button-prev',
+      }
+    });
+    
+    const swiperMapProducts = new Swiper('.carousel-map-products', {
+      grabCursor: true,
+      mousewheel: false,
+      slidesPerView: "auto",
+      navigation: {
+        nextEl: '.button-next',
+        prevEl: '.button-prev',
+      }
+    });
+
+    // Swiper team mobile
+    const swiperTeam = new Swiper('.swiper-team', {
+      autoplay: false,
+      grabCursor: true,
+      mousewheel: false,
+      slidesPerView: "auto",
+      spaceBetween: 25,
+    });
+
+    // Swiper brands mobile
+    const swiperBrands = new Swiper('.carousel-brands', {
       spaceBetween: 15,
-    })
+      grabCursor: true,
+      mousewheel: false,
+      slidesPerView: "auto",
+      navigation: {
+        nextEl: '.button-next',
+        prevEl: '.button-prev',
+      }
+    });
     
 
     const data1 = new CountUp('data-1', 691284, { startVal: 100000, duration: 25 });
@@ -78,8 +130,8 @@ AOS.init({
     const productsfrequency = $('#frequency');
 
     const simulaData1 = new CountUp('simulaData1', 0, { startVal: 0 });
-    const simulaData2 = new CountUp('simulaData2', 0, { startVal: 0, suffix: 'gr' });
-    const simulaData3 = new CountUp('simulaData3', 0, { startVal: 0, suffix: 'gr' });
+    const simulaData2 = new CountUp('simulaData2', 0, { startVal: 0, suffix: ' gr' });
+    const simulaData3 = new CountUp('simulaData3', 0, { startVal: 0, suffix: ' gr' });
 
     simulaData1.start();
     simulaData2.start();
@@ -583,37 +635,15 @@ AOS.init({
 
     });
 
-    const swiperParallax = new Swiper('.swiper-parallax', {
-      direction: 'vertical',
-      parallax: true,
-      cssMode: true,
-      mousewheel: true,
-      navigation: {
-        nextEl: '.swiper-button-prev',
-        prevEl: '.swiper-button-next',
-      },
+    $("#mobileFilterTrigger").click(function (e) { 
+      // e.preventDefault();
+      $(".filter-wrapper-mobile").toggleClass("opened");
+    });
+    $(".graber").click(function (e) { 
+      // e.preventDefault();
+      $(".filter-wrapper-mobile").removeClass("opened");
     });
 
-
-    // timeline carousel
-    var swiperTimeline = new Swiper('.timeline-swiper', {
-      // cssMode: true,
-      grabCursor: true,
-      mousewheel: false,
-      slidesPerView: "auto",
-      navigation: {
-        nextEl: '.swiper-tl-button-next',
-        prevEl: '.swiper-tl-button-prev',
-      }
-    });
-
-    let swiperTeam = new Swiper('.swiper-team', {
-      autoplay: false,
-      grabCursor: true,
-      mousewheel: false,
-      slidesPerView: "auto",
-      spaceBetween: 25,
-    });
     
   });
 

@@ -26,7 +26,6 @@
     //   $('#memberModal').show();
     // });
 
-
   });
 
 })(jQuery);

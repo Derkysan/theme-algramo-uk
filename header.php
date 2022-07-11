@@ -33,7 +33,7 @@ $navbar_type       = get_theme_mod( 'understrap_navbar_type', 'collapse' );
 <div class="site" id="page">
   
   <div id="loadingPage" class="loader animate__animated animate__fadeIn">
-    <img src="<?php echo get_theme_file_uri(); ?>/images/loader.gif" width="120" alt="loader">
+    <img src="<?php echo get_theme_file_uri(); ?>/images/gif/loader.gif" width="120" alt="loader">
   </div>
 
 	<!-- ******************* The Navbar Area ******************* -->

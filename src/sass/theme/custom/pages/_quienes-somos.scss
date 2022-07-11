@@ -45,27 +45,7 @@
       }
     }
     .btn-swiper {
-      width: 32px;
-      height: 32px;
-      position: absolute;
       top: 25%;
-      bottom: auto;
-      margin: auto;
-      border-radius: 16px;
-      background-color: #2D2D2D;
-      z-index: 2;
-      color: #ffffff;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      &.swiper-tl-button-next {
-        right: 2em;
-        left: auto;
-      }
-      &.swiper-tl-button-prev {
-        left: 2em;
-        right: auto;
-      }    
     }
     &.date {
       .swiper-wrapper {
@@ -91,11 +71,35 @@
         width: 100%;
         height: 290px;
         margin-bottom: .75em;
+        position: relative;
         img {
           width: 100%;
           height: 100%;
           object-fit: cover;
           object-position: center;
+          position: absolute;
+          top: 0;
+          left: 0;
+          &.member-img-primary {
+            opacity: 1;
+            transition: all .15s linear;
+          }
+          &.member-img-secondary {
+            opacity: 0;
+            transition: all .15s linear;
+          }
+        }
+        &:hover {
+          img {
+            &.member-img-primary {
+              opacity: 0;
+              transition: all .15s linear;
+            }
+            &.member-img-secondary {
+              opacity: 1;
+              transition: all .15s linear;
+            }
+          }
         }
       }
       .info {
@@ -112,6 +116,7 @@
         }
       }
     }
+    
   }
   &.interactive {
     .team-list {
@@ -212,6 +217,16 @@
       .member {
         width: 100%;
         margin-right: 0;
+      }
+    }
+  }
+
+  .banner-wrapper {
+    .banner {
+      .content-banner {
+        h2 {
+          font-size: 3em;
+        }
       }
     }
   }

@@ -598,6 +598,9 @@ jQuery(document).ready(function() {
 <div id="mapPage" class="animate__animated animate__fadeIn">
 
   <section id="mapPage" class="no-header-page">
+    <div class="bg-white py-3 text-center d-block d-md-none">
+      <p class="fw-bold mb-0"><?php _e('¿Que productos estas buscando?'); ?></p>
+    </div>
 
     <div class="filter-wrapper">
       <div class="container-fluid h-100">
@@ -605,30 +608,81 @@ jQuery(document).ready(function() {
           <div class="col h-100">
             <div class="map-filter">
 
-              <div class="filter-item sep pe-3 d-flex align-items-center">
-                <button id="labelPOS" type="button" class="btn btn-link text-decoration-none switch-label text-primary">Ver puntos de venta</button>
+              <div class="filter-item sep pe-3 d-flex align-items-center d-none d-md-inline-flex">
+                <button id="labelPOS" type="button" class="btn btn-link text-decoration-none switch-label text-primary"><?php _e('Ver puntos de venta'); ?></button>
                 <label class="switch mx-2">
                   <input id="switchView" type="checkbox" role="switch">
                   <span class="slider round"></span>
                 </label>
-                <button id="labelDLVR" type="button" class="btn btn-link text-decoration-none switch-label">Ver comunas de despacho</button>
+                <button id="labelDLVR" type="button" class="btn btn-link text-decoration-none switch-label"><?php _e('Ver comunas de despacho'); ?></button>
               </div>
-              <div class="filter-item sep px-3">
+              <div class="filter-item sep px-3 d-none d-md-inline-flex">
                 <div id="selectShop" class="dropdow-checkbox-multiselect">
-                  <div class="dropbtn dropbtn-shop">Selecciona tienda</div>
+                  <div class="dropbtn dropbtn-shop"><?php _e('Selecciona tienda'); ?></div>
                   <ul class="options" id="results-stores">
                   </ul>
                 </div>
               </div>
-              <div class="filter-item sep px-3">
+              <div class="filter-item sep px-3 d-none d-md-inline-flex">
                <div id="selectBrand" class="dropdow-checkbox-multiselect">
-                  <div class="dropbtn dropbtn-brand">Selecciona Marca</div>
+                  <div class="dropbtn dropbtn-brand"><?php _e('Selecciona Marca'); ?></div>
                   <ul class="options" id="results-products"> 
                   </ul>
                 </div>
               </div>
-              <div class="filter-item">
-                <button style="display:none;" id="clearFilters" type="button" class="btn btn-link text-decoration-none"><i class="fa-solid fa-xmark fa-xl me-2"></i> Borrar filtros</button>
+              <div class="filter-item d-none d-md-inline-flex">
+                <button style="display:none;" id="clearFilters" type="button" class="btn btn-link text-decoration-none"><i class="fa-solid fa-xmark fa-xl me-2"></i> <?php _e('Borrar filtros'); ?></button>
+              </div>
+
+              <!-- Mobile filter -->
+              <div class="filter-item first sep pe-3 d-flex align-items-center d-inline-flex d-md-none ">
+                <select class="form-select border-0" aria-label="Default select example">
+                  <option value="0" selected><?php _e('Ver puntos de venta'); ?></option>
+                  <option value="1"><?php _e('Comunas de despacho'); ?></option>
+                </select>
+              </div>
+              <div class="filter-item px-3 d-inline-flex d-md-none">
+                <button id="mobileFilterTrigger" type="button" class="btn btn-primary btn-sm d-flex align-items-center justify-content-center text-white rounded-pill px-3">
+                  <?php _e('Filtros'); ?> <img src="<?php echo get_theme_file_uri(); ?>/images/svg/icon-filter.svg" class="ms-1" alt="icono filtrar">
+                </button>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="filter-wrapper-mobile d-block d-md-none open">
+      <div class="box">
+        <div class="container">
+          <div class="row">
+            <div class="col">
+
+              <div class="header-box text-center">
+                <div class="graber"></div>
+                <h5 class="fw-bolder mb-0">Filtros</h5>
+              </div>
+              <div class="body-box">
+                <h6 class="fw-bolder">Selecciona tienda</h6>
+                <ul id="results-stores-mobile">
+                  <li>
+                    <label class="item-checkbox" for="1"> filtro 1
+                      <input id="1" class="filter-store-class" name="shopFilter" type="checkbox" value="value">
+                      <span class="checkmark"></span>
+                    </label>
+                  </li>
+                </ul>
+                <hr>
+                <div class="">Selecciona Marca</div>
+                <ul id="results-products-mobile">
+                  <li>
+                    <label class="item-checkbox" for="1"> filtro 1
+                      <input id="1" class="filter-store-class" name="shopFilter" type="checkbox" value="value">
+                      <span class="checkmark"></span>
+                    </label>
+                  </li>
+                </ul>
               </div>
 
             </div>
@@ -639,26 +693,68 @@ jQuery(document).ready(function() {
 
     <div class="map-result">
 
+      <div id="mapboxgl" class="map-wrapper sticky-top">map-wrapper</div>
+
       <div class="result-items-wrapper py-4">
 
         <div id="resPOS">
           <div class="container-fluid">
-            <div class="row align-items-center mb-4">
+            <div class="row align-items-center mb-4 d-none d-md-flex">
               <div class="col">
-                <p class="fw-bold mb-0">¿Que productos estas buscando?</p>
+                <p class="fw-bold mb-0"><?php _e('¿Que productos estas buscando?'); ?></p>
               </div>
               <div class="col">
                 <small class="d-block text-end text-muted" id="tags-area">
-                	<span id="showingAll">Mostrando todos los productos</span>
+                	<span id="showingAll"><?php _e('Mostrando todos los productos'); ?></span>
                 </small>
               </div>
             </div>
             <div class="row">
               <div class="col">
 
-                <div class="result-list">
+                <div class="result-list"></div>
 
-                </div>
+                <!-- ::::::: result-list mobile ::::::: -->
+                <!-- <div class="carousel-map-products position-relative">
+                  <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                      <div class="item">
+                        <label class="wrapper-checkbox">
+                          <input id="product-'+this.products[i].id+'" name="products" checked type="checkbox" value="'+this.products[i].id+'">
+                          <span class="checkmark"></span>
+                          <div class="overlay"></div>
+                        </label>
+                        <div class="thumb">
+                          <img src="<?php echo get_theme_file_uri(); ?>/images/products/omo.png" class="" alt="product">
+                        </div>
+                        <div class="info">
+                          <div class="name">Omo</div>
+                          <div class="desc">Detergente liquido, matic multiacción. Con agentes biodegradables</div>
+                          <div class="qty">3 Litros</div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="swiper-slide">
+                      <div class="item">
+                        <label class="wrapper-checkbox">
+                          <input id="product-'+this.products[i].id+'" name="products" checked type="checkbox" value="'+this.products[i].id+'">
+                          <span class="checkmark"></span>
+                          <div class="overlay"></div>
+                        </label>
+                        <div class="thumb">
+                          <img src="<?php echo get_theme_file_uri(); ?>/images/products/omo.png" class="" alt="product">
+                        </div>
+                        <div class="info">
+                          <div class="name">Omo</div>
+                          <div class="desc">Detergente liquido, matic multiacción. Con agentes biodegradables</div>
+                          <div class="qty">3 Litros</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="btn-swiper button-next"><i class="fa-solid fa-angle-right"></i></div>
+                  <div class="btn-swiper button-prev"><i class="fa-solid fa-angle-left"></i></div>
+                </div> -->
 
               </div>
             </div>
@@ -669,38 +765,30 @@ jQuery(document).ready(function() {
           <div class="container-fluid">
             <div class="row align-items-center mb-4">
               <div class="col">
-                <p class="fw-bold mb-0">Productos disponibles en la <span style="color: #0080ff;">zona azul</span></p>
+                <p class="fw-bold mb-0"><?php _e('Productos disponibles en la'); ?> <span style="color: #0080ff;"><?php _e('zona azul'); ?></span></p>
               </div>
-              <div class="col">
-                <small class="d-block text-end text-muted">Mostrando todos los productos</small>
+              <div class="col d-none d-md-inline-flex">
+                <small class="d-block text-end text-muted"><?php _e('Mostrando todos los productos'); ?></small>
               </div>
             </div>
 
             <div class="row mb-4">
-              <div class="col px-4 overflow-hidden" id="swiper-azul">
-
-
-
-              </div>
+              <div class="col px-4 overflow-hidden" id="swiper-azul"></div>
             </div>
             
             <div class="row align-items-center mb-4">
               <div class="col">
-                <p class="fw-bold mb-0">Productos disponibles en la <span style="color: #8A25F5;">zona morada</span></p>
+                <p class="fw-bold mb-0"><?php _e('Productos disponibles en la'); ?> <span style="color: #8A25F5;"><?php _e('zona morada'); ?></span></p>
               </div>
             </div>
 
             <div class="row">
-              <div class="col px-4 overflow-hidden" id="swiper-morado">
- 
-              </div>
+              <div class="col px-4 overflow-hidden" id="swiper-morado"></div>
             </div>
           </div>
         </div>
 
-      </div>
-
-      <div id="mapboxgl" class="map-wrapper sticky-top">map-wrapper</div>
+      </div>      
     </div>
 
   </section>

@@ -5,32 +5,47 @@
 <div class="animate__animated animate__fadeIn">
 
   <section class="content-page header-fixed">
+    
+    <?php if ( have_rows( 'banner' ) ) : ?>
+      <?php while ( have_rows( 'banner' ) ) : the_row(); ?>
+        <div class="banner-wrapper">
+          <div class="banner">
+            <?php if ( get_sub_field( 'imagen_banner' ) ) : ?>
+              <img src="<?php the_sub_field( 'imagen_banner' ); ?>" alt="banner image" />
+            <?php endif ?>
+            
+            <div class="container h-100 content-banner">
+              <div class="row h-100 align-items-center">
+                <div class="col-12 col-md-6 offset-md-5">
 
-    <div class="banner-wrapper">
-      <div class="banner">
-        <img src="<?php echo get_theme_file_uri(); ?>/images/banner-quienes-somos.png" alt="banner image">
-        <div class="container h-100 content-banner">
-          <div class="row h-100 align-items-center">
-            <div class="col-12 col-md-6 offset-md-5">
+                  <?php the_sub_field( 'texto_banner' ); ?>
 
-              <h2>Economía circular para Todos y Todas</h2>
-              <p>Empoderar a las personas a cambiar radicalmente nuestros hábitos de consumo, construyendo un futuro sustentable para esta y las próximas generaciones. </p>
-
+                </div>
+              </div>
             </div>
           </div>
         </div>
-      </div>
-    </div>
+        
+        
+      <?php endwhile; ?>
+    <?php endif; ?>
 
+    
+
+    
     <div class="timeline-carousel-wrapper py-5">
       <div class="container mb-5">
         <div class="row justify-content-center">
           <div class="col-8">
-
+            
             <div class="d-flex justify-content-center mb-5">
               <img src="<?php echo get_theme_file_uri(); ?>/images/vector-solid.svg" class="asterisk" data-aos="fade-up" data-aos-offset="200" data-aos-easing="ease-in-out" alt="asterisk img">
             </div>
-            <h4 class="text-center fw-bold">De un almacén en la comuna de La Granja a trabajar con las marcas más grandes del mundo ✊🏻</h4 class="text-center fw-bold">
+            <?php if ( have_rows( 'linea_de_tiempo' ) ) : ?>
+              <?php while ( have_rows( 'linea_de_tiempo' ) ) : the_row(); ?>
+                <h4 class="text-center fw-bold"><?php the_sub_field( 'texto_cabecera' ); ?></h4>
+              <?php endwhile; ?>
+            <?php endif; ?>
 
           </div>
         </div>
@@ -38,7 +53,7 @@
     </div>
 
     <div class="carousel-wrapper mb-5">
-      <div class="timeline-swiper">
+      <div class="swiper-carousel timeline-swiper">
         <div class="swiper-wrapper">
           <div class="swiper-slide">
             <img src="<?php echo get_theme_file_uri(); ?>/images/timeline/1.png" alt="slide timeline">
@@ -77,23 +92,31 @@
             <img src="<?php echo get_theme_file_uri(); ?>/images/timeline/12.png" alt="slide timeline">
           </div>
         </div>
-        <div class="btn-swiper swiper-tl-button-next"><i class="fa-solid fa-angle-right"></i></div>
-        <div class="btn-swiper swiper-tl-button-prev"><i class="fa-solid fa-angle-left"></i></div>
+        <div class="btn-swiper button-next"><i class="fa-solid fa-angle-right"></i></div>
+        <div class="btn-swiper button-prev"><i class="fa-solid fa-angle-left"></i></div>
       </div>
     </div>
 
+    
     <div class="team-wrapper interactive py-5 bg-white">
       <div class="container">
         <div class="row">
           <div class="col">
 
-            <h4 class="text-center mb-4">Tenemos la experiencia y el talento para liderar la Refill Revolution.</h4>
-            <h5 class="text-center text-primary mb-5 fw-bold">Equipo de líderes</h5>
+            <h4 class="text-center mb-4">
+              <?php _e('Tenemos la experiencia y el talento para liderar la Refill Revolution.'); ?>
+            </h4>
+            <h5 class="text-center text-primary mb-5 fw-bold">
+              <?php _e('Equipo de líderes'); ?>
+            </h5>
+
+            <?php if ( have_rows( 'equipo' ) ) : ?>
+	            <?php while ( have_rows( 'equipo' ) ) : the_row(); ?>
 
             <div class="team-list d-none d-md-flex">
 
-              <?php if ( have_rows( 'equipo' ) ) : $i = 0; ?>
-                <?php while ( have_rows( 'equipo' ) ) : the_row(); $i++; ?>
+              <?php if ( have_rows( 'listado' ) ) : $i = 0; ?>
+                <?php while ( have_rows( 'listado' ) ) : the_row(); $i++; ?>
                   <?php if ( have_rows( 'miembro' ) ) : ?>
                     <?php while ( have_rows( 'miembro' ) ) : the_row(); ?>
 
@@ -128,23 +151,16 @@
                                   <h3><?php the_sub_field( 'descripcion' ); ?></h3>
                                   
                                   <ul>
-                                    <?php if ( have_rows( 'redes_sociales' ) ) : ?>
-                                      <?php while ( have_rows( 'redes_sociales' ) ) : the_row(); ?>
-
-                                        <?php if ( get_sub_field('instagram') ) { ?>
-                                          <li>
-                                            <a class="text-decoration-none" href="<?php the_sub_field( 'instagram' ); ?>" target="_blank"><span><i class="fa-brands fa-instagram"></i></span> Instagram</a>
-                                          </li>
-                                        <?php } ?>
-                                        <?php if ( get_sub_field('linkedin') ) { ?>
-                                          <li>
-                                            <a class="text-decoration-none" href="<?php the_sub_field( 'linkedin' ); ?>" target="_blank"><span><i class="fa-brands fa-linkedin-in"></i></span> Linkedin</a>
-                                          </li>
-                                        <?php } ?>
-
-                                        
-                                      <?php endwhile; ?>
-                                    <?php endif; ?>
+                                    <?php if ( get_sub_field('instagram') ) { ?>
+                                      <li>
+                                        <a class="text-decoration-none" href="<?php the_sub_field( 'instagram' ); ?>" target="_blank"><span><i class="fa-brands fa-instagram"></i></span> Instagram</a>
+                                      </li>
+                                    <?php } ?>
+                                    <?php if ( get_sub_field('linkedin') ) { ?>
+                                      <li>
+                                        <a class="text-decoration-none" href="<?php the_sub_field( 'linkedin' ); ?>" target="_blank"><span><i class="fa-brands fa-linkedin-in"></i></span> Linkedin</a>
+                                      </li>
+                                    <?php } ?>
                                   </ul>
                                 </div>
                               </div>
@@ -162,6 +178,8 @@
                 <?php // No rows found ?>
               <?php endif; ?>
             </div>
+            <?php endwhile; ?>
+  <?php endif; ?>
 
             <!-- Slider main container -->
             <div class="swiper swiper-team position-relative d-block d-md-none">
@@ -199,7 +217,10 @@
             <?php $cta_equipo = get_field( 'cta_equipo' ); ?>
             <?php if ( $cta_equipo ) : ?>
               <div class="cta-btn my-5">
-                <a href="<?php echo esc_url( $cta_equipo); ?>">¡Conoce al resto de nuestro equipo! <span><i class="fa-solid fa-angle-right"></i></span></a>
+                <a href="<?php echo esc_url( $cta_equipo); ?>">
+                  <?php _e('¡Conoce al resto de nuestro equipo! '); ?>
+                  <span><i class="fa-solid fa-angle-right"></i></span>
+                </a>
               </div>
             <?php endif; ?>
 
@@ -208,13 +229,14 @@
         </div>
       </div>
     </div>
+      
 
     <div class="py-5 bg-black text-white text-center">
       <div class="container">
         <div class="row">
           <div class="col">
-            <p>Nuestros Reconocimientos 🌟</p>
-            <h4>Ser pioneros es parte de nuestro ADN</h4>
+            <p><?php _e('Nuestros Reconocimientos'); ?> 🌟</p>
+            <h4><?php _e('Ser pioneros es parte de nuestro ADN'); ?></h4>
           </div>
         </div>
       </div>
@@ -233,13 +255,13 @@
                 <div class="swiper swiper-v">
                   <div class="swiper-wrapper">
                     <div class="swiper-slide">
-                      <h3>Empresa más innovadora de latinoamérica en 2015 y 2020</h3>
+                      <h3><?php _e('Empresa más innovadora de latinoamérica en 2015 y 2020'); ?></h3>
                     </div>
                     <div class="swiper-slide">
-                      <h3>Primer lugar en el Ocean Plastic Innovation Challenge de 2019</h3>
+                      <h3><?php _e('Primer lugar en el Ocean Plastic Innovation Challenge de 2019'); ?></h3>
                     </div>
                     <div class="swiper-slide">
-                      <h3>Una de las 20 startups con mayor impacto social y medioambiental del 2021</h3>
+                      <h3><?php _e('Una de las 20 startups con mayor impacto social y medioambiental del 2021'); ?></h3>
                     </div>
                   </div>
 
@@ -256,7 +278,9 @@
                 </div>
               </div>
 
-              <h3 class="text-white text-center mt-5 d-block d-md-none">Empresa más innovadora de latinoamérica en 2015 y 2020</h3>
+              <h3 class="text-white text-center mt-5 d-block d-md-none">
+                <?php _e('Empresa más innovadora de latinoamérica en 2015 y 2020'); ?>
+              </h3>
 
             </div>
           </div>
@@ -269,7 +293,9 @@
               <img src="<?php echo get_theme_file_uri(); ?>/images/svg/logo-national-geographic.svg" alt="slide">
             </div>
             <div class="col-12 col-md-6">
-                <h3 class="text-white text-center mt-5 d-block d-md-none">Primer lugar en el Ocean Plastic Innovation Challenge de 2019</h3>
+                <h3 class="text-white text-center mt-5 d-block d-md-none">
+                  <?php _e('Primer lugar en el Ocean Plastic Innovation Challenge de 2019'); ?>
+                </h3>
             </div>
           </div>
         </div>
@@ -281,7 +307,9 @@
               <img src="<?php echo get_theme_file_uri(); ?>/images/svg/logo-impacto.svg" alt="slide">
             </div>
             <div class="col-12 col-md-6">
-              <h3 class="text-white text-center mt-5 d-block d-md-none">Una de las 20 startups con mayor impacto social y medioambiental del 2021</h3>
+              <h3 class="text-white text-center mt-5 d-block d-md-none">
+                <?php _e('Una de las 20 startups con mayor impacto social y medioambiental del 2021'); ?>
+              </h3>
             </div>
           </div>
         </div>
@@ -346,7 +374,6 @@
     </div>
 
   </section>
-
 
 </div>
 

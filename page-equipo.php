@@ -10,7 +10,7 @@
       <div class="row h-100 align-items-center justify-content-center">
         <div class="col-12 col-md-7">
 
-          <h1 class="text-center fw-bold">Conoce a <br/> <span class="text-primary">nuestro equipo</span> </h1>
+          <h1 class="text-center fw-bold"><?php _e('Conoce a'); ?> <br/> <span class="text-primary"><?php _e('nuestro equipo'); ?></span> </h1>
 
         </div>
       </div>
@@ -36,7 +36,10 @@
                     <div class="member" data-bs-toggle="modal" data-bs-target="#memberModal_<?php echo $i; ?>">
                       <div class="thumb">
                         <?php if ( get_sub_field( 'imagen' ) ) : ?>
-                          <img src="<?php the_sub_field( 'imagen' ); ?>" />
+                          <img src="<?php the_sub_field( 'imagen' ); ?>"  class="member-img-primary"/>
+                        <?php endif ?>
+                        <?php if ( get_sub_field( 'imagen_secundaria' ) ) : ?>
+                          <img src="<?php the_sub_field( 'imagen_secundaria' ); ?>"  class="member-img-secondary"/>
                         <?php endif ?>
                       </div>
                       <div class="info">

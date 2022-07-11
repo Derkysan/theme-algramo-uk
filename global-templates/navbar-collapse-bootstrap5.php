@@ -75,7 +75,7 @@ $container = get_theme_mod('understrap_container_type');
   <div class="container-fluid d-md-none">
     <nav id="main-nav" class="navbar navbar-expand-md bg-transparent main-navbar h-100" aria-labelledby="main-nav-label">
 
-    <div class="wrapper-logo">
+    <div class="wrapper-logo d-flex align-items-center">
       <a class="d-inline-flex" rel="home" href="<?php echo esc_url(home_url('/')); ?>" itemprop="url">
         <div class="logo-animated d-none d-md-flex">
           <span class="logo-wrapper">
@@ -90,9 +90,33 @@ $container = get_theme_mod('understrap_container_type');
     </div>
 
 
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="<?php esc_attr_e('Toggle navigation', 'understrap'); ?>">
+    <!-- <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="<?php esc_attr_e('Toggle navigation', 'understrap'); ?>">
+      <i class="fa-solid fa-bars"></i>
+    </button> -->
+    <button class="navbar-toggler mobile-menu-toggler" type="button">
       <i class="fa-solid fa-bars"></i>
     </button>
+
+    <div class="mobile-menu-wrapper">
+      <button type="button" class="btn btn-link close-menu text-decoration-none text-white"><i class="fa-solid fa-xmark fa-2x"></i></button>
+      <div class="mobile-menu-body">
+        <?php
+          if (has_nav_menu('primary')) {
+            wp_nav_menu(
+              array(
+                'theme_location' => 'primary',
+                'menu_class' => 'navbar-nav mobile',
+                'container_class' => 'mobile-menu',
+                'fallback_cb' => '',
+                'depth' => 2,
+                'walker' => new Understrap_WP_Bootstrap_Navwalker(),
+              )
+            );
+          }
+        ?>
+        <?php dynamic_sidebar('header-right'); ?>
+      </div>
+    </div>
 
     <div id="navbarNavDropdown" class="collapse navbar-collapse justify-content-between">
 

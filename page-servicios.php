@@ -10,7 +10,9 @@
       <div class="row h-100 align-items-center justify-content-center">
         <div class="col-12 col-md-7">
 
-          <h1 class="text-center fw-bold">Recarga en<span class="text-primary"> todas partes</span></h1>
+          <h1 class="text-center fw-bold">
+            <?php _e('Recarga en'); ?><span class="text-primary"> <?php _e('todas partes'); ?></span>
+          </h1>
 
         </div>
       </div>
@@ -24,9 +26,11 @@
         <div class="col-12 col-md-8">
 
           <div class="services-thumb-list-wrapper">
-            <h5 class="text-center mb-3">Selecciona tu lugar de recarga:</h5>
+            <h5 class="text-center mb-3">
+              <?php _e('Selecciona tu lugar de recarga:'); ?>
+            </h5>
 
-            <ul class="services-thumb-list">
+            <ul class="services-thumb-list d-none d-md-flex">
               <li>
                 <a href="#lider" style="background-color: #0072D2;">
                   <img src="<?php echo get_theme_file_uri(); ?>/images/svg/logo-lider.svg" alt="logo">
@@ -45,8 +49,30 @@
             </ul>
           </div>
 
+          <div class="carousel-brands position-relative d-block d-md-none">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <a href="#lider" style="background-color: #0072D2;">
+                  <img src="<?php echo get_theme_file_uri(); ?>/images/svg/logo-lider.svg" alt="logo">
+                </a>
+              </div>
+              <div class="swiper-slide">
+                <a href="#acuenta" style="background-color: #C22026;">
+                  <img src="<?php echo get_theme_file_uri(); ?>/images/svg/logo-acuenta.svg" alt="logo">
+                </a>
+              </div>
+              <div class="swiper-slide">
+                <a href="#sodimac" style="background-color: #0072CE;">
+                  <img src="<?php echo get_theme_file_uri(); ?>/images/svg/logo-sodimac.svg" alt="logo">
+                </a>
+              </div>
+            </div>
+          </div>
+
           <div class="cta-btn my-5">
-            <a href="#">Encuéntranos en el mapa <span><i class="fa-solid fa-angle-right"></i></span></a>
+            <a href="https://cl.algramo.cl/puntos-de-ventas/">
+              <?php _e('Encuéntranos en el mapa'); ?> <span><i class="fa-solid fa-angle-right"></i></span>
+            </a>
           </div>
 
         </div>
@@ -65,49 +91,62 @@
             <div class="d-flex justify-content-center mb-5">
               <img src="<?php echo get_theme_file_uri(); ?>/images/vector-solid.svg" class="asterisk" data-aos="fade-up" data-aos-offset="200" data-aos-easing="ease-in-out" alt="asterisk img">
             </div>
-            <h2 class="text-center">Supermercados Lider</h2>
-            <p class="text-center">Encuentra nuestras estaciones de recarga mientras</br> haces tus compras de supermercado.</p>
+            <h2 class="text-center">
+              <?php _e('Supermercados Lider'); ?>
+            </h2>
+            <p class="text-center">
+              <?php _e('Encuentra nuestras estaciones de recarga mientras'); ?></br> <?php _e('haces tus compras de supermercado.'); ?>
+            </p>
             <div class="image-collapse-wrapper">
               <img src="<?php echo get_theme_file_uri(); ?>/images/book-bg.png" class="grid-service-1" data-aos="fade-right" data-aos-delay="150" data-aos-offset="200" data-aos-easing="ease-in-out" alt="grid image">
               <img src="<?php echo get_theme_file_uri(); ?>/images/book-bg.png" class="grid-service-2" data-aos="fade-left" data-aos-delay="150" data-aos-offset="200" data-aos-easing="ease-in-out" alt="grid image">
               <div class="service-image">
                 <img src="<?php echo get_theme_file_uri(); ?>/images/supermercados_lider_fondo_gris.png" alt="service img">
-                <div class="tooltips-wrapper lider ">
+                <div class="tooltips-wrapper lider  d-none d-md-block">
                   <div class="tooltip-item dot-1">
                     <i class="fa-solid fa-plus"></i>
                     <div class="tooltip-content">
-                      <p>Necesitarás usar uno de nuestros envases inteligentes para tu primera recarga. Los encontrarás junto al dispensador y se pagan solo la primera vez.</p>
+                      <p>
+                        <?php _e('Necesitarás usar uno de nuestros envases inteligentes para tu primera recarga. Los encontrarás junto al dispensador y se pagan solo la primera vez.'); ?>
+                      </p>
                       <div class="triangle-left"></div>
                     </div>
                   </div>
                   <div class="tooltip-item dot-2">
                     <i class="fa-solid fa-plus"></i>
                     <div class="tooltip-content">
-                      <p>El proceso de recarga lo controlas tú mismo desde la pantalla. Es muy fácil y cómodo.</p>
+                      <p>
+                        <?php _e('El proceso de recarga lo controlas tú mismo desde la pantalla. Es muy fácil y cómodo.'); ?>
+                      </p>
                       <div class="triangle-left"></div>
                     </div>
                   </div>
                   <div class="tooltip-item dot-3">
                     <i class="fa-solid fa-plus"></i>
                     <div class="tooltip-content">
-                      <p>Antes de retirar tu envase, recuerda retirar tu ticket, con él debes pagar en caja.</p>
+                      <p>
+                        <?php _e('Antes de retirar tu envase, recuerda retirar tu ticket, con él debes pagar en caja.'); ?>
+                      </p>
                       <div class="triangle-left"></div>
                     </div>
                   </div>
                   <div class="tooltip-item dot-4">
                     <i class="fa-solid fa-plus"></i>
                     <div class="tooltip-content">
-                      <p>Aquí insertas el envase para iniciar tu recarga. Es importante que tu envase se encuentre limpio y vacío.</p>
+                      <p><?php _e('Aquí insertas el envase para iniciar tu recarga. Es importante que tu envase se encuentre limpio y vacío.'); ?></p>
                       <div class="triangle-left"></div>
                     </div>
                   </div>
                 </div>
               </div>
-              
+
             </div>
 
             <div class="cta-btn my-5">
-              <a href="#">Ver estaciones y productos disponibles <span><i class="fa-solid fa-angle-right"></i></span></a>
+              <a href="#">
+                <?php _e('Ver estaciones y productos disponibles'); ?> 
+                <span><i class="fa-solid fa-angle-right"></i></span>
+              </a>
             </div>
           </div>
 
@@ -115,49 +154,56 @@
             <div class="d-flex justify-content-center mb-5">
               <img src="<?php echo get_theme_file_uri(); ?>/images/vector-solid.svg" class="asterisk" data-aos="fade-up" data-aos-offset="200" data-aos-easing="ease-in-out" alt="asterisk img">
             </div>
-            <h2 class="text-center">SuperBodega Acuenta</h2>
-            <p class="text-center">Encuentra nuestras estaciones de recarga mientras</br> haces tus compras de supermercado.</p>
+            <h2 class="text-center">
+              <?php _e('SuperBodega Acuenta'); ?>
+            </h2>
+            <p class="text-center">
+              <?php _e('SuperBodega Acuenta'); ?>
+              <?php _e('Encuentra nuestras estaciones de recarga mientras'); ?></br> <?php _e('haces tus compras de supermercado.'); ?>
+            </p>
             <div class="image-collapse-wrapper">
               <img src="<?php echo get_theme_file_uri(); ?>/images/book-bg.png" class="grid-service-1" data-aos="fade-right" data-aos-delay="150" data-aos-offset="200" data-aos-easing="ease-in-out" alt="grid image">
               <img src="<?php echo get_theme_file_uri(); ?>/images/book-bg.png" class="grid-service-2" data-aos="fade-left" data-aos-delay="150" data-aos-offset="200" data-aos-easing="ease-in-out" alt="grid image">
               <div class="service-image">
                 <img src="<?php echo get_theme_file_uri(); ?>/images/superbodega_cuenta_fondo_gris.png" alt="service img">
-                <div class="tooltips-wrapper acuenta">
+                <div class="tooltips-wrapper acuenta d-none d-md-block">
                   <div class="tooltip-item dot-1">
                     <i class="fa-solid fa-plus"></i>
                     <div class="tooltip-content">
-                      <p>Necesitarás usar uno de nuestros envases inteligentes para tu primera recarga. Los encontrarás junto al dispensador y se pagan solo la primera vez.</p>
+                      <p><?php _e('Necesitarás usar uno de nuestros envases inteligentes para tu primera recarga. Los encontrarás junto al dispensador y se pagan solo la primera vez.'); ?></p>
                       <div class="triangle-left"></div>
                     </div>
                   </div>
                   <div class="tooltip-item dot-2">
                     <i class="fa-solid fa-plus"></i>
                     <div class="tooltip-content">
-                      <p>El proceso de recarga lo controlas tú mismo desde la pantalla. Es muy fácil y cómodo.</p>
+                      <p><?php _e('El proceso de recarga lo controlas tú mismo desde la pantalla. Es muy fácil y cómodo.'); ?></p>
                       <div class="triangle-left"></div>
                     </div>
                   </div>
                   <div class="tooltip-item dot-3">
                     <i class="fa-solid fa-plus"></i>
                     <div class="tooltip-content">
-                      <p>Aquí insertas el envase para iniciar tu recarga. Es importante que tu envase se encuentre limpio y vacío.</p>
+                      <p><?php _e('Aquí insertas el envase para iniciar tu recarga. Es importante que tu envase se encuentre limpio y vacío.'); ?></p>
                       <div class="triangle-left"></div>
                     </div>
                   </div>
                   <div class="tooltip-item dot-4">
                     <i class="fa-solid fa-plus"></i>
                     <div class="tooltip-content">
-                      <p>Antes de retirar tu envase, recuerda retirar tu ticket, con él debes pagar en caja.</p>
+                      <p><?php _e('Antes de retirar tu envase, recuerda retirar tu ticket, con él debes pagar en caja.'); ?></p>
                       <div class="triangle-left"></div>
                     </div>
                   </div>
                 </div>
               </div>
-              
+
             </div>
 
             <div class="cta-btn my-5">
-              <a href="#">Ver estaciones y productos disponibles <span><i class="fa-solid fa-angle-right"></i></span></a>
+              <a href="#">
+                <?php _e('Ver estaciones y productos disponibles '); ?>
+                <span><i class="fa-solid fa-angle-right"></i></span></a>
             </div>
           </div>
 
@@ -165,49 +211,61 @@
             <div class="d-flex justify-content-center mb-5">
               <img src="<?php echo get_theme_file_uri(); ?>/images/vector-solid.svg" class="asterisk" data-aos="fade-up" data-aos-offset="200" data-aos-easing="ease-in-out" alt="asterisk img">
             </div>
-            <h2 class="text-center">Sodimac</h2>
-            <p class="text-center">Encuentra nuestras estaciones de recarga mientras</br> haces tus compras de supermercado.</p>
+            <h2 class="text-center">
+              <?php _e('Sodimac'); ?>
+            </h2>
+            <p class="text-center">
+              <?php _e('Encuentra nuestras estaciones de recarga mientras'); ?></br> <?php _e('haces tus compras de supermercado.'); ?>
+            </p>
             <div class="image-collapse-wrapper">
               <img src="<?php echo get_theme_file_uri(); ?>/images/book-bg.png" class="grid-service-1" data-aos="fade-right" data-aos-delay="150" data-aos-offset="200" data-aos-easing="ease-in-out" alt="grid image">
               <img src="<?php echo get_theme_file_uri(); ?>/images/book-bg.png" class="grid-service-2" data-aos="fade-left" data-aos-delay="150" data-aos-offset="200" data-aos-easing="ease-in-out" alt="grid image">
               <div class="service-image">
                 <img src="<?php echo get_theme_file_uri(); ?>/images/sodimac_fondo_gris.png" alt="service img">
-                <div class="tooltips-wrapper sodimac">
+                <div class="tooltips-wrapper sodimac d-none d-md-block">
                   <div class="tooltip-item dot-1">
                     <i class="fa-solid fa-plus"></i>
                     <div class="tooltip-content">
-                      <p>Aquí insertas el envase para iniciar tu recarga. Es importante que tu envase se encuentre limpio y vacío.</p>
+                      <p><?php _e('Aquí insertas el envase para iniciar tu recarga. Es importante que tu envase se encuentre limpio y vacío.'); ?></p>
                       <div class="triangle-left"></div>
                     </div>
                   </div>
                   <div class="tooltip-item dot-2">
                     <i class="fa-solid fa-plus"></i>
                     <div class="tooltip-content">
-                      <p>El proceso de recarga lo controlas tú mismo desde la pantalla. Es muy fácil y cómodo.</p>
+                      <p>
+                        <?php _e('El proceso de recarga lo controlas tú mismo desde la pantalla. Es muy fácil y cómodo.'); ?>
+                      </p>
                       <div class="triangle-left"></div>
                     </div>
                   </div>
                   <div class="tooltip-item dot-3">
                     <i class="fa-solid fa-plus"></i>
                     <div class="tooltip-content">
-                      <p>Necesitarás usar uno de nuestros envases inteligentes para tu primera recarga. Los encontrarás junto al dispensador y se pagan solo la primera vez.</p>
+                      <p>
+                        <?php _e('Necesitarás usar uno de nuestros envases inteligentes para tu primera recarga. Los encontrarás junto al dispensador y se pagan solo la primera vez.'); ?>
+                      </p>
                       <div class="triangle-left"></div>
                     </div>
                   </div>
                   <div class="tooltip-item dot-4">
                     <i class="fa-solid fa-plus"></i>
                     <div class="tooltip-content">
-                      <p>Antes de retirar tu envase, recuerda retirar tu ticket, con él debes pagar en caja.</p>
+                      <p>
+                        <?php _e('Antes de retirar tu envase, recuerda retirar tu ticket, con él debes pagar en caja.'); ?>
+                      </p>
                       <div class="triangle-left"></div>
                     </div>
                   </div>
                 </div>
               </div>
-              
+
             </div>
 
             <div class="cta-btn my-5">
-              <a href="#">Ver estaciones y productos disponibles <span><i class="fa-solid fa-angle-right"></i></span></a>
+              <a href="#">
+                <?php _e('Ver estaciones y productos disponibles '); ?>
+                <span><i class="fa-solid fa-angle-right"></i></span></a>
             </div>
           </div>
 
@@ -219,62 +277,73 @@
   <section class="delivery-wrapper">
     <img src="<?php echo get_theme_file_uri(); ?>/images/vector-lineal.png" class="delivery-graph" alt="asterisk img">
     <div class="container">
-      <div class="row align-items-center gx-5">
-        <div class="col-12 col-md-5">
-          <div class="image-collapse-wrapper">
-            <img src="<?php echo get_theme_file_uri(); ?>/images/book-bg.png" class="grid-delivery" data-aos="fade-right" data-aos-delay="150" data-aos-offset="200" data-aos-easing="ease-in-out" alt="grid image">
-            <div class="service-image">
-              <img src="<?php echo get_theme_file_uri(); ?>/images/characteristic-1.png" alt="service img">
-            </div>
-            <div class="service-image-collapse">
-              <p class="mb-0">
-                <button class="btn btn-circle" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
-                  <i class="fa-solid fa-plus"></i>
-                </button>
-              </p>
-              <div class="collapse" id="collapseExample">
-                <div class="card card-body">
-                  Some placeholder content for the collapse component. This panel is hidden by default but revealed when the user activates the relevant trigger.
+      <?php if (have_rows('algramo_a_domicilio')) : ?>
+        <?php while (have_rows('algramo_a_domicilio')) : the_row(); ?>
+
+          <div class="row align-items-center gx-5">
+            <div class="col-12 col-md-5">
+              <div class="image-collapse-wrapper">
+                <img src="<?php echo get_theme_file_uri(); ?>/images/book-bg.png" class="grid-delivery" data-aos="fade-right" data-aos-delay="150" data-aos-offset="200" data-aos-easing="ease-in-out" alt="grid image">
+                <div class="service-image">
+                  <?php if (get_sub_field('imagen')) : ?>
+                    <img src="<?php the_sub_field('imagen'); ?>" />
+                  <?php endif ?>
                 </div>
               </div>
             </div>
+            <div class="col-12 col-md-7">
+              <h2>
+                <?php the_sub_field('titulo'); ?>
+              </h2>
+              <p class="mb-3">
+                <?php the_sub_field('texto'); ?>
+              </p>
+              <?php $cta_mapa = get_sub_field('cta_mapa'); ?>
+              <?php if ($cta_mapa) : ?>
+                <div class="cta-btn mb-5 text-start">
+                  <a href="<?php echo esc_url($cta_mapa); ?>">
+                    <?php _e('Ver estaciones y productos disponibles'); ?> 
+                    <span><i class="fa-solid fa-angle-right"></i></span>
+                  </a>
+                </div>
+              <?php endif; ?>
+            </div>
           </div>
-        </div>
-        <div class="col-12 col-md-7">
-          <h2>Algramo a domicilio</h2>
-          <p class="mb-3">Pide tus recargas a domicilio y te visitaremos en la puerta de tu casa.</p>
-          <div class="cta-btn mb-5 text-start">
-            <a href="#">Ver mapa de cobertura y productos disponibles <span><i class="fa-solid fa-angle-right"></i></span></a>
-          </div>
-        </div>
-      </div>
+
+        <?php endwhile; ?>
+      <?php endif; ?>
     </div>
   </section>
 
-  <section class="locations-wrapper bg-white">
-    <div class="container">
-      <div class="row">
-        <div class="col-12 col-md-4 mb-5 mb-md-0">
-          <div class="location-img">
-            <img src="<?php echo get_theme_file_uri(); ?>/images/categoria-1.png" alt="">
+  <?php if (have_rows('locaciones')) : ?>
+    <?php while (have_rows('locaciones')) : the_row(); ?>
+
+      <section class="locations-wrapper bg-white">
+        <div class="container">
+          <div class="row">
+            <?php if (have_rows('locacion')) : ?>
+              <?php while (have_rows('locacion')) : the_row(); ?>
+
+                <div class="col-12 col-md-4 mb-5 mb-md-0">
+                  <div class="location-img">
+                    <?php if (get_sub_field('imagen_locacion')) : ?>
+                      <img src="<?php the_sub_field('imagen_locacion'); ?>" />
+                    <?php endif ?>
+                  </div>
+                  <p><?php the_sub_field('nombre_locacion'); ?></p>
+                </div>
+
+              <?php endwhile; ?>
+            <?php else : ?>
+              <?php // No rows found 
+              ?>
+            <?php endif; ?>
+
           </div>
-          <p>Colegios y universidades 🎓</p>
         </div>
-        <div class="col-12 col-md-4 mb-5 mb-md-0">
-          <div class="location-img">
-            <img src="<?php echo get_theme_file_uri(); ?>/images/categoria-2.png" alt="">
-          </div>
-          <p>Minimarkets 🥑</p>
-        </div>
-        <div class="col-12 col-md-4 mb-5 mb-md-0">
-          <div class="location-img">
-            <img src="<?php echo get_theme_file_uri(); ?>/images/categoria-3.png" alt="">
-          </div>
-          <p>Estaciones de servicio 🚘</p>
-        </div>
-      </div>
-    </div>
-  </section>
+      </section>
+    <?php endwhile; ?>
+  <?php endif; ?>
 
 </div>
 
