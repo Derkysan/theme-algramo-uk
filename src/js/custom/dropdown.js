@@ -1,13 +1,14 @@
 var console = window.console;
 
-const changeLanguage = (lang) => {
-  let url = lang;
-  if (url) { // require a URL
-    $('#loadingPage').addClass('animate__animated animate__fadeIn');
-      window.location = url; // redirect
-  }
-  return false;
-}
+// const changeLanguage = (lang) => {
+//   let url = lang;
+//   if (url) { // require a URL
+//     $('#loadingPage').addClass('animate__animated animate__fadeIn');
+//       window.location = url; // redirect
+//   }
+//   return false;
+// }
+(function ($) {
 
 var x, i, j, l, ll, selElmnt, a, b, c;
 /*look for any elements with the class "custom-select":*/
@@ -39,19 +40,27 @@ for (i = 0; i < l; i++) {
         for (i = 0; i < sl; i++) {
           if (s.options[i].innerHTML == this.innerHTML) {
             s.selectedIndex = i;
-            // console.log(s.options[i].value);
-            changeLanguage(s.options[i].value); // *** change language
             h.innerHTML = this.innerHTML;
             y = this.parentNode.getElementsByClassName("same-as-selected");
             yl = y.length;
+
+
+            if (s.selectedIndex === 1) {
+              $('.flag-gb').removeClass('d-inline-flex').addClass('d-none');
+              $('.flag-cl').removeClass('d-none').addClass('d-inline-flex');
+              window.location = 'https://cl.algramo.cl/';
+            } else {
+              $('.flag-gb').removeClass('d-none').addClass('d-inline-flex');
+              $('.flag-cl').removeClass('d-inline-flex').addClass('d-none');
+            }
+
             for (k = 0; k < yl; k++) {
-              y[k].removeAttribute("class");
+              y[k].removeAttribute("class");              
             }
             this.setAttribute("class", "same-as-selected");
             break;
           }
         }
-        
         h.click();
     });
     b.appendChild(c);
@@ -90,3 +99,5 @@ function closeAllSelect(elmnt) {
 /*if the user clicks anywhere outside the select box,
 then close all select boxes:*/
 document.addEventListener("click", closeAllSelect);
+
+})(jQuery);

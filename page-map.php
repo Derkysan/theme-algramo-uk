@@ -55,7 +55,7 @@ var gapp = {
 		{
 			"id": "omo",
 			"name": "Omo",
-			"desc": "Detergente liquido, matic multiacción. Con agentes biodegradables",
+			"desc": "<?php _e('Detergente liquido, matic multiacción. Con agentes biodegradables') ?>",
 			"image": "<?php echo get_theme_file_uri(); ?>/images/products/omo.png",
 			"qty": "3 Lt",
 			"zones": ["azul","morado"],
@@ -66,7 +66,7 @@ var gapp = {
 		{
 			"id": "quix",
 			"name": "Quix",
-			"desc": "Lavalozas líquido concentrado. Pureza esencial. Biodegradable",
+			"desc": "<?php _e('Lavalozas líquido concentrado. Pureza esencial. Biodegradable') ?>",
 			"image": "<?php echo get_theme_file_uri(); ?>/images/products/quix.png",
 			"qty": "1.5 Lt",
 			"zones": ["azul","morado"],
@@ -77,7 +77,7 @@ var gapp = {
 		{
 			"id": "soft",
 			"name": "Soft",
-			"desc": "Suavizante de ropa líquido. Diluido clásico. Biodegradable",
+			"desc": "<?php _e('Suavizante de ropa líquido. Diluido clásico con agentes biodegradables') ?>",
 			"image": "<?php echo get_theme_file_uri(); ?>/images/products/soft.png",
 			"qty": "1.5 Lt",
 			"zones": ["azul","morado"],
@@ -88,7 +88,7 @@ var gapp = {
 		{
 			"id": "cif",
 			"name": "Cif",
-			"desc": "Limpiador desengrasante líquido. Antograsa ultra rápido. Biodegradable.",
+			"desc": "<?php _e('Limpiador desengrasante líquido con agentes biodegradables') ?>",
 			"image": "<?php echo get_theme_file_uri(); ?>/images/products/cif.png",
 			"qty": "1.5 Lt",
 			"zones": ["azul","morado"],
@@ -99,7 +99,7 @@ var gapp = {
 		{
 			"id": "detergente-lider",
 			"name": "Detergente Lider",
-			"desc": "Lavalozas líquido Máximo poder desengrasante. Biodegradable.",
+			"desc": "<?php _e('Lavalozas líquido Máximo poder desengrasante. Biodegradable.') ?>",
 			"image": "<?php echo get_theme_file_uri(); ?>/images/products/lider-detergente.png",
 			"qty": "3 Lt",
 			"zones": [],
@@ -110,7 +110,7 @@ var gapp = {
 		{
 			"id": "lavaloza-lider",
 			"name": "Lavaloza Lider",
-			"desc": "Lavalozas líquido Máximo poder desengrasante. Biodegradable.",
+			"desc": "<?php _e('Lavalozas líquido Máximo poder desengrasante. Biodegradable.') ?>",
 			"image": "<?php echo get_theme_file_uri(); ?>/images/products/lider-lavaloza.png",
 			"qty": "1.5 Lt",
 			"zones": [],
@@ -121,7 +121,7 @@ var gapp = {
 		{
 			"id": "suavizante-lider",
 			"name": "Suavizante Lider",
-			"desc": "Suavizante de ropa clásico. Con agentes biodegradables.",
+			"desc": "<?php _e('Suavizante de ropa clásico. Con agentes biodegradables.') ?>",
 			"image": "<?php echo get_theme_file_uri(); ?>/images/products/lider-suavizante.png",
 			"qty": "1.5 Lt",
 			"zones": [],
@@ -132,7 +132,7 @@ var gapp = {
 		{
 			"id": "limpiapisos-lider",
 			"name": "Limpiapisos Lider",
-			"desc": "Limpiador multiespacios lavanda. Con agentes biodegradables.",
+			"desc": "<?php _e('Limpiador multiespacios lavanda. Con agentes biodegradables.') ?>",
 			"image": "<?php echo get_theme_file_uri(); ?>/images/products/lider-limpiapisos.png",
 			"qty": "1.5 Lt",
 			"zones": [],
@@ -143,7 +143,7 @@ var gapp = {
 		{
 			"id": "purina-raza-grande",
 			"name": "Purina raza grande",
-			"desc": "Alimento de mascotas Seco/sólido para perros medianos y grandes.",
+			"desc": "<?php _e('Alimento de mascotas Seco/sólido para perros medianos y grandes.') ?>",
 			"image": "<?php echo get_theme_file_uri(); ?>/images/products/purina-raza-grande.png",
 			"qty": "3 a 15 kilos",
 			"zones": ["azul"],
@@ -154,7 +154,7 @@ var gapp = {
 		{
 			"id": "purina-raza-chica",
 			"name": "Purina raza chica",
-			"desc": "Alimento de mascotas Seco/sólido para perros minis y pequeños.",
+			"desc": "<?php _e('Alimento de mascotas Seco/sólido para perros minis y pequeños.') ?>",
 			"image": "<?php echo get_theme_file_uri(); ?>/images/products/purina-raza-chica.png",
 			"qty": "3 a 15 kilos",
 			"zones": ["azul"],
@@ -655,6 +655,9 @@ jQuery(document).ready(function() {
               <div class="filter-item d-none d-md-inline-flex">
                 <button style="display:none;" id="clearFilters" type="button" class="btn btn-link text-decoration-none"><i class="fa-solid fa-xmark fa-xl me-2"></i> <?php _e('Borrar filtros'); ?></button>
               </div>
+              <div class="filter-item px-3 d-none d-md-inline-flex">
+                <div class="text-map"><?php _e('Selecciona el punto de venta para ver los productos disponibles'); ?></div>
+              </div>
 
               <!-- Mobile filter -->
               <div class="filter-item first sep pe-3 d-flex align-items-center d-inline-flex d-md-none ">
@@ -715,7 +718,9 @@ jQuery(document).ready(function() {
 
     <div class="map-result">
 
-      <div id="mapboxgl" class="map-wrapper sticky-top">map-wrapper</div>
+      <div id="mapboxgl" class="map-wrapper sticky-top">
+        <div class="text-map"><?php _e('Selecciona el punto de venta para ver los productos disponibles'); ?></div>
+      </div>
 
       <div class="result-items-wrapper py-4">
 
@@ -789,7 +794,7 @@ jQuery(document).ready(function() {
               <div class="col">
                 <p class="fw-bold mb-0"><?php _e('Productos disponibles en la'); ?> <span style="color: #0080ff;"><?php _e('zona azul'); ?></span></p>
               </div>
-              <div class="col d-none d-md-inline-flex">
+              <div class="col d-none d-md-inline-flex justify-content-end">
                 <small class="d-block text-end text-muted"><?php _e('Mostrando todos los productos'); ?></small>
               </div>
             </div>
@@ -804,8 +809,14 @@ jQuery(document).ready(function() {
               </div>
             </div>
 
-            <div class="row">
+            <div class="row mb-5">
               <div class="col px-4 overflow-hidden" id="swiper-morado"></div>
+            </div>
+
+            <div class="row">
+              <div class="col">
+                <?php _e('Para hacer tu pedido descarga la app Algramo, disponible para'); ?> <a href="https://apps.apple.com/cl/app/algramo/id1499212206" target="_blank" rel="noopener noreferrer">Apple</a> <?php _e('y'); ?> <a href="https://play.google.com/store/apps/details?id=com.algramoapp&gl=US" target="_blank" rel="noopener noreferrer">Android</a>.
+              </div>
             </div>
           </div>
         </div>

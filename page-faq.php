@@ -43,7 +43,8 @@
                         <span class="text-primary">
                           <?php 
                           if ( $index <= 9 ) {
-                            echo '0'.$index;
+                            // echo '0'.$index;
+                            echo ''.$index;
                           } else {
                             echo $index;
                           }

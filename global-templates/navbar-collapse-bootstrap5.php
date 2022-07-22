@@ -56,15 +56,23 @@ $container = get_theme_mod('understrap_container_type');
       <div class="col">
         <div class="d-flex align-items-center justify-content-end">
 
-          <!-- <div class="lang-selector me-3">
+          <div class="lang-selector me-5">
+            <span class="flag-selected flag-cl d-none"><img id="flagSelected" src="<?php echo get_theme_file_uri(); ?>/images/svg/cl.svg" alt=" flag"></span>
+            <span class="flag-selected flag-gb d-d-inline-flex"><img id="flagSelected" src="<?php echo get_theme_file_uri(); ?>/images/svg/gb.svg" alt=" flag"></span>
             <div class="custom-select">
-              <select>
-                <option value="0">Select car:</option>
-                <option selected value="http://cl.algramo.cl/">Chile</option>
-                <option value="https://uk.algramo.cl/">UK</option>
+              <select id="langSelector">
+                <option value="0"></option>
+                <option value="http://cl.algramo.cl/" >
+                  <img src="<?php echo get_theme_file_uri(); ?>/images/svg/cl.svg" alt=" flag">
+                  Chile
+                </option>
+                <option value="https://uk.algramo.cl/" selected>
+                  <img src="<?php echo get_theme_file_uri(); ?>/images/svg/gb.svg" alt=" flag">
+                  UK
+                </option>
               </select>
             </div>
-          </div> -->
+          </div>
 
           <?php dynamic_sidebar('header-right'); ?>
         </div>
@@ -135,15 +143,23 @@ $container = get_theme_mod('understrap_container_type');
       }
       ?>
 
-      <!-- <div class="lang-selector">
-        <div class="custom-select" style="width:200px;">
-          <select>
-            <option value="0">Select car:</option>
-            <option selected value="http://cl.algramo.cl/">Chile</option>
-            <option value="https://uk.algramo.cl/">UK</option>
+      <div class="lang-selector me-5">
+        <span class="flag-selected flag-cl d-inline-flex"><img id="flagSelected" src="<?php echo get_theme_file_uri(); ?>/images/svg/cl.svg" alt=" flag"></span>
+        <span class="flag-selected flag-gb d-none"><img id="flagSelected" src="<?php echo get_theme_file_uri(); ?>/images/svg/gb.svg" alt=" flag"></span>
+        <div class="custom-select">
+          <select id="langSelector">
+            <option value="0"></option>
+            <option value="http://cl.algramo.cl/" >
+              <img src="<?php echo get_theme_file_uri(); ?>/images/svg/cl.svg" alt=" flag">
+              Chile
+            </option>
+            <option value="https://uk.algramo.cl/" selected>
+              <img src="<?php echo get_theme_file_uri(); ?>/images/svg/gb.svg" alt=" flag">
+              UK
+            </option>
           </select>
         </div>
-      </div> -->
+      </div>
 
       <div class="secondary-menu">
         <?php dynamic_sidebar('header-right'); ?>

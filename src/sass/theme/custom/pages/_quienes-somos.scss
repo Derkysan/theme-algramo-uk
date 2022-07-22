@@ -63,6 +63,7 @@
   .team-list {
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
     .member {
       width: calc(20% - 1em);
       margin-right: 1em;
@@ -120,6 +121,7 @@
   }
   &.interactive {
     .team-list {
+      justify-content: center;
       .member {
         cursor: pointer;
       }
@@ -214,6 +216,7 @@
 
   .team-wrapper {
     .team-list {
+      justify-content: center;
       .member {
         width: 100%;
         margin-right: 0;

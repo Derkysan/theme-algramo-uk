@@ -52,59 +52,105 @@
       </div>
     </div>
 
-    <div class="carousel-wrapper mb-5">
-      <div class="swiper-carousel timeline-swiper">
-        <div class="swiper-wrapper">
-          <div class="swiper-slide">
-            <img src="<?php echo get_theme_file_uri(); ?>/images/timeline/1.png" alt="slide timeline">
+    <?php if (ICL_LANGUAGE_CODE=='en') { ?> 
+      <div class="carousel-wrapper mb-5">
+        <div class="swiper-carousel timeline-swiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <img src="<?php echo get_theme_file_uri(); ?>/images/timeline_en/1.png" alt="slide timeline">
+            </div>
+            <div class="swiper-slide">
+              <img src="<?php echo get_theme_file_uri(); ?>/images/timeline_en/2.png" alt="slide timeline">
+            </div>
+            <div class="swiper-slide">
+              <img src="<?php echo get_theme_file_uri(); ?>/images/timeline_en/3.png" alt="slide timeline">
+            </div>
+            <div class="swiper-slide">
+              <img src="<?php echo get_theme_file_uri(); ?>/images/timeline_en/4.png" alt="slide timeline">
+            </div>
+            <div class="swiper-slide">
+              <img src="<?php echo get_theme_file_uri(); ?>/images/timeline_en/5.png" alt="slide timeline">
+            </div>
+            <div class="swiper-slide">
+              <img src="<?php echo get_theme_file_uri(); ?>/images/timeline_en/6.png" alt="slide timeline">
+            </div>
+            <div class="swiper-slide">
+              <img src="<?php echo get_theme_file_uri(); ?>/images/timeline_en/7.png" alt="slide timeline">
+            </div>
+            <div class="swiper-slide">
+              <img src="<?php echo get_theme_file_uri(); ?>/images/timeline_en/8.png" alt="slide timeline">
+            </div>
+            <div class="swiper-slide">
+              <img src="<?php echo get_theme_file_uri(); ?>/images/timeline_en/9.png" alt="slide timeline">
+            </div>
+            <div class="swiper-slide">
+              <img src="<?php echo get_theme_file_uri(); ?>/images/timeline_en/10.png" alt="slide timeline">
+            </div>
+            <div class="swiper-slide">
+              <img src="<?php echo get_theme_file_uri(); ?>/images/timeline_en/11.png" alt="slide timeline">
+            </div>
+            <div class="swiper-slide">
+              <img src="<?php echo get_theme_file_uri(); ?>/images/timeline_en/12.png" alt="slide timeline">
+            </div>
           </div>
-          <div class="swiper-slide">
-            <img src="<?php echo get_theme_file_uri(); ?>/images/timeline/2.png" alt="slide timeline">
-          </div>
-          <div class="swiper-slide">
-            <img src="<?php echo get_theme_file_uri(); ?>/images/timeline/3.png" alt="slide timeline">
-          </div>
-          <div class="swiper-slide">
-            <img src="<?php echo get_theme_file_uri(); ?>/images/timeline/4.png" alt="slide timeline">
-          </div>
-          <div class="swiper-slide">
-            <img src="<?php echo get_theme_file_uri(); ?>/images/timeline/5.png" alt="slide timeline">
-          </div>
-          <div class="swiper-slide">
-            <img src="<?php echo get_theme_file_uri(); ?>/images/timeline/6.png" alt="slide timeline">
-          </div>
-          <div class="swiper-slide">
-            <img src="<?php echo get_theme_file_uri(); ?>/images/timeline/7.png" alt="slide timeline">
-          </div>
-          <div class="swiper-slide">
-            <img src="<?php echo get_theme_file_uri(); ?>/images/timeline/8.png" alt="slide timeline">
-          </div>
-          <div class="swiper-slide">
-            <img src="<?php echo get_theme_file_uri(); ?>/images/timeline/9.png" alt="slide timeline">
-          </div>
-          <div class="swiper-slide">
-            <img src="<?php echo get_theme_file_uri(); ?>/images/timeline/10.png" alt="slide timeline">
-          </div>
-          <div class="swiper-slide">
-            <img src="<?php echo get_theme_file_uri(); ?>/images/timeline/11.png" alt="slide timeline">
-          </div>
-          <div class="swiper-slide">
-            <img src="<?php echo get_theme_file_uri(); ?>/images/timeline/12.png" alt="slide timeline">
-          </div>
+          <div class="btn-swiper button-next"><i class="fa-solid fa-angle-right"></i></div>
+          <div class="btn-swiper button-prev"><i class="fa-solid fa-angle-left"></i></div>
         </div>
-        <div class="btn-swiper button-next"><i class="fa-solid fa-angle-right"></i></div>
-        <div class="btn-swiper button-prev"><i class="fa-solid fa-angle-left"></i></div>
       </div>
-    </div>
-
-
+    <?php } else { ?> 
+      <div class="carousel-wrapper mb-5">
+        <div class="swiper-carousel timeline-swiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <img src="<?php echo get_theme_file_uri(); ?>/images/timeline/1.png" alt="slide timeline">
+            </div>
+            <div class="swiper-slide">
+              <img src="<?php echo get_theme_file_uri(); ?>/images/timeline/2.png" alt="slide timeline">
+            </div>
+            <div class="swiper-slide">
+              <img src="<?php echo get_theme_file_uri(); ?>/images/timeline/3.png" alt="slide timeline">
+            </div>
+            <div class="swiper-slide">
+              <img src="<?php echo get_theme_file_uri(); ?>/images/timeline/4.png" alt="slide timeline">
+            </div>
+            <div class="swiper-slide">
+              <img src="<?php echo get_theme_file_uri(); ?>/images/timeline/5.png" alt="slide timeline">
+            </div>
+            <div class="swiper-slide">
+              <img src="<?php echo get_theme_file_uri(); ?>/images/timeline/6.png" alt="slide timeline">
+            </div>
+            <div class="swiper-slide">
+              <img src="<?php echo get_theme_file_uri(); ?>/images/timeline/7.png" alt="slide timeline">
+            </div>
+            <div class="swiper-slide">
+              <img src="<?php echo get_theme_file_uri(); ?>/images/timeline/8.png" alt="slide timeline">
+            </div>
+            <div class="swiper-slide">
+              <img src="<?php echo get_theme_file_uri(); ?>/images/timeline/9.png" alt="slide timeline">
+            </div>
+            <div class="swiper-slide">
+              <img src="<?php echo get_theme_file_uri(); ?>/images/timeline/10.png" alt="slide timeline">
+            </div>
+            <div class="swiper-slide">
+              <img src="<?php echo get_theme_file_uri(); ?>/images/timeline/11.png" alt="slide timeline">
+            </div>
+            <div class="swiper-slide">
+              <img src="<?php echo get_theme_file_uri(); ?>/images/timeline/12.png" alt="slide timeline">
+            </div>
+          </div>
+          <div class="btn-swiper button-next"><i class="fa-solid fa-angle-right"></i></div>
+          <div class="btn-swiper button-prev"><i class="fa-solid fa-angle-left"></i></div>
+        </div>
+      </div>
+    <?php } ?>
+     
     <div class="team-wrapper interactive py-5 bg-white">
       <div class="container">
         <div class="row">
           <div class="col">
 
             <h4 class="text-center mb-4">
-              <?php _e('Tenemos la experiencia y el talento para liderar la Refill Revolution.'); ?>
+              <?php _e('Tenemos la experiencia y el talento para liderar la Refill Revolution'); ?>
             </h4>
             <h5 class="text-center text-primary mb-5 fw-bold">
               <?php _e('Equipo de líderes'); ?>
@@ -268,14 +314,8 @@
                   ?>
                 <?php endif; ?>
 
-                
-
               <?php endwhile; ?>
             <?php endif; ?>
-
-
-
-
 
             <?php $cta_equipo = get_field('cta_equipo'); ?>
             <?php if ($cta_equipo) : ?>
@@ -286,7 +326,6 @@
                 </a>
               </div>
             <?php endif; ?>
-
 
           </div>
         </div>

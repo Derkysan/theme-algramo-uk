@@ -178,13 +178,13 @@
                 <img src="<?php echo get_theme_file_uri(); ?>/images/book-bg.png" class="grid-img d-none" data-aos="fade-down" data-aos-delay="50" data-aos-offset="250" data-aos-easing="ease-in-out" alt="grid image">
                 <div class="d-flex justify-content-center mb-5">
                   <div class="recharge-img-wrapper" data-aos="fade-up" data-aos-delay="50" data-aos-offset="250" data-aos-easing="ease-in-out">
-                    <img src="<?php echo get_theme_file_uri(); ?>/images/git/gif-trabaja-con-nosotros.gif" alt="gif trabaja con nosotros">
+                    <img src="<?php echo get_theme_file_uri(); ?>/images/gif/gif-trabaja-con-nosotros.gif" alt="gif trabaja con nosotros">
                   </div>
                 </div>
               </div>
-              <div class="mb-5" data-aos="fade-up" data-aos-delay="50" data-aos-offset="250" data-aos-easing="ease-in-out">
+              <!-- <div class="mb-5" data-aos="fade-up" data-aos-delay="50" data-aos-offset="250" data-aos-easing="ease-in-out">
                 <?php the_sub_field('texto'); ?>
-              </div>
+              </div> -->
 
             </div>
           </div>

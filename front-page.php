@@ -22,10 +22,19 @@ get_header();
 
   <section class="main-slider">
 
-    <div class="img-spin rotate d-none d-md-block">
+    <!-- <div class="img-spin rotate d-none d-md-block">
       <img src="<?php echo get_theme_file_uri(); ?>/images/recarga-reutiliza-repite.svg" class="" alt="Recarga, reutiliza, repite">
-    </div>
+    </div> -->
 
+    <?php if (ICL_LANGUAGE_CODE=='en') { ?>
+      <div class="img-spin rotate d-none d-md-block">
+        <img src="<?php echo get_theme_file_uri(); ?>/images/refill-reuse-repeat.svg" class="" alt="Refill, reuse, repeat">
+      </div>
+    <?php } else { ?>
+      <div class="img-spin rotate d-none d-md-block">
+        <img src="<?php echo get_theme_file_uri(); ?>/images/recarga-reutiliza-repite.svg" class="" alt="Recarga, reutiliza, repite">
+      </div>
+    <?php } ?>
     <!-- Slider main container -->
     <div class="swiper-main">
       <!-- Additional required wrapper -->
@@ -129,7 +138,7 @@ get_header();
           <img src="<?php echo get_theme_file_uri(); ?>/images/book-bg.png" class="grid-img" data-aos="fade-right" data-aos-delay="150" data-aos-offset="200" data-aos-easing="ease-in-out" alt="grid image">
         </div>
         <div class="container">
-          <div class="row justify-content-center mt-5 pt-3">
+          <div class="row justify-content-center mt-5 pt-5">
             <div class="col-12 col-md-7 text-center">
               <div class="mt-5 mb-5" class="text-graph-1" data-aos="fade-up" data-aos-delay="50" data-aos-offset="200" data-aos-easing="ease-in-out">
                 <?php the_sub_field('bloque_texto'); ?>
@@ -194,7 +203,7 @@ get_header();
           <img src="<?php the_sub_field('imagen'); ?>" class="quote-img" data-aos="fade-in" data-aos-delay="50" data-aos-offset="250" data-aos-easing="ease-in-out" />
           <div class="container quote-txt-wrapper h-100">
             <div class="row h-100 align-items-start align-items-md-center">
-              <div class="col-12 col-md-7">
+              <div class="col-12 col-md-8">
                 <h3 class="pe-4" data-aos="fade-right" data-aos-delay="50" data-aos-offset="200" data-aos-easing="ease-in-out"><?php the_sub_field('cita_texto'); ?></h3>
                 <p data-aos="fade-right" data-aos-delay="150" data-aos-offset="0" data-aos-easing="ease-in-out"><?php the_sub_field('cita_info'); ?></p>
               </div>
@@ -212,7 +221,7 @@ get_header();
     <?php while (have_rows('compra_inteligente')) : the_row(); ?>
 
       <section class="smart-buy py-5">
-        <img src="<?php echo get_theme_file_uri(); ?>/images/text-graph-1.svg" class="graph d-none d-md-inline-flex" alt="text graph" data-aos="fade-right" data-aos-delay="50" data-aos-offset="50" data-aos-easing="ease-in-out">
+        <!-- <img src="<?php echo get_theme_file_uri(); ?>/images/text-graph-1.svg" class="graph d-none d-md-inline-flex" alt="text graph" data-aos="fade-right" data-aos-delay="50" data-aos-offset="50" data-aos-easing="ease-in-out"> -->
 
         <div class="container">
           <div class="row justify-content-center">
@@ -268,8 +277,38 @@ get_header();
     <?php endwhile; ?>
   <?php endif; ?>
 
+  
+  <?php if ( have_rows( 'find_us' ) ) : ?>
+    <?php while ( have_rows( 'find_us' ) ) : the_row(); ?>
 
-  <section class="py-5 bg-white store-btn-wrapper">
+      <section class="py-5" data-aos="fade-up" data-aos-delay="50" data-aos-offset="50" data-aos-easing="ease-in-out">
+        <div class="container">
+          <div class="row justify-content-center">
+            <div class="col-12 col-md-7">
+              
+              <div class="findus-wrapper">
+              
+                <h2 class="text-center mb-4"><?php the_sub_field( 'titulo' ); ?></h2>
+                <div class="findus-img mb-3">
+                <?php if ( get_sub_field( 'imagen' ) ) : ?>
+                  <img src="<?php the_sub_field( 'imagen' ); ?>" />
+                <?php endif ?>
+                </div>
+                <div class="findus-content">
+                <?php the_sub_field( 'texto' ); ?>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </section>
+
+    <?php endwhile; ?>
+  <?php endif; ?>
+  
+
+  <!-- <section class="py-5 bg-white store-btn-wrapper">
     <img src="<?php echo get_theme_file_uri(); ?>/images/vector-lineal-green-cut-top.png" class="cut-asterisk d-none d-md-inline-flex" data-aos="fade-down-right" data-aos-delay="50" data-aos-offset="250" data-aos-easing="ease-in-out" alt="asterisk img">
 
     <div class="phone-1 d-none d-md-block" data-aos="fade-left" data-aos-delay="50" data-aos-offset="50" data-aos-easing="ease-in-out">
@@ -341,7 +380,7 @@ get_header();
         </div>
       </div>
     </div>
-  </section>
+  </section> -->
 
   <section class="fullpage d-none">
     <div id="block-1" class="section">
@@ -569,7 +608,7 @@ get_header();
     <?php endwhile; ?>
   <?php endif; ?>
 
-  <?php if (have_rows('recargar')) : ?>
+  <!-- <?php if (have_rows('recargar')) : ?>
     <?php while (have_rows('recargar')) : the_row(); ?>
 
       <section class="how-to-wrapper py-5">
@@ -591,7 +630,7 @@ get_header();
                       <?php endif ?>
                     </div>
                     <h5 class="my-4"><?php the_sub_field('titulo'); ?>
-                      <!-- <span><img src="<?php echo get_theme_file_uri(); ?>/images/emoji-hand.png" style="width: 24px" alt="emoji"></span>  -->
+                      <span><img src="<?php echo get_theme_file_uri(); ?>/images/emoji-hand.png" style="width: 24px" alt="emoji"></span> 
                     </h5>
 
                     <?php if (have_rows('enlace')) : ?>
@@ -620,7 +659,7 @@ get_header();
                       <?php endif ?>
                     </div>
                     <h5 class="my-4"><?php the_sub_field('titulo'); ?>
-                      <!-- <span><img src="<?php echo get_theme_file_uri(); ?>/images/emoji-hand.png" style="width: 24px" alt="emoji"></span>  -->
+                      <span><img src="<?php echo get_theme_file_uri(); ?>/images/emoji-hand.png" style="width: 24px" alt="emoji"></span> 
                     </h5>
 
                     <?php if (have_rows('enlace')) : ?>
@@ -642,7 +681,7 @@ get_header();
       </section>
 
     <?php endwhile; ?>
-  <?php endif; ?>
+  <?php endif; ?> -->
 
   <section class="py-5">
     <div class="container-fluid">
@@ -667,7 +706,7 @@ get_header();
                   <div class="item">
                     <div class="data">
                       <div id="data-2" class="main" data-aos="fade-in" data-aos-id="randomize"></div>
-                      <p><?php _e('Kg Co2 evitado'); ?></p>
+                      <p><?php _e('Kg. Co2 evitado'); ?></p>
                     </div>
                   </div>
                 </div>
@@ -675,7 +714,7 @@ get_header();
                   <div class="item">
                     <div class="data">
                       <div id="data-3" class="main" data-aos="fade-in" data-aos-id="randomize"></div>
-                      <p><?php _e('Lt. Agua Ahorrada '); ?></p>
+                      <p><?php _e('Lt. Agua ahorrada '); ?></p>
                     </div>
                   </div>
                 </div>
@@ -683,7 +722,7 @@ get_header();
                   <div class="item">
                     <div class="data">
                       <div id="data-4" class="main" data-aos="fade-in" data-aos-id="randomize"></div>
-                      <p><?php _e('Kg plástico ahorrados'); ?></p>
+                      <p><?php _e('Kg. Plástico ahorrados'); ?></p>
                     </div>
                   </div>
                 </div>

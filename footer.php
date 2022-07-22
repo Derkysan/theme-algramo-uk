@@ -40,12 +40,12 @@ $container = get_theme_mod( 'understrap_container_type' );
     <div class="d-none d-md-block mb-5"></div>
 
     <div class="row" style="align-items: baseline;">
-      <div class="col-12 col-md-7">
+      <div class="col-12 col-md-10">
         <?php dynamic_sidebar( 'footer-5' ); ?>
       </div>
-      <div class="col-12 col-md-5">
+      <div class="col-12 col-md-2">
         <div class="footer-copy">
-          <span><?php _e('Todos lo derechos reservados, 2022'); ?></span>
+          <!-- <span><?php _e('Todos lo derechos reservados, 2022'); ?></span> -->
           <?php if (ICL_LANGUAGE_CODE=='en') { ?>
             <img src="<?php echo get_theme_file_uri(); ?>/images/logo-empresa-certificada_en.png" width="70" alt="logo empresa certificada">
           <?php } else { ?>
@@ -57,12 +57,11 @@ $container = get_theme_mod( 'understrap_container_type' );
 
 	</div><!-- container end -->
   
-  
   <div class="dev-brand">
     <div class="container">
       <div class="row">
         <div class="col">
-          <span class="me-1">Website por</span> 
+          <span class="me-1"><?php _e('Website por'); ?></span> 
           <a href="https://www.prosaestudio.com/" target="_blank" rel="noopener noreferrer"><img src="<?php echo get_theme_file_uri(); ?>/images/prosa_logo.png" width="60" alt="PROSA ESTUDIO"></a>
         </div>
       </div>

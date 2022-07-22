@@ -69,11 +69,20 @@
             </div>
           </div>
 
-          <div class="cta-btn my-5">
-            <a href="https://cl.algramo.cl/puntos-de-ventas/">
-              <?php _e('Encuéntranos en el mapa'); ?> <span><i class="fa-solid fa-angle-right"></i></span>
-            </a>
-          </div>
+          <?php if ( have_rows( 'cta' ) ) : ?>
+            <?php while ( have_rows( 'cta' ) ) : the_row(); ?>
+              
+              <?php $enlace = get_sub_field( 'enlace' ); ?>
+              <?php if ( $enlace ) : ?>
+                <div class="cta-btn my-5">
+                  <a href="<?php echo esc_url( $enlace); ?>">
+                    <?php the_sub_field( 'cta_texto' ); ?> <span><i class="fa-solid fa-angle-right"></i></span>
+                  </a>
+                </div>
+              <?php endif; ?>
+
+            <?php endwhile; ?>
+          <?php endif; ?>
 
         </div>
       </div>
@@ -95,7 +104,7 @@
               <?php _e('Supermercados Lider'); ?>
             </h2>
             <p class="text-center">
-              <?php _e('Encuentra nuestras estaciones de recarga mientras'); ?></br> <?php _e('haces tus compras de supermercado.'); ?>
+              <?php _e('Encuentra nuestras estaciones de recarga '); ?></br> <?php _e('mientras haces tus compras de supermercado.'); ?>
             </p>
             <div class="image-collapse-wrapper">
               <img src="<?php echo get_theme_file_uri(); ?>/images/book-bg.png" class="grid-service-1" data-aos="fade-right" data-aos-delay="150" data-aos-offset="200" data-aos-easing="ease-in-out" alt="grid image">
@@ -142,12 +151,24 @@
 
             </div>
 
-            <div class="cta-btn my-5">
-              <a href="#">
-                <?php _e('Ver estaciones y productos disponibles'); ?> 
-                <span><i class="fa-solid fa-angle-right"></i></span>
-              </a>
-            </div>
+            <?php if ( have_rows( 'cta:_lider' ) ) : ?>
+              <?php while ( have_rows( 'cta:_lider' ) ) : the_row(); ?>
+
+                <?php $enlace = get_sub_field( 'enlace' ); ?>
+                <?php if ( $enlace ) : ?>
+                  <div class="cta-btn my-5">
+                    <a href="<?php echo esc_url( $enlace); ?>">
+                      <?php the_sub_field( 'cta_texto' ); ?>
+                      <span><i class="fa-solid fa-angle-right"></i></span>
+                    </a>
+                  </div>
+                <?php endif; ?>
+
+
+              <?php endwhile; ?>
+            <?php endif; ?>
+
+            
           </div>
 
           <div id="acuenta" class="service-wrapper">
@@ -158,8 +179,7 @@
               <?php _e('SuperBodega Acuenta'); ?>
             </h2>
             <p class="text-center">
-              <?php _e('SuperBodega Acuenta'); ?>
-              <?php _e('Encuentra nuestras estaciones de recarga mientras'); ?></br> <?php _e('haces tus compras de supermercado.'); ?>
+              <?php _e('Encuentra nuestras estaciones de recarga '); ?></br> <?php _e('mientras haces tus compras de supermercado.'); ?>
             </p>
             <div class="image-collapse-wrapper">
               <img src="<?php echo get_theme_file_uri(); ?>/images/book-bg.png" class="grid-service-1" data-aos="fade-right" data-aos-delay="150" data-aos-offset="200" data-aos-easing="ease-in-out" alt="grid image">
@@ -200,11 +220,22 @@
 
             </div>
 
-            <div class="cta-btn my-5">
-              <a href="#">
-                <?php _e('Ver estaciones y productos disponibles '); ?>
-                <span><i class="fa-solid fa-angle-right"></i></span></a>
-            </div>
+            <?php if ( have_rows( 'cta:_acuenta' ) ) : ?>
+              <?php while ( have_rows( 'cta:_acuenta' ) ) : the_row(); ?>
+
+                <?php $enlace = get_sub_field( 'enlace' ); ?>
+                <?php if ( $enlace ) : ?>
+                  <div class="cta-btn my-5">
+                    <a href="<?php echo esc_url( $enlace); ?>">
+                      <?php the_sub_field( 'cta_texto' ); ?>
+                      <span><i class="fa-solid fa-angle-right"></i></span>
+                    </a>
+                  </div>
+                <?php endif; ?>
+
+
+              <?php endwhile; ?>
+            <?php endif; ?>
           </div>
 
           <div id="sodimac" class="service-wrapper">
@@ -215,7 +246,7 @@
               <?php _e('Sodimac'); ?>
             </h2>
             <p class="text-center">
-              <?php _e('Encuentra nuestras estaciones de recarga mientras'); ?></br> <?php _e('haces tus compras de supermercado.'); ?>
+              <?php _e('Encuentra nuestras estaciones de recarga mientras'); ?></br> <?php _e('haces tus compras del hogar.'); ?>
             </p>
             <div class="image-collapse-wrapper">
               <img src="<?php echo get_theme_file_uri(); ?>/images/book-bg.png" class="grid-service-1" data-aos="fade-right" data-aos-delay="150" data-aos-offset="200" data-aos-easing="ease-in-out" alt="grid image">
@@ -262,11 +293,22 @@
 
             </div>
 
-            <div class="cta-btn my-5">
-              <a href="#">
-                <?php _e('Ver estaciones y productos disponibles '); ?>
-                <span><i class="fa-solid fa-angle-right"></i></span></a>
-            </div>
+            <?php if ( have_rows( 'cta:_sodimac' ) ) : ?>
+              <?php while ( have_rows( 'cta:_sodimac' ) ) : the_row(); ?>
+
+                <?php $enlace = get_sub_field( 'enlace' ); ?>
+                <?php if ( $enlace ) : ?>
+                  <div class="cta-btn my-5">
+                    <a href="<?php echo esc_url( $enlace); ?>">
+                      <?php the_sub_field( 'cta_texto' ); ?>
+                      <span><i class="fa-solid fa-angle-right"></i></span>
+                    </a>
+                  </div>
+                <?php endif; ?>
+
+
+              <?php endwhile; ?>
+            <?php endif; ?>
           </div>
 
         </div>
@@ -288,6 +330,22 @@
                   <?php if (get_sub_field('imagen')) : ?>
                     <img src="<?php the_sub_field('imagen'); ?>" />
                   <?php endif ?>
+                  <div class="tooltips-wrapper a-domicilio d-none d-md-block">
+                    <div class="tooltip-item dot-1">
+                      <i class="fa-solid fa-plus"></i>
+                      <div class="tooltip-content">
+                        <p><?php _e('Los envases inteligentes vendrán incluidos en tu primer pedido. Después tienes que  encargarte de cuidarlos y tenerlos limpios para tu próxima recarga.'); ?></p>
+                        <div class="triangle-left"></div>
+                      </div>
+                    </div>
+                    <div class="tooltip-item dot-2">
+                      <i class="fa-solid fa-plus"></i>
+                      <div class="tooltip-content">
+                        <p><?php _e('Nuestro equipo se encargará de recargar tus envases. Si no estarás en tu casa para recibirnos, puedes dejar tus envases con tu conserje o con algún vecino.'); ?></p>
+                        <div class="triangle-left"></div>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
@@ -321,6 +379,7 @@
       <section class="locations-wrapper bg-white">
         <div class="container">
           <div class="row">
+            <h4 class="fw-bolder text-center mb-5"><?php _e('Próximamente'); ?></h4>
             <?php if (have_rows('locacion')) : ?>
               <?php while (have_rows('locacion')) : the_row(); ?>
 

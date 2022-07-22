@@ -15666,6 +15666,11 @@ figure.woocommerce-product-gallery__wrapper {
   font-style: normal;
   font-display: swap;
 }
+.navbar-toggler,
+.mobile-menu-toggler {
+  color: #0D0D0D !important;
+}
+
 #wrapper-navbar {
   background-color: #ffffff;
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
@@ -15705,11 +15710,13 @@ figure.woocommerce-product-gallery__wrapper {
   padding-bottom: 0.75em;
 }
 
+#menu-menu-header-right-uk,
 #menu-menu-header-right {
   list-style: none;
   padding: 0;
   margin: 0;
 }
+#menu-menu-header-right-uk .btn-cmp a,
 #menu-menu-header-right .btn-cmp a {
   font-weight: 450;
   display: inline-block;
@@ -15722,6 +15729,20 @@ figure.woocommerce-product-gallery__wrapper {
   font-size: 14px;
 }
 
+.lang-selector {
+  position: relative;
+}
+.lang-selector .flag-selected {
+  position: absolute;
+  top: 0;
+  left: 8px;
+  bottom: 0;
+  margin: auto;
+  display: flex;
+}
+.lang-selector .flag-selected img {
+  width: 20px;
+}
 .lang-selector .wpml-ls-legacy-dropdown-click {
   max-width: 12em !important;
 }
@@ -15740,6 +15761,27 @@ figure.woocommerce-product-gallery__wrapper {
 }
 .lang-selector .wpml-ls-legacy-dropdown-click ul li .wpml-ls-sub-menu {
   border: 0 !important;
+}
+.lang-selector .wpml-ls-legacy-list-horizontal ul li {
+  position: relative;
+  margin-right: 10px;
+}
+.lang-selector .wpml-ls-legacy-list-horizontal ul li:nth-child(2)::before {
+  content: "/";
+  position: absolute;
+  left: -8px;
+  top: 0;
+  bottom: 0;
+  margin: 0 auto;
+  line-height: 1.8em;
+}
+.lang-selector .wpml-ls-legacy-list-horizontal ul li a {
+  color: #000000;
+  padding-left: 0.5em;
+  padding-right: 0.5em;
+}
+.lang-selector .wpml-ls-legacy-list-horizontal ul li.wpml-ls-current-language a {
+  color: #00abb1 !important;
 }
 
 .logo-animated {
@@ -15952,10 +15994,10 @@ figure.woocommerce-product-gallery__wrapper {
   gap: 2em;
 }
 
-ul#menu-redes-sociales li {
+ul#menu-redes-sociales-uk li, ul#menu-redes-sociales li {
   margin-right: 0.5em !important;
 }
-ul#menu-redes-sociales li:before {
+ul#menu-redes-sociales-uk li:before, ul#menu-redes-sociales li:before {
   width: 24px;
   height: 24px;
   background-color: #ffffff;
@@ -15966,7 +16008,7 @@ ul#menu-redes-sociales li:before {
   margin-right: 0.5em;
   color: #000000;
 }
-ul#menu-redes-sociales li a {
+ul#menu-redes-sociales-uk li a, ul#menu-redes-sociales li a {
   font-family: CircularStd-Book, Helvetica Neue, Helvetica, Arial, sans-serif !important;
   cursor: pointer;
 }
@@ -15978,7 +16020,8 @@ ul#menu-redes-sociales li a {
 }
 
 @media (max-width: 767.98px) {
-  #menu-redes-sociales {
+  #menu-redes-sociales-uk,
+#menu-redes-sociales {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -16541,7 +16584,6 @@ ul#menu-redes-sociales li a {
 .select-selected:before {
   width: 1em;
   position: absolute;
-  content: url("../images/svg/cl.svg");
   top: 7px;
   left: 1em;
 }
@@ -17605,6 +17647,7 @@ img.grid-carousel {
   position: relative;
   font-size: 1.25em;
   border-radius: 0;
+  font-weight: 600;
 }
 .collapse-list .item .btn-collapse .collapse-icon {
   width: 3em;
@@ -18380,6 +18423,7 @@ img.grid-carousel {
 .team-wrapper .team-list {
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
 }
 .team-wrapper .team-list .member {
   width: calc(20% - 1em);
@@ -18431,6 +18475,9 @@ img.grid-carousel {
 }
 .team-wrapper .team-list .member .info:nth-child(5n) {
   margin-right: 0;
+}
+.team-wrapper.interactive .team-list {
+  justify-content: center;
 }
 .team-wrapper.interactive .team-list .member {
   cursor: pointer;
@@ -18492,6 +18539,9 @@ img.grid-carousel {
     max-width: 200px;
   }
 
+  .team-wrapper .team-list {
+    justify-content: center;
+  }
   .team-wrapper .team-list .member {
     width: 100%;
     margin-right: 0;

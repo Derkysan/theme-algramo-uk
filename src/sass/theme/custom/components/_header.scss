@@ -1,5 +1,8 @@
+.navbar-toggler,
+.mobile-menu-toggler {
+  color: #0D0D0D !important;
+}
 #wrapper-navbar {
-  // background: linear-gradient(180deg, #FFFFFF 0%, rgba(255, 255, 255, 0) 100%);
   background-color: #ffffff;
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
   height: 85px;
@@ -41,6 +44,7 @@
   }
 }
 
+#menu-menu-header-right-uk,
 #menu-menu-header-right {
   list-style: none;
   padding: 0;
@@ -61,6 +65,18 @@
 }
 
 .lang-selector {
+  position: relative;
+  .flag-selected {
+    position: absolute;
+    top: 0;
+    left: 8px;
+    bottom: 0;
+    margin: auto;
+    display: flex;
+    img {
+      width: 20px;
+    }
+  }
   .wpml-ls-legacy-dropdown-click {
     max-width: 12em !important;
     ul {
@@ -82,6 +98,35 @@
         }
         .wpml-ls-sub-menu {
           border: 0 !important;
+        }
+      }
+    }
+  }
+  .wpml-ls-legacy-list-horizontal {
+    ul {
+      li {
+        position: relative;
+        margin-right: 10px;
+        &:nth-child(2) {
+          &::before {
+            content: "/";
+            position: absolute;
+            left: -8px;
+            top: 0;
+            bottom: 0;
+            margin: 0 auto;
+            line-height: 1.8em;
+          }
+        }
+        a {
+          color: #000000;
+          padding-left: .5em;
+          padding-right: .5em;
+        }
+        &.wpml-ls-current-language {
+          a {
+            color: #00abb1 !important;
+          }
         }
       }
     }
